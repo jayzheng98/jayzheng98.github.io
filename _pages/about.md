@@ -10,11 +10,8 @@ redirect_from:
 
  
 * Hi, I'm Zhongyi!
-
 * Now I'm looking for a supervisor with available PhD positions.
-
 * I am a MPhil student at the Southwest Jiaotong University (SWJTU), Chengdu, majoring in **Computer Science and Technology**. Currently, I am doing research in the field of cybersecurity supervised by [Prof. Lianshan Yan](https://faculty.swjtu.edu.cn/yanlianshan/en/index.htm) in the CIPC lab. 
-
 * Before that, I was an undergraduate student majoring in **Network Engineering** at Southwest Jiaotong University. I am in the **top 14%** of my major and have obtained the **Postgraduate Recommendation** to study for an academic master degree without attending the exam.
 * To learn more about me, you can have a view of my CV page [here](/cv)
 * I have the habit of summarizing learning content, see my notes [here](/notes)
