@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Jay Zheng's Page"
 title_separator          : "-"
 name                     : &name "Zhongyi Zheng"
-description              : &description "I am a master student major in CS who is interested in Cybersecurity"
+description              : &description ""
 url                      : https://jayzheng98.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -107,9 +107,9 @@ author:
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            : "https://steamcommunity.com/profiles/76561198390639615/"
+  steam            : "76561198390639615"
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          :
   vine             :
   weibo            :
   xing             :
