@@ -2,10 +2,10 @@
 title: "A Process-Oriented and Coalescent Analysis Method for Safety and Security in Railway Systems"
 collection: publications
 permalink: /publication/paper-number-1
-excerpt: 'Zhongyi Zheng, Saifei Li, Xiong Deng, Lianshan Yan'
+excerpt: '*Zhongyi Zheng, Saifei Li, Xiong Deng, Lianshan Yan*'
 date: 2022-8-12
 venue: 'International Journal of Critical Infrastructure Protection'
-paperurl: 'URL is not available for now' #'http://academicpages.github.io/files/paper1.pdf'
+#paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 ---
 Current status: **Under Review**
   
