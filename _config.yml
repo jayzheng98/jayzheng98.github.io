@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Zhongyi Zheng"
-  avatar           : "1.jpg"
+  avatar           : "11.jpg"
   bio              : "I am a master student major in CS who is interested in Cybersecurity"
   location         : "Chengdu"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  googlescholar    : 
+  email            : "zhengzy@my.swjtu.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,18 +96,18 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "https://github.com/jayzheng98"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
+  steam            : "https://steamcommunity.com/profiles/76561198390639615/"
   tumblr           :
   twitter          : "replacethistwitterhandle"
   vine             :
