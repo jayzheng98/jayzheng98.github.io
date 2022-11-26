@@ -26,5 +26,5 @@ author_profile: false
 
 ## 🔧: Other Tools
 
-- [Git](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/_notes/Git.md)
+- [Git](/_notes/Git.md)
 - [Docker](https://github.com/CyC2018/CS-Notes/blob/master/notes/Docker.md)
