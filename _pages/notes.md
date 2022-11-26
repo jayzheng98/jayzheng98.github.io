@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Personal Notes"
-permalink: /nots/
+permalink: /notes/
 author_profile: false
 ---
 <br>
@@ -26,4 +26,4 @@ author_profile: false
 ## 🔧: Other Tools
 
 - [Git](/notes/Git)
-- [Docker](/no/Docker)
+- [Docker](/notes/Docker)
