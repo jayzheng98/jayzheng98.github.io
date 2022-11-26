@@ -474,6 +474,12 @@ ALTER EVENT yearly_delete_stale_audit_rows DISABLE;
 ```
 
 ## Chapt.11 Transaction
+**1. ACID features**
+<div align="center"> <img src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql3.png" width="960px"> </div><br>
+
+**2. Create transaction**
+ - *MySQL uses autocommit mode by default, if you don't explicitly use START TRANSACTION to start a transaction, each query will be treated as a transaction and automatically committed*
+
 ```sql
 START TRANSACTION;              #Actually this sentence and the COMMIT are not necessary
 UPDATE customers
@@ -481,10 +487,11 @@ SET points = points + 10
 WHERE customer_id = 1;
 COMMIT;                         #Changes only take effect after the commit, otherwise they would be rollbacked
 ```
+**3. Isolation level**
+- *Use "lock" to prevent multiple transactions update the same content at the same time (cause lost update)*
+- *4 levels are set to cope with 4 kinds of concurrency issues:*
 
-1. Use "lock" to prevent multiple transactions update the same content at the same time(cause lost update)
-2. Use "isolation" to prevent another transaction reads the yet committed data
-Pic.1
+<div align="center"> <img src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>
 
 ```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
@@ -493,7 +500,8 @@ SELECT points FROM customers WHERE customer_id = 1;
 SELECT points FROM customers WHERE customer_id = 1;
 COMMIT;
 ```
-3. If 2 transactions are updating 2 records in a reverse order, it is likely to have "deadlock"
+**4. Deadlock**
+ - *If 2 transactions are updating 2 records in a reverse order, it is likely to have deadlock*
 
 ## Chapt.12 Design A Database
 1. ER Diagram
