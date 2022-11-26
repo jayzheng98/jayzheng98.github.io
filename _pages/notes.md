@@ -4,7 +4,6 @@ title: "Personal Notes"
 permalink: /notes/
 author_profile: false
 ---
-{% include base_path %}
 <br>
 
 ## ✏️: Algorithm & Data Structure
@@ -26,5 +25,5 @@ author_profile: false
 
 ## 🔧: Other Tools
 
-- [Git](/note/Git)
+- [Git](https://jayzheng98.github.io/note/Git)
 - [Docker](/note/Docker)
