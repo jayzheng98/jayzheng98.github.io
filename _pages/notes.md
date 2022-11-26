@@ -6,24 +6,23 @@ author_profile: false
 ---
 <br>
 
-## ✏️: Algorithm & Data Structure
+## ✏️  Algorithm & Data Structure
 
 - [Online programming](https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20题解%20-%20目录.md)
 
-## 💻: Operating Systems
+## 💻  Operating Systems
 
 - [Linux](https://github.com/CyC2018/CS-Notes/blob/master/notes/Linux.md)
 
-## ☁️: Networking
+## ☁️  Networking
 
 - [Device configuration](https://github.com/CyC2018/CS-Notes/blob/master/notes/HTTP.md)
 - [Socket](https://github.com/CyC2018/CS-Notes/blob/master/notes/Socket.md)
 
-## 💾: Databases
+## 💾  Databases
 
 - [MySQL](/notes/Mysql)
 
-## 🔧: Other Tools
+## 🔧  Other Tools
 
 - [Git](/notes/Git)
-- [Docker](/notes/Docker)
