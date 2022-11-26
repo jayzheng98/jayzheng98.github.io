@@ -1,4 +1,10 @@
-# Git
+---
+layout: archive
+title: "Git"
+permalink: /notes/Git
+author_profile: false
+---
+
 <!-- GFM-TOC -->
 * [Git](#git)
     * [集中式与分布式](#集中式与分布式)
