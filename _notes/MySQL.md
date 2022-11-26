@@ -84,6 +84,7 @@ LEFT JOIN invoices i
     AND p.invoice_id = i.invoice_id         #In this case, the second condition is actually an inner join!!
 ORDER BY c.client_id;
 ```
+
 **5. Union** <br>
  - *With UNION, each query must contain the same columns, expressions and aggregation functions*
 ```sql
@@ -136,6 +137,7 @@ VALUE(
 DELETE FROM customers                 #Delete all the columns, but can be filtered by WHERE
 WHERE first_name = 'Michael' AND last_name = 'Jackson';
 ```
+
 **3. Copy a table**
 ```sql
 USE sql_invoicing;
@@ -184,6 +186,7 @@ JOIN payment_methods pm
 	ON p.payment_method =  pm.payment_method_id
 GROUP BY p.date, pm.name              #Each group is a combination of these 2 columns
 ```
+
 **3. HAVING** <br>
  - *Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT*
 ```sql
@@ -325,6 +328,7 @@ CREATE VIEW sales_by_client AS
     JOIN invoices i USING (client_id)
     GROUP BY c.client_id, c.name;
 ```
+
 **2. Delete view**
 ```sql
 DROP VIEW IF EXISTS sales_by_client;
@@ -351,6 +355,7 @@ WITH CHECK OPTION;                              #Prevent some unexpected missing
 DELETE FROM invoice_with_balance
 WHERE invoice_id = 1;
 ```
+
 ## Chapt.9 Stored procedure
 ```sql
 #Define a temp delimiter
