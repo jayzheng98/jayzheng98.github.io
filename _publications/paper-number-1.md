@@ -10,5 +10,3 @@ venue: 'International Journal of Critical Infrastructure Protection'
 Current status: **Under Review** <br>[Journal Home](https://www.sciencedirect.com/journal/international-journal-of-critical-infrastructure-protection)
   
 A novel approach to deeply integrate the security analysis with the process of system service is proposed, which achieves the coalescence analysis of two critical attributes as functional safety and cyber security of cyber-physical systems.
-
-![gif](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/code.gif?raw=true)
