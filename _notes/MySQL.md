@@ -498,8 +498,7 @@ COMMIT;                         #Changes only take effect after the commit, othe
 - *Use "lock" to prevent multiple transactions update the same content at the same time (cause lost update)*
 - *4 levels are set to cope with 4 kinds of concurrency issues:*
 
-<!--<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>-->
-![pic1](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png)
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>
 
 ```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
@@ -512,49 +511,59 @@ COMMIT;
  - *If 2 transactions are updating 2 records in a reverse order, it is likely to have deadlock*
 
 ## Chapt.12 Design A Database
-1. ER Diagram
-Entity-Relationship has 3 components: entities, attributes, and relationships, which are used for conceptual design of relational databases
-Pic.2
+**1. ER Diagram**
+ - *Entity-Relationship has 3 components: entities, attributes, and relationships, which are used for conceptual design of relational databases*
 
-2. Normalization
-1NF: A table cannot have repeated columns and each cell of it should have a single value
-2NF: One table with its columns should represent only one entity
-3NF: A column in a table should not be derived from other columns
+<div align="center"> <img alt="eer" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql2.png" width="800px"> </div><br>
 
-Tips1: Directly combine tables that are frequently joined together
-Tips2: Use 2 one-many relationships to represent the many-many relationship
+**2. Normalization**
+ - ***1NF**: A table cannot have repeated columns and each cell of it should have a single value*
+ - ***2NF**: One table with its columns should represent only one entity*
+ - ***3NF**: A column in a table should not be derived from other columns*
+<br>
+ - *Tips1: Directly combine tables that are frequently joined together*
+ - *Tips2: Use 2 one-many relationships to represent the many-many relationship*
 
+**3. Create database**
 ```sql
 CREATE DATABASE IF NOT EXISTS sql_store2;
 USE sql_store2;
-
-DROP TABLE IF EXISTS orders;     #Because "orders" depends on "customers", we have to drop "orders" before drop "customers"
+```
+**4. Create & Delete table**
+```sql
+DROP TABLE IF EXISTS orders;        #Because "orders" depends on "customers", we have to drop "orders" first
 DROP TABLE IF EXISTS customers;
+
 CREATE TABLE IF NOT EXISTS customers(
-	customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name  VARCHAR(50) NOT NULL,
     points      INT NOT NULL DEFAULT 0,
     email       VARCHAR(255) NOT NULL UNIQUE
 );
 
-ALTER TABLE customers
-	ADD last_name     VARCHAR(50) NOT NULL AFTER first_name,
-    ADD city          VARCHAR(50) NOT NULL,
-    MODIFY first_name VARCHAR(50) DEFAULT '',
-    DROP points;
-    -- DROP PRIMARY KEY;         #Don't need to specify column name
-    
 CREATE TABLE IF NOT EXISTS orders(
-	order_id    INT PRIMARY KEY,
+    order_id    INT PRIMARY KEY,
     customer_id INT NOT NULL,
     FOREIGN KEY fk_orders_customers (customer_id)
-		REFERENCES customers (customer_id)
+	REFERENCES customers (customer_id)
         ON UPDATE CASCADE
         ON DELETE NO ACTION
 );
-
-SHOW ENGINES;                    #Store engines: InnoDB & MyISAM
 ```
+**5. Alter table**
+```sql
+ALTER TABLE customers
+    ADD last_name     VARCHAR(50) NOT NULL AFTER first_name,
+    ADD city          VARCHAR(50) NOT NULL,
+    MODIFY first_name VARCHAR(50) DEFAULT '',
+    DROP points;
+    -- DROP PRIMARY KEY;           #Don't need to specify column name
+```
+**6. Engine**
+```sql
+SHOW ENGINES;                      #Store engines: InnoDB & MyISAM
+```
+
 ## Chapt.13 Indexing
 #Design indexes based on the queries but not tables
 #Execute the "load_1000_customers.sql" and "create-db-blog.sql" scripts first!
