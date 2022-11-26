@@ -21,9 +21,9 @@ author_profile: false
 
 ## 💾: Databases
 
-- [MySQL](/note/MySQL)
+- [MySQL](/notes/MySQL)
 
 ## 🔧: Other Tools
 
-- [Git](https://jayzheng98.github.io/note/Git)
-- [Docker](/note/Docker)
+- [Git](https://jayzheng98.github.io/notes/Git)
+- [Docker](/no/Docker)
