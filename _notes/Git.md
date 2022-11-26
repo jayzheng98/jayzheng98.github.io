@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Git"
+collection: notes
 permalink: /notes/Git
 author_profile: false
 ---
@@ -17,7 +18,6 @@ author_profile: false
     * [SSH 传输设置](#ssh-传输设置)
     * [.gitignore 文件](#gitignore-文件)
     * [Git 命令一览](#git-命令一览)
-    * [参考资料](#参考资料)
 <!-- GFM-TOC -->
 
 
