@@ -22,9 +22,9 @@ author_profile: false
 
 ## 💾: Databases
 
-- [MySQL](https://github.com/CyC2018/CS-Notes/blob/master/notes/MySQL.md)
+- [MySQL](/_notes/MySQL.md)
 
 ## 🔧: Other Tools
 
 - [Git](/_notes/Git.md)
-- [Docker](https://github.com/CyC2018/CS-Notes/blob/master/notes/Docker.md)
+- [Docker](/_notes/Docker.md)
