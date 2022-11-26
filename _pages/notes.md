@@ -4,7 +4,7 @@ title: "Personal Notes"
 permalink: /notes/
 author_profile: false
 ---
-
+{% include base_path %}
 <br>
 
 ## ✏️: Algorithm & Data Structure
