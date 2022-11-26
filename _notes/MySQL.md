@@ -564,49 +564,65 @@ SHOW ENGINES;                      #Store engines: InnoDB & MyISAM
 ```
 
 ## Chapt.13 Indexing
-#Design indexes based on the queries but not tables
-#Execute the "load_1000_customers.sql" and "create-db-blog.sql" scripts first!
-#BTree: A type of index structure
+**1. Create index**
+ - *Design indexes based on the queries but not tables*
+ - *BTree: A type of index structure*
+
 ```sql
 CREATE INDEX idx_points ON customers(points);
 EXPLAIN SELECT customer_id FROM customers 
 -- USE INDEX (idx_customers)                                    #Not required
 WHERE points > 1000;                                            #rows: 1010 -> 529
-
+```
+**2. Delete index**
+```sql
 DROP INDEX idx_points ON customers;
+```
+**3. Prefix indexes**
+ - *Only for BLOB, TEXT and VARCHAR*
 
-#Prefix indexes
-#Only for BLOB, TEXT and VARCHAR
+```sql
 CREATE INDEX idx_lastname ON customers(last_name(20));
 SELECT COUNT(DISTINCT LEFT(last_name, 1)), 
-	   COUNT(DISTINCT LEFT(last_name, 5)),                      #Best prefix index value
-	   COUNT(DISTINCT LEFT(last_name, 10))
+       COUNT(DISTINCT LEFT(last_name, 5)),                      #Best prefix index value
+       COUNT(DISTINCT LEFT(last_name, 10))
 FROM customers;
-
-#Fulltext indexes
+```
+**4. Fulltext indexes**
+```sql
 CREATE FULLTEXT INDEX idx_title_body ON posts(title, body);
 SELECT *-- , MATCH(title, body) AGAINST ('javascript') AS scores
 FROM posts 
 WHERE MATCH(title, body) AGAINST ('javascript') OR
       MATCH(title, body) AGAINST ('"handling a form"' IN BOOLEAN MODE) OR 
-	  MATCH(title, body) AGAINST ('redux -react' IN BOOLEAN MODE);
-      
-#Composite indexes
-#Put index columns with higher selectivity first
-#Selectivity: unique index values/amount of records. The maximum value is 1, at which point each record has a unique index
+      MATCH(title, body) AGAINST ('redux -react' IN BOOLEAN MODE);
+```
+**5. Composite indexes**
+- *Put index columns with higher selectivity first
+ Selectivity: unique index values/amount of records. The maximum value is 1, at which point each record has a unique index*
+
+```sql
 CREATE INDEX idx_state_points ON customers(state, points);      
 EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA' AND points > 1000;
+```
+ - *If we change the above AND to OR, indexes will be ignored, Mysql has to do a full index scan with 1010 rows*
 
-#If we change the above AND to OR, indexes will be ignored, Mysql has to do a full index scan with 1010 rows
+```sql
 EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA'    #Split OR by UNION
   UNION SELECT customer_id FROM customers WHERE points > 1000;  #Both queries use the "idx_state_points" which means this index is a covering index
-```  
+```
+
 ## Chapt.14 Securing database
+**1. Create user**
 ```sql
 CREATE USER moon_app IDENTIFIED BY 'admin';
-
+```
+**2. Delete user**
+```sql
 DROP USER moon_app;
-
+```
+**3. Grant privilege**
+```sql
 GRANT SELECT, INSERT, UPDATE, EXECUTE, DELETE, CREATE VIEW
 ON sql_store.*
 TO moon_app;
