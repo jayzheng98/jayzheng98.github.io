@@ -1,9 +1,7 @@
 ---
 layout: archive
 title: "Git"
-permalink: /notes/Git
-redirect_from:
-  - /Git.md
+permalink: /note/Git
 author_profile: false
 ---
 
