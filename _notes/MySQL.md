@@ -415,39 +415,50 @@ DELIMITER ;
 ```
 
 ## Chapt.10 Trigger
+**1. Create trigger**
+ - *Trigger is automatically executed BEFORE or AFTER the INSERT, DELETE and UPDATE*
+
 ```sql
-#Trigger is automatically executed BEFORE or AFTER INSERT, DELETE and UPDATE
 DELIMITER $$ 
 CREATE TRIGGER payments_after_insert             #The INSERT trigger
-	AFTER INSERT ON payments
+    AFTER INSERT ON payments
     FOR EACH ROW
 BEGIN
     UPDATE invoices
     SET payment_total = payment_total + NEW.amount
     WHERE invoice_id = NEW.invoice_id;
 END$$
+
 INSERT INTO payments
 VALUES(DEFAULT, 5, 3, '2019-01-01', 10, 1)$$
 
-DROP TRIGGER IF EXISTS payments_after_delete$$
-
 CREATE TRIGGER payments_after_delete             #The DELETE trigger
-	AFTER DELETE ON payments
+    AFTER DELETE ON payments
     FOR EACH ROW
 BEGIN
     UPDATE invoices
     SET payment_total = payment_total - OLD.amount
     WHERE invoice_id = OLD.invoice_id;
 END$$
+
 DELETE FROM payments
 WHERE payment_id > 8$$
 DELIMITER ;
-
+```
+**2. Delete trigger**
+```sql
+DROP TRIGGER IF EXISTS payments_after_delete;
+```
+**3. Show trigger**
+```sql
 SHOW TRIGGERS;
+```
+**4. Create Event**
+ - *Event is automatically executed according to a SCHEDULE*
 
-#Event is automatically executed according to a SCHEDULE
+```sql
 DELIMITER $$ 
-CREATE EVENT yearly_delete_stale_audit_rows      #Create an event to yearly delete data of previous years
+CREATE EVENT yearly_delete_stale_audit_rows        #Create an event to yearly delete data of previous years
 ON SCHEDULE
     EVERY 1 YEAR STARTS '2019-01-01' ENDS '2029-01-01'
 DO
@@ -456,11 +467,12 @@ BEGIN
     WHERE date < NOW() - INTERVAL 1 YEAR;
 END$$
 DELIMITER ;
-
-SHOW EVENTS;
-
+```
+**5. Alter event**
+```sql
 ALTER EVENT yearly_delete_stale_audit_rows DISABLE; 
 ```
+
 ## Chapt.11 Transaction
 ```sql
 START TRANSACTION;              #Actually this sentence and the COMMIT are not necessary
