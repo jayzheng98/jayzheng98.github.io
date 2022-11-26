@@ -367,6 +367,8 @@ WHERE invoice_id = 1;
 DELIMITER $$
 ```
 **2. Create SP**
+ - *Treat SP as a storage of the query process of a table*
+
 ```sql
 DELIMITER $$
 CREATE PROCEDURE get_clients()
@@ -566,7 +568,7 @@ SHOW ENGINES;                      #Store engines: InnoDB & MyISAM
 ## Chapt.13 Indexing
 **1. Create index**
  - *Design indexes based on the queries but not tables*
- - *BTree: A type of index structure*
+ - ***BTree**: A type of index structure*
 
 ```sql
 CREATE INDEX idx_points ON customers(points);
@@ -598,8 +600,8 @@ WHERE MATCH(title, body) AGAINST ('javascript') OR
       MATCH(title, body) AGAINST ('redux -react' IN BOOLEAN MODE);
 ```
 **5. Composite indexes**
-- *Put index columns with higher selectivity first
- Selectivity: unique index values/amount of records. The maximum value is 1, at which point each record has a unique index*
+- *Put index columns with higher selectivity first<br>
+ **Selectivity**: unique index values/amount of records. The maximum value is 1, at which point each record has a unique index*
 
 ```sql
 CREATE INDEX idx_state_points ON customers(state, points);      
