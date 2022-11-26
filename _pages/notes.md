@@ -25,5 +25,5 @@ author_profile: false
 
 ## 🔧: Other Tools
 
-- [Git](/notes)
+- [Git](/notes/Git)
 - [Docker](/notes/Docker)
