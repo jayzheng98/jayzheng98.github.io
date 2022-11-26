@@ -2,6 +2,8 @@
 layout: archive
 title: "Git"
 permalink: /notes/Git
+redirect_from:
+  - /Git.md
 author_profile: false
 ---
 
