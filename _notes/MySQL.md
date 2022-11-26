@@ -71,6 +71,7 @@ JOIN employees m                      #Self join, to find the manager
 ```
 **4. Outer join** <br>
  - *The inner join only returns content that meets the join conditions, causing some content to be lost. To display these lost content, an outer join is required (left/right)*
+
 ```sql
 USE sql_invoicing;
 SELECT *
@@ -84,9 +85,9 @@ LEFT JOIN invoices i
     AND p.invoice_id = i.invoice_id         #In this case, the second condition is actually an inner join!!
 ORDER BY c.client_id;
 ```
-
 **5. Union** <br>
  - *With UNION, each query must contain the same columns, expressions and aggregation functions*
+
 ```sql
 SELECT customer_id, first_name, points, 'Bronze' AS type
 FROM customers
@@ -133,11 +134,11 @@ VALUE(
 **2. Delete** <br>
  - *Difference between DELETE, TRUNCATE and DROP: <br>
    TRUNCATE and DELETE only delete data without deleting the structure of the table; DROP will delete the structure of the table, triggers, indexes, etc*
+
 ```sql
 DELETE FROM customers                 #Delete all the columns, but can be filtered by WHERE
 WHERE first_name = 'Michael' AND last_name = 'Jackson';
 ```
-
 **3. Copy a table**
 ```sql
 USE sql_invoicing;
@@ -162,7 +163,7 @@ WHERE client_id = (                   #If the result of nested query is not uniq
 ```
 
 ## Chapt.5 Aggregation Function
-**1. Common afs**
+**1. Common AFs**
 ```sql
 USE sql_invoicing;
 SELECT 
@@ -176,6 +177,7 @@ FROM invoices;
 ```
 **2. GROUP BY** <br>
  - *Only useful for aggregation functions!*
+
 ```sql
 SELECT 
     p.date,
@@ -186,9 +188,9 @@ JOIN payment_methods pm
 	ON p.payment_method =  pm.payment_method_id
 GROUP BY p.date, pm.name              #Each group is a combination of these 2 columns
 ```
-
 **3. HAVING** <br>
  - *Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT*
+
 ```sql
 USE sql_store;
 SELECT 
@@ -317,6 +319,7 @@ ORDER BY first_name;
 ## Chapt.8 View
 **1. Create view**
  - *Treat view as a snapshot of the query result of a table*
+
 ```sql
 USE sql_invoicing;
 CREATE VIEW sales_by_client AS 
@@ -328,7 +331,6 @@ CREATE VIEW sales_by_client AS
     JOIN invoices i USING (client_id)
     GROUP BY c.client_id, c.name;
 ```
-
 **2. Delete view**
 ```sql
 DROP VIEW IF EXISTS sales_by_client;
@@ -336,6 +338,7 @@ DROP VIEW IF EXISTS sales_by_client;
 **3. Updatable view**
  - *View without DSTINCT, AF(GROUP BY, HAVING) and UNION can be used in UPDATE, INSERT and DELETE statements*
  - *Used in case you don't have direct access to a table*
+
 ```sql
 CREATE OR REPLACE VIEW invoice_with_balance AS
     SELECT 
@@ -357,37 +360,48 @@ WHERE invoice_id = 1;
 ```
 
 ## Chapt.9 Stored procedure
+**1. Define a temp delimiter**
+ - *To avoid doing this, right click the "Stored Procedures" in the left navigator to create a SP*
+
 ```sql
-#Define a temp delimiter
-#To avoid doing this, right click the "Stored Procedures" in the left navigator to create a SP
-DELIMITER $$                                     
+DELIMITER $$
+```
+**2. Create SP**
+```sql
+DELIMITER $$
 CREATE PROCEDURE get_clients()
 BEGIN
-	SELECT * FROM clients;
+    SELECT * FROM clients;
 END$$
 DELIMITER ;
-
-DROP PROCEDURE IF EXISTS get_clients;           #Delete SP
-
+```
+**3. Delete SP**
+```sql
+DROP PROCEDURE IF EXISTS get_clients;
+```
+**4. SP with parameters**
+```sql
 DELIMITER $$ 
 CREATE PROCEDURE get_unpaid_invoices_for_client(
-	client_id INT,
-    OUT invoices_count INT,                     #OUT means this parameter is used for output(try not to use...)
+    client_id INT,
+    OUT invoices_count INT,                     #OUT means this parameter is used for output(try not to use it...)
     OUT invoices_total DECIMAL(9,2)             #2 bits to store decimal, and the rest 7 to store integer
     )
 BEGIN
-	SELECT COUNT(*), SUM(invoice_total)
+    SELECT COUNT(*), SUM(invoice_total)
     INTO invoices_count, invoices_total
     FROM invoices i
     WHERE i.client_id = client_id AND payment_total = 0;
 END$$
 DELIMITER ;
-
+```
+**5. Variables in SP**
+```sql
 DELIMITER $$ 
 CREATE PROCEDURE get_risk_factor()
 BEGIN
-	DECLARE risk_factor DECIMAL(9,2) DEFAULT 0;  #Declare a variable, must write before SELECT sentences
-	DECLARE invoices_total DECIMAL(9,2);
+    DECLARE risk_factor DECIMAL(9,2) DEFAULT 0;  #Declare a variable, must write before SELECT sentences
+    DECLARE invoices_total DECIMAL(9,2);
     DECLARE invoices_count INT;
     
     SELECT COUNT(*), SUM(invoice_total)
@@ -399,6 +413,7 @@ BEGIN
 END$$
 DELIMITER ;
 ```
+
 ## Chapt.10 Trigger
 ```sql
 #Trigger is automatically executed BEFORE or AFTER INSERT, DELETE and UPDATE
