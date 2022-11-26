@@ -25,5 +25,5 @@ author_profile: false
 
 ## 🔧: Other Tools
 
-- [Git](https://jayzheng98.github.io/notes/Git)
+- [Git](/notes/Git)
 - [Docker](/no/Docker)
