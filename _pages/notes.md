@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Personal Notes"
-permalink: /notes/
+permalink: /nots/
 author_profile: false
 ---
 <br>
