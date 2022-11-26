@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Git"
-permalink: /note/Git
+permalink: /notes/Git
 author_profile: false
 ---
 
@@ -150,10 +150,3 @@ $ ssh-keygen -t rsa -C "youremail@example.com"
 <div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7a29acce-f243-4914-9f00-f2988c528412.jpg" width=""> </div><br>
 
 比较详细的地址：http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf
-
-## 参考资料
-
-- [Git - 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
-- [图解 Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html)
-- [廖雪峰 : Git 教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-- [Learn Git Branching](https://learngitbranching.js.org/)
