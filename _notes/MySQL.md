@@ -514,13 +514,12 @@ COMMIT;
 **1. ER Diagram**
  - *Entity-Relationship has 3 components: entities, attributes, and relationships, which are used for conceptual design of relational databases*
 
-<div align="center"> <img alt="eer" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql2.png" width="800px"> </div><br>
+<div align="center"> <img alt="eer" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql2.png" width="700px"> </div><br>
 
 **2. Normalization**
  - ***1NF**: A table cannot have repeated columns and each cell of it should have a single value*
  - ***2NF**: One table with its columns should represent only one entity*
  - ***3NF**: A column in a table should not be derived from other columns*
-<br>
  - *Tips1: Directly combine tables that are frequently joined together*
  - *Tips2: Use 2 one-many relationships to represent the many-many relationship*
 
