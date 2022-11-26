@@ -22,9 +22,9 @@ author_profile: false
 
 ## 💾: Databases
 
-- [MySQL](/notes/MySQL)
+- [MySQL](/note/MySQL)
 
 ## 🔧: Other Tools
 
-- [Git](/notes/Git)
-- [Docker](/notes/Docker)
+- [Git](/note/Git)
+- [Docker](/note/Docker)
