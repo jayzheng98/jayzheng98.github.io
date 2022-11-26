@@ -69,7 +69,7 @@ JOIN employees m                      #Self join, to find the manager
     ON e.reports_to = m.employee_id;
 ```
 **4. Outer join** <br>
-  *The inner join only returns content that meets the join conditions, causing some content to be lost. To display these lost content, an outer join is required (left/right)*
+ - *The inner join only returns content that meets the join conditions, causing some content to be lost. To display these lost content, an outer join is required (left/right)*
 ```sql
 USE sql_invoicing;
 SELECT *
@@ -84,7 +84,7 @@ LEFT JOIN invoices i
 ORDER BY c.client_id;
 ```
 **5. Union** <br>
-  *With UNION, each query must contain the same columns, expressions and aggregation functions*
+ - *With UNION, each query must contain the same columns, expressions and aggregation functions*
 ```sql
 SELECT customer_id, first_name, points, 'Bronze' AS type
 FROM customers
@@ -128,7 +128,7 @@ VALUE(
     );
 ```
 **2. Delete** <br>
-  *Difference between DELETE, TRUNCATE and DROP: <br>
+ - *Difference between DELETE, TRUNCATE and DROP: <br>
    TRUNCATE and DELETE only delete data without deleting the structure of the table; DROP will delete the structure of the table, triggers, indexes, etc*
 ```sql
 DELETE FROM customers                 #Delete all the columns, but can be filtered by WHERE
@@ -170,7 +170,7 @@ SELECT
 FROM invoices;
 ```
 **2. GROUP BY** <br>
-  *Only useful for aggregation functions!*
+ - *Only useful for aggregation functions!*
 ```sql
 SELECT 
     p.date,
@@ -182,7 +182,7 @@ JOIN payment_methods pm
 GROUP BY p.date, pm.name              #Each group is a combination of these 2 columns
 ```
 **3. HAVING** <br>
-  *Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT*
+ - *Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT*
 ```sql
 USE sql_store;
 SELECT 
@@ -196,48 +196,55 @@ GROUP BY c.customer_id, c.first_name, c.last_name, c.state
 HAVING spent_money>100;
 ```
 ## Chapt.6 Complex Query
+**1. Subquery example**
 ```sql
 USE sql_invoicing;
 SELECT *
 FROM clients
 WHERE client_id NOT IN (
-	SELECT DISTINCT client_id
+    SELECT DISTINCT client_id
     FROM invoices
     );
-#Another style with JOIN
+```
+**Another style with JOIN**
+```sql
 SELECT *
 FROM clients
 LEFT JOIN invoices USING(client_id)
 WHERE invoice_id IS NULL;
-#Another style with EXISTS
+```
+**Another style with EXISTS**
+```sql
 SELECT *
 FROM clients c
 WHERE NOT EXISTS (
-	SELECT client_id
+    SELECT client_id
     FROM invoices
     WHERE client_id = c.client_id
     );
-
-#"IN" equals to "= ANY"
-
+```
+**2. Correlated subquery**
+```sql
 SELECT *
 FROM invoices i
 WHERE invoice_total > (
-	SELECT AVG(invoice_total)
+    SELECT AVG(invoice_total)
     FROM invoices
-    WHERE client_id = i.client_id        #correlated subquery
+    WHERE client_id = i.client_id        #
     );         
-
+```
+**3. FROM & SELECT subquery**
+```sql
 SELECT *
-FROM (                                   #FROM subquery. Only for single queries!
+FROM (                                           #FROM subquery. Only for single queries!
 	SELECT 
 		invoice_id, 
 		invoice_total,
 		(SELECT AVG(invoice_total)       #SELECT subquery. Direct using "AVG(invoice_total)" returns only 1 row
-		FROM invoices) AS invoices_avg,
+		 FROM invoices) AS invoices_avg,
 		invoice_total - (SELECT invoices_avg) AS difference
 	FROM invoices
-    ) AS invoice_summary;                #Must have alias
+    ) AS invoice_summary;                        #Must have alias
 ```
 ## Chapt.7 Built-in Function
 ```sql
