@@ -25,5 +25,5 @@ author_profile: false
 
 ## 🔧: Other Tools
 
-- [Git](/notes/Git)
+- [Git](https://github.com/CyC2018/CS-Notes/blob/master/notes/Git.md)
 - [Docker](/notes/Docker)
