@@ -498,7 +498,8 @@ COMMIT;                         #Changes only take effect after the commit, othe
 - *Use "lock" to prevent multiple transactions update the same content at the same time (cause lost update)*
 - *4 levels are set to cope with 4 kinds of concurrency issues:*
 
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>
+<!--<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>-->
+![pic1](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png)
 
 ```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
