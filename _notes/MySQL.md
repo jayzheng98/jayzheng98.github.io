@@ -157,38 +157,43 @@ WHERE client_id = (                   #If the result of nested query is not uniq
     );
 ```
 ## Chapt.5 Aggregation Function
+**1. Common afs**
 ```sql
 USE sql_invoicing;
 SELECT 
-	MAX(invoice_total) AS highest,
+    MAX(invoice_total) AS highest,
     MIN(invoice_total) AS lowest,
     AVG(invoice_total) AS average,
     SUM(invoice_total) AS total,
     COUNT(invoice_total) AS number,                 #COUNT only counts for non-NUll
     COUNT(DISTINCT client_id) AS client_number      #DISTINCT for deduplication  
 FROM invoices;
-
-#GROUP BY is only useful for aggregation functions!
+```
+**2. GROUP BY** <br>
+  *Only useful for aggregation functions!*
+```sql
 SELECT 
-	p.date,
+    p.date,
     pm.name AS payment_method,
     SUM(p.amount) AS total_payments
 FROM payments p
 JOIN payment_methods pm
 	ON p.payment_method =  pm.payment_method_id
-GROUP BY p.date, pm.name        #Each group is a combination of these 2 columns
-ORDER BY p.date;
-
+GROUP BY p.date, pm.name              #Each group is a combination of these 2 columns
+```
+**3. HAVING** <br>
+  *Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT*
+```sql
 USE sql_store;
 SELECT 
-	c.customer_id, c.first_name, c.last_name, c.state,
+    c.customer_id, c.first_name, c.last_name, c.state,
     SUM(oi.quantity*oi.unit_price) AS spent_money
 FROM customers c 
-JOIN orders o USING(customer_id)
-JOIN order_items oi	USING(order_id)
-WHERE state='VA'
+JOIN orders o       USING(customer_id)
+JOIN order_items oi USING(order_id)
+WHERE state='VA'                      #WHERE must be written before GROUP BY
 GROUP BY c.customer_id, c.first_name, c.last_name, c.state
-HAVING spent_money>100;         #Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT
+HAVING spent_money>100;
 ```
 ## Chapt.6 Complex Query
 ```sql
