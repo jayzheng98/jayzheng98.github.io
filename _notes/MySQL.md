@@ -331,7 +331,7 @@ DROP VIEW IF EXISTS sales_by_client;
 ```
 **3. Updatable view**
  - *View without DSTINCT, AF(GROUP BY, HAVING) and UNION can be used in UPDATE, INSERT and DELETE statements*
- - *Used in case you don't have direct access to a table
+ - *Used in case you don't have direct access to a table*
 ```sql
 CREATE OR REPLACE VIEW invoice_with_balance AS
     SELECT 
