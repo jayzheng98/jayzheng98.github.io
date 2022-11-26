@@ -1,19 +1,26 @@
-# MySQL
+---
+layout: archive
+title: "MySQL"
+collection: notes
+permalink: /notes/Mysql
+author_profile: false
+---
+
 <!-- GFM-TOC -->
-* [MySQL](#mysql)
-    * [1. Select](#chapt2-select)
-    * [2. Join](#chapt3-join)
-    * [3. Column Operation](#chapt4-column-operation)
-    * [4. Aggregation Function](#chapt5-aggregation-function)
-    * [5. Complex Query](#chapt6-complex-query)
-    * [6. Built-in Function](#chapt7-built\-in-function)
-    * [7. View](#chapt8-view)
-    * [8. Stored procedure](#chapt9-stored-procedure)
-    * [9. Trigger](#chapt10-trigger)
-    * [10. Transaction](#chapt11-transaction)
-    * [11. Design A Database](#chapt12-design-a-database)
-    * [12. Indexing](#chapt13-indexing)
-    * [13. Securing database](#chapt14-securing-database)
+* Chapters
+    * [2. Select](#chapt2-select)
+    * [3. Join](#chapt3-join)
+    * [4. Column Operation](#chapt4-column-operation)
+    * [5. Aggregation Function](#chapt5-aggregation-function)
+    * [6. Complex Query](#chapt6-complex-query)
+    * [7. Built-in Function](#chapt7-built\-in-function)
+    * [8. View](#chapt8-view)
+    * [9. Stored procedure](#chapt9-stored-procedure)
+    * [10. Trigger](#chapt10-trigger)
+    * [11. Transaction](#chapt11-transaction)
+    * [12. Design A Database](#chapt12-design-a-database)
+    * [13. Indexing](#chapt13-indexing)
+    * [14. Securing database](#chapt14-securing-database)
 <!-- GFM-TOC -->
 
 ## Chapt.2 Select
@@ -375,38 +382,39 @@ ALTER EVENT yearly_delete_stale_audit_rows DISABLE;
 ```
 ## Chapt.11 Transaction
 ```sql
-START TRANSACTION;                 #Actually this sentence and the COMMIT are not necessary
+START TRANSACTION;              #Actually this sentence and the COMMIT are not necessary
 UPDATE customers
 SET points = points + 10
 WHERE customer_id = 1;
-COMMIT;                            #Changes only take effect after the commit, otherwise they would be rollbacked
-/*
-Use "lock" to prevent multiple transactions update the same content at the same time(cause lost update)
-Use "isolation" to prevent another transaction reads the yet committed data
+COMMIT;                         #Changes only take effect after the commit, otherwise they would be rollbacked
+```
+
+1. Use "lock" to prevent multiple transactions update the same content at the same time(cause lost update)
+2. Use "isolation" to prevent another transaction reads the yet committed data
 Pic.1
-*/
+
+```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 START TRANSACTION;                 #Non-repeatable reads
 SELECT points FROM customers WHERE customer_id = 1;
 SELECT points FROM customers WHERE customer_id = 1;
 COMMIT;
-
-#If 2 transactions are updating 2 records in a reverse order, it is likely to have "deadlock"
 ```
+3. If 2 transactions are updating 2 records in a reverse order, it is likely to have "deadlock"
+
 ## Chapt.12 Design A Database
-/*
-ER Diagram:
+1. ER Diagram
 Entity-Relationship has 3 components: entities, attributes, and relationships, which are used for conceptual design of relational databases
 Pic.2
 
-Normalization:
+2. Normalization
 1NF: A table cannot have repeated columns and each cell of it should have a single value
 2NF: One table with its columns should represent only one entity
 3NF: A column in a table should not be derived from other columns
 
 Tips1: Directly combine tables that are frequently joined together
 Tips2: Use 2 one-many relationships to represent the many-many relationship
-*/
+
 ```sql
 CREATE DATABASE IF NOT EXISTS sql_store2;
 USE sql_store2;
