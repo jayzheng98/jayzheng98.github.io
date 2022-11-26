@@ -21,7 +21,7 @@ author_profile: false
 
 ## 💾: Databases
 
-- [MySQL](/notes/MySQL)
+- [MySQL](/notes/Mysql)
 
 ## 🔧: Other Tools
 
