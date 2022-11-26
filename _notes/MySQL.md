@@ -45,6 +45,7 @@ SELECT *
 FROM orders
 WHERE shipped_date IS NULL;
 ```
+
 ## Chapt.3 Join
 **1. Regular form of an inner join**
 ```sql
@@ -100,6 +101,7 @@ WHERE points>3000
 ORDER BY first_name;
 #This snippet is optimized in Chapt 7
 ```
+
 ## Chapt.4 Column Operation
 **1. Insert**
 ```sql
@@ -156,6 +158,7 @@ WHERE client_id = (                   #If the result of nested query is not uniq
 	WHERE name='Myworks'
     );
 ```
+
 ## Chapt.5 Aggregation Function
 **1. Common afs**
 ```sql
@@ -195,6 +198,7 @@ WHERE state='VA'                      #WHERE must be written before GROUP BY
 GROUP BY c.customer_id, c.first_name, c.last_name, c.state
 HAVING spent_money>100;
 ```
+
 ## Chapt.6 Complex Query
 **1. Subquery example**
 ```sql
@@ -246,83 +250,106 @@ FROM (                                           #FROM subquery. Only for single
 	FROM invoices
     ) AS invoice_summary;                        #Must have alias
 ```
+
 ## Chapt.7 Built-in Function
+**1. Number**
 ```sql
 SELECT ROUND(3.1415926, 4); 
 SELECT TRUNCATE(4.24923, 2); 
-SELECT CEILING(5.2);                     #Minimal integer >= input
-SELECT FLOOR(5.2);                       #Maximal integer <= input
-SELECT RAND();                           #Random in (0,1)
-    
-SELECT TRIM('  A-928 201 24  ');         #Remove leading and trailing spaces
-SELECT SUBSTRING('Kindergarten', 2, 4);
+SELECT CEILING(5.2);                          #Minimal integer >= input
+SELECT FLOOR(5.2);                            #Maximal integer <= input
+SELECT RAND();                                #Random in (0,1)
+```
+**2. String**
+```sql
+SELECT TRIM('  A-928 201 24  ');              #Remove leading and trailing spaces
+SELECT SUBSTRING('Kindergarten', 2, 4);       #Extract 4 characters, start with character No.2 (1,2,3,...)
 SELECT LOCATE('der', 'Kindergarten');
 SELECT REPLACE('Kindergarten', 'e', 'de');
 SELECT CONCAT('Zheng', ' ', 'Zhongyi');
-    
+```
+**3. Time**
+```sql
 SELECT *
 FROM orders
 WHERE YEAR(order_date) = EXTRACT(YEAR FROM NOW());
 SELECT DATEDIFF(NOW(), '1998-07-15');
-    
+```
+**4. IFNULL & COALESCE & IF**
+```sql
 SELECT 
-	order_id,
+    order_id,
     order_date, 
-	-- IFNULL(shipper_id, 'Not assigned') AS shipper,            #If the first parameter is NULL, return the second one
-	COALESCE(shipper_id, comments, 'Not assigned') AS shipper,   #Replace NULL with the first non-NULL parameter
+    -- IFNULL(shipper_id, 'Not assigned') AS shipper,             #If the first parameter is NULL, return the second one
+    COALESCE(shipper_id, comments, 'Not assigned') AS shipper,    #Replace NULL with the first non-NULL parameter
     IF(YEAR(order_date) = 2019, 'Active', 'Archive') AS status
 FROM orders;
-
+```
+**5. CASE**
+```sql
 SELECT 
-	order_id,
+    order_id,
     order_date,
     CASE 
-		WHEN YEAR(order_date)=2019 THEN 'Active'
+	WHEN YEAR(order_date)=2019 THEN 'Active'
         WHEN YEAR(order_date)=2018 THEN 'Last year'
         WHEN YEAR(order_date)<2018 THEN 'Archived'
         ELSE 'Future'
-	END AS status
+    END AS status
 FROM orders;
-
-#Optimize the last snippet in Chapt 3
+```
+**Optimize the last snippet in [Chapt 3](#chapt4-column-operation)**
+```sql
 SELECT       
-	customer_id, first_name, points, 
+    customer_id, first_name, points, 
     CASE
-		WHEN points<2000 THEN 'Bronze' 
-		WHEN points BETWEEN 2000 AND 3000 THEN 'Silver'
-		WHEN points>3000 THEN 'Gold'
-	END AS type
+	WHEN points<2000 THEN 'Bronze' 
+	WHEN points BETWEEN 2000 AND 3000 THEN 'Silver'
+	WHEN points>3000 THEN 'Gold'
+    END AS type
 FROM customers
 ORDER BY first_name;
 ```
+
 ## Chapt.8 View
+**1. Create view**
+ - *Treat view as a snapshot of the query result of a table*
 ```sql
 USE sql_invoicing;
 CREATE VIEW sales_by_client AS 
-	SELECT 
-		c.client_id,
-		c.name,
-		SUM(invoice_total) AS total_sales
-	FROM clients c
-	JOIN invoices i USING (client_id)
-	GROUP BY c.client_id, c.name;
+    SELECT 
+	c.client_id,
+	c.name,
+	SUM(invoice_total) AS total_sales
+    FROM clients c
+    JOIN invoices i USING (client_id)
+    GROUP BY c.client_id, c.name;
+```
+**2. Delete view**
+```sql
+DROP VIEW IF EXISTS sales_by_client;
+```
+**3. Updatable view**
+ - *View without DSTINCT, AF(GROUP BY, HAVING) and UNION can be used in UPDATE, INSERT and DELETE statements*
+ - *Used in case you don't have direct access to a table
+```sql
+CREATE OR REPLACE VIEW invoice_with_balance AS
+    SELECT 
+	invoice_id,
+    	number,
+	client_id,
+        invoice_total,
+	payment_total,
+	invoice_total - payment_total AS balance,
+	invoice_date,
+	due_date,
+	payment_date
+    FROM invoices
+    WHERE invoice_total - payment_total > 0
+WITH CHECK OPTION;                              #Prevent some unexpected missing of values
 
-DROP VIEW IF EXISTS sales_by_client;             #Delete view
-
-CREATE OR REPLACE VIEW invoice_with_balance AS   #Changeable view
-	SELECT 
-		invoice_id,
-		number,
-		client_id,
-		invoice_total,
-		payment_total,
-		invoice_total - payment_total AS balance,
-		invoice_date,
-		due_date,
-		payment_date
-	FROM invoices
-	WHERE invoice_total - payment_total > 0
-WITH CHECK OPTION;                               #Prevent some unexpected missing of values
+DELETE FROM invoice_with_balance
+WHERE invoice_id = 1;
 ```
 ## Chapt.9 Stored procedure
 ```sql
@@ -335,13 +362,13 @@ BEGIN
 END$$
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS get_clients;            #Delete SP
+DROP PROCEDURE IF EXISTS get_clients;           #Delete SP
 
 DELIMITER $$ 
 CREATE PROCEDURE get_unpaid_invoices_for_client(
 	client_id INT,
-    OUT invoices_count INT,                      #OUT means this parameter is used for output(try not to use...)
-    OUT invoices_total DECIMAL(9,2)              #2 bits to store decimal, and the rest 7 to store integer
+    OUT invoices_count INT,                     #OUT means this parameter is used for output(try not to use...)
+    OUT invoices_total DECIMAL(9,2)             #2 bits to store decimal, and the rest 7 to store integer
     )
 BEGIN
 	SELECT COUNT(*), SUM(invoice_total)
