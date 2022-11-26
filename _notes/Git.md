@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Git"
-permalink: /notes/Git
+permalink: /note/Git
 author_profile: false
 ---
 
