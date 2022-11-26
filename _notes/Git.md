@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Git"
+collection: notes
 permalink: /note/Git
 author_profile: false
 ---
