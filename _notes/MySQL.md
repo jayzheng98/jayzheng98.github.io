@@ -24,7 +24,7 @@ author_profile: false
 <!-- GFM-TOC -->
 
 ## Chapt.2 Select
-1. Wildcard, regular expression, order and limit
+**1. Wildcard, regular expression, ORDER and LIMIT**
 ```sql
 SELECT *
 FROM customers
@@ -39,28 +39,28 @@ SELECT first_name, last_name,
 FROM customers
 ORDER BY birth_date DESC;            #Multiple columns can be set for one ordering
 ```
-2. Null
+**2. Null**
 ```sql
 SELECT *
 FROM orders
 WHERE shipped_date IS NULL;
 ```
 ## Chapt.3 Join
-1. Regular form of an inner join
+**1. Regular form of an inner join**
 ```sql
 SELECT *
 FROM customers c                     #Cannot use its original name once the column has an alias
 JOIN orders o
     ON o.customer_id = c.customer_id
 ```
-2. Joining across databases
+**2. Joining across databases**
 ```sql
 SELECT *
 FROM order_items oi
 JOIN sql_inventory.products p
     ON oi.product_id = p.product_id;
 ```
-3. Self join
+**3. Self join**
 ```sql
 USE sql_hr;
 SELECT e.employee_id, e.first_name, e.reports_to, m.first_name AS manager
@@ -68,7 +68,7 @@ FROM employees e
 JOIN employees m                      #Self join, to find the manager
     ON e.reports_to = m.employee_id;
 ```
-4. Outer join <br>
+**4. Outer join** <br>
   *The inner join only returns content that meets the join conditions, causing some content to be lost. To display these lost content, an outer join is required (left/right)*
 ```sql
 USE sql_invoicing;
@@ -83,7 +83,7 @@ LEFT JOIN invoices i
     AND p.invoice_id = i.invoice_id         #In this case, the second condition is actually an inner join!!
 ORDER BY c.client_id;
 ```
-5. Union <br>
+**5. Union** <br>
   *With UNION, each query must contain the same columns, expressions and aggregation functions*
 ```sql
 SELECT customer_id, first_name, points, 'Bronze' AS type
@@ -101,6 +101,7 @@ ORDER BY first_name;
 #This snippet is optimized in Chapt 7
 ```
 ## Chapt.4 Column Operation
+**1. Insert**
 ```sql
 INSERT INTO customers
 VALUE(
@@ -125,20 +126,28 @@ VALUE(
     'US',
     9999
     );
-    
+```
+**2. Delete** <br>
+  *Difference between DELETE, TRUNCATE and DROP: <br>
+   TRUNCATE and DELETE only delete data without deleting the structure of the table; DROP will delete the structure of the table, triggers, indexes, etc*
+```sql
 DELETE FROM customers                 #Delete all the columns, but can be filtered by WHERE
 WHERE first_name = 'Michael' AND last_name = 'Jackson';
-
+```
+**3. Copy a table**
+```sql
 USE sql_invoicing;
-CREATE TABLE invoices_archived AS     #Copy a table
+CREATE TABLE invoices_archived AS 
 	SELECT i.invoice_id, i.number, c.name AS client, i.invoice_total, i.payment_total, i.invoice_date, i.due_date, i.payment_date
 	FROM invoices i
 	JOIN clients c USING (client_id)
 	WHERE payment_date IS NOT NULL;
-
+```
+**4. Update**
+```sql
 UPDATE invoices
 SET                                   #Becasue sql doesn't have "==", we must use SET to change values
-	payment_total = invoice_total/2, 
+    payment_total = invoice_total/2, 
     payment_date = due_date
 -- WHERE client_id IN (3,5)           #Update multiple columns
 WHERE client_id = (                   #If the result of nested query is not unique, change "=" to "IN" here
