@@ -500,7 +500,7 @@ COMMIT;                         #Changes only take effect after the commit, othe
 - *Use "lock" to prevent multiple transactions update the same content at the same time (cause lost update)*
 - *4 levels are set to cope with 4 kinds of concurrency issues:*
 
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png?raw=true" width="700px"> </div><br>
 
 ```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
@@ -516,7 +516,7 @@ COMMIT;
 **1. ER Diagram**
  - *Entity-Relationship has 3 components: entities, attributes, and relationships, which are used for conceptual design of relational databases*
 
-<div align="center"> <img alt="eer" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql2.png" width="700px"> </div><br>
+<div align="center"> <img alt="eer" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql2.png?raw=true" width="700px"> </div><br>
 
 **2. Normalization**
  - ***1NF**: A table cannot have repeated columns and each cell of it should have a single value*
