@@ -475,7 +475,7 @@ ALTER EVENT yearly_delete_stale_audit_rows DISABLE;
 
 ## Chapt.11 Transaction
 **1. ACID features**
-<div align="center"> <img src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql3.png" width="960px"> </div><br>
+<div align="center"> <img alt="acid" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql3.png" width="960px"> </div><br>
 
 **2. Create transaction**
  - *MySQL uses autocommit mode by default, if you don't explicitly use START TRANSACTION to start a transaction, each query will be treated as a transaction and automatically committed*
@@ -491,7 +491,7 @@ COMMIT;                         #Changes only take effect after the commit, othe
 - *Use "lock" to prevent multiple transactions update the same content at the same time (cause lost update)*
 - *4 levels are set to cope with 4 kinds of concurrency issues:*
 
-<div align="center"> <img src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/mysql1.png" width="700px"> </div><br>
 
 ```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
