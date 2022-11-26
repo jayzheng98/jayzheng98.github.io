@@ -24,55 +24,68 @@ author_profile: false
 <!-- GFM-TOC -->
 
 ## Chapt.2 Select
+1. Wildcard, regular expression, order and limit
 ```sql
 SELECT *
 FROM customers
--- WHERE (address LIKE '%trail%' OR address LIKE '%avenue%') AND phone LIKE '%4'                    #"%" is the early used wildcard
--- WHERE last_name REGEXP 'field|mac|rose' OR last_name REGEXP 'll$' OR last_name REGEXP '^boa'     #Regular expression
-WHERE last_name REGEXP '[gim]e' OR last_name REGEXP 'a[n-w]'                                        #last_name that include "ge/ie/me/an-aw"
+-- WHERE (address LIKE '%trail%' OR address LIKE '%avenue%') AND phone LIKE '%4'                  #"%" is the early used wildcard
+-- WHERE last_name REGEXP 'field|mac|rose' OR last_name REGEXP 'll$' OR last_name REGEXP '^boa'   #Regular expression
+WHERE last_name REGEXP '[gim]e' OR last_name REGEXP 'a[n-w]'                                      #last_name that include "ge/ie/me/an-aw"
 ORDER BY points DESC
 LIMIT 3;                             #LIMIT must be placed in the end of snippet
 
 SELECT first_name, last_name, 
-		10 AS points                 #Give a value and name it with "points" (has no relation with the "points" column)
+		10 AS points         #Give a value and name it with "points" (has no relation with the "points" column)
 FROM customers
 ORDER BY birth_date DESC;            #Multiple columns can be set for one ordering
-
+```
+2. Null
+```sql
 SELECT *
 FROM orders
 WHERE shipped_date IS NULL;
 ```
 ## Chapt.3 Join
+1. Regular form of an inner join
 ```sql
 SELECT *
--- FROM customers c                  #Cannot use its original name once the column has an alias
--- JOIN orders o
-	-- ON o.customer_id = c.customer_id
+FROM customers c                     #Cannot use its original name once the column has an alias
+JOIN orders o
+    ON o.customer_id = c.customer_id
+```
+2. Joining across databases
+```sql
+SELECT *
 FROM order_items oi
-JOIN sql_inventory.products p        #Joining across databases
-	ON oi.product_id = p.product_id;
-
+JOIN sql_inventory.products p
+    ON oi.product_id = p.product_id;
+```
+3. Self join
+```sql
 USE sql_hr;
 SELECT e.employee_id, e.first_name, e.reports_to, m.first_name AS manager
 FROM employees e
-JOIN employees m                     #Self join, to find the manager
-	ON e.reports_to = m.employee_id;
-
-#The inner join only returns content that meets the join conditions, causing some content to be lost
-#To display these lost content, an outer join is required(left/right)
+JOIN employees m                      #Self join, to find the manager
+    ON e.reports_to = m.employee_id;
+```
+4. Outer join <br>
+  *The inner join only returns content that meets the join conditions, causing some content to be lost. To display these lost content, an outer join is required (left/right)*
+```sql
 USE sql_invoicing;
 SELECT *
 FROM clients c
 LEFT JOIN payments p
     USING (client_id)                       #If the column names are the same, use USING instead of ON
 LEFT JOIN payment_methods pm                #Join multiple tables
-	ON p.payment_method = pm.payment_method_id
+    ON p.payment_method = pm.payment_method_id
 LEFT JOIN invoices i            
-	ON c.client_id = i.client_id            #Compound Join Conditions
+    ON c.client_id = i.client_id            #Compound Join Conditions
     AND p.invoice_id = i.invoice_id         #In this case, the second condition is actually an inner join!!
 ORDER BY c.client_id;
-
-#With UNION, each query must contain the same columns, expressions and aggregation functions
+```
+5. Union <br>
+  *With UNION, each query must contain the same columns, expressions and aggregation functions*
+```sql
 SELECT customer_id, first_name, points, 'Bronze' AS type
 FROM customers
 WHERE points<2000
@@ -91,7 +104,7 @@ ORDER BY first_name;
 ```sql
 INSERT INTO customers
 VALUE(
-	DEFAULT,       #The customer_id column is Auto Incremental, use "last_insert_id()" to get the id of last insert
+    DEFAULT,       #The customer_id column is Auto Incremental, use "last_insert_id()" to get the id of last insert
     'John',
     'Smith',
     '1998-07-15',
@@ -102,7 +115,7 @@ VALUE(
     9980
     ),
     (              #Insert multiple rows
-	DEFAULT,
+    DEFAULT,
     'Michael',
     'Jackson',
     '1978-12-15',
