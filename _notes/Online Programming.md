@@ -22,12 +22,10 @@ author_profile: false
 ## Recursion (DFS)
 ### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
 1. Using macro definition to realize exchange：
-
 ```c
 #define swap (x,y,t) (t = x, x = y, y = t)
 ```
 2. Solution:
-
 ```c
 int count=0;
 char *tmp, *rec;
@@ -59,7 +57,6 @@ int main(){
 
 ### HJ43 迷宫问题 (Labyrinth problem)
 1. A template for such problem：
-
 ```c
 void dfs(int n, int m){
     maze[n][m]=1;               // Mark this position has been passed
@@ -76,13 +73,11 @@ void dfs(int n, int m){
     maze[n][m]=0;   // Restore step and mark (Whether backtracking is needed depends on the actual situation)
 }
 ```
-
 2. If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances.<br>
    - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops.
 
 ### HJ67 & HJ89 24点游戏 (24-point game)
 1. Use array "rec" to mark whether the number is used to achieve the full arrangement：
-
 ```c
 for(int j=0;j<4;j++){
     if(rec[j]==0){
@@ -97,7 +92,6 @@ for(int j=0;j<4;j++){
  }
 ```
 2. The end condition for the requirement to output the formula: ("i" starts from 0)
-
 ```c
 char* formu[9];      // Because input has the value of 10, a two-dimensional array is needed
 if (i == 4) {
