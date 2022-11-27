@@ -13,7 +13,7 @@ author_profile: false
  
 ## ✏️  Algorithm & Data Structure
 
-- [Online programming](/notes/OP)
+- [Online Programming](/notes/OP)
 
 ## 💻  Operating Systems
 
@@ -21,7 +21,7 @@ author_profile: false
 
 ## ☁️  Networking
 
-- [Device configuration](https://github.com/CyC2018/CS-Notes/blob/master/notes/HTTP.md)
+- [Device Configuration](https://github.com/CyC2018/CS-Notes/blob/master/notes/HTTP.md)
 - [Socket](https://github.com/CyC2018/CS-Notes/blob/master/notes/Socket.md)
 
 ## 💾  Databases
