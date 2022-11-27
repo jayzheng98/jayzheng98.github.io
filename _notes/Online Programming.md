@@ -142,7 +142,7 @@ bool match(char* str, char* str1) {
 
 ## Mathematics
 ### HJ50 四则运算
-**1. Solution:**
+**1.** Solution:
 
 ```c
 int i;
@@ -223,7 +223,7 @@ int gcd(int a, int b){
 
 ## Hash
 #### BM90 最小覆盖子串
-**1.Solution:**
+**1.** Solution:
 
 ```c
 char* minWindow(char* S, char* T ) {
@@ -267,7 +267,7 @@ for(int i=0;i<len;i++){
 
 ## Sort
 ### BM20 数组中的逆序对
-**1. Solution: merge sort**
+**1.** Solution: merge sort
 
 ```c
 static long P = 0;
@@ -308,7 +308,7 @@ int InversePairs(int* data, int dataLen ) {
 ```
 
 ### BM54 三数之和 （这道题的思想可能经常用到）
-**1. Solution:**
+**1.** Solution:
 
 ```c
 int** threeSum(int* num, int numLen) {
@@ -463,7 +463,7 @@ int depth(TreeNode *root) {
 ```
 
 ### BM40 重建二叉树
-**1.Solution:**
+**1.** Solution:
 
 ```c
 struct TreeNode* recur(int* xianxu, int* zhongxu, int Len){
@@ -502,9 +502,7 @@ typedef struct queue{
     int tail;
 }Queue;
 ```
-**2.** 创建：
-
-`Queue q;`
+**2.** 创建： `Queue q;`
 
 ## Others
 ## HJ30 字符串合并处理
