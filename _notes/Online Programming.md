@@ -376,7 +376,9 @@ for (int i = 1; i <= m; i++) {
 ```
 **2.** 状态转移4种情况（主、主附1、主附2、主附1附2）：
 
-`dp[j]=Max(dp[j], wei[i][0] + dp[j - val[i][0]]);    //买了这个商品剩下的钱能买到的满意度`
+```c
+dp[j]=Max(dp[j], wei[i][0] + dp[j - val[i][0]]);    //买了这个商品剩下的钱能买到的满意度
+```
 
 ### HJ24 合唱队  最少出队多少人构成山字形身高队形
 **1.** 以i为中心分别从左到右和从右到左找两边的最长上升子序列，最后记得多减一个！
@@ -428,7 +430,6 @@ typedef struct LinkNode{
 ```
 **2.** 创建一个节点：
 `LinkNode* p=malloc(sizeof(LinkNode));`
-**3.** 链表的查找都得从头节点开始
 
 ## Binary Tree
 ## BM26 二叉树层序遍历
@@ -509,7 +510,7 @@ typedef struct queue{
 **1.** switch()语句小技巧：
 
 ```c
-case 'a':              // 将执行和后一句一样的内容
+case 'a':                                // 将执行和后一句一样的内容
 case 'A': in[i]='5'; break;
 ```
 
@@ -521,15 +522,15 @@ void DeciToBina(int n, char* out) {
     int length=0;
     char a[8];
     while (n>=2) {
-        a[length++] = (n % 2) + '0';               //将除2得到的余数装入数组中
+        a[length++] = (n % 2) + '0';     //将除2得到的余数装入数组中
         n = n / 2;
     }
-    a[length++] = (n % 2) + '0';                   //存储最后一个余数
+    a[length++] = (n % 2) + '0';         //存储最后一个余数
     while(length<8){
         a[length++]='0';
     }
-    for (int i = length - 1, k=0; i >= 0; i--){    //将余数从下往上输出
-        out[k++] = a[i];
+    for (int i = length - 1, k=0; i >= 0; i--){  
+        out[k++] = a[i];                 //将余数从下往上输出
     }
 }
 ```
@@ -570,4 +571,6 @@ int ipToBina(char* in, char* out){
 ### JZ15 二进制中1的个数
 **1.** 将负数的补码视作原码以获取其对应的正数：
 
-`unsigned int tmp = (unsigned int) n;`
+```c
+unsigned int tmp = (unsigned int) n;
+```
