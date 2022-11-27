@@ -21,21 +21,25 @@ author_profile: false
 
 ## Recursion (DFS)
 ### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
-1. Using macro definition to realize exchange：#define swap (x,y,t) (t = x, x = y, y = t)
-2. Solution:
+1. Using macro definition to realize exchange：
+
+```c
+#define swap (x,y,t) (t = x, x = y, y = t)
+```
+3. Solution:
 
 ```c
 int count=0;
 char *tmp, *rec;
 char *out[];
 void dfs(char* s, int i, int len){
-    if (i == len) {     // End condition
+    if (i == len) {      // End condition
         strcpy(out[count++],tmp);
         return;
     }
     for (int j = 0; j < len; j++) {
         if (j > 0 && s[j] == s[j - 1] && rec[j - 1] == 0)
-            continue;      // Sorting can put the same numbers together so that you can skip them here
+            continue;    // Sorting can put the same numbers together so that you can skip them here
         if (rec[j] == 0) {
             rec[j] = 1;
             tmp[i] = s[j];
@@ -58,9 +62,9 @@ int main(){
 
 ```c
 void dfs(int n, int m){
-    maze[n][m]=1;    // Mark this position has been passed
+    maze[n][m]=1;               // Mark this position has been passed
     k++;
-    if(n==row-1 && m==col-1){    // End condition
+    if(n==row-1 && m==col-1){   // End condition
         …;
         return;
     }
@@ -69,13 +73,15 @@ void dfs(int n, int m){
     if(n-1>=0 && !maze[n-1][m])   dfs(n-1,m);
     if(m-1>=0 && !maze[n][m-1])   dfs(n,m-1);
     k--;
-    maze[n][m]=0;   // Restore step and mark (backtracking is not necessary, it depends on the actual problem)
+    maze[n][m]=0;   // Restore step and mark (Whether backtracking is needed depends on the actual situation)
 }
 ```
-2. If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances<br> ("BM57 Number of islands" needs to use loops to find '1' to define the entrance of an island. Every time we pass in a position in an island, '0' should be set first, but it cannot be restored to '1' after passing out! Otherwise, we would enter the same island multiple times during the loops.)
+2. If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances.<br>
+   - *"**BM57 Number of islands**" needs to use loops to find '1' to define the entrance of an island. Every time we pass in a position in an island, '0' should be set first, but it cannot be restored to '1' after passing out! Otherwise, we would enter the same island multiple times during the loops.)*
 
-### HJ67 & HJ89 24点游戏
-1. 通过辅助数组rec标记数字是否使用来实现全排列输入：
+### HJ67 & HJ89 24点游戏 (24-point game)
+1. Use array "rec" to mark whether the number is used to achieve the full arrangement：
+
 ```c
 for(int j=0;j<4;j++){
     if(rec[j]==0){
@@ -89,21 +95,23 @@ for(int j=0;j<4;j++){
     }
  }
 ```
-2. 要求输出公式时的结束条件（i从0开始）： 
+2. The end condition for the requirement to output the formula: ("i" starts from 0)
+
 ```c
-char* formu[9]; //因为输入有10所以定义二维的，判断字符也要变成用strcmp判断字符串，很烦人
+char* formu[9];      // Because input has the value of 10, a two-dimensional array is needed
 if (i == 4) {
     if (calc == 24) {
-        if (!strcmp(formu[0], "+")) {
+        if (!strcmp(formu[0], "+")) {      // Elements in array are no longer "char" but "string"
             flag = 1;
-            for (int l = 1; l < k; l++) {
-                printf("%s", formu[l]); // 不要第一个符号
+            for (int l = 1; l < k; l++) {  // Skip the first operator
+                printf("%s", formu[l]); 
             }
        }
     }
     return;
 }
 ```
+
 ### HJ71 字符串通配符（记录isdigit和isalpha）
 1. malloc定义的数组a可以用*a++访问，但不能用其赋值（++会让指针位置变化，细想一下就知道为啥不行了）；a[n]定义的数组无法用*a++访问和赋值
 2. 两种方式定义的数组均可用*(a+i)来访问和赋值
