@@ -21,7 +21,8 @@ author_profile: false
 
 ## Recursion (DFS)
 ### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
-**1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)` <br>
+**1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)` 
+
 **2.** Solution:
 
 ```c
@@ -201,13 +202,8 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){
 **1.** Output the *float* variable with specified number of decimals, like 2: `printf("%.2f", i);`
 
 ### HJ108 求最小公倍数
-**1.** 求a和b的最大公约数：
-
-```c
-int gcd(int a, int b){
-   return b == 0 ? a : gcd(b, a%b);
-}
-```
+**1.** 求a和b的最大公约数：`int gcd(int a, int b){   return b == 0 ? a : gcd(b, a%b); }`
+ 
 **2.** 最小公倍数为a\*b除以最大公约数
 
 ### JZ14 剪绳子
