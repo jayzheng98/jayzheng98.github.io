@@ -21,10 +21,10 @@ author_profile: false
 
 ## Recursion (DFS)
 ### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
-**1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)`
+**1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)` <br>
 **2.** Solution:
 
-```
+```c
 int count=0;
 char *tmp, *rec;
 char *out[];
