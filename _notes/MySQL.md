@@ -87,6 +87,7 @@ ORDER BY c.client_id;
 ```
 **5. Union** <br>
  - *With UNION, each query must contain the same columns, expressions and aggregation functions*
+ - *This snippet is optimized in [Chapt 7](#chapt7-built\-in-function)*
 
 ```sql
 SELECT customer_id, first_name, points, 'Bronze' AS type
@@ -101,7 +102,6 @@ SELECT customer_id, first_name, points, 'Gold' AS type
 FROM customers
 WHERE points>3000
 ORDER BY first_name;
-#This snippet is optimized in Chapt 7
 ```
 
 ## Chapt.4 Column Operation
