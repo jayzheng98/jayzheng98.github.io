@@ -58,7 +58,8 @@ int main(){
 ```
 
 ### HJ43 迷宫问题 (Labyrinth problem)
-1. A template for such problem:
+**1.** A template for such problem:
+
 ```c
 void dfs(int n, int m){
     maze[n][m]=1;               // Mark this position has been passed
@@ -75,11 +76,12 @@ void dfs(int n, int m){
     maze[n][m]=0;   // Restore step and mark (Whether backtracking is needed depends on the actual situation)
 }
 ```
-2. If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances.<br>
+**2.** If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances.<br>
       - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops.
 
 ### HJ67 & HJ89 24点游戏 (24-point game)
-1. Use array "rec" to mark whether the number is used to achieve the full arrangement：
+**1.** Use array "rec" to mark whether the number is used to achieve the full arrangement：
+
 ```c
 for(int j=0;j<4;j++){
     if(rec[j]==0){
@@ -93,7 +95,8 @@ for(int j=0;j<4;j++){
     }
  }
 ```
-2. The end condition for the requirement to output the formula: ("i" starts from 0)
+**2.** The end condition for the requirement to output the formula: ("i" starts from 0)
+
 ```c
 char* formu[9];      // Because input has the value of 10, a two-dimensional array is needed
 if (i == 4) {
@@ -110,8 +113,9 @@ if (i == 4) {
 ```
 
 ### HJ71 字符串通配符（记录isdigit和isalpha）
-1. malloc定义的数组a可以用*a++访问，但不能用其赋值（++会让指针位置变化，细想一下就知道为啥不行了）；a[n]定义的数组无法用*a++访问和赋值
-2. 两种方式定义的数组均可用*(a+i)来访问和赋值
+**1.** malloc定义的数组a可以用*a++访问，但不能用其赋值（++会让指针位置变化，细想一下就知道为啥不行了）；a[n]定义的数组无法用*a++访问和赋值
+**2.** 两种方式定义的数组均可用*(a+i)来访问和赋值
+
 ```c
 bool match(char* str, char* str1) {
     if (*str == '\0' && *str1 == '\0') //同时结束,返回true
@@ -137,12 +141,13 @@ bool match(char* str, char* str1) {
 ```
 
 ## Mathematics
-HJ50 四则运算
-int i;  //全局变量
+### HJ50 四则运算
+```c
+int i;
 int calc(char* in, int len) {
     char flag = '+';
-int stack[40];
-int tmp = 0, out = 0, top=-1;
+    int stack[40];
+    int tmp = 0, out = 0, top=-1;
     while (i < len) {
         tmp = 0;
         if(in[i]=='-')
@@ -164,10 +169,15 @@ int tmp = 0, out = 0, top=-1;
         flag = in[i++];
     }
     for (int j = 0; j <= top; j++) {
-        out += stack[j];            }
-    return out; }
-HJ82 埃及分数分解
-1. 可以用scanf直接将字符数字变成整型数字
+        out += stack[j];
+    }
+    return out;
+}
+```
+### HJ82 埃及分数分解
+**1.** 可以用scanf直接将字符数字变成整型数字
+
+```c
 while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){
      while(fz!=1){
          if(fm%fz==0){
@@ -179,7 +189,9 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){
          fz-=y;
          fm*=x+1;
      }
-     printf("1/%lld\n",fm);    }
+     printf("1/%lld\n",fm);
+}
+```
 HJ107 求解立方根
 1. 输出指定位数的浮点型（小数点后两位）：
 printf("%.2f", i);
