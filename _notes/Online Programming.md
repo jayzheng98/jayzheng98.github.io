@@ -21,12 +21,13 @@ author_profile: false
 
 ## Recursion (DFS)
 ### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
-1. Using macro definition to realize exchange：<br>
+1. Using macro definition to realize exchange:
+
  ```c
 #define swap (x,y,t) (t = x, x = y, y = t)
 ```
 2. Solution:
- ```c
+```c
 int count=0;
 char *tmp, *rec;
 char *out[];
@@ -56,7 +57,7 @@ int main(){
 ```
 
 ### HJ43 迷宫问题 (Labyrinth problem)
-1. A template for such problem：
+1. A template for such problem:
 ```c
 void dfs(int n, int m){
     maze[n][m]=1;               // Mark this position has been passed
@@ -91,7 +92,6 @@ for(int j=0;j<4;j++){
     }
  }
 ```
-
 2. The end condition for the requirement to output the formula: ("i" starts from 0)
 ```c
 char* formu[9];      // Because input has the value of 10, a two-dimensional array is needed
