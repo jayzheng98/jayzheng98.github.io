@@ -21,7 +21,7 @@ author_profile: false
 
 ## Recursion (DFS)
 ### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
-**1.** Using macro definition to realize exchange:
+**1.** Using *macro definition* to realize exchange:
 
 ```c
 #define swap (x,y,t) (t = x, x = y, y = t)
@@ -76,7 +76,7 @@ void dfs(int n, int m){
     maze[n][m]=0;   // Restore step and mark (Whether backtracking is needed depends on the actual situation)
 }
 ```
-**2.** If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances.
+**2.** If the entrance is not unique, use *for loops* (usually 2) in the main func to traverse all the entrances.
  - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops.
 
 ### HJ67 & HJ89 24点游戏 (24-point game)
@@ -202,7 +202,7 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){
 ```
 
 ### HJ107 求解立方根
-**1.** 输出指定位数的浮点型（小数点后两位）：
+**1.** Output the *float* variable with specified number of decimals, like 2:
 
 `printf("%.2f", i);`
 
@@ -217,12 +217,10 @@ int gcd(int a, int b){
 **2.** 最小公倍数为a\*b除以最大公约数
 
 ### JZ14 剪绳子
-**1.** 整数N除以M，向上取整：
-
-`int res = (N - 1) / M + 1;`
+**1.** 整数N除以M，向上取整： `int res = (N - 1) / M + 1;`
 
 ## Hash
-#### BM90 最小覆盖子串
+### BM90 最小覆盖子串
 **1.** Solution:
 
 ```c
@@ -267,7 +265,7 @@ for(int i=0;i<len;i++){
 
 ## Sort
 ### BM20 数组中的逆序对
-**1.** Solution: merge sort
+**1.** Solution: Merge sort
 
 ```c
 static long P = 0;
@@ -376,9 +374,7 @@ for (int i = 1; i <= m; i++) {
 ```
 **2.** 状态转移4种情况（主、主附1、主附2、主附1附2）：
 
-```c
-dp[j]=Max(dp[j], wei[i][0] + dp[j - val[i][0]]);    //买了这个商品剩下的钱能买到的满意度
-```
+`dp[j]=Max(dp[j], wei[i][0] + dp[j - val[i][0]]);    //买了这个商品剩下的钱能买到的满意度`
 
 ### HJ24 合唱队  最少出队多少人构成山字形身高队形
 **1.** 以i为中心分别从左到右和从右到左找两边的最长上升子序列，最后记得多减一个！
@@ -503,7 +499,7 @@ typedef struct queue{
     int tail;
 }Queue;
 ```
-**2.** 创建： `Queue q;`
+**2.** Create with： `Queue q;`
 
 ## Others
 ## HJ30 字符串合并处理
@@ -562,15 +558,13 @@ int ipToBina(char* in, char* out){
 
 ### HJ77 火车进站
 **1.** 字典序：转换成字符串后用qsort+strcmp实现，cmp：
-- char arr[n][m] :        `return strcmp((char*)a, (char*)b);`
+- char arr\[n]\[m] :      `return strcmp((char*)a, (char*)b);`
 - char** arr=calloc(…) :  `return strcmp(*(char**)a, *(char**)b);`
 
 ### HJ94 记票统计
 **1.** 可以用getchar()丢弃一个不需要的输入字符！
 
 ### JZ15 二进制中1的个数
-**1.** 将负数的补码视作原码以获取其对应的正数：
+**1.** Treat the *complement* of a negative number as the *true form* to obtain its corresponding positive number:
 
-```c
-unsigned int tmp = (unsigned int) n;
-```
+`unsigned int tmp = (unsigned int) n;`
