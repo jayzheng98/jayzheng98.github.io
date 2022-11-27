@@ -26,7 +26,7 @@ author_profile: false
 ```c
 #define swap (x,y,t) (t = x, x = y, y = t)
 ```
-3. Solution:
+2. Solution:
 
 ```c
 int count=0;
@@ -76,8 +76,9 @@ void dfs(int n, int m){
     maze[n][m]=0;   // Restore step and mark (Whether backtracking is needed depends on the actual situation)
 }
 ```
+
 2. If the entrance is not unique, use "for" loops (usually 2) in the main func to traverse all the entrances.<br>
-   - *"**BM57 Number of islands**" needs to use loops to find '1' to define the entrance of an island. Every time we pass in a position in an island, '0' should be set first, but it cannot be restored to '1' after passing out! Otherwise, we would enter the same island multiple times during the loops.)*
+   - ***BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops.)*
 
 ### HJ67 & HJ89 24点游戏 (24-point game)
 1. Use array "rec" to mark whether the number is used to achieve the full arrangement：
