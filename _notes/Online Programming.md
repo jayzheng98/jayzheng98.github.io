@@ -8,26 +8,28 @@ author_profile: false
 
 <!-- GFM-TOC -->
 * Categories
-    * [1. Recursion (DFS)](#recursion-(dfs))
+    * [1. Recursion (DFS)](#recursion-dfs)
     * [2. Mathematics](#mathematics)
     * [3. Hash](#hash)
     * [4. Sort](#sort)
     * [5. DP](#dp)
     * [6. Linked List](#linked-list)
     * [7. Binary Tree](#binary-tree)
-    * [8. Stack & Queue](#stack-&-queue)
+    * [8. Stack & Queue](#stack--queue)
     * [9. Others](#others)
 <!-- GFM-TOC -->
 
 ## Recursion (DFS)
-BM56 有重复项数字的全排列
+### BM56 有重复项数字的全排列
 1. 宏定义交换：#define swap (x,y,t) (t = x, x = y, y = t)
+```c
 int count=0;
 char *out, *rec;
 void dfs(char* s, int i, int len){
     if (i == len) {//收集到一种情况
         count++;
-        return;   }
+        return;
+    }
     for (int j = 0; j < len; j++) {
         if (j > 0 && s[j] == s[j - 1] && rec[j - 1] == 0)
             continue;  //这个数字和前一个数字相等，不再重复使用
@@ -35,7 +37,8 @@ void dfs(char* s, int i, int len){
             rec[j] = 1;
             out[i] = s[j];
             dfs(s, i + 1, len);
-            rec[j] = 0;  }
+            rec[j] = 0;
+        }
     }
 }
 int main(){
@@ -43,24 +46,33 @@ int main(){
     scanf("%s",s);
     qsort(s,strlen(s),sizeof(char),cmp); // 排序是关键！！在此cmp省略
     dfs(s,0,strlen(s));
-    …  }
-HJ43 迷宫问题
+    …  
+}
+```
+
+### HJ43 迷宫问题
 1. 基础模板：
+```c
 void dfs(int n, int m){
     maze[n][m]=1; // 标记走过
     k++;
     if(n==row-1 && m==col-1){
         …;
-        return;    }
+        return;
+    }
     if(n+1<row && !maze[n+1][m])  dfs(n+1,m);
     if(m+1<col && !maze[n][m+1])  dfs(n,m+1);
     if(n-1>=0 && !maze[n-1][m])  dfs(n-1,m);
     if(m-1>=0 && !maze[n][m-1])  dfs(n,m-1);
     k--;   // 退出来了，步数和标记还原（迷宫问题好像不需要还原标记？但最好还是还原一下）
-maze[n][m]=0; }
+    maze[n][m]=0; 
+}
+```
 2. 若入口不唯一，则要在main中用for循环（一般是两个）遍历所有入口（BM57 岛屿数量也要用循环判断’1’来寻找每一个岛屿的入口，每递进一个岛屿位置后先要清’0’，但递出后不能还原！因为那道题递归的作用是把岛屿清零，不需要回溯）
-HJ67&HJ89 24点游戏
+
+### HJ67 & HJ89 24点游戏
 1. 通过辅助数组rec标记数字是否使用来实现全排列输入：
+```c
 for(int j=0;j<4;j++){
     if(rec[j]==0){
         rec[j]=1;
@@ -69,9 +81,12 @@ for(int j=0;j<4;j++){
         dfs(in,i+1,calc-in[j]);
         dfs(in,i+1,calc*in[j]);
         dfs(in,i+1,calc/in[j]);
-        rec[j]=0;    }
+        rec[j]=0;
+    }
  }
+```
 2. 要求输出公式时的结束条件（i从0开始）： 
+```c
 char* formu[9]; //因为输入有10所以定义二维的，判断字符也要变成用strcmp判断字符串，很烦人
 if (i == 4) {
     if (calc == 24) {
@@ -80,12 +95,15 @@ if (i == 4) {
             for (int l = 1; l < k; l++) {
                 printf("%s", formu[l]); // 不要第一个符号
             }
-  }
-  }
-return;  }
-HJ71 字符串通配符（记录isdigit和isalpha）
+       }
+    }
+    return;
+}
+```
+### HJ71 字符串通配符（记录isdigit和isalpha）
 1. malloc定义的数组a可以用*a++访问，但不能用其赋值（++会让指针位置变化，细想一下就知道为啥不行了）；a[n]定义的数组无法用*a++访问和赋值
 2. 两种方式定义的数组均可用*(a+i)来访问和赋值
+```c
 bool match(char* str, char* str1) {
     if (*str == '\0' && *str1 == '\0') //同时结束,返回true
         return true;
@@ -93,9 +111,11 @@ bool match(char* str, char* str1) {
         return false;
     if (*str == *str1 || abs(*str - *str1) == 32) {
         return match(str + 1, str1 + 1);
-    } else if (*str == '?' && (isdigit(*str1) || isalpha(*str1))){
+    }
+    else if (*str == '?' && (isdigit(*str1) || isalpha(*str1))){
         return match(str + 1, str1 + 1);
-    } else if (*str == '*' && (isdigit(*str1) || isalpha(*str1))) {
+    } 
+    else if (*str == '*' && (isdigit(*str1) || isalpha(*str1))) {
         //匹配0个str+1,str1不动，匹配1个str和str1都前移1位，匹配多个str不动，str+1
         while (*str == '*') { //多个*和一个*效果相同
             str++;
@@ -103,7 +123,9 @@ bool match(char* str, char* str1) {
         str--;
         return match(str + 1, str1) || match(str + 1, str1 + 1) || match(str, str1 + 1);
     }
-    return false; }
+    return false;
+}
+```
 
 ## Mathematics
 HJ50 四则运算
