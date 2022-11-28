@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "郑中一<br>Zhongyi Zheng"
+  name             : <font size="6">Zhongyi Zheng</font>
   avatar           : "11.jpg"
-  bio              : <br>
+  bio              : <br><br>
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" alt="C++" title="C++">
                      <img width="25" src="https://www.kindpng.com/picc/m/11-118738_php-logo-png-circle-transparent-png.png" alt="PHP" title="PHP">
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python" title="Python">
