@@ -2,7 +2,7 @@
 title: "Verification and recurrence of ***** vulnerability in China Urban Rail Transit"
 collection: projects
 permalink: /projects/project1
-excerpt: "CNNVD-202204-3571"
+excerpt: "*The project has been submitted to [China National Vulnerability Database of Information Security](https://www.cnnvd.org.cn/home/childHome), numbered: CNNVD-202204-3571*"
 date: 2021-09-22
 ---
 
