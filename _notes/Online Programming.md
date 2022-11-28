@@ -209,7 +209,7 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){  // Use "scanf" to directly c
 ### HJ108 Find the least common multiple (求最小公倍数)
 **1.** Find the greatest common divisor of "a" and "b": `int gcd(int a, int b){   return b == 0 ? a : gcd(b, a%b); }`
  
-**2.** The least common multiple = (a\*b) / gcd(a,b)
+**2.** The least common multiple: `(a*b) / gcd(a,b)`
 
 ### JZ14 Cut a rope (剪绳子)
 **Description:** For example, when the length of the rope is 8, we cut it into three sections with lengths of 2, 3, 3 to get the maximum product 18
