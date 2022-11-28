@@ -238,7 +238,7 @@ char* minWindow(char* S, char* T ) {
                 k=l;
             }
             if(map[S[l]]==0)
-                lent++;     // This an element that needs to be included, which means narrowing is completed. So we can end the "while(!lent)"
+                lent++;     // This is an element that needs to be included, which means narrowing is completed. So we can end the "while(!lent)"
             hash[S[l]]++;
             l++;
         }
