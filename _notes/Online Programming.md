@@ -20,12 +20,12 @@ author_profile: false
 <!-- GFM-TOC -->
 
 ## Recursion (DFS)
-### BM56 有重复项数字的全排列 (Full arrangement of numbers with duplicates) 
+### BM56 Full arrangement of numbers with duplicates (有重复项数字的全排列) 
 **1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)` 
 
 **2.** Solution:
 
-<pre name="code" class="c">
+```c
 int count=0;
 char *tmp, *rec;
 char *out[];
@@ -48,13 +48,13 @@ void dfs(char* s, int i, int len){
 int main(){
     …
     scanf("%s",s);
-    qsort(s,strlen(s),sizeof(char),cmp);    // Sorting is the key! The cmp function is omitted here
+    qsort(s,strlen(s),sizeof(char),cmp);    // Sorting is the key! The "cmp" function is omitted here
     dfs(s,0,strlen(s));
     …  
 }
-</pre>
+```
 
-### HJ43 迷宫问题 (Labyrinth problem)
+### HJ43 Labyrinth problem (迷宫问题)
 **1.** A template for such problem:
 
 ```c
@@ -76,7 +76,7 @@ void dfs(int n, int m){
 **2.** If the entrance is not unique, use *for loops* (usually 2) in the main func to traverse all the entrances.
  - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops.
 
-### HJ67 & HJ89 24点游戏 (24-point game)
+### HJ67 & HJ89 24-point game (24点游戏)
 **1.** Use array "rec" to mark whether the number is used to achieve the full arrangement：
 
 ```c
@@ -109,15 +109,18 @@ if (i == 4) {
 }
 ```
 
-### HJ71 字符串通配符（记录isdigit和isalpha）
-**1.** malloc定义的数组a可以用\*a++访问，但不能用其赋值（++会让指针位置变化，细想一下就知道为啥不行了）；a[n]定义的数组无法用\*a++访问和赋值
-**2.** 两种方式定义的数组均可用\*(a+i)来访问和赋值
+### HJ71 String wildcard (字符串通配符)
+**1.** A confusible point in C:
+  - Elements in an array defined by *malloc*, can be accessed with "\*a++", but cannot be assigned with it. ("++" will change the position of the pointer)
+  - Elements in an array defined by *a[n]*, cannot be accessed and assigned with \*a++.
+  - Elements in arrays defined in both ways above can be accessed and assigned with \*(a+i).
+**2.** Solution:
 
 ```c
 bool match(char* str, char* str1) {
-    if (*str == '\0' && *str1 == '\0') //同时结束,返回true
+    if (*str == '\0' && *str1 == '\0')     // End at the same time, return true
         return true;
-    if (*str == '\0' || *str1 == '\0') //有一个先结束，返回false
+    if (*str == '\0' || *str1 == '\0')     // One ends first, return false
         return false;
     if (*str == *str1 || abs(*str - *str1) == 32) {
         return match(str + 1, str1 + 1);
@@ -126,19 +129,19 @@ bool match(char* str, char* str1) {
         return match(str + 1, str1 + 1);
     } 
     else if (*str == '*' && (isdigit(*str1) || isalpha(*str1))) {
-        //匹配0个str+1,str1不动，匹配1个str和str1都前移1位，匹配多个str不动，str+1
-        while (*str == '*') { //多个*和一个*效果相同
+        while (*str == '*') {              // Multiple "*" are equivalent to one "*"
             str++;
         }
         str--;
-        return match(str + 1, str1) || match(str + 1, str1 + 1) || match(str, str1 + 1);
+        return match(str + 1, str1) || match(str + 1, str1 + 1) || match(str, str1 + 1); 
+        // 0 matched: str+1, str1 fixed; 1 matched: str+1, str1+1; Multiple matched: str fixed, str+1
     }
     return false;
 }
 ```
 
 ## Mathematics
-### HJ50 四则运算
+### HJ50 Arithemetic (四则运算)
 **1.** Solution:
 
 ```c
@@ -177,12 +180,14 @@ int calc(char* in, int len) {
     return out;
 }
 ```
+ 
+### HJ82 Decompose true fraction into Egyptian fractions (埃及分数分解)
+**Description:** For example, 8/11 = 1/2 + 1/5 + 1/55 + 1/110
 
-### HJ82 埃及分数分解
-**1.** 可以用scanf直接将字符数字变成整型数字
+**1.** Solution:
 
 ```c
-while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){
+while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){  // Use "scanf" to directly change "char" into "int"
      while(fz!=1){
          if(fm%fz==0){
              fm/=fz;
@@ -198,19 +203,21 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){
 }
 ```
 
-### HJ107 求解立方根
+### HJ107 Calculate cube root (求解立方根)
 **1.** Output the *float* variable with specified number of decimals, like 2: `printf("%.2f", i);`
 
-### HJ108 求最小公倍数
-**1.** 求a和b的最大公约数：`int gcd(int a, int b){   return b == 0 ? a : gcd(b, a%b); }`
+### HJ108 Find the least common multiple (求最小公倍数)
+**1.** Find the greatest common divisor of "a" and "b": `int gcd(int a, int b){   return b == 0 ? a : gcd(b, a%b); }`
  
-**2.** 最小公倍数为a\*b除以最大公约数
+**2.** The least common multiple = (a\*b) / gcd(a,b)
 
-### JZ14 剪绳子
-**1.** 整数N除以M，向上取整： `int res = (N - 1) / M + 1;`
+### JZ14 Cut a rope (剪绳子)
+**Description:** For example, when the length of the rope is 8, we cut it into three sections with lengths of 2, 3, 3 to get the maximum product 18
+
+**1.** "N" divided by "M" and rounded up: `int res = (N - 1) / M + 1;`
 
 ## Hash
-### BM90 最小覆盖子串
+### BM90 Minimum window substring(最小覆盖子串)
 **1.** Solution:
 
 ```c
@@ -222,23 +229,23 @@ char* minWindow(char* S, char* T ) {
     }
     while(r<lens){
         if(hash[S[r]]>0)
-            lent--; //匹配到一个
+            lent--;         // 1 matched
         hash[S[r]]--;
         r++;
-        while(!lent){ //全部出现了，缩左界（此时hash里面只有待匹配字符位置为0，其他为负）
+        while(!lent){       // All matched, narrow the left bound (at this time in "hash", only values of the characters to be matched are 0, others are negative)
             if(out>r-l){
-                out=r-l;  //记录子串长度及开始位置
+                out=r-l;    // Record length "r-l" and start position "l" of the substring
                 k=l;
             }
             if(map[S[l]]==0)
-                lent++; //该位置是需要包含的元素，缩界完成，结束循环
+                lent++;     // This an element that needs to be included, which means narrowing is completed. So we can end the "while(!lent)"
             hash[S[l]]++;
             l++;
         }
     }
-    if(out==lens+1) //没匹配完全
+    if(out==lens+1)        // Matching is incomplete
         return "";
-    S[k+out]='\0'; //直接结束字符串，准备返回字串
+    S[k+out]='\0';         // End the string and prepare for the "return"
     return &S[k];
 }
 ```
