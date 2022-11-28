@@ -82,7 +82,11 @@ analytics:
 author:
   name             : "Zhongyi Zheng"
   avatar           : "11.jpg"
-  bio              : "\t Acute \n\t Assiduous \n\t Curious \n\t Tough \n"
+  bio              : |
+   Acute
+   Assiduous
+   Curious
+   Tough
   location         : "Chengdu"
   employer         :
   pubmed           : 
