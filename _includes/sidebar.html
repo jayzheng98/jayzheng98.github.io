@@ -13,7 +13,7 @@
           "{{ s.image | prepend: "/images/" | prepend: base_path }}"
         {% endif %}
         alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}"
-        width="{% if s.image_width %}{{ s.image_width }}{% endif %}">
+        width="25">
       {% endif %}
       {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
