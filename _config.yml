@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Zhongyi Zheng"
   avatar           : "11.jpg"
-  bio              : Acute Assiduous Curious Tough
+  bio              : "Acute \n\n Assiduous Curious Tough"
   location         : "Chengdu"
   employer         :
   pubmed           : 
@@ -187,6 +187,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   notes:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
 
