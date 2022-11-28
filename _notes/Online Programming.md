@@ -25,7 +25,7 @@ author_profile: false
 
 **2.** Solution:
 
-```c
+<pre name="code" class="c">
 int count=0;
 char *tmp, *rec;
 char *out[];
@@ -52,7 +52,7 @@ int main(){
     dfs(s,0,strlen(s));
     …  
 }
-```
+</pre>
 
 ### HJ43 迷宫问题 (Labyrinth problem)
 **1.** A template for such problem:
