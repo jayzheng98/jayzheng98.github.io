@@ -497,22 +497,21 @@ typedef struct LinkNode{
 **3.** If the head node of the linked list is unknown, use the value of targeted node's next node to cover the value of targeted node, and then remove its next node
 
 ## Binary Tree
-## BM26 二叉树层序遍历
-**1.** 前序遍历的变种，分层存放前序遍历的结果。递归参数要传递层数，输出数组也变二维
+## BM26 Binary tree level order traversal (二叉树层序遍历)
+**1.** It is a variation of preorder traversal, that is, the results of preorder traversal are stored hierarchically
 
 ```c
-void levelorder(int level, struct TreeNode* root, int** out, int** rs){
-    if(root==NULL)
+void levelorder(struct TreeNode* root, int level, int** out, int* arrlevel){  // Recursive parameters need to include the current level of the tree
+    if(root == NULL)
         return;
     if(level>=k){
-        out[level]=calloc(100, sizeof(int));
+        out[level]=calloc(1000,sizeof(int));                                  // The output array also becomes two-dimensional
         k++;
     }
-    int* i=&out[level][(*rs)[level]];
-    *i++=root->val;
-    (*rs)[level]++;
-    levelorder(level+1, root->left, out, rs);
-    levelorder(level+1, root->right, out, rs);
+
+    out[level][arrlevel[level]++]=root->val;
+    levelorder(root->left, level+1, out, arrlevel);
+    levelorder(root->right, level+1, out, arrlevel);
 }
 ```
 
