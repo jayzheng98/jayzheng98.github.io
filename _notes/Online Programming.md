@@ -465,11 +465,12 @@ for(int i=0;i<len;i++){
 ```
 
 ## Linked List
-### BM2 链表内指定区间反转
-**1.** 养成用一个空头结点记录链表的好习惯（遇到首尾节点反转时不会出错）
+### BM2 Reverse between specified range in linked list (链表内指定区间反转)
+**1.** Develop the habit of using a null node to indicate the linked list (In case the first and last node need to be reversed)
 
+**2.** Solution: The position of "pre" and "cur" actually don't change, and constantly insert "new" between "pre" and "cur"
 ```c
-while(n-m){ // pre和cur位置不移动，相当于不停地把new插到pre和cur之间
+while(n-m){ 
      new=cur->next;
      cur->next=new->next;
      new->next=pre->next;
@@ -478,11 +479,11 @@ while(n-m){ // pre和cur位置不移动，相当于不停地把new插到pre和cu
 }
 ```
 
-### BM9 删除链表的倒数第n个节点
-**1.** 快指针先走n步，然后快慢指针一起出发实现对倒数第n的定位
+### BM9 Remove the nth node from the bottom of a linked list (删除链表的倒数第n个节点)
+**1.** Solution: The fast pointer moves n steps first, then the slow pointer starts. When the fast pointer points to NULL, the slow pointer points to the nth node from the bottom of the linked list.
 
-### HJ48 从单向链表中删除指定值的节点
-**1.** 定义：
+### HJ48 Remove the specified node from a one-way linked list (从单向链表中删除指定值的节点)
+**1.** Definition of the node：
 
 ```c
 typedef struct LinkNode{
@@ -490,8 +491,10 @@ typedef struct LinkNode{
     struct LinkNode* next;
 }LinkNode;
 ```
-**2.** 创建一个节点：
+**2.** Create a node：
 `LinkNode* p=malloc(sizeof(LinkNode));`
+
+**3.** If the head node of the linked list is unknown, use the value of targeted node's next node to cover the value of targeted node, and then remove its next node
 
 ## Binary Tree
 ## BM26 二叉树层序遍历
