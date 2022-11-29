@@ -480,7 +480,7 @@ while(n-m){
 ```
 
 ### BM9 Remove the nth node from the bottom of a linked list (删除链表的倒数第n个节点)
-**1.** Solution: The fast pointer moves n steps first, then the slow pointer starts. When the fast pointer points to NULL, the slow pointer points to the nth node from the bottom of the linked list.
+**1.** Solution: The *fast pointer* moves n steps first, then the *slow pointer* starts. When the fast pointer points to *NULL*, the slow pointer points to the nth node from the bottom of the linked list.
 
 ### HJ48 Remove the specified node from a one-way linked list (从单向链表中删除指定值的节点)
 **1.** Definition of the node：
@@ -498,9 +498,10 @@ typedef struct LinkNode{
 
 ## Binary Tree
 ## BM26 Binary tree level order traversal (二叉树层序遍历)
-**1.** It is a variation of preorder traversal, that is, the results of preorder traversal are stored hierarchically
+**1.** It is a variation of *preorder traversal*, that is, the results of preorder traversal are stored hierarchically
 
 ```c
+static int k=0;
 void levelorder(struct TreeNode* root, int level, int** out, int* arrlevel){  // Recursive parameters need to include the current level of the tree
     if(root == NULL)
         return;
@@ -515,19 +516,20 @@ void levelorder(struct TreeNode* root, int level, int** out, int* arrlevel){  //
 }
 ```
 
-### BM36 判断是不是平衡二叉树
-**1.** 求树的高度：
+### BM36 Balanced Binary Tree (判断是不是平衡二叉树)
+**1.** Calculate the depth of a tree:
 
 ```c
 int depth(TreeNode *root) {
-    if (!root) return 0;
+    if (!root) 
+        return 0;
     int ldep = depth(root->left);
     int rdep = depth(root->right);
     return fmax(ldep, rdep) + 1;
 }
 ```
 
-### BM40 重建二叉树
+### BM40 Reconstruct binary tree (重建二叉树)
 **1.** Solution:
 
 ```c
@@ -557,82 +559,82 @@ struct TreeNode* recur(int* xianxu, int* zhongxu, int Len){
 ```
 
 ## Stack & Queue
-### BM45 滑动窗口的最大值
-**1.** 队列比较适合于滑动窗口的维护（实际上就是一个有双指针的数组），定义：
+### BM45 Maximum in sliding window (滑动窗口的最大值)
+**1.** The queue is quite suitable for the maintenance of sliding window (A queue actually is an array with 2 pointers)
+
+**2.** Definition of the queue:
 
 ```c
 typedef struct queue{
     int data[MAX];
-    int head;          //在左边
+    int head;
     int tail;
 }Queue;
 ```
-**2.** Create with： `Queue q;`
+**3.** Create a queue： `Queue q;`
 
 ## Others
-## HJ30 字符串合并处理
-**1.** switch()语句小技巧：
+## HJ30 String merging (字符串合并处理)
+**1.** Tips of *switch()*: 
 
 ```c
-case 'a':                                // 将执行和后一句一样的内容
+case 'a':                           // It will execute the same as the next "case" 
 case 'A': in[i]='5'; break;
 ```
 
-### HJ33 整数与IP地址间的转换
-**1.** 十进制转八位二进制：
+### HJ33 Conversion between integer and IP address (整数与IP地址间的转换)
+**1.** Convert decimal to binary (8-bit):
 
 ```c
-void DeciToBina(int n, char* out) {
+void DeciToBina(int n, int* out) {
     int length=0;
-    char a[8];
-    while (n>=2) {
-        a[length++] = (n % 2) + '0';     //将除2得到的余数装入数组中
+    int a[8];
+    while (n>0) {
+        a[length++] = (n % 2);
         n = n / 2;
     }
-    a[length++] = (n % 2) + '0';         //存储最后一个余数
     while(length<8){
-        a[length++]='0';
+        a[length++]=0;              // Fill with "0"
     }
     for (int i = length - 1, k=0; i >= 0; i--){  
-        out[k++] = a[i];                 //将余数从下往上输出
+        out[k++] = a[i];            // Output the remainders in reverse order
     }
 }
 ```
-**2.** IP地址转32位二进制
+**2.** Convert IP address to binary (32-bit):
 
 ```c
-int ipToBina(char* in, char* out){
+void IPToBina(char* in, int* out){
     int tmp=0, count=0, c=0;
-    char* ip[4];
+    int* ip[4];
     for(int j=0;j<=strlen(in);j++){
-        if(in[j]!='.' && in[j]>='0' && in[j]<='9')
+        if(in[j]!='.' && isdigit(in[j]))
             tmp=tmp*10 + in[j]-'0';
         else if(in[j]=='.' || j==strlen(in)){
-            ip[count]=calloc(8, sizeof(char));
+            ip[count]=calloc(8, sizeof(int));
             DeciToBina(tmp, ip[count++]);
             tmp=0;
         }
-        else               //其他特殊字符
-            return 1;
     }
     for(int a=0;a<4;a++){
         for(int b=0;b<8;b++){
             out[c++]= ip[a][b];
         }
     }
-    return 0;
 }
 ```
 
-### HJ77 火车进站
-**1.** 字典序：转换成字符串后用qsort+strcmp实现，cmp：
+### HJ77 Trains pull in (火车进站)
+**Description:** Enter a line of positive integers to be *pushed*, output all schemes of *popping* in dictionary order
+
+**1.** Dictionary order: Achieved by *qsort* and *strcmp*
 - char arr\[n]\[m] :      `return strcmp((char*)a, (char*)b);`
 - char** arr=calloc(…) :  `return strcmp(*(char**)a, *(char**)b);`
 
-### HJ94 记票统计
-**1.** 可以用getchar()丢弃一个不需要的输入字符！
+### HJ94 Count of votes (记票统计)
+**1.** Tips: Use *getchar()* to drop a unneeded character from the input
 
-### JZ15 二进制中1的个数
+### JZ15 Number of "1" in the binary number (二进制中1的个数)
 **1.** Treat the *complement* of a negative number as the *true form* to obtain its corresponding positive number:
 
 `unsigned int tmp = (unsigned int) n;`
