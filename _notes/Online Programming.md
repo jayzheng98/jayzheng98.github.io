@@ -229,23 +229,23 @@ char* minWindow(char* S, char* T ) {
     }
     while(r<lens){
         if(hash[S[r]]>0)
-            lent--;         // 1 matched
+            lent--;          // 1 matched
         hash[S[r]]--;
         r++;
-        while(!lent){       // All matched, narrow the left bound (at this time in "hash", only values of the characters to be matched are 0, others are negative)
+        while(!lent){        // All matched, narrow the left bound (at this time in "hash", only values of the characters to be matched are 0, others are negative)
             if(out>r-l){
-                out=r-l;    // Record length "r-l" and start position "l" of the substring
+                out=r-l;     // Record length "r-l" and start position "l" of the substring
                 k=l;
             }
             if(map[S[l]]==0)
-                lent++;     // This is an element that needs to be included, which means narrowing is completed. So we can end the "while(!lent)"
+                lent++;      // This is an element that needs to be included, which means narrowing is completed. So we can end the "while(!lent)"
             hash[S[l]]++;
             l++;
         }
     }
-    if(out==lens+1)        // Matching is incomplete
+    if(out==lens+1)          // Matching is incomplete
         return "";
-    S[k+out]='\0';         // End the string and prepare for the "return"
+    S[k+out]='\0';           // End the string and prepare for the "return"
     return &S[k];
 }
 ```
@@ -276,7 +276,7 @@ void merge(int* arr, int* tmp, int l, int mid, int r) {
             tmp[k++] = arr[ll++];
         else {
             P += (mid - ll + 1);
-            P %= 1000000007;       // Surely these 2 steps are not needed in the normal template of merge sort
+            P %= 1000000007;        // Surely these 2 steps are not needed in the normal template of merge sort
             tmp[k++] = arr[rr++];
         }
     }
@@ -287,7 +287,7 @@ void merge(int* arr, int* tmp, int l, int mid, int r) {
         tmp[k++] = arr[rr++];
     }
     for (int i = l; i <= r; i++){
-        arr[i] = *(tmp++);         // Array "data" pointed by the formal parameter pointer "arr" will change accordingly
+        arr[i] = *(tmp++);          // Array "data" pointed by the formal parameter pointer "arr" will change accordingly
     } 
 }
 void mergesort(int* arr, int l, int r) {
