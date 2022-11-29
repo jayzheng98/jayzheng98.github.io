@@ -22,8 +22,11 @@ author_profile: false
     * [13. Indexing](#chapt13-indexing)
     * [14. Securing database](#chapt14-securing-database)
 <!-- GFM-TOC -->
+<br>
 
 # Chapt.2 Select
+<hr>
+
 **1. Wildcard, regular expression, ORDER and LIMIT**
 ```sql
 SELECT *
@@ -45,8 +48,11 @@ SELECT *
 FROM orders
 WHERE shipped_date IS NULL;
 ```
+<br>
 
 # Chapt.3 Join
+<hr>
+
 **1. Regular form of an inner join**
 ```sql
 SELECT *
@@ -103,8 +109,12 @@ FROM customers
 WHERE points>3000
 ORDER BY first_name;
 ```
+<br>
 
 # Chapt.4 Column Operation
+<hr>
+
+
 **1. Insert**
 ```sql
 INSERT INTO customers
@@ -161,8 +171,12 @@ WHERE client_id = (                   #If the result of nested query is not uniq
 	WHERE name='Myworks'
     );
 ```
+<br>
 
 # Chapt.5 Aggregation Function
+<hr>
+
+
 **1. Common AFs**
 ```sql
 USE sql_invoicing;
@@ -203,8 +217,12 @@ WHERE state='VA'                      #WHERE must be written before GROUP BY
 GROUP BY c.customer_id, c.first_name, c.last_name, c.state
 HAVING spent_money>100;
 ```
+<br>
 
 # Chapt.6 Complex Query
+<hr>
+
+
 **1. Subquery example**
 ```sql
 USE sql_invoicing;
@@ -255,8 +273,12 @@ FROM (                                           #FROM subquery. Only for single
 	FROM invoices
     ) AS invoice_summary;                        #Must have alias
 ```
+<br>
 
 # Chapt.7 Built-in Function
+<hr>
+
+
 **1. Number**
 ```sql
 SELECT ROUND(3.1415926, 4); 
@@ -315,8 +337,12 @@ SELECT
 FROM customers
 ORDER BY first_name;
 ```
+<br>
 
 # Chapt.8 View
+<hr>
+
+
 **1. Create view**
  - *Treat view as a snapshot of the query result of a table*
 
@@ -358,8 +384,12 @@ WITH CHECK OPTION;                              #Prevent some unexpected missing
 DELETE FROM invoice_with_balance
 WHERE invoice_id = 1;
 ```
+<br>
 
 # Chapt.9 Stored procedure
+<hr>
+
+
 **1. Define a temp delimiter**
  - *To avoid doing this, right click the "Stored Procedures" in the left navigator to create a SP*
 
@@ -415,8 +445,12 @@ BEGIN
 END$$
 DELIMITER ;
 ```
+<br>
 
 # Chapt.10 Trigger
+<hr>
+
+
 **1. Create trigger**
  - *Trigger is automatically executed BEFORE or AFTER the INSERT, DELETE and UPDATE*
 
@@ -474,8 +508,12 @@ DELIMITER ;
 ```sql
 ALTER EVENT yearly_delete_stale_audit_rows DISABLE; 
 ```
+<br>
 
 # Chapt.11 Transaction
+<hr>
+
+
 **1. ACID features**
  - ***Atomicity**<br>
 All changes to data are performed as if they are a single operation. That is, all the changes are performed, or none of them are*
@@ -511,8 +549,12 @@ COMMIT;
 ```
 **4. Deadlock**
  - *If 2 transactions are updating 2 records in a reverse order, it is likely to have deadlock*
+<br>
 
 # Chapt.12 Design A Database
+<hr>
+
+
 **1. ER Diagram**
  - *Entity-Relationship has 3 components: entities, attributes, and relationships, which are used for conceptual design of relational databases*
 
@@ -564,8 +606,12 @@ ALTER TABLE customers
 ```sql
 SHOW ENGINES;                      #Store engines: InnoDB & MyISAM
 ```
+<br>
 
 # Chapt.13 Indexing
+<hr>
+
+
 **1. Create index**
  - *Design indexes based on the queries but not tables*
  - ***BTree**: A type of index structure*
@@ -613,8 +659,12 @@ EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA' AND points > 1000;
 EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA'    #Split OR by UNION
   UNION SELECT customer_id FROM customers WHERE points > 1000;  #Both queries use the "idx_state_points" which means this index is a covering index
 ```
+<br>
 
 # Chapt.14 Securing database
+<hr>
+
+
 **1. Create user**
 ```sql
 CREATE USER moon_app IDENTIFIED BY 'admin';
