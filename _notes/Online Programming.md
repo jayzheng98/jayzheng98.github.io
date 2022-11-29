@@ -11,7 +11,7 @@ author_profile: false
     * [1. Recursion (DFS)](#recursion-dfs)
     * [2. Mathematics](#mathematics)
     * [3. Hash](#hash)
-    * [4. Sort](#sorting)
+    * [4. Sorting](#sorting)
     * [5. DP](#dp)
     * [6. Linked List](#linked-list)
     * [7. Binary Tree](#binary-tree)
