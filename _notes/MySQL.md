@@ -22,6 +22,7 @@ author_profile: false
     * [13. Indexing](#chapt13-indexing)
     * [14. Securing database](#chapt14-securing-database)
 <!-- GFM-TOC -->
+
 <br>
 
 # Chapt.2 Select
