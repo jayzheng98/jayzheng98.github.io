@@ -11,7 +11,7 @@ author_profile: false
     * [1. Recursion (DFS)](#recursion-dfs)
     * [2. Mathematics](#mathematics)
     * [3. Hash](#hash)
-    * [4. Sort](#sort)
+    * [4. Sort](#sorting)
     * [5. DP](#dp)
     * [6. Linked List](#linked-list)
     * [7. Binary Tree](#binary-tree)
@@ -19,7 +19,7 @@ author_profile: false
     * [9. Others](#others)
 <!-- GFM-TOC -->
 
-## Recursion (DFS)
+# Recursion (DFS)
 ### BM56 Full arrangement of numbers with duplicates (有重复项数字的全排列) 
 **1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)` 
 
@@ -140,7 +140,7 @@ bool match(char* str, char* str1) {
 }
 ```
 
-## Mathematics
+# Mathematics
 ### HJ50 Arithemetic (四则运算)
 **1.** Solution:
 
@@ -216,7 +216,7 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){  // Use "scanf" to directly c
 
 **1.** "N" divided by "M" and rounded up: `int res = (N - 1) / M + 1;`
 
-## Hash
+# Hash
 ### BM90 Minimum window substring(最小覆盖子串)
 **1.** Solution:
 
@@ -262,7 +262,7 @@ for(int i=0;i<len;i++){
 }
 ```
 
-## Sort
+# Sorting
 ### BM20 Inverse pairs in an array (数组中的逆序对)
 **1.** Solution: Merge sort
 
@@ -354,7 +354,7 @@ for (char j = 'A'; j <= 'Z'; j++) {
 }
 ```
 
-## DP
+# DP
 ### HJ16 Shopping list (购物单)
 **Description:** There are 3 kinds of goods: main part, accessory 1 and 2, accessories must be purchased after the corresponding main part. Known the price and satisfaction of each product, calculate the maximum satisfaction we can get with money N
 
@@ -464,7 +464,7 @@ for(int i=0;i<len;i++){
  }
 ```
 
-## Linked List
+# Linked List
 ### BM2 Reverse between specified range in linked list (链表内指定区间反转)
 **1.** Develop the habit of using a null node to indicate the linked list (In case the first and last node need to be reversed)
 
@@ -496,7 +496,7 @@ typedef struct LinkNode{
 
 **3.** If the head node of the linked list is unknown, use the value of targeted node's next node to cover the value of targeted node, and then remove its next node
 
-## Binary Tree
+# Binary Tree
 ## BM26 Binary tree level order traversal (二叉树层序遍历)
 **1.** It is a variation of *preorder traversal*, that is, the results of preorder traversal are stored hierarchically
 
@@ -558,7 +558,7 @@ struct TreeNode* recur(int* xianxu, int* zhongxu, int Len){
 }
 ```
 
-## Stack & Queue
+# Stack & Queue
 ### BM45 Maximum in sliding window (滑动窗口的最大值)
 **1.** The queue is quite suitable for the maintenance of sliding window (A queue actually is an array with 2 pointers)
 
@@ -573,7 +573,7 @@ typedef struct queue{
 ```
 **3.** Create a queue： `Queue q;`
 
-## Others
+# Others
 ## HJ30 String merging (字符串合并处理)
 **1.** Tips of *switch()*: 
 
