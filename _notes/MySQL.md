@@ -15,12 +15,12 @@ author_profile: false
     * [6. Complex Query](#chapt6-complex-query)
     * [7. Built-in Function](#chapt7-built\-in-function)
     * [8. View](#chapt8-view)
-    * [9. Stored procedure](#chapt9-stored-procedure)
+    * [9. Stored Procedure](#chapt9-stored-procedure)
     * [10. Trigger](#chapt10-trigger)
     * [11. Transaction](#chapt11-transaction)
     * [12. Design A Database](#chapt12-design-a-database)
     * [13. Indexing](#chapt13-indexing)
-    * [14. Securing database](#chapt14-securing-database)
+    * [14. Securing Database](#chapt14-securing-database)
 <!-- GFM-TOC -->
 
 <br>
@@ -387,7 +387,7 @@ WHERE invoice_id = 1;
 ```
 <br>
 
-# Chapt.9 Stored procedure
+# Chapt.9 Stored Procedure
 <hr>
 
 
@@ -662,7 +662,7 @@ EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA'    #Split OR by UNI
 ```
 <br>
 
-# Chapt.14 Securing database
+# Chapt.14 Securing Database
 <hr>
 
 
