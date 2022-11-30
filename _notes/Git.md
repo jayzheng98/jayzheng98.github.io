@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "Git"
 permalink: /notes/Git
 author_profile: false
