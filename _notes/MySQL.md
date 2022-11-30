@@ -1,7 +1,7 @@
 ---
 #layout: archive
 title: "MySQL"
-#collection: notes
+collection: notes
 permalink: /notes/mysql
 author_profile: false
 ---
