@@ -3,8 +3,8 @@ permalink: /markdown1/
 title: "Markdown"
 author_profile: true
 redirect_from: 
-  - /md1/
-  - /markdown1.html 
+  - /md/
+  - /markdown.html 
 ---
 
 ## Locations of key files/directories
