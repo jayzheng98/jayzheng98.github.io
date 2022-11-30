@@ -11,7 +11,7 @@ redirect_from:
 <!-- GFM-TOC -->
 * Chapters 
     * [Statement](#statement)
-    * [1. Common commands](#common-commands)
+    * [1. Common Commands](#common-commands)
     * [2. Centralized & Distributed](#centralized--distributed)
     * [3. Central Server](#central-server)
     * [4. Workflow](#workflow)
@@ -28,7 +28,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 
 <br>
 
-# Common commands
+# Common Commands
 <hr>
    
 | Command | Object | Description |
