@@ -6,196 +6,174 @@ redirect_from:
   - /git/
 ---
 
-## Locations of key files/directories
+<!-- GFM-TOC -->
+* Chapters 
+    * [Statement](#statement)
+    * [1. Common commands](#common-commands)
+    * [2. Centralized & Distributed](#centralized--distributed)
+    * [3. Central Server](#central-server)
+    * [4. 工作流](#工作流)
+    * [5. 分支实现](#分支实现)
+    * [6. 冲突](#冲突)
+    * [7. 储藏（Stashing）](#储藏stashing)
+<!-- GFM-TOC -->
 
-* Basic config options: _config.yml
-* Top navigation bar config: _data/navigation.yml
-* Single pages: _pages/
-* Collections of pages are .md or .html files in:
-  * _publications/
-  * _portfolio/
-  * _posts/
-  * _teaching/
-  * _talks/
-* Footer: _includes/footer.html
-* Static files (like PDFs): /files/
-* Profile image (can set in _config.yml): images/profile.png
+<br>
 
-## Tips and hints
+# Statement
+<hr>
 
-* Name a file ".md" to have it render in markdown, name it ".html" to render in HTML.
-* Go to the [commit list](https://github.com/academicpages/academicpages.github.io/commits/master) (on your repo) to find the last version Github built with Jekyll. 
-  * Green check: successful build
-  * Orange circle: building
-  * Red X: error
-  * No icon: not built
+Some of the content and pictures in this article are excerpted from the [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/Git.md). If there is infringement, please inform to delete
 
-## Resources
- * [Liquid syntax guide](https://shopify.github.io/liquid/tags/control-flow/)
+<br>
 
-## Markdown guide
+# Common commands
+<hr>
 
-### Header three
+<div align="center">
+   
+| Command | Object | Description |
+|:--------|:-------:|:--------:|
+|git add | filename |  #将文件加到暂存区域|
+|git commit -m | filename | #将暂存区域的文件提交到git仓库|
+||||
+|git commit --amend | | #修改最后一次提交（shift+zz退出，q!不保存退出）|
+|git mv | original new |  #修改文件名|
+|git rm | filename |  #删除工作目录和暂存区的文件（不同的话不会删除，加-f强制删）|
+|git rm --cached | filename |  #只删除暂存区的文件|
+||||
+|git status|||
+|git log | | #查看提交记录|
+|git reflog ||  #（cmd窗口关掉后）查看每个版本号|
+||||
+|git reset | version |  #将该版本回滚到暂存区域|
+|git reset | HEAD~n |  #将HEAD指针移动到前n个对象上并将该对象回滚到暂存区域|
+|git reset --soft | HEAD~n |  #仅移动HEAD指针|
+|git reset --hard | HAED~n |  #比默认的多了“将暂存区域文件还原到工作目录”（覆盖掉源码）|
+||||
+|git diff | | #比较工作目录和暂存区的文件|
+|git diff | 版本号 |  #比较工作目录和仓库的文件|
+|git diff | 版本号1 版本号2 |  #比较仓库中的两个文件|
+|git diff --cached | 版本号 |  #比较暂存区和仓库的文件#只有仓库中的文件才有版本号，这样就理清关系了~|
+||||
+|git branch | 分支名 |  #创建分支|
+|git checkout | 分支名 | #切换分支|
+|git merge | 分支名 |  #合并分支|
+|git branch -d | 分支名 |  #删除分支|
 
-#### Header four
+</div>
 
-##### Header five
+<br>
 
-###### Header six
+# Centralized & Distributed
+<hr>
 
-## Blockquotes
+**1.** Git is a distributed version control system, while SVN is centralized
 
-Single line blockquote:
+<div align="center"> <img width="600" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git1.png?raw=true"/> </div><br>
 
-> Quotes are cool.
+**2.** Comparison between centralized and distributed: 
 
-## Tables
+<div align="center">
+   
+|  | Centralized | Distributed |
+|:--------|:-------:|:--------:|
+| The copy of code | only the central server | everyone's computer |
+| Work without central server | × | √ |
+| Networking required | √ | × |
+| Create and merge | slow (copy a complete code) | fast |
+   
+</div>
 
-### Table 1
+<br>
 
-| Entry            | Item   |                                                              |
-| --------         | ------ | ------------------------------------------------------------ |
-| [John Doe](#)    | 2016   | Description of the item in the list                          |
-| [Jane Doe](#)    | 2019   | Description of the item in the list                          |
-| [Doe Doe](#)     | 2022   | Description of the item in the list                          |
+# Central Server
+<hr>
 
-### Table 2
+**1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier
 
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|--------:|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|-----------------------------|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-|=============================|
-| Foot1   | Foot2   | Foot3   |
+**2.** For example, the [Github](https://github.com/) is a central server
+<br>
 
-## Definition Lists
+# 工作流
 
-Definition List Title
-:   Definition list division.
+新建一个仓库之后，当前目录就成为了工作区，工作区下有一个隐藏目录 .git，它属于 Git 的版本库。
 
-Startup
-:   A startup company or startup is a company or temporary organization designed to search for a repeatable and scalable business model.
+Git 的版本库有一个称为 Stage 的暂存区以及最后的 History 版本库，History 存储所有分支信息，使用一个 HEAD 指针指向当前分支。
 
-#dowork
-:   Coined by Rob Dyrdek and his personal body guard Christopher "Big Black" Boykins, "Do Work" works as a self motivator, to motivating your friends.
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208195941661.png"/> </div><br>
 
-Do It Live
-:   I'll let Bill O'Reilly [explain](https://www.youtube.com/watch?v=O_HyZ5aW76c "We'll Do It Live") this one.
+- git add files 把文件的修改添加到暂存区
+- git commit 把暂存区的修改提交到当前分支，提交之后暂存区就被清空了
+- git reset -- files 使用当前分支上的修改覆盖暂存区，用来撤销最后一次 git add files
+- git checkout -- files 使用暂存区的修改覆盖工作目录，用来撤销本地修改
 
-## Unordered Lists (Nested)
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208200014395.png"/> </div><br>
 
-  * List item one 
-      * List item one 
-          * List item one
-          * List item two
-          * List item three
-          * List item four
-      * List item two
-      * List item three
-      * List item four
-  * List item two
-  * List item three
-  * List item four
+可以跳过暂存区域直接从分支中取出修改，或者直接提交修改到分支中。
 
-## Ordered List (Nested)
+- git commit -a 直接把所有文件的修改添加到暂存区然后执行提交
+- git checkout HEAD -- files 取出最后一次修改，可以用来进行回滚操作
 
-  1. List item one 
-      1. List item one 
-          1. List item one
-          2. List item two
-          3. List item three
-          4. List item four
-      2. List item two
-      3. List item three
-      4. List item four
-  2. List item two
-  3. List item three
-  4. List item four
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208200543923.png"/> </div><br>
 
-## Buttons
+## 分支实现
 
-Make any link standout more when applying the `.btn` class.
+使用指针将每个提交连接成一条时间线，HEAD 指针指向当前分支指针。
 
-## Notices
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208203219927.png"/> </div><br>
 
-**Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
-{: .notice}
+新建分支是新建一个指针指向时间线的最后一个节点，并让 HEAD 指针指向新分支，表示新分支成为当前分支。
 
-## HTML Tags
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208203142527.png"/> </div><br>
 
-### Address Tag
+每次提交只会让当前分支指针向前移动，而其它分支指针不会移动。
 
-<address>
-  1 Infinite Loop<br /> Cupertino, CA 95014<br /> United States
-</address>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208203112400.png"/> </div><br>
 
-### Anchor Tag (aka. Link)
+合并分支也只需要改变指针即可。
 
-This is an example of a [link](http://github.com "Github").
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208203010540.png"/> </div><br>
 
-### Abbreviation Tag
+## 冲突
 
-The abbreviation CSS stands for "Cascading Style Sheets".
+当两个分支都对同一个文件的同一行进行了修改，在分支合并时就会产生冲突。
 
-*[CSS]: Cascading Style Sheets
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208203034705.png"/> </div><br>
 
-### Cite Tag
+Git 会使用 \<\<\<\<\<\<\< ，======= ，\>\>\>\>\>\>\> 标记出不同分支的内容，只需要把不同分支中冲突部分修改成一样就能解决冲突。
 
-"Code is poetry." ---<cite>Automattic</cite>
+```
+<<<<<<< HEAD
+Creating a new branch is quick & simple.
+=======
+Creating a new branch is quick AND simple.
+>>>>>>> feature1
+```
 
-### Code Tag
+## Fast forward
 
-You will learn later on in these tests that `word-wrap: break-word;` will be your best friend.
+"快进式合并"（fast-farward merge），会直接将 master 分支指向合并的分支，这种模式下进行分支合并会丢失分支信息，也就不能在分支历史上看出分支信息。
 
-### Strike Tag
+可以在合并时加上 --no-ff 参数来禁用 Fast forward 模式，并且加上 -m 参数让合并时产生一个新的 commit。
 
-This tag will let you <strike>strikeout text</strike>.
+```
+$ git merge --no-ff -m "merge with no-ff" dev
+```
 
-### Emphasize Tag
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208203639712.png"/> </div><br>
 
-The emphasize tag should _italicize_ text.
+## 储藏（Stashing）
 
-### Insert Tag
+在一个分支上操作之后，如果还没有将修改提交到分支上，此时进行切换分支，那么另一个分支上也能看到新的修改。这是因为所有分支都共用一个工作区的缘故。
 
-This tag should denote <ins>inserted</ins> text.
+可以使用 git stash 将当前分支的修改储藏起来，此时当前工作区的所有修改都会被存到栈中，也就是说当前工作区是干净的，没有任何未提交的修改。此时就可以安全的切换到其它分支上了。
 
-### Keyboard Tag
+```
+$ git stash
+Saved working directory and index state \ "WIP on master: 049d078 added the index file"
+HEAD is now at 049d078 added the index file (To restore them type "git stash apply")
+```
 
-This scarcely known tag emulates <kbd>keyboard text</kbd>, which is usually styled like the `<code>` tag.
+该功能可以用于 bug 分支的实现。如果当前正在 dev 分支上进行开发，但是此时 master 上有个 bug 需要修复，但是 dev 分支上的开发还未完成，不想立即提交。在新建 bug 分支并切换到 bug 分支之前就需要使用 git stash 将 dev 分支的未提交修改储藏起来。
 
-### Preformatted Tag
-
-This tag styles large blocks of code.
-
-<pre>
-.post-title {
-  margin: 0 0 5px;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 1.2;
-  and here's a line of some really, really, really, really long text, just to see how the PRE tag handles it and to find out how it overflows;
-}
-</pre>
-
-### Quote Tag
-
-<q>Developers, developers, developers&#8230;</q> &#8211;Steve Ballmer
-
-### Strong Tag
-
-This tag shows **bold text**.
-
-### Subscript Tag
-
-Getting our science styling on with H<sub>2</sub>O, which should push the "2" down.
-
-### Superscript Tag
-
-Still sticking with science and Isaac Newton's E = MC<sup>2</sup>, which should lift the 2 up.
-
-### Variable Tag
-
-This allows you to denote <var>variables</var>.
