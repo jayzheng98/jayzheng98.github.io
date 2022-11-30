@@ -1,5 +1,5 @@
 ---
-permalink: /notes/Git
+permalink: /notes/Git/
 title: "Markdown"
 author_profile: true
 redirect_from: 
