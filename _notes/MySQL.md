@@ -2,7 +2,7 @@
 layout: archive
 title: "MySQL"
 collection: notes
-permalink: /Mysql/
+permalink: /notes/mysql/
 author_profile: false
 ---
  
