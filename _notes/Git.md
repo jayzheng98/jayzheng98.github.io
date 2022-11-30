@@ -1,4 +1,5 @@
 ---
+collection: notes
 permalink: /notes/git
 title: "Git"
 author_profile: false
