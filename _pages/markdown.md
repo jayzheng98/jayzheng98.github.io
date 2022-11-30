@@ -1,10 +1,9 @@
 ---
-permalink: /markdown/
-title: "Markdown"
+permalink: /notes/Git
+title: "Git"
 author_profile: true
 redirect_from: 
-  - /md/
-  - /markdown.html 
+  - /git/
 ---
 
 ## Locations of key files/directories
