@@ -1,8 +1,10 @@
 ---
-layout: archive
-title: "Git"
-permalink: /Git/
-author_profile: false
+permalink: /notes/Git/
+title: "Markdown"
+author_profile: true
+redirect_from: 
+  - /md/
+  - /markdown.html
 ---
 
 <!-- GFM-TOC -->
