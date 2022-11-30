@@ -30,4 +30,4 @@ author_profile: false
 
 ## 🔧  Other Tools
 
-- [Git](/Git/)
+- [Git](/notes/Git)
