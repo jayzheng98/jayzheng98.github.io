@@ -1,7 +1,7 @@
 ---
 permalink: /notes/Git
 title: "Git"
-author_profile: true
+author_profile: false
 redirect_from: 
   - /git/
 ---
