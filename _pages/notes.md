@@ -13,7 +13,7 @@ author_profile: false
  
 ## ✏️  Algorithm & Data Structure
 
-- [Online Programming](/notes/OP)
+- [Online Programming](/OP/)
 
 ## 💻  Operating Systems
 
@@ -26,8 +26,8 @@ author_profile: false
 
 ## 💾  Databases
 
-- [MySQL](/notes/Mysql)
+- [MySQL](/Mysql/)
 
 ## 🔧  Other Tools
 
-- [Git](/notes/Git)
+- [Git](/Git/)
