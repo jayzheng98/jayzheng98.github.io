@@ -9,14 +9,13 @@ author_profile: false
 <!-- GFM-TOC -->
 * Chapters 
     * [Statement](#statement)
-    * [Common commands](#common-commands)
-    * [Centralized & Distributed](#centralized--distributed)
-    * [Central Server](#central-server)
-    * [工作流](#工作流)
-    * [分支实现](#分支实现)
-    * [冲突](#冲突)
-    * [Fast forward](#fast-forward)
-    * [储藏（Stashing）](#储藏stashing)
+    * [1. Common commands](#common-commands)
+    * [2. Centralized & Distributed](#centralized--distributed)
+    * [3. Central Server](#central-server)
+    * [4. 工作流](#工作流)
+    * [5. 分支实现](#分支实现)
+    * [6. 冲突](#冲突)
+    * [7. 储藏（Stashing）](#储藏stashing)
 <!-- GFM-TOC -->
 
 <br>
