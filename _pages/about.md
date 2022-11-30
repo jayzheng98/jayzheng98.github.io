@@ -15,9 +15,9 @@ redirect_from:
 
 * I am an academic master student (similar with MPhil) at the Southwest Jiaotong University (SWJTU), Chengdu, majoring in **Computer Science and Technology**. Currently, I am doing research in the field of cybersecurity supervised by [Prof. Lianshan Yan](https://faculty.swjtu.edu.cn/yanlianshan/en/index.htm) in the CIPC lab. 
 
-* To be more specific, my current research interest is in Anomaly Detection and Wireless Communication Security.
+* To be more specific, my current research interest is in **Anomaly Detection** and **Wireless Communication Security**.
 
-* Before that, I was an undergraduate student majoring in **Network Engineering** at Southwest Jiaotong University. I am in the top 14% of my major and have obtained the **Postgraduate Recommendation** to study for master degree without attending the exam.
+* Before that, I was an undergraduate student majoring in **Network Engineering** at Southwest Jiaotong University. My interest at that time mainly focused on the **Embedded System** developing. I am in the top 14% of my major and have obtained the **Postgraduate Recommendation** to study for master degree without attending the exam.
 
 * To learn more about me, you can have a view of my CV page [here](/cv).
 
