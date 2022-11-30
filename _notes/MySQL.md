@@ -5,7 +5,7 @@ collection: notes
 permalink: /notes/mysql/
 author_profile: false
 ---
- 
+
 <!-- GFM-TOC -->
 * Chapters
     * [2. Select](#chapt2-select)
