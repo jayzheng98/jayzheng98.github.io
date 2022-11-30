@@ -1,5 +1,5 @@
 ---
-permalink: /notes/Git
+permalink: /Git/
 title: "Git"
 author_profile: false
 #collection: notes
