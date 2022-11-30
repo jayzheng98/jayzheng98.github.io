@@ -28,6 +28,41 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 
 <br>
 
+# Common commands
+<hr>
+<div align="center">
+   
+| Command | Object | Description |
+|:--------|:-------:|:--------:|
+|git add |文件名 |  #将文件加到暂存区域|
+|git commit -m | "操作说明" | #将暂存区域的文件提交到git仓库|
+||||
+|git commit --amend | | #修改最后一次提交（shift+zz退出，q!不保存退出）|
+|git mv | 原名 改名 |  #修改文件名|
+|git rm | 文件名 |  #删除工作目录和暂存区的文件（不同的话不会删除，加-f强制删）|
+|git rm --cached | 文件名 |  #只删除暂存区的文件|
+||||
+|git status|||
+|git log | | #查看提交记录|
+|git reflog ||  #（cmd窗口关掉后）查看每个版本号|
+||||
+|git reset | 版本号 |  #将该版本回滚到暂存区域|
+|git reset | HEAD~n |  #将HEAD指针移动到前n个对象上并将该对象回滚到暂存区域|
+|git reset --soft | HEAD~n |  #仅移动HEAD指针|
+|git reset --hard | HAED~n |  #比默认的多了“将暂存区域文件还原到工作目录”（覆盖掉源码）|
+||||
+|git diff | | #比较工作目录和暂存区的文件|
+|git diff | 版本号 |  #比较工作目录和仓库的文件|
+|git diff | 版本号1 版本号2 |  #比较仓库中的两个文件|
+|git diff --cached | 版本号 |  #比较暂存区和仓库的文件#只有仓库中的文件才有版本号，这样就理清关系了~|
+||||
+|git branch | 分支名 |  #创建分支|
+|git checkout | 分支名 | #切换分支|
+|git merge | 分支名 |  #合并分支|
+|git branch -d | 分支名 |  #删除分支|
+
+</div><br>
+
 # Centralized & Distributed
 <hr>
 
@@ -36,18 +71,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 <div align="center"> <img width="600" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git1.png?raw=true"/> </div><br>
 
 **2.** Comparison between centralized and distributed: 
-
-<style>
-.center 
-{
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<div class="center">
+<div align="center">
    
 |  | Centralized | Distributed |
 |:--------|:-------:|:--------:|
