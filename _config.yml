@@ -231,13 +231,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _notes
-  - scope:
-      path: ""
-      type: notes
-    values:
-      layout: single
-      author_profile: false
   # _teaching
   - scope:
       path: ""
