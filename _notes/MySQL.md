@@ -1,5 +1,5 @@
 ---
-#layout: archive
+layout: archive
 title: "MySQL"
 collection: notes
 permalink: /notes/mysql
