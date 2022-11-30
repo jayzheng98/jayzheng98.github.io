@@ -9,9 +9,9 @@ author_profile: false
 <!-- GFM-TOC -->
 * Chapters 
     * [Statement](#statement)
-    * [1. Common commands](#common-commands)
-    * [2. Centralized & Distributed](#centralized--distributed)
-    * [3. Central Server](#central-server)
+    * [Common commands](#common-commands)
+    * [Centralized & Distributed](#centralized--distributed)
+    * [Central Server](#central-server)
     * [工作流](#工作流)
     * [分支实现](#分支实现)
     * [冲突](#冲突)
