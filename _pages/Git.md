@@ -1,22 +1,9 @@
 ---
-permalink: /Git/
+permalink: /notes/Git
 title: "Git"
 author_profile: false
 #collection: notes
 ---
-
-<!-- GFM-TOC -->
-* Chapters 
-    * [Statement](#statement)
-    * [1. Common commands](#common-commands)
-    * [2. Centralized & Distributed](#centralized--distributed)
-    * [3. Central Server](#central-server)
-    * [4. 工作流](#工作流)
-    * [5. 分支实现](#分支实现)
-    * [6. 冲突](#冲突)
-    * [7. 储藏（Stashing）](#储藏stashing)
-<!-- GFM-TOC -->
-
 <br>
 
 # Statement
