@@ -7,41 +7,66 @@ author_profile: false
 ---
 
 <!-- GFM-TOC -->
-* [Git](#git)
-    * [集中式与分布式](#集中式与分布式)
-    * [中心服务器](#中心服务器)
+* Chapters 
+    * [Statement](#statement)
+    * [1. Common commands](#common-commands)
+    * [2. Centralized & Distributed](#centralized--distributed)
+    * [3. Central Server](#central-server)
     * [工作流](#工作流)
     * [分支实现](#分支实现)
     * [冲突](#冲突)
     * [Fast forward](#fast-forward)
     * [储藏（Stashing）](#储藏stashing)
-    * [SSH 传输设置](#ssh-传输设置)
-    * [.gitignore 文件](#gitignore-文件)
-    * [Git 命令一览](#git-命令一览)
 <!-- GFM-TOC -->
 
+<br>
 
-## 集中式与分布式
+# Statement
+<hr>
 
-Git 属于分布式版本控制系统，而 SVN 属于集中式。
+Some of the content and pictures in this article are excerpted from the [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/Git.md). If there is infringement, please inform to delete
 
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191208200656794.png"/> </div><br>
+<br>
 
-集中式版本控制只有中心服务器拥有一份代码，而分布式版本控制每个人的电脑上就有一份完整的代码。
+# Centralized & Distributed
+<hr>
 
-集中式版本控制有安全性问题，当中心服务器挂了所有人都没办法工作了。
+**1.** Git is a distributed version control system, while SVN is centralized
 
-集中式版本控制需要连网才能工作，如果网速过慢，那么提交一个文件会慢的无法让人忍受。而分布式版本控制不需要连网就能工作。
+<div align="center"> <img width="600" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git1.png?raw=true"/> </div><br>
 
-分布式版本控制新建分支、合并分支操作速度非常快，而集中式版本控制新建一个分支相当于复制一份完整代码。
+**2.** Comparison between centralized and distributed: 
 
-## 中心服务器
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 
-中心服务器用来交换每个用户的修改，没有中心服务器也能工作，但是中心服务器能够 24 小时保持开机状态，这样就能更方便的交换修改。
+<div class="center">
+   
+|  | Centralized | Distributed |
+|:--------|:-------:|:--------:|
+| The copy of code | only the central server | everyone's computer |
+| Work without central server | × | √ |
+| Networking required | √ | × |
+| Create and merge | slow (copy a complete code) | fast |
+   
+</div><br>
 
-Github 就是一个中心服务器。
+# Central Server
+<hr>
 
-## 工作流
+**1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier
+
+**2.** The [Github](https://github.com/) is a central server
+<br>
+
+# 工作流
 
 新建一个仓库之后，当前目录就成为了工作区，工作区下有一个隐藏目录 .git，它属于 Git 的版本库。
 
@@ -122,31 +147,3 @@ HEAD is now at 049d078 added the index file (To restore them type "git stash app
 ```
 
 该功能可以用于 bug 分支的实现。如果当前正在 dev 分支上进行开发，但是此时 master 上有个 bug 需要修复，但是 dev 分支上的开发还未完成，不想立即提交。在新建 bug 分支并切换到 bug 分支之前就需要使用 git stash 将 dev 分支的未提交修改储藏起来。
-
-## SSH 传输设置
-
-Git 仓库和 Github 中心仓库之间的传输是通过 SSH 加密。
-
-如果工作区下没有 .ssh 目录，或者该目录下没有 id_rsa 和 id_rsa.pub 这两个文件，可以通过以下命令来创建 SSH Key：
-
-```
-$ ssh-keygen -t rsa -C "youremail@example.com"
-```
-
-然后把公钥 id_rsa.pub 的内容复制到 Github "Account settings" 的 SSH Keys 中。
-
-## .gitignore 文件
-
-忽略以下文件：
-
-- 操作系统自动生成的文件，比如缩略图；
-- 编译生成的中间文件，比如 Java 编译产生的 .class 文件；
-- 自己的敏感信息，比如存放口令的配置文件。
-
-不需要全部自己编写，可以到 [https://github.com/github/gitignore](https://github.com/github/gitignore) 中进行查询。
-
-## Git 命令一览
-
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7a29acce-f243-4914-9f00-f2988c528412.jpg" width=""> </div><br>
-
-比较详细的地址：http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf
