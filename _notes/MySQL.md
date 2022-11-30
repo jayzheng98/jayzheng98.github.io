@@ -665,7 +665,6 @@ EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA'    #Split OR by UNI
 # Chapt.14 Securing Database
 <hr>
 
-
 **1. Create user**
 ```sql
 CREATE USER moon_app IDENTIFIED BY 'admin';
