@@ -1,6 +1,6 @@
 ---
 title: "Git"
-permalink: /notes/Git
+permalink: /Git/
 author_profile: false
 ---
 
