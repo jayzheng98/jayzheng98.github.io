@@ -1,4 +1,5 @@
 ---
+layout: archive
 collection: notes
 permalink: /notes/git
 title: "Git"
