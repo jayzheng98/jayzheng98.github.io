@@ -229,6 +229,7 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){  // Use "scanf" to directly c
 **Description:** For example, when the length of the rope is 8, we cut it into three sections with lengths of 2, 3, 3 to get the maximum product 18
 
 **1.** "N" divided by "M" and rounded up: `int res = (N - 1) / M + 1;`
+
 <br>
 
 # Hash
@@ -521,6 +522,7 @@ typedef struct LinkNode{
 `LinkNode* p=malloc(sizeof(LinkNode));`
 
 **3.** If the head node of the linked list is unknown, use the value of targeted node's next node to cover the value of targeted node, and then remove its next node
+
 <br>
 
 # Binary Tree
@@ -604,6 +606,7 @@ typedef struct queue{
 }Queue;
 ```
 **3.** Create a queue： `Queue q;`
+
 <br>
 
 # Others
