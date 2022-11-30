@@ -2,6 +2,7 @@
 permalink: /notes/Git/
 title: "Markdown"
 author_profile: true
+collection: notes
 redirect_from: 
   - /md/
   - /markdown.html
