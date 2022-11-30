@@ -33,13 +33,13 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
    
 | Command | Object | Description |
 |:--------|:-------:|:--------:|
-|git add |文件名 |  #将文件加到暂存区域|
-|git commit -m | "操作说明" | #将暂存区域的文件提交到git仓库|
+|git add | filename |  #将文件加到暂存区域|
+|git commit -m | filename | #将暂存区域的文件提交到git仓库|
 ||||
 |git commit --amend | | #修改最后一次提交（shift+zz退出，q!不保存退出）|
-|git mv | 原名 改名 |  #修改文件名|
-|git rm | 文件名 |  #删除工作目录和暂存区的文件（不同的话不会删除，加-f强制删）|
-|git rm --cached | 文件名 |  #只删除暂存区的文件|
+|git mv | original new |  #修改文件名|
+|git rm | filename |  #删除工作目录和暂存区的文件（不同的话不会删除，加-f强制删）|
+|git rm --cached | filename |  #只删除暂存区的文件|
 ||||
 |git status|||
 |git log | | #查看提交记录|
@@ -86,7 +86,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 
 **1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier
 
-**2.** The [Github](https://github.com/) is a central server
+**2.** For example, the [Github](https://github.com/) is a central server
 <br>
 
 # 工作流
