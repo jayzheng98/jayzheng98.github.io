@@ -8,12 +8,12 @@ author_profile: false
 
 ## ⌨️  Programming Languages
 
-- [Python](/notes/python/)
-- [PHP](/notes/php/)
+- [Python](/notes/python)
+- [PHP](/notes/php)
  
 ## ✏️  Algorithm & Data Structure
 
-- [Online Programming](/notes/OP/)
+- [Online Programming](/notes/OP)
 
 ## 💻  Operating Systems
 
@@ -26,7 +26,7 @@ author_profile: false
 
 ## 💾  Databases
 
-- [MySQL](/notes/mysql/)
+- [MySQL](/notes/mysql)
 
 ## 🔧  Other Tools
 
