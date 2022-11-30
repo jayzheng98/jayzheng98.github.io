@@ -29,7 +29,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 
 # Common commands
 <hr>
-<div align="center">
+<center>
    
 | Command | Object | Description |
 |:--------|:-------:|:--------:|
@@ -60,7 +60,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git merge | 分支名 |  #合并分支|
 |git branch -d | 分支名 |  #删除分支|
 
-</div><br>
+</center><br>
 
 # Centralized & Distributed
 <hr>
@@ -70,7 +70,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 <div align="center"> <img width="600" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git1.png?raw=true"/> </div><br>
 
 **2.** Comparison between centralized and distributed: 
-<div align="center">
+<center>
    
 |  | Centralized | Distributed |
 |:--------|:-------:|:--------:|
@@ -79,7 +79,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 | Networking required | √ | × |
 | Create and merge | slow (copy a complete code) | fast |
    
-</div><br>
+</center><br>
 
 # Central Server
 <hr>
