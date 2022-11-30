@@ -8,6 +8,7 @@ author_profile: false
 
 <!-- GFM-TOC -->
 * Categories
+    * [Introduction](#introduction)
     * [1. Recursion (DFS)](#recursion-dfs)
     * [2. Mathematics](#mathematics)
     * [3. Hash](#hash)
@@ -18,8 +19,17 @@ author_profile: false
     * [8. Stack & Queue](#stack--queue)
     * [9. Others](#others)
 <!-- GFM-TOC -->
+<br>
+
+# Introduction
+<hr>
+At first, I practiced my online programming on the well-known [Leetcode](https://leetcode.com/). However, I found some paid functions on Leetcode, such as Debug and spell check, are free on [Nowcoder](https://www.nowcoder.com/), so I mainly use Nowcoder to train my programming now.
+
+<br>
 
 # Recursion (DFS)
+<hr>
+
 ### BM56 Full arrangement of numbers with duplicates (有重复项数字的全排列) 
 **1.** Using *macro definition* to realize exchange: `#define swap (x,y,t) (t = x, x = y, y = t)` 
 
@@ -139,8 +149,11 @@ bool match(char* str, char* str1) {
     return false;
 }
 ```
+<br>
 
 # Mathematics
+<hr>
+
 ### HJ50 Arithemetic (四则运算)
 **1.** Solution:
 
@@ -215,8 +228,11 @@ while(scanf("%lld%c%lld", &fz, &slash, &fm)!=EOF){  // Use "scanf" to directly c
 **Description:** For example, when the length of the rope is 8, we cut it into three sections with lengths of 2, 3, 3 to get the maximum product 18
 
 **1.** "N" divided by "M" and rounded up: `int res = (N - 1) / M + 1;`
+<br>
 
 # Hash
+<hr>
+
 ### BM90 Minimum window substring(最小覆盖子串)
 **1.** Solution:
 
@@ -261,8 +277,11 @@ for(int i=0;i<len;i++){
    hash[sample[i]]--;
 }
 ```
+<br>
 
 # Sorting
+<hr>
+
 ### BM20 Inverse pairs in an array (数组中的逆序对)
 **1.** Solution: Merge sort
 
@@ -353,8 +372,11 @@ for (char j = 'A'; j <= 'Z'; j++) {
    }
 }
 ```
+<br>
 
 # DP
+<hr>
+
 ### HJ16 Shopping list (购物单)
 **Description:** There are 3 kinds of goods: main part, accessory 1 and 2, accessories must be purchased after the corresponding main part. Known the price and satisfaction of each product, calculate the maximum satisfaction we can get with money N
 
@@ -463,8 +485,11 @@ for(int i=0;i<len;i++){
      }
  }
 ```
+<br>
 
 # Linked List
+<hr>
+
 ### BM2 Reverse between specified range in linked list (链表内指定区间反转)
 **1.** Develop the habit of using a null node to indicate the linked list (In case the first and last node need to be reversed)
 
@@ -495,8 +520,11 @@ typedef struct LinkNode{
 `LinkNode* p=malloc(sizeof(LinkNode));`
 
 **3.** If the head node of the linked list is unknown, use the value of targeted node's next node to cover the value of targeted node, and then remove its next node
+<br>
 
 # Binary Tree
+<hr>
+
 ## BM26 Binary tree level order traversal (二叉树层序遍历)
 **1.** It is a variation of *preorder traversal*, that is, the results of preorder traversal are stored hierarchically
 
@@ -557,8 +585,11 @@ struct TreeNode* recur(int* xianxu, int* zhongxu, int Len){
     return out; 
 }
 ```
+<br>
 
 # Stack & Queue
+<hr>
+
 ### BM45 Maximum in sliding window (滑动窗口的最大值)
 **1.** The queue is quite suitable for the maintenance of sliding window (A queue actually is an array with 2 pointers)
 
@@ -572,8 +603,11 @@ typedef struct queue{
 }Queue;
 ```
 **3.** Create a queue： `Queue q;`
+<br>
 
 # Others
+<hr>
+
 ## HJ30 String merging (字符串合并处理)
 **1.** Tips of *switch()*: 
 
