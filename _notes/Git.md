@@ -19,7 +19,6 @@ redirect_from:
     * [6. Conflict](#conflict)
     * [7. Stashing](#stashing)
 <!-- GFM-TOC -->
-
 <br>
 
 # Statement
@@ -63,6 +62,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git branch -d | branch name |  Delete a branch | 
 
 * See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
 <br>
 
 # Centralized & Distributed
@@ -89,6 +89,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 **1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier
 
 **2.** For example, the [Github](https://github.com/) is a central server
+
 <br>
 
 # Workflow
