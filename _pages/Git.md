@@ -1,8 +1,8 @@
 ---
-permalink: /notes/Git/
+permalink: /notes/Git
 title: "Git"
 author_profile: false
-collection: notes
+#collection: notes
 ---
 
 <!-- GFM-TOC -->
