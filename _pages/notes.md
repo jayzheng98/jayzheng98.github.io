@@ -9,7 +9,7 @@ author_profile: false
 ## ⌨️  Programming Languages
 
 - [Python](/notes/python)
-- [PHP](/notes/php)
+- [PHP](/php/)
  
 ## ✏️  Algorithm & Data Structure
 
