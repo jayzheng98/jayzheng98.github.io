@@ -47,7 +47,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git log | | #查看提交记录|
 |git reflog ||  #（cmd窗口关掉后）查看每个版本号|
 ||||
-|git reset | 版本号 |  #将该版本回滚到暂存区域|
+|git reset | version |  #将该版本回滚到暂存区域|
 |git reset | HEAD~n |  #将HEAD指针移动到前n个对象上并将该对象回滚到暂存区域|
 |git reset --soft | HEAD~n |  #仅移动HEAD指针|
 |git reset --hard | HAED~n |  #比默认的多了“将暂存区域文件还原到工作目录”（覆盖掉源码）|
