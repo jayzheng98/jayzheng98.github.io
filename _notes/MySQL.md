@@ -550,6 +550,7 @@ COMMIT;
 ```
 **4. Deadlock**
  - *If 2 transactions are updating 2 records in a reverse order, it is likely to have deadlock*
+
 <br>
 
 # Chapt.12 Design A Database
