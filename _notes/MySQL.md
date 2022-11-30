@@ -32,16 +32,16 @@ author_profile: false
 ```sql
 SELECT *
 FROM customers
--- WHERE (address LIKE '%trail%' OR address LIKE '%avenue%') AND phone LIKE '%4'                  #"%" is the early used wildcard
--- WHERE last_name REGEXP 'field|mac|rose' OR last_name REGEXP 'll$' OR last_name REGEXP '^boa'   #Regular expression
-WHERE last_name REGEXP '[gim]e' OR last_name REGEXP 'a[n-w]'                                      #last_name that include "ge/ie/me/an-aw"
+-- WHERE (address LIKE '%trail%' OR address LIKE '%avenue%') AND phone LIKE '%4'                  # "%" is the early used wildcard
+-- WHERE last_name REGEXP 'field|mac|rose' OR last_name REGEXP 'll$' OR last_name REGEXP '^boa'   # Regular expression
+WHERE last_name REGEXP '[gim]e' OR last_name REGEXP 'a[n-w]'                                      # last_name that include "ge/ie/me/an-aw"
 ORDER BY points DESC
-LIMIT 3;                             #LIMIT must be placed in the end of snippet
+LIMIT 3;                             # LIMIT must be placed in the end of snippet
 
 SELECT first_name, last_name, 
-		10 AS points         #Give a value and name it with "points" (has no relation with the "points" column)
+		10 AS points         # Give a value and name it with "points" (has no relation with the "points" column)
 FROM customers
-ORDER BY birth_date DESC;            #Multiple columns can be set for one ordering
+ORDER BY birth_date DESC;            # Multiple columns can be set for one ordering
 ```
 **2. Null**
 ```sql
@@ -57,7 +57,7 @@ WHERE shipped_date IS NULL;
 **1. Regular form of an inner join**
 ```sql
 SELECT *
-FROM customers c                     #Cannot use its original name once the column has an alias
+FROM customers c                     # Cannot use its original name once the column has an alias
 JOIN orders o
     ON o.customer_id = c.customer_id
 ```
@@ -73,7 +73,7 @@ JOIN sql_inventory.products p
 USE sql_hr;
 SELECT e.employee_id, e.first_name, e.reports_to, m.first_name AS manager
 FROM employees e
-JOIN employees m                      #Self join, to find the manager
+JOIN employees m                      # Self join, to find the manager
     ON e.reports_to = m.employee_id;
 ```
 **4. Outer join** <br>
@@ -84,12 +84,12 @@ USE sql_invoicing;
 SELECT *
 FROM clients c
 LEFT JOIN payments p
-    USING (client_id)                       #If the column names are the same, use USING instead of ON
-LEFT JOIN payment_methods pm                #Join multiple tables
+    USING (client_id)                       # If the column names are the same, use USING instead of ON
+LEFT JOIN payment_methods pm                # Join multiple tables
     ON p.payment_method = pm.payment_method_id
 LEFT JOIN invoices i            
-    ON c.client_id = i.client_id            #Compound Join Conditions
-    AND p.invoice_id = i.invoice_id         #In this case, the second condition is actually an inner join!!
+    ON c.client_id = i.client_id            # Compound Join Conditions
+    AND p.invoice_id = i.invoice_id         # In this case, the second condition is actually an inner join!!
 ORDER BY c.client_id;
 ```
 **5. Union** <br>
@@ -120,7 +120,7 @@ ORDER BY first_name;
 ```sql
 INSERT INTO customers
 VALUE(
-    DEFAULT,       #The customer_id column is Auto Incremental, use "last_insert_id()" to get the id of last insert
+    DEFAULT,       # The customer_id column is Auto Incremental, use "last_insert_id()" to get the id of last insert
     'John',
     'Smith',
     '1998-07-15',
@@ -130,7 +130,7 @@ VALUE(
     'CN',
     9980
     ),
-    (              #Insert multiple rows
+    (              # Insert multiple rows
     DEFAULT,
     'Michael',
     'Jackson',
@@ -147,7 +147,7 @@ VALUE(
    TRUNCATE and DELETE only delete data without deleting the structure of the table; DROP will delete the structure of the table, triggers, indexes, etc*
 
 ```sql
-DELETE FROM customers                 #Delete all the columns, but can be filtered by WHERE
+DELETE FROM customers                 # Delete all the columns, but can be filtered by WHERE
 WHERE first_name = 'Michael' AND last_name = 'Jackson';
 ```
 **3. Copy a table**
@@ -162,11 +162,11 @@ CREATE TABLE invoices_archived AS
 **4. Update**
 ```sql
 UPDATE invoices
-SET                                   #Becasue sql doesn't have "==", we must use SET to change values
+SET                                   # Becasue sql doesn't have "==", we must use SET to change values
     payment_total = invoice_total/2, 
     payment_date = due_date
--- WHERE client_id IN (3,5)           #Update multiple columns
-WHERE client_id = (                   #If the result of nested query is not unique, change "=" to "IN" here
+-- WHERE client_id IN (3,5)           # Update multiple columns
+WHERE client_id = (                   # If the result of nested query is not unique, change "=" to "IN" here
 	SELECT client_id
 	FROM clients
 	WHERE name='Myworks'
@@ -186,8 +186,8 @@ SELECT
     MIN(invoice_total) AS lowest,
     AVG(invoice_total) AS average,
     SUM(invoice_total) AS total,
-    COUNT(invoice_total) AS number,                 #COUNT only counts for non-NUll
-    COUNT(DISTINCT client_id) AS client_number      #DISTINCT for deduplication  
+    COUNT(invoice_total) AS number,                 # COUNT only counts for non-NUll
+    COUNT(DISTINCT client_id) AS client_number      # DISTINCT for deduplication  
 FROM invoices;
 ```
 **2. GROUP BY** <br>
@@ -201,7 +201,7 @@ SELECT
 FROM payments p
 JOIN payment_methods pm
 	ON p.payment_method =  pm.payment_method_id
-GROUP BY p.date, pm.name              #Each group is a combination of these 2 columns
+GROUP BY p.date, pm.name              # Each group is a combination of these 2 columns
 ```
 **3. HAVING** <br>
  - *Filtering with HAVING after GROUP BY, and can only filter contents exist in SELECT*
@@ -214,7 +214,7 @@ SELECT
 FROM customers c 
 JOIN orders o       USING(customer_id)
 JOIN order_items oi USING(order_id)
-WHERE state='VA'                      #WHERE must be written before GROUP BY
+WHERE state='VA'                      # WHERE must be written before GROUP BY
 GROUP BY c.customer_id, c.first_name, c.last_name, c.state
 HAVING spent_money>100;
 ```
@@ -264,15 +264,15 @@ WHERE invoice_total > (
 **3. FROM & SELECT subquery**
 ```sql
 SELECT *
-FROM (                                           #FROM subquery. Only for single queries!
+FROM (                                           # FROM subquery. Only for single queries!
 	SELECT 
 		invoice_id, 
 		invoice_total,
-		(SELECT AVG(invoice_total)       #SELECT subquery. Direct using "AVG(invoice_total)" returns only 1 row
+		(SELECT AVG(invoice_total)       # SELECT subquery. Direct using "AVG(invoice_total)" returns only 1 row
 		 FROM invoices) AS invoices_avg,
 		invoice_total - (SELECT invoices_avg) AS difference
 	FROM invoices
-    ) AS invoice_summary;                        #Must have alias
+    ) AS invoice_summary;                        # Must have alias
 ```
 <br>
 
@@ -284,14 +284,14 @@ FROM (                                           #FROM subquery. Only for single
 ```sql
 SELECT ROUND(3.1415926, 4); 
 SELECT TRUNCATE(4.24923, 2); 
-SELECT CEILING(5.2);                          #Minimal integer >= input
-SELECT FLOOR(5.2);                            #Maximal integer <= input
-SELECT RAND();                                #Random in (0,1)
+SELECT CEILING(5.2);                          # Minimal integer >= input
+SELECT FLOOR(5.2);                            # Maximal integer <= input
+SELECT RAND();                                # Random in (0,1)
 ```
 **2. String**
 ```sql
-SELECT TRIM('  A-928 201 24  ');              #Remove leading and trailing spaces
-SELECT SUBSTRING('Kindergarten', 2, 4);       #Extract 4 characters, start with character No.2 (1,2,3,...)
+SELECT TRIM('  A-928 201 24  ');              # Remove leading and trailing spaces
+SELECT SUBSTRING('Kindergarten', 2, 4);       # Extract 4 characters, start with character No.2 (1,2,3,...)
 SELECT LOCATE('der', 'Kindergarten');
 SELECT REPLACE('Kindergarten', 'e', 'de');
 SELECT CONCAT('Zheng', ' ', 'Zhongyi');
@@ -308,8 +308,8 @@ SELECT DATEDIFF(NOW(), '1998-07-15');
 SELECT 
     order_id,
     order_date, 
-    -- IFNULL(shipper_id, 'Not assigned') AS shipper,             #If the first parameter is NULL, return the second one
-    COALESCE(shipper_id, comments, 'Not assigned') AS shipper,    #Replace NULL with the first non-NULL parameter
+    -- IFNULL(shipper_id, 'Not assigned') AS shipper,             # If the first parameter is NULL, return the second one
+    COALESCE(shipper_id, comments, 'Not assigned') AS shipper,    # Replace NULL with the first non-NULL parameter
     IF(YEAR(order_date) = 2019, 'Active', 'Archive') AS status
 FROM orders;
 ```
@@ -380,7 +380,7 @@ CREATE OR REPLACE VIEW invoice_with_balance AS
 	payment_date
     FROM invoices
     WHERE invoice_total - payment_total > 0
-WITH CHECK OPTION;                              #Prevent some unexpected missing of values
+WITH CHECK OPTION;                              # Prevent some unexpected missing of values
 
 DELETE FROM invoice_with_balance
 WHERE invoice_id = 1;
@@ -417,8 +417,8 @@ DROP PROCEDURE IF EXISTS get_clients;
 DELIMITER $$ 
 CREATE PROCEDURE get_unpaid_invoices_for_client(
     client_id INT,
-    OUT invoices_count INT,                     #OUT means this parameter is used for output(try not to use it...)
-    OUT invoices_total DECIMAL(9,2)             #2 bits to store decimal, and the rest 7 to store integer
+    OUT invoices_count INT,                     # OUT means this parameter is used for output(try not to use it...)
+    OUT invoices_total DECIMAL(9,2)             # 2 bits to store decimal, and the rest 7 to store integer
     )
 BEGIN
     SELECT COUNT(*), SUM(invoice_total)
@@ -433,7 +433,7 @@ DELIMITER ;
 DELIMITER $$ 
 CREATE PROCEDURE get_risk_factor()
 BEGIN
-    DECLARE risk_factor DECIMAL(9,2) DEFAULT 0;  #Declare a variable, must write before SELECT sentences
+    DECLARE risk_factor DECIMAL(9,2) DEFAULT 0;  # Declare a variable, must write before SELECT sentences
     DECLARE invoices_total DECIMAL(9,2);
     DECLARE invoices_count INT;
     
@@ -457,7 +457,7 @@ DELIMITER ;
 
 ```sql
 DELIMITER $$ 
-CREATE TRIGGER payments_after_insert             #The INSERT trigger
+CREATE TRIGGER payments_after_insert             # The INSERT trigger
     AFTER INSERT ON payments
     FOR EACH ROW
 BEGIN
@@ -469,7 +469,7 @@ END$$
 INSERT INTO payments
 VALUES(DEFAULT, 5, 3, '2019-01-01', 10, 1)$$
 
-CREATE TRIGGER payments_after_delete             #The DELETE trigger
+CREATE TRIGGER payments_after_delete             # The DELETE trigger
     AFTER DELETE ON payments
     FOR EACH ROW
 BEGIN
@@ -495,7 +495,7 @@ SHOW TRIGGERS;
 
 ```sql
 DELIMITER $$ 
-CREATE EVENT yearly_delete_stale_audit_rows        #Create an event to yearly delete data of previous years
+CREATE EVENT yearly_delete_stale_audit_rows        # Create an event to yearly delete data of previous years
 ON SCHEDULE
     EVERY 1 YEAR STARTS '2019-01-01' ENDS '2029-01-01'
 DO
@@ -529,11 +529,11 @@ After a transaction successfully completes, changes to data persist and are not 
  - *MySQL uses autocommit mode by default, if you don't explicitly use START TRANSACTION to start a transaction, each query will be treated as a transaction and automatically committed*
 
 ```sql
-START TRANSACTION;              #Actually this sentence and the COMMIT are not necessary
+START TRANSACTION;              # Actually this sentence and the COMMIT are not necessary
 UPDATE customers
 SET points = points + 10
 WHERE customer_id = 1;
-COMMIT;                         #Changes only take effect after the commit, otherwise they would be rollbacked
+COMMIT;                         # Changes only take effect after the commit, otherwise they would be rollbacked
 ```
 **3. Isolation level**
 - *Use "lock" to prevent multiple transactions update the same content at the same time (cause lost update)*
@@ -543,7 +543,7 @@ COMMIT;                         #Changes only take effect after the commit, othe
 
 ```sql
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
-START TRANSACTION;                 #Non-repeatable reads
+START TRANSACTION;              # Non-repeatable reads
 SELECT points FROM customers WHERE customer_id = 1;
 SELECT points FROM customers WHERE customer_id = 1;
 COMMIT;
@@ -575,7 +575,7 @@ USE sql_store2;
 ```
 **4. Create & Delete table**
 ```sql
-DROP TABLE IF EXISTS orders;        #Because "orders" depends on "customers", we have to drop "orders" first
+DROP TABLE IF EXISTS orders;        # Because "orders" depends on "customers", we have to drop "orders" first
 DROP TABLE IF EXISTS customers;
 
 CREATE TABLE IF NOT EXISTS customers(
@@ -601,11 +601,11 @@ ALTER TABLE customers
     ADD city          VARCHAR(50) NOT NULL,
     MODIFY first_name VARCHAR(50) DEFAULT '',
     DROP points;
-    -- DROP PRIMARY KEY;           #Don't need to specify column name
+    -- DROP PRIMARY KEY;           # Don't need to specify column name
 ```
 **6. Engine**
 ```sql
-SHOW ENGINES;                      #Store engines: InnoDB & MyISAM
+SHOW ENGINES;                      # Store engines: InnoDB & MyISAM
 ```
 <br>
 
@@ -620,8 +620,8 @@ SHOW ENGINES;                      #Store engines: InnoDB & MyISAM
 ```sql
 CREATE INDEX idx_points ON customers(points);
 EXPLAIN SELECT customer_id FROM customers 
--- USE INDEX (idx_customers)                                    #Not required
-WHERE points > 1000;                                            #rows: 1010 -> 529
+-- USE INDEX (idx_customers)                                    # Not required
+WHERE points > 1000;                                            # rows: 1010 -> 529
 ```
 **2. Delete index**
 ```sql
@@ -633,7 +633,7 @@ DROP INDEX idx_points ON customers;
 ```sql
 CREATE INDEX idx_lastname ON customers(last_name(20));
 SELECT COUNT(DISTINCT LEFT(last_name, 1)), 
-       COUNT(DISTINCT LEFT(last_name, 5)),                      #Best prefix index value
+       COUNT(DISTINCT LEFT(last_name, 5)),                      # Best prefix index value
        COUNT(DISTINCT LEFT(last_name, 10))
 FROM customers;
 ```
@@ -657,8 +657,8 @@ EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA' AND points > 1000;
  - *If we change the above AND to OR, indexes will be ignored, Mysql has to do a full index scan with 1010 rows*
 
 ```sql
-EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA'    #Split OR by UNION
-  UNION SELECT customer_id FROM customers WHERE points > 1000;  #Both queries use the "idx_state_points" which means this index is a covering index
+EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA'    # Split OR by UNION
+  UNION SELECT customer_id FROM customers WHERE points > 1000;  # Both queries use the "idx_state_points" which means this index is a covering index
 ```
 <br>
 
