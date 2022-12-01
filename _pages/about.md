@@ -17,7 +17,7 @@ redirect_from:
 
 * To be more specific, my current research interest is in **Anomaly Detection** and **Wireless Communication Security**.
 
-* Before that, I was an undergraduate student majoring in **Network Engineering** at Southwest Jiaotong University. My interest at that time mainly focused on the **Embedded System** developing. I am in the top 14% of my major and have obtained the **Postgraduate Recommendation** to study for master degree without attending the exam.
+* Before that, I was an undergraduate student majoring in **Network Engineering** at SWJTU. My interest at that time mainly focused on the **Embedded System** developing. I am in the top 14% of my major and have obtained the **Postgraduate Recommendation** to study for master degree without attending the exam.
 
 * To learn more about me, you can have a view of my CV page [here](/cv).
 
