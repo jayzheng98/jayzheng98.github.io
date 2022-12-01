@@ -8,6 +8,8 @@ redirect_from:
   - /git/
 ---
 
+<a name="top"></a>
+
 <!-- GFM-TOC -->
 * Chapters 
     * [Statement](#statement)
@@ -86,18 +88,16 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 # Central Server
 <hr>
 
-**1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier
-
-**2.** For example, the [Github](https://github.com/) is a central server
+**1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier. For example, the [Github](https://github.com/) is a central server
 
 <br>
 
 # Workflow
 <hr>
 
-新建一个仓库之后，当前目录就成为了工作区，工作区下有一个隐藏目录 .git，它属于 Git 的版本库。
+**1.** After creating a new repository, the current directory becomes the workspace
 
-Git 的版本库有一个称为 Stage 的暂存区以及最后的 History 版本库，History 存储所有分支信息，使用一个 HEAD 指针指向当前分支。
+**2.** There is a hidden directory ".git" in the workspace, which belongs to the Git version library. The Git version library includes a staging area called "Stage" and the latest "History" version library. "History" stores all branches' information and uses a HEAD pointer to point to the current branch
 
 <div align="center"> <img width="850" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git2.png?raw=true"/> </div><br>
 <br>
@@ -105,31 +105,31 @@ Git 的版本库有一个称为 Stage 的暂存区以及最后的 History 版本
 # Branch
 <hr>
 
-使用指针将每个提交连接成一条时间线，HEAD 指针指向当前分支指针。
+**1. Implement**: Use the pointer to connect each submission into a timeline, and the HEAD pointer points to the current branch pointer
 
 <div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git3.png?raw=true"/> </div><br>
 
-新建分支是新建一个指针指向时间线的最后一个节点，并让 HEAD 指针指向新分支，表示新分支成为当前分支。
+**2. New**: Create a new pointer to the last node of the timeline, and make the HEAD pointer point to the new branch, indicating that the new branch becomes the current branch
 
 <div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git4.png?raw=true"/> </div><br>
 
-每次提交只会让当前分支指针向前移动，而其它分支指针不会移动。
+**3. Commit**: Each commit will only move the current branch pointer forward, while other pointers stay fixed
 
-<div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git5.png?raw=true"/> </div><br>
+<div align="center"> <img width="360" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git5.png?raw=true"/> </div><br>
 
-合并分支也只需要改变指针即可。
+**4. Merge**: Simply change the pointer
 
-<div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git6.png?raw=true"/> </div><br>
+<div align="center"> <img width="360" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git6.png?raw=true"/> </div><br>
 <br>
 
 # Conflict
 <hr>
 
-当两个分支都对同一个文件的同一行进行了修改，在分支合并时就会产生冲突。
+**1.** When two branches modify the same line of the same file, conflicts will occur during merging:
 
-<div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git7.png?raw=true"/> </div><br>
+<div align="center"> <img width="360" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git7.png?raw=true"/> </div><br>
 
-Git 会使用 \<\<\<\<\<\<\< ，======= ，\>\>\>\>\>\>\> 标记出不同分支的内容，只需要把不同分支中冲突部分修改成一样就能解决冲突。
+**2.** Git will use "\<\<\<\<\<\<\<, =======, \>\>\>\>\>\>\>" to identify contents of different branches. We only need to modify the conflicting parts to be the same to resolve the conflict
 
 ```
 <<<<<<< HEAD
@@ -143,9 +143,9 @@ Creating a new branch is quick AND simple.
 # Stashing
 <hr>
 
-在一个分支上操作之后，如果还没有将修改提交到分支上，此时进行切换分支，那么另一个分支上也能看到新的修改。这是因为所有分支都共用一个工作区的缘故。
+**1.** After operating on a branch, switch to another branch before the changes are committed, the changes can also be seen on the other branch. This is because all branches share a same workspace
 
-可以使用 git stash 将当前分支的修改储藏起来，此时当前工作区的所有修改都会被存到栈中，也就是说当前工作区是干净的，没有任何未提交的修改。此时就可以安全的切换到其它分支上了。
+**2.** We can use git stash to store the changes of the current branch. At this time, all the changes of the current workspace will be stored in the stack to keep the current workspace clean. As there are no uncommitted changes, we can safely switch to other branches.
 
 ```
 $ git stash
@@ -153,4 +153,6 @@ Saved working directory and index state \ "WIP on master: 049d078 added the inde
 HEAD is now at 049d078 added the index file (To restore them type "git stash apply")
 ```
 
-该功能可以用于 bug 分支的实现。如果当前正在 dev 分支上进行开发，但是此时 master 上有个 bug 需要修复，但是 dev 分支上的开发还未完成，不想立即提交。在新建 bug 分支并切换到 bug 分支之前就需要使用 git stash 将 dev 分支的未提交修改储藏起来。
+**3.** Stashing can be used to implement the "bug branch". If you are currently developing on the "dev branch", but there is a bug on the "master branch", and the development on the "dev branch" is incomplete to be submitted immediately. Before creating and switching to a new bug branch, you need to use `git stash` to store the uncommitted changes of "dev branch"
+
+<div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
