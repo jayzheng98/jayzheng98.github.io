@@ -79,10 +79,10 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
    
 |  | Centralized | Distributed |
 |:--------|:-------:|:--------:|
-| The copy of code | only the central server | everyone's computer |
+| The copy of code | Only the central server | Everyone's computer |
 | Work without central server | × | √ |
 | Networking required | √ | × |
-| Create and merge | slow (copy a complete code) | fast |
+| Create and merge | Slow (copy a complete code) | Fast |
 
 <br>
 
