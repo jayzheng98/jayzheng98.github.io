@@ -10,7 +10,7 @@ author_profile: false
 
 <!-- GFM-TOC -->
 * Chapters
-    * [1. Basic](#chapt1-basic)
+    * [1. Basic Info](#chapt1-basic-info)
     * [2. Output](#chapt2-output)
     * [3. Type of Data](#chapt3-type-of-data)
     * [4. Grammar](#chapt4-grammar)
@@ -23,10 +23,10 @@ author_profile: false
 
 <br>
 
-# Chapt.1 Basic
+# Chapt.1 Basic Info
 <hr>
 
-**1.** PHP files can contain "html", "CSS" and "JavaScript" code
+**1.** PHP files can include "html", "CSS" and "JavaScript" code
 
 | Code    | Description |
 |:-------:|:--------:|
@@ -64,22 +64,16 @@ author_profile: false
 <?php
     $x = true;
     var_dump($x);        // "var_dump()" can print the type of a variable
-    echo '<hr>';
     $y = -123;
     var_dump($y);
-    echo '<hr>';
     $f = 3.1415;
     var_dump($f);
-    echo '<hr>';
     $s1 = '我是';        // One Chinese character is three characters long
     var_dump($s1);
-    echo '<hr>';
     $s2 = 'my name is Jay';
     var_dump($s2);
-    echo '<hr>';
     $s3 = "$s1 zzy";     // " can parse variable content, while ' cannot
     var_dump($s3);
-    echo '<hr>';
     $n = null;
     var_dump($n);
 ?>
@@ -105,7 +99,7 @@ author_profile: false
     $s1 = 'I am';
     echo $s1.$arr2[1], '她叫', $arr1[1];    // "." and "," have the same effect
 ```
-**3.** Multidimensional array
+**3.** Multidimensional array (Try not to exceed 3 dimensions)
 
 ```php
     $MultiD_arr = array(
@@ -143,7 +137,7 @@ author_profile: false
 ```
 **5.** Constant
 
-```
+```php
 <?php
     define('HOST','127.0.0.1');   // Definition method 1
     echo HOST;
