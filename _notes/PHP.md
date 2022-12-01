@@ -185,7 +185,7 @@ author_profile: false
     
     // PHP8 has "match()" to match and output in the form of key&value
     $str4 = 'zzy';
-    echo match($str4){         // Exact match (while "switch" is not). For example, character number and integer number will be distinguished 
+    echo match($str4){          // Exact match (while "switch" is not). For example, character number and integer number will be distinguished 
         'hht' => 'Haotian He',
         'zzy' => 'Zhongyi Zheng',
         'wj' => 'Jing Wang'
@@ -197,25 +197,22 @@ author_profile: false
 ```php
 <?php
     $ouyang = 'OUYANG';
-    echo strtolower($ouyang);          // Convert to lowercase
+    echo strtolower($ouyang);           // Convert to lowercase
     
     $miejue = 'miejueshitai';
-    echo strtoupper($miejue);          // Convert to uppercase
+    echo strtoupper($miejue);           // Convert to uppercase
     
     $php = 'ouyang, miejue, ximen';
-    print_r ( explode(',', $php) );    // Divide string into array by ","
-    
+    print_r ( explode(',', $php) );     // Divide string into array by ","
+     
     $ximen = 'ximen';
-    echo md5($ximen);                  // Use "md5" to encrypt string
+    echo md5($ximen);                   // Use "md5" to encrypt string
     
     $arr = ['ouyang', 'ximen', 'tianpeng'];
-    echo count($arr);                  // Counting the number of elements
-    
-    echo implode(',',$arr);            // Combine array into string by ","
-    
-    echo in_array('tianpeng', $arr);   // Query the giving content
-    
-    array_pop($arr);                   // Delete the last element
+    echo count($arr);                   // Counting the number of elements
+    echo implode(',',$arr);             // Combine array into string by "," 
+    echo in_array('tianpeng', $arr);    // Query the giving content
+    array_pop($arr);                    // Delete the last element
     print_r($arr);
 ?>
 ```
@@ -225,7 +222,7 @@ author_profile: false
 <?php
     $num2 = 13;        
     function num($num1, $num2){
-        //global $num2;                //Use "global" to call global variables in functions
+        //global $num2;                 //Use "global" to call global variables in functions
         return $num1 * $num2;
     }
     echo num(12, 11);
@@ -389,7 +386,7 @@ author_profile: false
             return $this->fun3();                      // Use pseudo variable "$this" to refer to the method of current class
         }
         
-        // Magic methods (Only record "\_\_construct"	and "\_\_destruct" here)
+        // Magic methods (Only record "__construct" and "__destruct" here)
         public function __construct($name, $school, $id_num){   // "__construct" is executed when instantiating
             $this->name = $name;
             $this->school = $school;
@@ -550,18 +547,19 @@ author_profile: false
                         return 'Class of ouyang <hr/>';
                 }
         }
+?>
 ```
 <br>
 
 # Chapt.8 New Feature of PHP8
 <hr>
 
-**1.** New feature 1: JIT compiler
+**New feature 1**: JIT compiler
  - JIT (Just In Time) compiler can greatly improve the performance of PHP
  - JIT compiler will be integrated into PHP as an extension. The "Opcache extension" is used to directly convert some *opcodes* into *cpu instructions* at runtime
  - JIT is valid only when "Opcache" is enabled
 
-**2.** New feature 2: You can assign variables with default values when calling functions
+**New feature 2**: You can assign variables with default values when calling functions
  - PHP7
 
 ```php
@@ -592,8 +590,10 @@ function test($a,$b=0,$c=0,$d=0){
 
 test(10,20,d:30,c:40);
 ```
-**3.** New feature 3: You can define and initialize attributes in the constructor at the same time
+**New feature 3**: You can define and initialize attributes in the constructor at the same time
 
-`public function __construct(public $name, public $school, public $id_num){}`
+```php
+public function __construct(public $name, public $school, public $id_num){}
+```
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
