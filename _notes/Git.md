@@ -21,6 +21,7 @@ redirect_from:
     * [6. Conflict](#conflict)
     * [7. Stashing](#stashing)
 <!-- GFM-TOC -->
+
 <br>
 
 # Statement
