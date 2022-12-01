@@ -269,9 +269,9 @@ author_profile: false
         echo $int;
         $int++;
     }
-    $int = 1;
     
     // "do...while"
+    $int = 1;
     do {
         echo $int;
         $int++;
