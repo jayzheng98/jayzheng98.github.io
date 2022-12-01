@@ -6,6 +6,8 @@ permalink: /notes/OP
 author_profile: false
 ---
 
+<a name="top"></a>
+
 <!-- GFM-TOC -->
 * Categories
     * [Introduction](#introduction)
@@ -676,3 +678,5 @@ void IPToBina(char* in, int* out){
 **1.** Treat the *complement* of a negative number as the *true form* to obtain its corresponding positive number:
 
 `unsigned int tmp = (unsigned int) n;`
+
+<div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
