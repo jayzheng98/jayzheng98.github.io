@@ -6,6 +6,8 @@ permalink: /notes/mysql
 author_profile: false
 ---
 
+<a name="top"></a>
+
 <!-- GFM-TOC -->
 * Chapters
     * [2. Select](#chapt2-select)
@@ -686,3 +688,4 @@ REVOKE CREATE VIEW
 ON sql_store.*
 FROM moon_app;
 ```
+<a class="top-link hide" href="#top">↑</a>
