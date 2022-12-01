@@ -82,7 +82,7 @@ author_profile: false
 
 ```php
 <?php
-    $arr1 = array(                           // or use "[]"
+    $arr1 = array(                           // Or use "[]"
         'ouyang',
         'miejue'
     ); 
@@ -124,7 +124,7 @@ author_profile: false
 **4.** Loops in array
 
 ```php
-    foreach($arr2 as $k=>$v){             // key "k" and value "v"
+    foreach($arr2 as $k=>$v){             // Key "k" and value "v"
         echo $v, $k;
         echo '<hr>';
     } 
@@ -320,8 +320,8 @@ author_profile: false
 
 | Superglobal variable | Description |
 |:-------:|:--------:|
-| `$_GET` | Receive the value in the url, which is displayed after "?" |
-| `$_POST` | Receive the value in the url, but not be displayed |
+| `$_GET` | Receive the value in the URL, which is displayed after "?" |
+| `$_POST` | Receive the value in the URL, but not be displayed |
 | `$_COOKIE` | Be used to identify users and stored in client browsers |
 | `$_SESSION` | Be used to store "sessions" and stored in servers |
 | `$_REQUEST` | Include the value of "get", "post" and "cookie" |
@@ -361,6 +361,239 @@ author_profile: false
 # Chapt.7 Class and Object
 <hr>
 
+**1.** Three characteristics:
+ - **Inheritance**: Allows an object of one type to obtain the attributes and methods of an object of another type (the parent class cannot use the contents of the child class)
+ - **Encapsulation**: Abstracts an object into a class. Each class implements protection mechanisms for its own attributes and methods
+ - **Polymorphism**: Refers to that an entity has multiple forms at the same time, which is mainly embodied in the inheritance of the class (inherit first and then rewrite)
 
+**2.** Class attribute and class method
+```php
+<?php 
+    class Teacher{
+        // Class attribute (variable)
+        public $name = 'ouyang';                       // "public" (default): visible within class, outside class and in subclasses 
+        protected $school = 'SWJTU';                   // "protected": visible within class and subclasses, but invisible outside class
+        private $id_num;                               // "private": visible only within class, invisible in subclasses and outside class
+        
+        // Method
+        public function fun1(){
+            echo 'Name：miejue, School: SCU<hr/>';   // Try not to use "echo" but "return" in class
+        }
+        public function fun2(){
+            return 'Name：miejue, School: SCU<hr/>';
+        }
+        public function fun3(){                        // Use pseudo variable "$this" to refer to the variable of current class
+            return 'Name:'.$this->name.', School: '.$this->school.', ID Number: '.$this->id_num.'<hr/>'; 
+        }
+        public function fun4(){            
+            return $this->fun3();                      // Use pseudo variable "$this" to refer to the method of current class
+        }
+        
+        // Magic methods (Only record "\_\_construct"	and "\_\_destruct" here)
+        public function __construct($name, $school, $id_num){   // "__construct" is executed when instantiating
+            $this->name = $name;
+            $this->school = $school;
+            $this->id_num = $id_num;
+        }
+        public function __destruct(){                          // "__destruct" is automatically executed after the class execution
+            echo 'Class executed, ready to be destructed<hr/>';
+        }
+    }
+```    
+**3.** Inheritance and polymorphism
+
+```php
+    class PHPteacher extends Teacher{       // Inherit the class "Teacher" defined above
+        public function fun5(){
+            return $this->school;
+        }
+        public function fun6(){
+            return $this->id_num;
+        }
+        public function fun1(){
+            return 'I am rewritten here to embody the Polymorphism<hr/>';
+        }
+    }
+    
+    // Some tests
+    $ximen = new Teacher('ximen','SCU','5101061998');
+    print_r($ximen);
+    echo '<hr/>';
+    echo $ximen->name;
+    echo '<hr/>';
+    echo $ximen->fun3();
+    
+    $ouyang = new PHPteacher('ouyang','SWJTU','5101051997');
+    print_r($ouyang);
+    echo '<hr/>';
+    echo $ouyang->id_num;                 // Cannot access "id_num" (private)
+    echo '<hr/>';
+    echo $ouyang->fun5();                 // Can access "school" (protected)
+    echo $ouyang->fun6();                 // Still cannot access "id_num"    
+    echo $ouyang->fun3();
+    echo $ouyang->fun1();
+?>
+```
+**4.** Abstract class
+ - Abstract class cannot be instantiated but only inherited
+ - Abstract methods (no func body) in abstract class need to be rewritten in subclass
+
+```php
+<?php
+    abstract class Teacher1 {             // Notice that there is no "abstract attribute"
+        protected $name;
+        private $school;
+ 
+        public function __construct($name, $school) {
+            $this->name = $name;
+            $this->school = $school;
+        }
+        public function fun1() {
+            return 'Name: ' . $this->name . ', School: ' . $this->school .'<hr/>';
+        }
+        abstract public function fun2();
+    }
+
+    class PHPTeacher1 extends Teacher1 {
+        public function fun3() {
+            return $this->fun1();
+        }
+        public function fun2() {
+            return 'I am the rewritten method after inheriting <hr/>';
+        }
+    }
+
+    $obj = new PHPTeacher1('ximen', 'SCU');
+    echo $obj->fun2();
+    echo $obj->fun3();
+?>
+```
+**5.** Interface
+- Interface is a special kind of abstract class, and its methods are all abstract
+
+```php
+<?php
+    interface file{
+        public function noTF($param);     // Don't need to use the "abstract" keyword, but end its methods with ";"
+        public function noZY($param);
+    }
+    class Teacher2 implements file {      // Use "implements" to implement an interface
+        protected $name;
+        private $school;
+        public $noTF;
+        public $noZY;
+
+        public function __construct($name, $school) {
+            $this->name = $name;
+            $this->school = $school;
+        }
+        public function noTF($param) {
+            $this->noTF = $param;
+        }
+        public function noZY($param) {
+            $this->noZY = $param;
+        }
+        public function fun1() {
+            return 'I am' . $this->name . ', ' . $this->noTF . $this->noZY;
+        }
+    }
+
+    $obj = new Teacher2('ouyang', 'SWJTU');
+    $obj->noTF('I didn't conduct corporal punishment on students, ');
+    $obj->noZY('I didn't assign any homework');
+    echo $obj->fun1();
+?>
+```
+**6.** Namespace
+ - It is used to solve the naming conflict of global members, drawing on the idea of file directory (different directories can have files with the same name)
+ - The namespace must be written at the beginning of the program
+ - Except for variables, the rest members cannot be directly accessed across namespaces
+
+```php
+<?php
+    namespace one;
+        const NAME = 'Constant of miejue <hr/>';
+        function php(){
+                return 'Function of miejue <hr/>';
+        }
+        class phpcn{
+                public function fun(){
+                        return 'Class of miejue <hr/>';
+                }
+        }
+        
+        // Access in namespace one
+        echo php();  
+        echo \two\php();       
+        echo \one\three\php();
+        use \one\three as t;        // Use sub-namspace "one\three" and rename it with "as"
+        echo t\php();
+
+    namespace two;
+        const NAME = 'Constant of ximen <hr/>';
+        function php(){
+                return 'Function of ximen <hr/>';
+        }
+        class phpcn{
+                public function fun(){
+                        return 'Class of ximen <hr/>';
+                }
+        }
+
+    namespace one\three;           // Sub-namespace
+        const NAME = 'Constant of ouyang <hr/>';
+        function php(){
+                return 'Function of ouyang <hr/>';
+        }
+        class phpcn{
+                public function fun(){
+                        return 'Class of ouyang <hr/>';
+                }
+        }
+```
+<br>
+
+# Chapt.8 New Feature of PHP8
+<hr>
+
+**1.** New feature 1: JIT compiler
+ - JIT (Just In Time) compiler can greatly improve the performance of PHP
+ - JIT compiler will be integrated into PHP as an extension. The "Opcache extension" is used to directly convert some *opcodes* into *cpu instructions* at runtime
+ - JIT is valid only when "Opcache" is enabled
+
+**2.** New feature 2: You can assign variables with default values when calling functions
+ - PHP7
+
+```php
+function test($a,$b=0,$c=0,$d=0){
+    echo $a;
+    echo '<hr/>';
+    echo $b;
+    echo '<hr/>';
+    echo $c;
+    echo '<hr/>';
+    echo $d;
+}
+
+test(10,20,30,40);
+```
+ - PHP8
+
+```php
+function test($a,$b=0,$c=0,$d=0){
+    echo $a;
+    echo '<hr/>';
+    echo $b;
+    echo '<hr/>';
+    echo $c;
+    echo '<hr/>';
+    echo $d;
+}
+
+test(10,20,d:30,c:40);
+```
+**3.** New feature 3: You can define and initialize attributes in the constructor at the same time
+
+`public function __construct(public $name, public $school, public $id_num){}`
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
