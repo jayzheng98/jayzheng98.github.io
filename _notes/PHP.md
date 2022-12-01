@@ -78,7 +78,7 @@ author_profile: false
     var_dump($n);
 ?>
 ```
-**2.** Array
+**2. Array**
 
 ```php
 <?php
