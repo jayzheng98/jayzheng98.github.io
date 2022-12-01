@@ -26,7 +26,7 @@ author_profile: false
 # Chapt.1 Basic Info
 <hr>
 
-**1.** PHP files can include "html", "CSS" and "JavaScript" code
+**1. PHP files can include "html", "CSS" and "JavaScript" code**
 
 | Code    | Description |
 |:-------:|:--------:|
@@ -41,7 +41,7 @@ author_profile: false
 # Chapt.2 Output
 <hr>
 
-**1.** PHP use `echo` and `print` to output contents:
+**1. PHP use** `echo` **and** `print` **to output contents:**
 
 ```php
 <?php
@@ -58,7 +58,7 @@ author_profile: false
 # Chapt.3 Type of Data
 <hr>
 
-**1.** Integer, float, boolean, null and string
+**1. Integer, float, boolean, null and string**
 
 ```php
 <?php
@@ -99,7 +99,7 @@ author_profile: false
     $s1 = 'I am';
     echo $s1.$arr1[1], '她叫', $arr2[1];    // "." and "," have the same effect
 ```
-**3.** Multidimensional array (Try not to exceed 3 dimensions)
+**3. Multidimensional array (Try not to exceed 3 dimensions)**
 
 ```php
     $MultiD_arr = array(
@@ -121,7 +121,7 @@ author_profile: false
     echo '<hr>';
     echo 'I can use'.$MultiD_arr[2]['kungfu'][1].', and am learning'.$MultiD_arr[2]['kungfu'][0];  // Access elements in multi-D array
 ```
-**4.** Loops in array
+**4. Loops in array**
 
 ```php
     foreach($arr2 as $k=>$v){             // Key "k" and value "v"
@@ -135,7 +135,7 @@ author_profile: false
     } 
 ?>
 ```
-**5.** Constant
+**5. Constant**
 
 ```php
 <?php
@@ -150,7 +150,7 @@ author_profile: false
 # Chapt.4 Grammar
 <hr>
 
-**1.** Conditional statements
+**1. Conditional statements**
 
 ```php
 <?php
@@ -192,7 +192,7 @@ author_profile: false
     };
 ?>
 ```
-**2.** Built-in functions
+**2. Built-in functions**
 
 ```php
 <?php
@@ -216,7 +216,7 @@ author_profile: false
     print_r($arr);
 ?>
 ```
-**3.** Custom functions
+**3. Custom functions**
 
 ```php
 <?php
@@ -228,7 +228,7 @@ author_profile: false
     echo num(12, 11);
 ?>
 ```
-**4.** Operators
+**4. Operators**
 
 | Operator | Description |
 |:-------:|:--------:|
@@ -259,7 +259,7 @@ author_profile: false
     var_dump( true === 'true' );   // "(Not) Identically equal to" compare not only values but also data types
 ?>
 ```
-**5.** Loops
+**5. Loops**
  
 ```php
 <?php
@@ -294,7 +294,7 @@ author_profile: false
 # Chapt.5 Database
 <hr>
 
-**1.** PHP could operate databases through the "PDO (PHP Data Object)":
+**1. PHP could operate databases through the "PDO (PHP Data Object)":**
 
 ```php
 <?php
@@ -306,14 +306,15 @@ author_profile: false
     print_r($arr);
 ?>
 ```
-**2.** Instruction about the "Mysql" database please refer to [here](https://jayzheng98.github.io/notes/mysql)
+**2. Instruction about the Mysql database please refer to [here](https://jayzheng98.github.io/notes/mysql)**
 
 <br>
 
 # Chapt.6 Superglobal Variable
 <hr>
 
-**1.** Superglobal variables can be used across pages. For example, they can be used directly in "test2.php" though created in "test.php"
+**1. Use** 
+- *Superglobal variables can be used across pages. For example, they can be used directly in "test2.php" though created in "test.php"*
 
 | Superglobal variable | Description |
 |:-------:|:--------:|
@@ -325,6 +326,7 @@ author_profile: false
 | `$GLOBALS` | A global combined array that includes all variables |
 
 <br>
+**2. Example**
 
 ```php
 <?php
@@ -358,12 +360,12 @@ author_profile: false
 # Chapt.7 Class and Object
 <hr>
 
-**1.** Three characteristics:
- - **Inheritance**: Allows an object of one type to obtain the attributes and methods of an object of another type (the parent class cannot use the contents of the child class)
- - **Encapsulation**: Abstracts an object into a class. Each class implements protection mechanisms for its own attributes and methods
- - **Polymorphism**: Refers to that an entity has multiple forms at the same time, which is mainly embodied in the inheritance of the class (inherit first and then rewrite)
+**1. Three characteristics:**
+ - ***Inheritance**: Allows an object of one type to obtain the attributes and methods of an object of another type (the parent class cannot use the contents of the child class)*
+ - ***Encapsulation**: Abstracts an object into a class. Each class implements protection mechanisms for its own attributes and methods*
+ - ***Polymorphism**: Refers to that an entity has multiple forms at the same time, which is mainly embodied in the inheritance of the class (inherit first and then rewrite)*
 
-**2.** Class attribute and class method
+**2. Class attribute and class method**
 ```php
 <?php 
     class Teacher{
@@ -397,7 +399,7 @@ author_profile: false
         }
     }
 ```    
-**3.** Inheritance and polymorphism
+**3. Inheritance and polymorphism**
 
 ```php
     class PHPteacher extends Teacher{       // Inherit the class "Teacher" defined above
@@ -431,9 +433,9 @@ author_profile: false
     echo $ouyang->fun1();
 ?>
 ```
-**4.** Abstract class
- - Abstract class cannot be instantiated but only inherited
- - Abstract methods (no func body) in abstract class need to be rewritten in subclass
+**4. Abstract class**
+ - *Abstract class cannot be instantiated but only inherited*
+ - *Abstract methods (no func body) in abstract class need to be rewritten in subclass*
 
 ```php
 <?php
@@ -465,8 +467,8 @@ author_profile: false
     echo $obj->fun3();
 ?>
 ```
-**5.** Interface
-- Interface is a special kind of abstract class, and its methods are all abstract
+**5. Interface**
+- *Interface is a special kind of abstract class, and its methods are all abstract*
 
 ```php
 <?php
@@ -501,10 +503,10 @@ author_profile: false
     echo $obj->fun1();
 ?>
 ```
-**6.** Namespace
- - It is used to solve the naming conflict of global members, drawing on the idea of file directory (different directories can have files with the same name)
- - The namespace must be written at the beginning of the program
- - Except for variables, the rest members cannot be directly accessed across namespaces
+**6. Namespace**
+ - *It is used to solve the naming conflict of global members, drawing on the idea of file directory (different directories can have files with the same name)*
+ - *The namespace must be written at the beginning of the program*
+ - *Except for variables, the rest members cannot be directly accessed across namespaces*
 
 ```php
 <?php
@@ -554,13 +556,13 @@ author_profile: false
 # Chapt.8 New Feature of PHP8
 <hr>
 
-**New feature 1**: JIT compiler
- - JIT (Just In Time) compiler can greatly improve the performance of PHP
- - JIT compiler will be integrated into PHP as an extension. The "Opcache extension" is used to directly convert some *opcodes* into *cpu instructions* at runtime
- - JIT is valid only when "Opcache" is enabled
+**New feature 1: JIT compiler**
+ - *JIT (Just In Time) compiler can greatly improve the performance of PHP*
+ - *JIT compiler will be integrated into PHP as an extension. The "Opcache extension" is used to directly convert some* opcodes *into* cpu instructions *at runtime*
+ - *JIT is valid only when "Opcache" is enabled*
 
-**New feature 2**: You can assign variables with default values when calling functions
- - PHP7
+**New feature 2: You can assign variables with default values when calling functions**
+ - *PHP7*
 
 ```php
 function test($a,$b=0,$c=0,$d=0){
@@ -575,7 +577,7 @@ function test($a,$b=0,$c=0,$d=0){
 
 test(10,20,30,40);
 ```
- - PHP8
+ - *PHP8*
 
 ```php
 function test($a,$b=0,$c=0,$d=0){
@@ -590,7 +592,7 @@ function test($a,$b=0,$c=0,$d=0){
 
 test(10,20,d:30,c:40);
 ```
-**New feature 3**: You can define and initialize attributes in the constructor at the same time
+**New feature 3: You can define and initialize attributes in the constructor at the same time**
 
 ```php
 public function __construct(public $name, public $school, public $id_num){}
