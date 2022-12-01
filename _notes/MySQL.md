@@ -518,14 +518,10 @@ ALTER EVENT yearly_delete_stale_audit_rows DISABLE;
 
 
 **1. ACID features**
- - ***Atomicity**<br>
-All changes to data are performed as if they are a single operation. That is, all the changes are performed, or none of them are*
- - ***Consistency**<br>
-Data is in a consistent state when a transaction starts and when it ends*
- - ***Isolation**<br>
-The intermediate state of a transaction is invisible to other transactions. As a result, transactions that run concurrently appear to be serialized*
- - ***Durability**<br>
-After a transaction successfully completes, changes to data persist and are not undone, even in the event of a system failure*
+ - ***Atomicity**: All changes to data are performed as if they are a single operation. That is, all the changes are performed, or none of them are*
+ - ***Consistency**: Data is in a consistent state when a transaction starts and when it ends*
+ - ***Isolation**: The intermediate state of a transaction is invisible to other transactions. As a result, transactions that run concurrently appear to be serialized*
+ - ***Durability**: After a transaction successfully completes, changes to data persist and are not undone, even in the event of a system failure*
 
 **2. Create transaction**
  - *MySQL uses autocommit mode by default, if you don't explicitly use START TRANSACTION to start a transaction, each query will be treated as a transaction and automatically committed*
