@@ -688,4 +688,4 @@ REVOKE CREATE VIEW
 ON sql_store.*
 FROM moon_app;
 ```
-<div align="right"><a class="top-link hide" href="#top"><font size="7"> ↑</font></a></div>
+<div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
