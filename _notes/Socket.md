@@ -15,11 +15,11 @@ redirect_from:
     * [Introduction](#introduction)
     * [Linux](#linux)
        * [UDP](#udp)  
-         * [Client](#client)
-         * [Server](#server)
+         * [U-Client](#u\-client)
+         * [U-Server](#u\-server)
        * [TCP](#tcp)
-         * [Client](#client)
-         * [Server](#server)
+         * [T-Client](#t\-client)
+         * [T-Server](#t\-server)
        * [Test](#test)
     * [Windows](#windows)
 
@@ -32,7 +32,7 @@ redirect_from:
 
 **1.** Actually the complex rationale behind Socket is not recorded in this article. The aim of this page is to help people get started quickly. They can modify the templates according to their needs
 
-**2.** Besides the common data types such as "number" and "string", Socket can also transfer "structure" and "class" which is shown in [UDP Client](#udp-client)
+**2.** Besides the common data types such as "number" and "string", Socket can also transfer "structure" and "class" which is shown in [UDP Client](#u\-client)
 
 **3.** All codes are written in *C++* 
 
@@ -44,7 +44,7 @@ redirect_from:
 ## UDP
 <hr>
 
-### Client
+### U-Client
  - *IPv4*
 
 ```c++
@@ -104,7 +104,7 @@ int main() {
     return 0;
 }
 ```
-### Server
+### U-Server
  - *IPv4*
 
 ```c++
@@ -169,7 +169,7 @@ int main() {
 ## TCP
 <hr>
 
-### Client
+### T-Client
  - *IPv4*
 
 ```c++
@@ -218,7 +218,7 @@ int main(){
     return 0;
 }
 ```
-### Server
+### T-Server
  - *IPv4*
 
 ```c++
