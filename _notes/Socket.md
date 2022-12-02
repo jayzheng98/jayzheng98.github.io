@@ -163,7 +163,50 @@ int main() {
  - *IPv4*
 
 ```c++
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+using namespace std;
 
+int main(){
+    // Create a Socket
+    int client_sockfd=socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);  
+
+    struct sockaddr_in remote_addr;
+    socklen_t len = sizeof(remote_addr);
+    memset(&remote_addr, 0, len);
+    remote_addr.sin_family=AF_INET;
+    remote_addr.sin_addr.s_addr=inet_addr("127.0.0.1");
+    remote_addr.sin_port=htons(8000);
+
+    // Bind the socket to server's IP address
+    if(connect(client_sockfd, (struct sockaddr *)&remote_addr, len)<0){
+        perror("connect error");
+        return 1;
+    }
+    printf("Connected to server");
+
+    // Receive the welcome message
+    char buf[BUFSIZ];
+    recv(client_sockfd, buf, BUFSIZ, 0);
+    //buf[len]='/0';
+    printf("%s\n",buf);
+
+    while(1){
+        printf("Enter string to send:");
+        scanf("%s", buf);                            // 不用"&buf"?
+        if(!strcmp(buf,"quit")
+            break;
+        send(client_sockfd, buf, strlen(buf), 0);    // TODO!!!!!!!!!!!!!!!!!!!!!!!!!! sizeof?
+        recv(client_sockfd, buf, BUFSIZ, 0);
+        //buf[len]='/0';
+        printf("Reply: %s\n", buf);
+    }
+    close(client_sockfd);
+    return 0;
+}
 ```
 ## TCP Server
  - *IPv4*
@@ -188,8 +231,8 @@ int main(){
 
     // Listen to the connection requests
     if(listen(server_sockfd, 5)<0){
-      perror("listen error");
-      return 1;
+        perror("listen error");
+        return 1;
     };
 
     struct sockaddr_in remote_addr;          // Client socket structure
@@ -206,10 +249,10 @@ int main(){
     unsigned char reply[32] = {"Successfully received!"};
     
     while(1){
-      recv(client_sockfd, buf, BUFSIZ, 0)
-      //buf[len]='/0';
-      printf("%s\n", buf);
-      send(client_sockfd, reply, sizeof(reply), 0);
+        recv(client_sockfd, buf, BUFSIZ, 0)
+        //buf[len]='/0';
+        printf("%s\n", buf);
+        send(client_sockfd, reply, sizeof(reply), 0);
     }
     close(client_sockfd);
     close(server_sockfd);
