@@ -64,7 +64,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git merge | branch name | Merge changes from another branch|
 |git branch -d | branch name |  Delete a branch | 
 
-See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+**See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
 
 <br>
 
