@@ -14,10 +14,12 @@ redirect_from:
 * Categories 
     * [Introduction](#introduction)
     * [Linux](#linux)
-       * [UDP Client](#udp-client)
-       * [UDP Server](#udp-server)
-       * [TCP Client](#tcp-client)
-       * [TCP Server](#tcp-server)
+       * [UDP](#udp)  
+         * [Client](#client)
+         * [Server](#server)
+       * [TCP](#tcp)
+         * [Client](#client)
+         * [Server](#server)
        * [Test](#test)
     * [Windows](#windows)
 
@@ -39,7 +41,10 @@ redirect_from:
 # Linux
 <hr>
 
-## UDP Client
+## UDP
+<hr>
+
+### Client
  - *IPv4*
 
 ```c++
@@ -99,7 +104,7 @@ int main() {
     return 0;
 }
 ```
-## UDP Server
+### Server
  - *IPv4*
 
 ```c++
@@ -159,7 +164,12 @@ int main() {
     return 0;
 }
 ```
-## TCP Client
+<br>
+
+## TCP
+<hr>
+
+### Client
  - *IPv4*
 
 ```c++
@@ -197,7 +207,7 @@ int main(){
     while(1){
         printf("Enter string to send:");
         scanf("%s", buf);                            // 不用"&buf"?
-        if(!strcmp(buf,"quit")
+        if(!strcmp(buf, "quit"))
             break;
         send(client_sockfd, buf, strlen(buf), 0);    // TODO!!!!!!!!!!!!!!!!!!!!!!!!!! sizeof?
         recv(client_sockfd, buf, BUFSIZ, 0);
@@ -208,7 +218,7 @@ int main(){
     return 0;
 }
 ```
-## TCP Server
+### Server
  - *IPv4*
 
 ```c++
@@ -259,12 +269,16 @@ int main(){
     return 0;
 }
 ```
+<br>
+
 ## Test
-**1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested the "UDP Socket" with IDE "Clion" in Ubuntu 18.04:<br>
- - *Client*
+<hr>
+
+**1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested them with IDE "Clion" in Ubuntu 18.04:<br>
+ - *UDP Client*
 <div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="600px"> </div><br>
 
- - *Server*
+ - *UDP Server*
 <div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="600px"> </div><br>
 
 <br>
