@@ -45,6 +45,7 @@ Actually
 #include <sys/types.h>
 #include <string.h>
 #include <iostream>
+using namespace std;
 
 struct UsrData{             // Test structure
     int usr_id[8];
@@ -83,17 +84,15 @@ int main(){
     sendUser.usr_id[0] = 1251;
     strcpy(sendUser.usr_nickname, "sadad");
     
-    while (1){
-        int sendNum  = sendto(sendSock, (class  circle *)&c1, sizeof(c1), 0, (struct sockaddr *)&sockAddr, sizeof(sockAddr));
-        printf("Send: %d\n", sendNum);
+    int sendNum  = sendto(sendSock, (class  circle *)&c1, sizeof(c1), 0, (struct sockaddr *)&sockAddr, sizeof(sockAddr));
+    printf("Send: %d\n", sendNum);
 
-        unsigned char buff[32] = {0};
-        recvfrom(sendSock, buff, sizeof(buff), 0, (struct sockaddr *)&sockAddr, sizeof(sockAddr));
-        printf("Reply: %s\n", buff);
-
-        close(sendSock);
-        return 0;
-    }
+    unsigned char buff[32] = {0};
+    recvfrom(sendSock, buff, sizeof(buff), 0, (struct sockaddr *)&sockAddr, sizeof(sockAddr));
+    printf("Reply: %s\n", buff);
+        
+    close(sendSock);
+    return 0;
 }
 ```
 ## UDP Server
@@ -108,6 +107,7 @@ int main(){
 #include <sys/types.h>
 #include <string.h>
 #include <iostream>
+using namespace std;
 
 struct UsrData{
     int usr_id[8];
@@ -157,6 +157,6 @@ int main(){
 # Windows
 <hr>
 
-Since I haven't encountered the scenario of socket communication on Windows in all my projects before, I cannot make a record here for the time being
+Since I haven't encountered the scenario of socket communication on Windows in all my projects before, I cannot make a record here for the time being 😉
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
