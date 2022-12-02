@@ -86,7 +86,7 @@ int main() {
     int n2 = sendto(sendSock, (struct UsrData *) &sendUser, sizeof(sendUser), 0, (struct sockaddr *) &sockAddr, len);
     // "sendto()" and "recvfrom()" return the number of bytes that have been transferred
     printf("Sent: %d\n", n1);
-    printf("Send: %d\n", n2);
+    printf("Sent: %d\n", n2);
     
     unsigned char reply[32];
     recvfrom(sendSock, reply, sizeof(reply), 0, (struct sockaddr *) &sockAddr, &len);
