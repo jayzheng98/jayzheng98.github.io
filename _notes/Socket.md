@@ -32,7 +32,7 @@ redirect_from:
 
 **2.** Besides the common data types such as "number" and "string", Socket can also transfer "structure" and "class" which is shown in [UDP Client](#udp-client)
 
-**3.** All codes are written in *C++*
+**3.** All codes are written in *C++* 
 
 <br>
 
@@ -40,6 +40,8 @@ redirect_from:
 <hr>
 
 ## UDP Client
+ - *IPv4*
+
 ```c++
 #include <stdio.h>
 #include <netinet/in.h>
@@ -48,6 +50,7 @@ redirect_from:
 #include <unistd.h>
 #include <sys/types.h>
 #include <string.h>
+using namespace std;
 
 struct UsrData {                // Test structure
     int usr_id;
@@ -64,12 +67,12 @@ public:
 
 int main() {
     // Create a Socket (address type, socket type, protocol type)
-    unsigned int sendSock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP); 
+    int sendSock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP); 
 
     // Bind your own address
     struct sockaddr_in sockAddr;
     socklen_t len = sizeof(sockAddr);
-    memset(&sockAddr, 0, sizeof(sockAddr));
+    memset(&sockAddr, 0, len);
     sockAddr.sin_family = AF_INET;                            // Use IPv4 address
     sockAddr.sin_addr.s_addr = inet_addr("127.0.0.1");        // Specific IP address
     sockAddr.sin_port = htons(8888);                          // Port
@@ -97,6 +100,7 @@ int main() {
 }
 ```
 ## UDP Server
+ - *IPv4*
 
 ```c++
 #include <stdio.h>
@@ -106,6 +110,7 @@ int main() {
 #include <unistd.h>
 #include <sys/types.h>
 #include <string.h>
+using namespace std;
 
 struct UsrData{
     int usr_id;
@@ -148,17 +153,68 @@ int main() {
         printf("Structure  ID=%d, Name: %s\n", recvUser.usr_id, recvUser.usr_nickname);
         printf("Class  %f\n", c2.calculate());                      // Check whether data has been transferred successfully
 
-        sendto(recevSock, reply, sizeof(reply), 0, (struct sockaddr *) &sendAddr, sizeof(sendAddr));
+        sendto(recevSock, reply, sizeof(reply), 0, (struct sockaddr *) &sendAddr, len);
     }
     close(recevSock);
     return 0;
 }
 ```
 ## TCP Client
+ - *IPv4*
+
 ```c++
+
 ```
 ## TCP Server
+ - *IPv4*
+
 ```c++
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+using namespace std;
+
+int main(){
+    int server_sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    
+    struct sockaddr_in my_addr;              // Server socket structure
+    memset(&my_addr, 0, sizeof(my_addr));
+    my_addr.sin_family = AF_INET; 
+    my_addr.sin_addr.s_addr = INADDR_ANY;    // Any IP address on this server
+    my_addr.sin_port=htons(8000);
+    bind(server_sockfd, (struct sockaddr *)&my_addr, sieof(my_addr));
+
+    // Listen to the connection requests
+    if(listen(server_sockfd, 5)<0){
+      perror("listen error");
+      return 1;
+    };
+
+    struct sockaddr_in remote_addr;          // Client socket structure
+    socklen_t len = sizeof(remote_addr);
+    
+    // Wait for connection requests to arrive
+    int client_sockfd = accept(server_sockfd, (struct sockaddr *)&remote_addr, &len);
+    printf("SourceIP: %s, Port=%d\n", inet_ntoa(remote_addr.sin_addr), ntohs(remote_addr.sin_port));
+    
+    // Welcome message
+    send(client_sockfd, "Welcome to my server", 21, 0);
+
+    char buf[BUFSIZ];
+    unsigned char reply[32] = {"Successfully received!"};
+    
+    while(1){
+      recv(client_sockfd, buf, BUFSIZ, 0)
+      //buf[len]='/0';
+      printf("%s\n", buf);
+      send(client_sockfd, reply, sizeof(reply), 0);
+    }
+    close(client_sockfd);
+    close(server_sockfd);
+    return 0;
+}
 ```
 ## Test
 **1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested the "UDP Socket" with IDE "Clion" in Ubuntu 18.04:<br>
