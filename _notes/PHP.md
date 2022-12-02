@@ -558,7 +558,7 @@ author_profile: false
 
 **New feature 1: JIT compiler**
  - *JIT (Just In Time) compiler can greatly improve the performance of PHP*
- - *JIT compiler will be integrated into PHP as an extension. The "Opcache extension" is used to directly convert some* opcodes *into* cpu instructions *at runtime*
+ - *JIT compiler will be integrated into PHP as an extension. The "Opcache extension" is used to directly convert some <u>opcodes</u> into <u>cpu instructions</u> at runtime*
  - *JIT is valid only when "Opcache" is enabled*
 
 **New feature 2: You can assign variables with default values when calling functions**
