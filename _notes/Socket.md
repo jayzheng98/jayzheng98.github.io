@@ -18,6 +18,7 @@ redirect_from:
        * [UDP Server](#udp-server)
        * [TCP Client](#tcp-client)
        * [TCP Server](#tcp-server)
+       * [Test](#test)
     * [Windows](#windows)
 
 <!-- GFM-TOC -->
@@ -27,7 +28,9 @@ redirect_from:
 # Introduction
 <hr>
 
-Actually
+**1.** Actually the complex rationale behind Socket is not recorded in this article. The aim of this page is to help people get started quickly. They can modify the templates according to their needs
+
+**2.** All codes are written in *C++*
 
 <br>
 
@@ -143,6 +146,18 @@ int main() {
     return 0;
 }
 ```
+## TCP Client
+```c++
+```
+## TCP Server
+```c++
+```
+## Test
+**1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested the "UDP Socket" with IDE "Clion" in Ubuntu 18.04:<br>
+ - *Client*
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="500px"> </div><br>
+ - *Server*
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="500px"> </div><br>
 
 <br>
 
