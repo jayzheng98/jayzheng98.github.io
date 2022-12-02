@@ -163,10 +163,10 @@ int main() {
 ## Test
 **1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested the "UDP Socket" with IDE "Clion" in Ubuntu 18.04:<br>
  - *Client*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="600px"> </div><br>
 
  - *Server*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="600px"> </div><br>
 
 <br>
 
