@@ -22,7 +22,7 @@ author_profile: false
 ## ☁️  Networking
 
 - [Device Configuration](https://github.com/CyC2018/CS-Notes/blob/master/notes/HTTP.md)
-- [Socket](https://github.com/CyC2018/CS-Notes/blob/master/notes/Socket.md)
+- [Socket](/notes/socket)
 
 ## 💾  Databases
 
