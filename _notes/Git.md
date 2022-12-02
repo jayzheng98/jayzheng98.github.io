@@ -64,7 +64,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git merge | branch name | Merge changes from another branch|
 |git branch -d | branch name |  Delete a branch | 
 
-* See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 <br>
 
@@ -90,7 +90,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 <hr>
 
 **1.** The central server is used to exchange the changes of each user. Git can work without it, but the central server can run continuously which makes exchanges easier
- - For example, the [Github](https://github.com/) is a central server
+ - *For example, the [Github](https://github.com/) is a central server*
 
 <br>
 
@@ -100,7 +100,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 **1.** After creating a new repository, the current directory becomes the workspace
 
 **2.** There is a hidden directory ".git" in the workspace, which belongs to the Git version library
- - The Git version library includes a staging area called "Stage" and the latest "History" version library. "History" stores all branches' information and uses a HEAD pointer to point to the current branch
+ - *The Git version library includes a staging area called "Stage" and the latest "History" version library. "History" stores all branches' information and uses a HEAD pointer to point to the current branch*
 
 <div align="center"> <img width="850" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git2.png?raw=true"/> </div><br>
 <br>
@@ -108,19 +108,23 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 # Branch
 <hr>
 
-**1. Implement**: Use the pointer to connect each submission into a timeline, and the HEAD pointer points to the current branch pointer
+**1. Implement**
+ - *Use the pointer to connect each submission into a timeline, and the HEAD pointer points to the current branch pointer*
 
 <div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git3.png?raw=true"/> </div><br>
 
-**2. New**: Create a new pointer to the last node of the timeline, and make the HEAD pointer point to the new branch, indicating that the new branch becomes the current branch
+**2. New**
+ - *Create a new pointer to the last node of the timeline, and make the HEAD pointer point to the new branch, indicating that the new branch becomes the current branch*
 
 <div align="center"> <img width="300" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git4.png?raw=true"/> </div><br>
 
-**3. Commit**: Each commit will only move the current branch pointer forward, while other pointers stay fixed
+**3. Commit**
+ - *Each commit will only move the current branch pointer forward, while other pointers stay fixed*
 
 <div align="center"> <img width="360" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git5.png?raw=true"/> </div><br>
 
-**4. Merge**: Simply change the pointer
+**4. Merge**
+ - *Simply change the pointer*
 
 <div align="center"> <img width="360" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/git6.png?raw=true"/> </div><br>
 <br>
@@ -149,7 +153,7 @@ Creating a new branch is quick AND simple.
 **1.** After operating on a branch, switch to another branch before the changes are committed, the changes can also be seen on the other branch. This is because all branches share a same workspace
 
 **2.** We can use `git stash` to store the changes of the current branch
- - At this time, all the changes of the current workspace will be stored in the stack to keep the current workspace clean. As there are no uncommitted changes, we can safely switch to other branches
+ - *At this time, all the changes of the current workspace will be stored in the stack to keep the current workspace clean. As there are no uncommitted changes, we can safely switch to other branches*
 
 ```
 $ git stash
@@ -158,6 +162,6 @@ HEAD is now at 049d078 added the index file (To restore them type "git stash app
 ```
 
 **3.** Stashing can be used to implement the "bug branch"
- - If you are currently developing on the "dev branch", but there is a bug on the "master branch", and the development on the "dev branch" is incomplete to be submitted immediately. Before creating and switching to a new bug branch, you need to use `git stash` to store the uncommitted changes of "dev branch"
+ - *If you are currently developing on the "dev branch", but there is a bug on the "master branch", and the development on the "dev branch" is incomplete to be submitted immediately. Before creating and switching to a new bug branch, you need to use `git stash` to store the uncommitted changes of "dev branch"*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
