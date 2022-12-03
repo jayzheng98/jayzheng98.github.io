@@ -174,15 +174,17 @@ int main() {
 
 ```c++
 #include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <string.h>
 using namespace std;
 
 int main(){
     // Create a Socket
-    int client_sockfd=socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);  
+    int client_sockfd=socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
     struct sockaddr_in remote_addr;
     socklen_t len = sizeof(remote_addr);
@@ -196,22 +198,20 @@ int main(){
         perror("connect error");
         return 1;
     }
-    printf("Connected to server");
+    printf("Connected to server\n");
 
     // Receive the welcome message
     char buf[BUFSIZ];
     recv(client_sockfd, buf, BUFSIZ, 0);
-    //buf[len]='/0';
     printf("%s\n",buf);
 
     while(1){
         printf("Enter string to send:");
-        scanf("%s", buf);                            // 不用"&buf"?
+        scanf("%s", buf);
         if(!strcmp(buf, "quit"))
             break;
-        send(client_sockfd, buf, strlen(buf), 0);    // TODO!!!!!!!!!!!!!!!!!!!!!!!!!! sizeof?
+        send(client_sockfd, buf, sizeof(buf), 0);
         recv(client_sockfd, buf, BUFSIZ, 0);
-        //buf[len]='/0';
         printf("Reply: %s\n", buf);
     }
     close(client_sockfd);
@@ -223,21 +223,23 @@ int main(){
 
 ```c++
 #include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <string.h>
 using namespace std;
 
 int main(){
     int server_sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    
+
     struct sockaddr_in my_addr;              // Server socket structure
     memset(&my_addr, 0, sizeof(my_addr));
-    my_addr.sin_family = AF_INET; 
+    my_addr.sin_family = AF_INET;
     my_addr.sin_addr.s_addr = INADDR_ANY;    // Any IP address on this server
     my_addr.sin_port=htons(8000);
-    bind(server_sockfd, (struct sockaddr *)&my_addr, sieof(my_addr));
+    bind(server_sockfd, (struct sockaddr *)&my_addr, sizeof(my_addr));
 
     // Listen to the connection requests
     if(listen(server_sockfd, 5)<0){
@@ -247,21 +249,21 @@ int main(){
 
     struct sockaddr_in remote_addr;          // Client socket structure
     socklen_t len = sizeof(remote_addr);
-    
+
     // Wait for connection requests to arrive
     int client_sockfd = accept(server_sockfd, (struct sockaddr *)&remote_addr, &len);
     printf("SourceIP: %s, Port=%d\n", inet_ntoa(remote_addr.sin_addr), ntohs(remote_addr.sin_port));
-    
+
     // Welcome message
-    send(client_sockfd, "Welcome to my server", 21, 0);
+    send(client_sockfd, "Welcome to my server\n", 22, 0);
 
     char buf[BUFSIZ];
     unsigned char reply[32] = {"Successfully received!"};
-    
+
     while(1){
-        recv(client_sockfd, buf, BUFSIZ, 0)
-        //buf[len]='/0';
+        recv(client_sockfd, buf, BUFSIZ, 0);
         printf("%s\n", buf);
+        memset(&buf, 0, sizeof(buf));
         send(client_sockfd, reply, sizeof(reply), 0);
     }
     close(client_sockfd);
@@ -275,12 +277,20 @@ int main(){
 <hr>
 
 **1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested them with IDE "Clion" in Ubuntu 18.04:<br>
- - *UDP Client*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="600px"> </div><br>
 
- - *UDP Server*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="600px"> </div><br>
+**2. UDP**
+ - *Client*
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="500px"> </div><br>
 
+ - *Server*
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="500px"> </div><br>
+
+**3. TCP**
+ - *Client*
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket3.png?raw=true" width="500px"> </div><br>
+
+ - *Server*
+<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket4.png?raw=true" width="500px"> </div><br>
 <br>
 
 # Windows
