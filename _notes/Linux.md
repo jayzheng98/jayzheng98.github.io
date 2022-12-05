@@ -14,7 +14,7 @@ author_profile: false
     * [1. Common Commands](#common-commands)
     * [2. Vim](#vim)
     * [3. Network Configuration](#network-configuration)
-    * [4. File permission](#file-permission)
+    * [4. Permission](#permission)
 <!-- GFM-TOC -->
 
 <br>
@@ -34,17 +34,17 @@ This article mainly records the problems & solutions I've met when operating Lin
 |***File Commands:***|
 | ls |Directory listing|
 | ls -al |Formatted listing with hidden files|
-| ls -lt |Sorting the Formatted listing by time modification|
+| ls -lt |Sort the Formatted listing by time modification|
 | cd dir |Change directory to dir|
 | cd |Change to home directory|
 | pwd |Show current working directory|
-| mkdir dir |Creating a directory dir|
+| mkdir dir |Create a directory dir|
 | cat >file |Places the standard input into the file|
 | more file |Output the contents of the file|
 | tail -f file |Output the contents of file as it grows, starting with the last 10 lines|
 | touch file |Create or update file|
-| rm file |Deleting the file|
-| rm -r dir |Deleting the directory|
+| rm file |Delete the file|
+| rm -r dir |Delete the directory recursively|
 | rm -f file |Force to remove the file|
 | rm -rf dir |Force to remove the directory dir|
 | cp file1 file2 |Copy the contents of file1 to file2|
@@ -105,14 +105,14 @@ This article mainly records the problems & solutions I've met when operating Lin
 # Vim
 <hr>
 
-**1. 3 modes**:
+**1. Three modes**
  - *Command mode: Default mode, can be used to move the cursor to view content*
  - *Insert mode: Press the "i" button to enter, and edit the text*
  - *Bottom-line mode: Press the ":" button to enter, and to save and exit*
 
-<div align="center"> <img alt="3modes" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux1.png?raw=true" width="500px"> </div>
+<div align="center"> <img alt="3modes" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux1.png?raw=true" width="500px"> </div><br>
 
-**2. Commands under the bottom-line mode**:
+**2. Commands under the bottom-line mode**
 
 | Command | Description |
 |:--------|:--------:|
@@ -125,5 +125,16 @@ This article mainly records the problems & solutions I've met when operating Lin
 
 <br>
 
+# Network Configuration
+<hr>
 
-<div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
+**1. System UI**
+ - *Using "Ubuntu 18.04" as an example. "CentOS" and "Fedora" are similar with it*
+
+<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"><img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"><img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px"><br>
+
+**2. CommandLine**
+
+
+
+<div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
