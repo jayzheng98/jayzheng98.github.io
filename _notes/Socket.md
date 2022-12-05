@@ -92,7 +92,7 @@ int main() {
     // Send class and structure
     int n1 = sendto(sendSock, (class circle *) &c1, sizeof(c1), 0, (struct sockaddr *) &sockAddr, len);
     int n2 = sendto(sendSock, (struct UsrData *) &sendUser, sizeof(sendUser), 0, (struct sockaddr *) &sockAddr, len);
-    // "sendto()" and "recvfrom()" return the number of bytes that have been transferred
+    // "sendto()" and "recvfrom()" return the number of bytes that have been transmitted
     printf("Sent: %d\n", n1);
     printf("Sent: %d\n", n2);
     
