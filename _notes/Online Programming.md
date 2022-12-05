@@ -89,8 +89,9 @@ void dfs(int n, int m){
     maze[n][m]=0;   // Restore step and mark (Whether backtracking is needed depends on the actual situation)
 }
 ```
+
 **2.** If the entrance is not unique, use *for loops* (usually 2) in the main func to traverse all the entrances.
- - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops.
+ - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops
 
 ### HJ67 & HJ89 24-point game (24点游戏)
 **1.** Use array "rec" to mark whether the number is used to achieve the full arrangement：
@@ -108,6 +109,7 @@ for(int j=0;j<4;j++){
     }
  }
 ```
+
 **2.** The end condition for the requirement to output the formula: ("i" starts from 0)
 
 ```c
@@ -127,9 +129,10 @@ if (i == 4) {
 
 ### HJ71 String wildcard (字符串通配符)
 **1.** A confusible point in C:
-  - Elements in an array defined by *malloc*, can be accessed with "\*a++", but cannot be assigned with it. ("++" will change the position of the pointer)
-  - Elements in an array defined by *a[n]*, cannot be accessed and assigned with \*a++.
-  - Elements in arrays defined in both ways above can be accessed and assigned with \*(a+i).
+  - Elements in an array defined by *malloc*, can be accessed with "\*a++", but cannot be assigned with it ("++" will change the position of the pointer)
+  - Elements in an array defined by *a[n]*, cannot be accessed and assigned with \*a++
+  - Elements in arrays defined in both ways above can be accessed and assigned with \*(a+i)
+
 **2.** Solution:
 
 ```c
@@ -285,6 +288,7 @@ for(int i=0;i<len;i++){
    hash[sample[i]]--;
 }
 ```
+
 <br>
 
 # Sorting
@@ -380,6 +384,7 @@ for (char j = 'A'; j <= 'Z'; j++) {
    }
 }
 ```
+
 <br>
 
 # DP
@@ -405,6 +410,7 @@ for (int i = 1; i <= m; i++) {
       }
 }
 ```
+
 **2.** 4 cases of state transfer:
  - Buy main part
  - Buy main part & accessory 1
@@ -493,6 +499,7 @@ for(int i=0;i<len;i++){
      }
  }
 ```
+
 <br>
 
 # Linked List
@@ -524,6 +531,7 @@ typedef struct LinkNode{
     struct LinkNode* next;
 }LinkNode;
 ```
+
 **2.** Create a node：
 `LinkNode* p=malloc(sizeof(LinkNode));`
 
@@ -594,6 +602,7 @@ struct TreeNode* recur(int* xianxu, int* zhongxu, int Len){
     return out; 
 }
 ```
+
 <br>
 
 # Stack & Queue
@@ -611,6 +620,7 @@ typedef struct queue{
     int tail;
 }Queue;
 ```
+
 **3.** Create a queue： `Queue q;`
 
 <br>
@@ -645,6 +655,7 @@ void DeciToBina(int n, int* out) {
     }
 }
 ```
+
 **2.** Convert IP address to binary (32-bit):
 
 ```c
