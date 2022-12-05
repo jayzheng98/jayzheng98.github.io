@@ -11,10 +11,10 @@ author_profile: false
 <!-- GFM-TOC -->
 * Categories
     * [Introduction](#introduction)
-    * [1. Common Commands](#common-commands)
-    * [2. Vim](#vim)
-    * [3. Network Configuration](#network-configuration)
-    * [4. Permission](#permission)
+    * [Common Commands](#common-commands)
+    * [Vim](#vim)
+    * [Network Configuration](#network-configuration)
+    * [Change Permission](#change-permission)
 <!-- GFM-TOC -->
 
 <br>
@@ -105,6 +105,8 @@ This article mainly records the problems & solutions I've met when operating Lin
 # Vim
 <hr>
 
+Vim is a popular and build-in text editor of Linux systems. In most of the cases I use it to modify configuration files of networking or apps
+
 **1. Three modes**
  - *Command mode: Default mode, can be used to move the cursor to view content*
  - *Insert mode: Press the "i" button to enter, and edit the text*
@@ -128,8 +130,9 @@ This article mainly records the problems & solutions I've met when operating Lin
 # Network Configuration
 <hr>
 
+In case we have to construct a network includes Linux systems, usually we have to config static IP addresses for them. Here I use "Ubuntu 18.04" as an example (configurations on "CentOS" and "Fedora" are similar)
+
 **1. System UI**
- - *Using "Ubuntu 18.04" as an example. "CentOS" and "Fedora" are similar with it*
 
 <img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"><img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"><img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px"><br>
 
