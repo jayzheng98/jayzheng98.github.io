@@ -17,11 +17,11 @@ author_profile: false
 
 ## 💻  Operating Systems
 
-- [Linux](https://github.com/CyC2018/CS-Notes/blob/master/notes/Linux.md)
+- [Linux](/notes/Linux)
 
 ## ☁️  Networking
 
-- [Device Configuration](https://github.com/CyC2018/CS-Notes/blob/master/notes/HTTP.md)
+- [Device Configuration](/notes/DC)
 - [Socket](/notes/socket)
 
 ## 💾  Databases
