@@ -4,13 +4,11 @@ collection: notes
 permalink: /notes/linux
 title: "Linux"
 author_profile: false
+toc: true
+toc_sticky: ture
 ---
 
 <a name="top"></a>
-
-{% include toc.html html=content %}
-
-<br>
 
 # Introduction
 <hr>
