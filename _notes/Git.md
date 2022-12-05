@@ -10,7 +10,7 @@ redirect_from:
 
 <a name="top"></a>
 
-<!-- GFM-TOC -->
+<!-- 
 * Chapters 
     * [Statement](#statement)
     * [1. Common Commands](#common-commands)
@@ -20,7 +20,7 @@ redirect_from:
     * [5. Branch](#branch)
     * [6. Conflict](#conflict)
     * [7. Stashing](#stashing)
-<!-- GFM-TOC -->
+-->
 
 <br>
 
