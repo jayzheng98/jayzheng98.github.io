@@ -8,15 +8,7 @@ author_profile: false
 
 <a name="top"></a>
 
-<!-- GFM-TOC -->
-* Categories
-    * [Introduction](#introduction)
-    * [Common Commands](#common-commands)
-    * [Vim](#vim)
-    * [Network Configuration](#network-configuration)
-    * [Change Permission](#change-permission)
-    * [Remove File Lock](#remove-file-lock)
-<!-- GFM-TOC -->
+{% include toc.html html=content %}
 
 <br>
 
