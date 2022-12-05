@@ -98,5 +98,34 @@ This article mainly records the problems & solutions I've met when operating Lin
 | ctrl+u |Erases the whole line|
 | ctrl+r |Type to bring up a recent command|
 | exit |Logout the current session|
+|***Shutdown:***|
+| shutdown -h |Shut down immediately after services are stopped|
+| shutdown -r |Restart after services are stopped|
 
 <br>
+
+# Vim
+<hr>
+
+**1. 3 modes**:
+ - *Command mode: Default mode, can be used to move the cursor to view content*
+ - *Insert mode: Press the "i" button to enter, and edit the text*
+ - *Bottom-line mode: Press the ":" button to enter, and to save and exit*
+
+<div align="center"> <img alt="3modes" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux1.png?raw=true" width="500px"> </div>
+
+**2. Commands under the bottom-line mode**:
+
+| Command | Description |
+|:--------|:--------:|
+| :w | Write to disk|
+| :w! | Force writing to disk when the file is read-only|
+| :q | Leave |
+| :q! | Force leaving without saving |
+| :wq | Leave after writing to disk |
+| :wq!| Leave after forcing writing to disk |
+
+<br>
+
+
+<div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div>
