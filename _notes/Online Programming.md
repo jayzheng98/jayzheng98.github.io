@@ -155,6 +155,7 @@ bool match(char* str, char* str1) {
     return false;
 }
 ```
+
 <br>
 
 # Mathematics
@@ -533,7 +534,7 @@ typedef struct LinkNode{
 # Binary Tree
 <hr>
 
-## BM26 Binary tree level order traversal (二叉树层序遍历)
+### BM26 Binary tree level order traversal (二叉树层序遍历)
 **1.** It is a variation of *preorder traversal*, that is, the results of preorder traversal are stored hierarchically
 
 ```c
@@ -617,7 +618,7 @@ typedef struct queue{
 # Others
 <hr>
 
-## HJ30 String merging (字符串合并处理)
+### HJ30 String merging (字符串合并处理)
 **1.** Tips of *switch()*: 
 
 ```c
