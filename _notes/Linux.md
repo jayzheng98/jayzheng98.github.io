@@ -60,7 +60,7 @@ This article mainly records the problems & solutions I've met when operating Lin
 |***Searching:***|
 | grep pattern file |Search for pattern in file|
 | grep -r pattern dir |Search recursively for pattern in dir|
-| command \| grep pattern |Search pattern in the output of a command|
+| command \| grep pattern |Search pattern in the output of another command|
 | locate file |Find all instances of file|
 | find . -name filename |Searches in the directory (represented by ".") and below it, for files and directories with names starting with filename|
 | pgrep pattern |Searches for all the named processes, that matches with the pattern and, by default, returns their ID|
@@ -158,7 +158,7 @@ gateway 192.168.4.1
    
 <div align="center"> <img alt="l7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux7.png?raw=true" width="450px"> </div>
    
- - *Use one of the following commands to restart the network or simply restart the system to activate the new configuration*
+ - *Use one of the following commands to restart the network or simply restart the system to activate the new configuration:*
 ```
 /etc/init.d/networking restart
 sudo service network-manager restart
@@ -172,14 +172,42 @@ sudo service networking restart
 **1. Problem**
  - *I used to install the [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) on my ubuntu18, and the system logs that Sysmon generates are stored in the "/var/log/syslog". Later I wanted the transmission tool [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit those logs to my ELK mainframe. However, the permission of "syslog" is read-only, Nxlog cannot retrieve any data from it*
 
-**2. Solution1**
- - *A common thought to address the problem aforementioned is to change the permission of the targetted file using* `sudo chmod 777 /var/log/syslog` *. It does work at first, nevertheless, I find that the permission of "syslog" will turn back to read-only each time I restart the system*
+**2. Rationale**
+ - *Insufficient privilege*
 
-**3. Solution2**
+**3. Solution1**
+ - *A common thought to address the problem aforementioned is to change the permission of the targeted file using* `sudo chmod 777 /var/log/syslog` *. It does work at first, nevertheless, I find that the permission of "syslog" will turn back to read-only each time I restart the system*
+
+**4. Solution2**
  - *Another way to solve the problem is to grant the application a higher permission to access the target. Using* `sudo gedit /etc/passwd` *we can not only grant apps but also users. To do this, simply change the corresponding number after the "x:" to "0"*
 
 <div align="center"> <img alt="l8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux8.png?raw=true" width="660px"> </div>
 
  - *In the highlighted part of the pic above, I've granted Nxlog the highest permission as the changed number is actually the UID, and the UID of root user is "0"*
+ 
+<br>
+
+# Remove File Lock
+<hr>
+
+**1. Problem**
+ - *The error below often occurs when installing applications using the apt command on Ubuntu:*
+
+<div align="center"> <img alt="l9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux9.png?raw=true" width="450px"> </div>
+
+**2. Rationale**
+ - *File locks are used to prevent two or more processes from using the same data. When apt or apt-get commands are running, they create lock files in a few places. If the previous apt command was not terminated properly, the lock files are not deleted and hence they prevent any new instances of apt-get or apt commands*
+
+**3. Solution**
+ - *Use* `ps -e | grep apt` *to find out related processes*
+ - *Use* `sudo kill PID` *to terminate processes if returned*
+ - *Use the following commands to safely remove the locks:*
+
+```
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock
+```
+
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
