@@ -114,7 +114,7 @@ Vim is a popular and build-in text editor of Linux systems. In most of the cases
 
 <div align="center"> <img alt="3modes" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux1.png?raw=true" width="500px"> </div><br>
 
-**2. Commands under the bottom-line mode**
+**2. Commands in the bottom-line mode**
 
 | Command | Description |
 |:--------|:--------:|
@@ -134,7 +134,7 @@ In case we have to construct a network includes Linux systems, usually we have t
 
 **1. System UI**
 
-<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"> <img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"> <img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px">
+<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" width="220px"> <img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="400px"> <img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="320px">
 
 <br>
 
