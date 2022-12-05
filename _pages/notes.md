@@ -17,7 +17,7 @@ author_profile: false
 
 ## 💻  Operating Systems
 
-- [Linux](/notes/Linux)
+- [Linux](/notes/linux)
 
 ## ☁️  Networking
 
