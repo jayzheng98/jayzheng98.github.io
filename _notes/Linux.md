@@ -180,6 +180,6 @@ sudo service networking restart
 
 <div align="center"> <img alt="l8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux8.png?raw=true" width="660px"> </div>
 
- - *In the highlighted part of the pic above, I've granted Nxlog the highest permission as the changed number is actually the UID, and the root user's UID is "0"*
+ - *In the highlighted part of the pic above, I've granted Nxlog the highest permission as the changed number is actually the UID, and the UID of root user is "0"*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
