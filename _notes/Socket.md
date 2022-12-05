@@ -280,17 +280,17 @@ int main(){
 
 **2. UDP**
  - *Client*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="500px"> </div>
+<div align="center"> <img alt="uclient" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket1.png?raw=true" width="500px"> </div>
 
  - *Server*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="userver" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket2.png?raw=true" width="500px"> </div><br>
 
 **3. TCP**
  - *Client*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket3.png?raw=true" width="500px"> </div>
+<div align="center"> <img alt="tclient" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket3.png?raw=true" width="500px"> </div>
 
  - *Server*
-<div align="center"> <img alt="isolevel" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket4.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="tserver" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/socket4.png?raw=true" width="500px"> </div><br>
 <br>
 
 # Windows
