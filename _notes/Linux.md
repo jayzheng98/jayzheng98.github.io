@@ -4,6 +4,10 @@ collection: notes
 permalink: /notes/linux
 title: "Linux"
 author_profile: false
+output:
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 <a name="top"></a>
