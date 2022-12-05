@@ -134,7 +134,7 @@ In case we have to construct a network includes Linux systems, usually we have t
 
 **1. System UI**
 
-<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" width="220px"> <img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"> <img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="340px">
+<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" width="220px"> <img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="400px"> <img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="340px">
 
 <br>
 
