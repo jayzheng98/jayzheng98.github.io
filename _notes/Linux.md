@@ -139,11 +139,11 @@ In case we have to construct a network includes Linux systems, usually we have t
 <br>
 
 **2. CommandLine**
- - *Use `ifconfig` to check the name of targeted network card*
+ - *Use* `ifconfig` *to check the name of targeted network card*
  
 <div align="center"> <img alt="l5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux5.png?raw=true" width="450px"> </div>
 
- - *Use `sudo vi /etc/network/interfaces` or `sudo gedit /etc/network/interfaces`to open the configuration file*
+ - *Use* `sudo vi /etc/network/interfaces` *or* `sudo gedit /etc/network/interfaces` *to open the configuration file*
  
 <div align="center"> <img alt="l6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux6.png?raw=true" width="450px"> </div>
  
