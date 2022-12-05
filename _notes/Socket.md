@@ -32,7 +32,7 @@ redirect_from:
 
 **1.** Actually the complex rationale behind Socket is not recorded in this article. The aim of this page is to help people get started quickly. They can modify the templates according to their needs
 
-**2.** Besides the common data types such as "number" and "string", Socket can also transfer "structure" and "class" which is shown in [UDP Client](#u\-client)
+**2.** Besides the common data types such as "number" and "string", Socket can also transmit "structure" and "class" which is shown in [UDP Client](#u\-client)
 
 **3.** All codes are written in *C++* 
 
@@ -156,7 +156,7 @@ int main() {
         printf("SourceIP: %s, Port=%d\n", inet_ntoa(sendAddr.sin_addr), ntohs(sendAddr.sin_port));
 
         printf("Structure  ID=%d, Name: %s\n", recvUser.usr_id, recvUser.usr_nickname);
-        printf("Class  %f\n", c2.calculate());                      // Check whether data has been transferred successfully
+        printf("Class  %f\n", c2.calculate());                      // Check whether data has been transmitted successfully
 
         sendto(recevSock, reply, sizeof(reply), 0, (struct sockaddr *) &sendAddr, len);
     }
