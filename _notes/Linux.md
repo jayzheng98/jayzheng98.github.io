@@ -69,7 +69,7 @@ This article mainly records the problems & solutions I've met when operating Lin
 | whoami |Who you are logged in as|
 | finger user |Display information about user|
 | uname -a |Show kernel information|
-| cat /proc/cpuinfo |Cpu information|
+| cat /proc/cpuinfo |CPU information|
 | cat /proc/meminfo |Memory information|
 | df |Show the disk usage|
 | du |Show directory space usage|
@@ -91,7 +91,7 @@ This article mainly records the problems & solutions I've met when operating Lin
 | wget -c file |Continue a stopped download|
 |***Shortcuts:***|
 | ctrl+c |Halts the current command|
-| ctrl+z |Stops the current command, resume with fg in the foreground or bg in the background|
+| ctrl+z |Stops the current command, resume with `fg` in the foreground or `bg` in the background|
 | ctrl+w |Erases one word in the current line|
 | ctrl+u |Erases the whole line|
 | ctrl+r |Type to bring up a recent command|
@@ -134,7 +134,7 @@ In case we have to construct a network includes Linux systems, usually we have t
 
 **1. System UI**
 
-<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"><img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"><img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px">
+<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"> <img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"> <img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px">
 
 <br>
 
