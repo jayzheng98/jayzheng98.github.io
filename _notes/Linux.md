@@ -134,10 +134,39 @@ In case we have to construct a network includes Linux systems, usually we have t
 
 **1. System UI**
 
-<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"><img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"><img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px"><br>
+<img alt="l2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux2.png?raw=true" height="250px"><img alt="l3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux3.png?raw=true" width="420px"><img alt="l4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux4.png?raw=true" width="350px">
+
+<br>
 
 **2. CommandLine**
+ - *Use `ifconfig` to check the name of targeted network card*
+ 
+<div align="center"> <img alt="l5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux5.png?raw=true" width="450px"> </div>
 
+ - *Use `sudo vi /etc/network/interfaces` or `sudo gedit /etc/network/interfaces`to open the configuration file*
+ 
+<div align="center"> <img alt="l6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux6.png?raw=true" width="450px"> </div>
+ 
+ - *Insert your modification based on the following template, and save the changes*
+```
+auto ens33
+iface ens33 inet static
+address 192.168.4.200
+netmask 255.255.255.0
+gateway 192.168.4.1
+```
+   
+<div align="center"> <img alt="l7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux7.png?raw=true" width="450px"> </div>
+   
+ - *Use one of the following commands to restart the network or simply restart the system to activate the new configuration*
+```
+/etc/init.d/networking restart
+sudo service network-manager restart
+sudo service networking restart
+```
+<br>
 
+# Change Permission
+<hr>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
