@@ -8,7 +8,7 @@ author_profile: false
 
 <a name="top"></a>
 
-<!-- GFM-TOC -->
+<!-- 
 * Categories
     * [Introduction](#introduction)
     * [1. Recursion (DFS)](#recursion-dfs)
@@ -20,7 +20,7 @@ author_profile: false
     * [7. Binary Tree](#binary-tree)
     * [8. Stack & Queue](#stack--queue)
     * [9. Others](#others)
-<!-- GFM-TOC -->
+ -->
 
 <br>
 
