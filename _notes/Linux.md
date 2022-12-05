@@ -15,6 +15,7 @@ author_profile: false
     * [Vim](#vim)
     * [Network Configuration](#network-configuration)
     * [Change Permission](#change-permission)
+    * [Remove File Lock](#remove-file-lock)
 <!-- GFM-TOC -->
 
 <br>
@@ -148,6 +149,7 @@ In case we have to construct a network includes Linux systems, usually we have t
 <div align="center"> <img alt="l6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux6.png?raw=true" width="450px"> </div>
  
  - *Insert your modification based on the following template, and save the changes*
+
 ```
 auto ens33
 iface ens33 inet static
@@ -159,6 +161,7 @@ gateway 192.168.4.1
 <div align="center"> <img alt="l7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux7.png?raw=true" width="450px"> </div>
    
  - *Use one of the following commands to restart the network or simply restart the system to activate the new configuration:*
+
 ```
 /etc/init.d/networking restart
 sudo service network-manager restart
@@ -193,7 +196,7 @@ sudo service networking restart
 **1. Problem**
  - *The error below often occurs when installing applications using the apt command on Ubuntu:*
 
-<div align="center"> <img alt="l9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux9.png?raw=true" width="450px"> </div>
+<div align="center"> <img alt="l9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux9.png?raw=true" width="600px"> </div>
 
 **2. Rationale**
  - *File locks are used to prevent two or more processes from using the same data. When apt or apt-get commands are running, they create lock files in a few places. If the previous apt command was not terminated properly, the lock files are not deleted and hence they prevent any new instances of apt-get or apt commands*
