@@ -169,4 +169,17 @@ sudo service networking restart
 # Change Permission
 <hr>
 
+**1. Problem**
+ - *I used to install the [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) on my ubuntu18, and the system logs that Sysmon generates are stored in the "/var/log/syslog". Later I wanted the transmission tool [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit those logs to my ELK mainframe. However, the permission of "syslog" is read-only, Nxlog cannot retrieve any data from it*
+
+**2. Solution1**
+ - *A common thought to address the problem aforementioned is to change the permission of the targetted file using* `sudo chmod 777 /var/log/syslog` *. It does work at first, nevertheless, I find that the permission of "syslog" will turn back to read-only each time I restart the system*
+
+**3. Solution2**
+ - *Another way to solve the problem is to grant the application a higher permission to access the target. Using* `sudo gedit /etc/passwd` *we can not only grant apps but also users. To do this, simply change the corresponding number after the "x:" to "0"*
+
+<div align="center"> <img alt="l8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux8.png?raw=true" width="660px"> </div>
+
+ - *In the highlighted part of the pic above, I've granted Nxlog the highest permission as the changed number is actually the UID, and the root user's UID is "0"*
+
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
