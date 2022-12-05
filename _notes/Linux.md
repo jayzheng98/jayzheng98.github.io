@@ -41,8 +41,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 | mkdir dir |Creating a directory dir|
 | cat >file |Places the standard input into the file|
 | more file |Output the contents of the file|
-| head file |Output the first 10 lines of the file|
-| tail file |Output the last 10 lines of the file|
 | tail -f file |Output the contents of file as it grows, starting with the last 10 lines|
 | touch file |Create or update file|
 | rm file |Deleting the file|
