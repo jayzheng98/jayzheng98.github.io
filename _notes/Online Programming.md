@@ -31,7 +31,6 @@ author_profile: false
 
 **2.** The reason why I choose *C* for online programming is that *C* is relatively rudimentary and does not have many powerful built-in functions that *Python* and *C++* have. So programming with *C* allows me to have a more comprehensive and in-depth understanding of data structure & algorithm
 
-## 
 <br>
 
 # Recursion (DFS)
