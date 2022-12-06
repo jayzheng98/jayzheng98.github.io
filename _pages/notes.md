@@ -27,6 +27,7 @@ author_profile: false
 ## 💾  Databases
 
 - [MySQL](/notes/mysql)
+- [ArangoDB](/notes/arangodb)
 
 ## 🔧  Other Tools
 
