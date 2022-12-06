@@ -12,7 +12,7 @@ toc_label: "Contents"
 
 <a name="top"></a>
 
-<!-- GFM-TOC -->
+<!-- 
 * Categories 
     * [Introduction](#introduction)
     * [Linux](#linux)
@@ -25,7 +25,7 @@ toc_label: "Contents"
        * [Test](#test)
     * [Windows](#windows)
 
-<!-- GFM-TOC -->
+ -->
 
 <br>
 
