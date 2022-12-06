@@ -47,7 +47,7 @@ As mentioned in the [project](), I've set up a simulation shooting range in my l
 
  - *When you see the* `Switch>` *, it means that you have successfully connected to your device*
 
-<div align="center"> <img alt="dc7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc6.png?raw=true" width="400px"> </div><br>
+<div align="center"> <img alt="dc7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc6.png?raw=true" width="400px"> </div>
 
 **4. Configure**
  - *Here are some useful commands to configure Cisco switches*
@@ -82,9 +82,11 @@ show int vlanxx
 show ip route
 ```
 
- - *The final configuration of my range is shown below, it is exactly the same with the topology. Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
+ - *The final configuration of my range is shown below, it is exactly the same with the topology*
  
 <div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="550px"> <br><br> <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="550px"> </div> 
+
+ - *Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
 
 ## H3C
 **1. Device overview**
