@@ -13,11 +13,16 @@ toc_label: "Contents"
 <br>
 
 # Introduction
+<hr>
+
 As mentioned in the [project](), I've set up a simulation shooting range in my laboratory according to the network topology of high-speed railway signal system, and the topology diagram is shown below. This article roughly records my networking process
 
-<div align="center"> <img alt="dc1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="720px"> </div><br>
+<div align="center"> <img alt="dc1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="720px"> </div>
+<br>
 
 # Layer 3 Switch
+<hr>
+
 ## Cisco 
 **1. Device overview**
  - *The layer 3 switch in the pic is [Catalyst 3560G series](https://www.cisco.com/c/en/us/support/switches/catalyst-3560-series-switches/series.html)*
@@ -46,7 +51,7 @@ As mentioned in the [project](), I've set up a simulation shooting range in my l
 **4. Configure**
  - *Here are some useful commands to configure Cisco switches*
  
-```java
+```
 enable 
 conf ter
 
@@ -89,7 +94,7 @@ show ip route
 **2. Configure**
  - *Actually I didn't add this switch in my network in the end, so here I just simply record some commands of its configuration*
 
-```java
+```
 sys
 
 // Create vlan "xx" and configure IP (address, mask)
@@ -117,6 +122,20 @@ display vlan
 display int vlan xx
 ```
 
-<div align="center"> <img alt="dc10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc9.jpg?raw=true" width="550px"> </div><br>
+<div align="center"> <img alt="dc10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc9.jpg?raw=true" width="550px"> </div>
+<br>
+
+# Router
+<hr>
+
+## UTT 
+**1. Device overview**
+ - *The router in the pic is [HiPER 840G](https://www.utt.com.cn/productdetail.php?modelid=178)*
+
+<div align="center"> <img alt="dc12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc11.jpg?raw=true" width="550px"> </div><br>
+
+**2. Connect for configuration**
+ - *Use a PC to connect to its <u>LAN</u> interface, then input the IP address of this LAN to login the configuration website (The default IP of my device is 192.168.1.1)*
+
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
