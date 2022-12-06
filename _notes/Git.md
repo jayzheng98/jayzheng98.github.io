@@ -32,9 +32,8 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 <br>
 
 # Common Commands
-<hr>
-    
-    
+<hr><br>
+
 **1. Table**
 
 | Command | Object | Description |
