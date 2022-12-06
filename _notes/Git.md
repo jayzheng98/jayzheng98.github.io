@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: nsingle
 collection: notes
 permalink: /notes/git
 title: "Git"
