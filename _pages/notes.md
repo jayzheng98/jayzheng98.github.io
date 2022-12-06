@@ -3,6 +3,7 @@ layout: archive
 title: "Personal Notes"
 permalink: /notes/
 author_profile: false
+toc: true
 ---
 <img align="right" alt="GIF" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/code.gif?raw=true" width="343" height="220" title="Do what you like, and do it best">
 
