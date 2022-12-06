@@ -1,11 +1,11 @@
 ---
-layout: nsingle
+layout: single
 collection: notes
 permalink: /notes/git
 title: "Git"
 author_profile: false
 toc: true
-toc_label: Contents
+toc_label: "Contents"
 ---
 
 <a name="top"></a>
