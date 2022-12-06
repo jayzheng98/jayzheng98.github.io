@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: nsingle
 title: "Online Programming"
 collection: notes
 permalink: /notes/OP
