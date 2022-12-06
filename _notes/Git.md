@@ -1,11 +1,13 @@
 ---
-layout: archive
+layout: single
 collection: notes
 permalink: /notes/git
 title: "Git"
 author_profile: false
 redirect_from: 
   - /git/
+toc: true
+toc_label: Contents
 ---
 
 <a name="top"></a>
