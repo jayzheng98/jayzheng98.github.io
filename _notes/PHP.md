@@ -1,14 +1,16 @@
 ---
-layout: archive
+layout: single
 title: "PHP"
 collection: notes
 permalink: /notes/php
 author_profile: false
+toc: true
+toc_label: "Contents"
 ---
 
 <a name="top"></a>
 
-<!-- GFM-TOC -->
+<!-- 
 * Chapters
     * [1. Basic Info](#chapt1-basic-info)
     * [2. Output](#chapt2-output)
@@ -19,7 +21,7 @@ author_profile: false
     * [7. Class and Object](#chapt7-class-and-object)
     * [8. New Feature of PHP8](#chapt8-new-feature-of-php8)
     * [9. Exercise](#chapt9-exercise)
-<!-- GFM-TOC -->
+ -->
 
 <br>
 
@@ -27,6 +29,8 @@ author_profile: false
 <hr>
 
 **1. PHP files can include "html", "CSS" and "JavaScript" code**
+
+**2. Basic symbols**
 
 | Code    | Description |
 |:-------:|:--------:|
