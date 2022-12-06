@@ -36,8 +36,6 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 
 **1.** See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
-**2. Table**
-
 | Command | Object | Description |
 |:--------|:-------:|:--------:|
 |git add | filename | Add files to the staging area |
