@@ -48,23 +48,23 @@ As mentioned in the [project](), I've set up a simulation shooting range in my l
  
 ```java
 enable 
- 
-// Enable routing between vlans
 conf ter
-ip routing
- 
-// Configure static route (destination address, mask, destination gateway)
-ip route 172.110.2.0 255.255.255.0 192.168.2.2
- 
+
 // Create vlan "xx" and configure IP (address, mask)
 vlanxx
 int vlan xx
 ip add 192.168.4.1 255.255.255.0
- 
+
 // Include ports in vlan xx
 int g0/7
 switchport mode access
 switchport access vlan xx
+
+// Enable routing between vlans
+ip routing
+ 
+// Configure static route (destination address, mask, destination gateway)
+ip route 172.110.2.0 255.255.255.0 192.168.2.2
  
 // Save and exit
 exit
@@ -78,6 +78,45 @@ show ip route
 
  - *The final configuration of my range is shown below, it is exactly the same with the topology. Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
  
-<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="500px">    <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="500px"> </div> 
- 
+<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="450px">   <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="450px"> </div> 
+
+## H3C
+**1. Device overview**
+ - *The H3C layer 3 switch in my lab is [S3600 series](https://www.h3c.com/en/Support/Resource_Center/HK/Switches/H3C_S3600/H3C_S3600_Series_Switches/default.htm)*
+
+<div align="center"> <img alt="dc11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc10.jpg?raw=true" width="600px"> </div><br>
+
+**2. Configure**
+ - *Actually I didn't add this switch in my network in the end, so here I just simply record some commands of its configuration*
+
+```java
+sys
+
+// Create vlan "xx" and configure IP (address, mask)
+vlan xx
+int vlan-interfacexx
+ip add 192.168.5.254 255.255.255.0
+
+// Include ports in vlan xx
+vlan xx
+port g1/0/1
+port g1/0/2 to g1/0/10
+
+// H3C switches enable routing between vlans by default
+
+// Configure static route (destination address, mask, destination gateway)
+ip route-static 192.168.5.0 24 192.168.5.1
+
+// Save and exit
+q
+save
+
+// Show configurations
+display ip routing-table
+display vlan
+display int vlan xx
+```
+
+<div align="center"> <img alt="dc10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc9.jpg?raw=true" width="550px"> </div><br>
+
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
