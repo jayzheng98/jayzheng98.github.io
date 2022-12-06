@@ -34,6 +34,8 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 # Common Commands
 <hr>
 
+**1. Table**
+
 | Command | Object | Description |
 |:--------|:-------:|:--------:|
 |git add | filename | Add files to the staging area |
@@ -64,7 +66,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git merge | branch name | Merge changes from another branch|
 |git branch -d | branch name |  Delete a branch | 
 
-**See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
+**2. See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
 
 <br>
 
