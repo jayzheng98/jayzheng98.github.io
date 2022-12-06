@@ -1,9 +1,11 @@
 ---
-layout: archive
+layout: single
 title: "MySQL"
 collection: notes
 permalink: /notes/mysql
 author_profile: false
+toc: true
+toc_label: "Contents"
 ---
 
 <a name="top"></a>
