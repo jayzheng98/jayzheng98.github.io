@@ -32,9 +32,11 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 <br>
 
 # Common Commands
-<hr><br>
+<hr>
 
-**1. Table**
+**1.** See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+**2. Table**
 
 | Command | Object | Description |
 |:--------|:-------:|:--------:|
@@ -65,8 +67,6 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 |git checkout | branch name | Switch to a branch |
 |git merge | branch name | Merge changes from another branch|
 |git branch -d | branch name |  Delete a branch | 
-
-**2. See more from the [cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)**
 
 <br>
 
