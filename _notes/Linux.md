@@ -102,7 +102,7 @@ Vim is a popular and build-in text editor of Linux systems. In most of the cases
  - *Insert mode: Press the "i" button to enter, and edit the text*
  - *Bottom-line mode: Press the ":" button to enter, and to save and exit*
 
-<div align="center"> <img alt="3modes" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux1.png?raw=true" width="500px"> </div>
+<div align="center"> <img alt="3modes" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/linux1.png?raw=true" width="500px"> </div><br>
 
 **2. Commands in the bottom-line mode**
 
