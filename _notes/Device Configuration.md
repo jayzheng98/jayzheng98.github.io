@@ -144,7 +144,7 @@ display int vlan xx
 **3. Configure**
  - *Usually we only need to focus on the configuration of **LAN interfaces**(left) and the **static route**(right)*
 
-<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="300px"><img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="455px"> </div> 
+<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="300px"><img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="470px"> </div> 
 
  - *Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1)*
 
