@@ -1,4 +1,5 @@
 ---
+permalink: /test/
 title: Sticky table of contents sidebar
 toc: true
 toc_label: "Contents"
