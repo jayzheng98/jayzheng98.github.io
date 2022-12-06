@@ -33,7 +33,51 @@ As mentioned in the [project](), I've set up a simulation shooting range in my l
 
 <div align="center"> <img alt="dc4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc3.jpg?raw=true" width="300px"> </div><br>
 
-**3. Configure**
+**3. Set up for configuration**
  - *Download the [Hyper Terminal](https://www.hilgraeve.com/hyperterminal-trial/) which provides us with the terminal to configure devices*
- - **
+ - *Set up a new connection, and select the <u>cluster communication port(COM)</u> which was former connected with console cable*
+
+<div align="center"> <img alt="dc5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc4.png?raw=true" width="300px">    <img alt="dc6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc5.png?raw=true" width="400px"> </div>
+
+ - *When you see the* `Switch>` *, it means that you have successfully connected to your device*
+
+<div align="center"> <img alt="dc7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc6.png?raw=true" width="400px"> </div><br>
+
+**4. Configure**
+ - *Here are some useful commands to configure Cisco switchs*
+ 
+ ```java
+ enable 
+ 
+ // Show configurations
+ show vlan
+ show int vlanxx
+ show ip route
+ 
+ // Enable routing between vlans
+ conf ter
+ ip routing
+ 
+ // Configure static route (destination address, mask, destination gateway)
+ ip route 172.110.2.0 255.255.255.0 192.168.2.2
+ 
+ // Create vlan "xx" and configure IP (address, mask)
+ vlanxx
+ int vlan xx
+ ip add 192.168.4.1 255.255.255.0
+ 
+ // Include ports in vlan xx
+ int g0/7
+ switchport mode access
+ switchport access vlan xx
+ 
+ // Save and exit
+ exit
+ write
+ ```
+
+ - *The final configuration of my range is shown below, it is exactly the same with the topology. Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
+ 
+<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="500px">    <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="500px"> </div> 
+ 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
