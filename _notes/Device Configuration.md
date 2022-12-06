@@ -84,7 +84,7 @@ show ip route
 
  - *The final configuration of my range is shown below, it is exactly the same with the topology. Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
  
-<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="430px">   <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="430px"> </div> 
+<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="550px"> <br><br> <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="550px"> </div> 
 
 ## H3C
 **1. Device overview**
@@ -142,7 +142,7 @@ display int vlan xx
 **3. Configure**
  - *Usually we only need to focus on the configuration of **LAN interfaces** and the **static route** (Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1)*
 
-<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="340px">   <img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="500px"> </div> 
+<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="340px">   <img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="480px"> </div> 
 
 **4. Further explanation**
  - *Here I want to emphasize the role of **static route**. In case you have to connect 2 networks that are **not** in the same segment, you have to configure the static route of both network bridges*
