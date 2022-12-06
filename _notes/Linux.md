@@ -28,7 +28,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 | ls |Directory listing|
 | ls -al |Formatted listing with hidden files|
 | ls -lt |Sort the Formatted listing by time modification|
-| cd dir |Change directory to dir|
 | cd |Change to home directory|
 | pwd |Show current working directory|
 | mkdir dir |Create a directory dir|
@@ -87,7 +86,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 | ctrl+z |Stops the current command, resume with `fg` in the foreground or `bg` in the background|
 | ctrl+u |Erases the whole line|
 | ctrl+r |Type to bring up a recent command|
-| exit |Logout the current session|
 |***Shutdown:***||
 | shutdown -h |Shut down immediately after services are stopped|
 | shutdown -r |Restart after services are stopped|
