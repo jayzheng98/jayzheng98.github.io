@@ -58,7 +58,7 @@
     top: 0;
     right: 0;
     width: $right-sidebar-width-narrow;
-    margin-right: -1 * $right-sidebar-width-narrow;
+    // margin-right: -1 * $right-sidebar-width-narrow;
     // padding-left: 1em;
     padding-top: 1em !important; /* added to make toc scroll with page */
     z-index: 10;
@@ -192,7 +192,7 @@
     position: absolute;
     top: -11px;
     left: calc(50% - 10px);
-    // width: 0;
+    width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
     border-color: $border-color transparent;
@@ -209,7 +209,7 @@
     position: absolute;
     top: -10px;
     left: calc(50% - 10px);
-    // width: 0;
+    width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
     border-color: #fff transparent;
