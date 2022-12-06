@@ -1,9 +1,10 @@
 ---
-layout: archive
+layout: single
 title: "Online Programming"
 collection: notes
 permalink: /notes/OP
 author_profile: false
+toc: true
 ---
 
 <a name="top"></a>
