@@ -44,37 +44,37 @@ As mentioned in the [project](), I've set up a simulation shooting range in my l
 <div align="center"> <img alt="dc7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc6.png?raw=true" width="400px"> </div><br>
 
 **4. Configure**
- - *Here are some useful commands to configure Cisco switchs*
+ - *Here are some useful commands to configure Cisco switches*
  
- ```java
- enable 
+```java
+enable 
  
- // Show configurations
- show vlan
- show int vlanxx
- show ip route
+// Enable routing between vlans
+conf ter
+ip routing
  
- // Enable routing between vlans
- conf ter
- ip routing
+// Configure static route (destination address, mask, destination gateway)
+ip route 172.110.2.0 255.255.255.0 192.168.2.2
  
- // Configure static route (destination address, mask, destination gateway)
- ip route 172.110.2.0 255.255.255.0 192.168.2.2
+// Create vlan "xx" and configure IP (address, mask)
+vlanxx
+int vlan xx
+ip add 192.168.4.1 255.255.255.0
  
- // Create vlan "xx" and configure IP (address, mask)
- vlanxx
- int vlan xx
- ip add 192.168.4.1 255.255.255.0
+// Include ports in vlan xx
+int g0/7
+switchport mode access
+switchport access vlan xx
  
- // Include ports in vlan xx
- int g0/7
- switchport mode access
- switchport access vlan xx
+// Save and exit
+exit
+write
  
- // Save and exit
- exit
- write
- ```
+// Show configurations
+show vlan
+show int vlanxx
+show ip route
+```
 
  - *The final configuration of my range is shown below, it is exactly the same with the topology. Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
  
