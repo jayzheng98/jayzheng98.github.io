@@ -10,7 +10,7 @@ toc_label: "Contents"
 
 <a name="top"></a>
 
-<!-- GFM-TOC -->
+<!--
 * Chapters
     * [2. Select](#chapt2-select)
     * [3. Join](#chapt3-join)
@@ -25,7 +25,7 @@ toc_label: "Contents"
     * [12. Design A Database](#chapt12-design-a-database)
     * [13. Indexing](#chapt13-indexing)
     * [14. Securing Database](#chapt14-securing-database)
-<!-- GFM-TOC -->
+ -->
 
 <br>
 
