@@ -21,8 +21,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 <hr>
  
 **1. A specific [instruction](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)** 
- 
-**2. Table** 
 
 | Command | Description |
 |:--------|:--------:|
@@ -87,7 +85,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 |***Shortcuts:***||
 | ctrl+c |Halts the current command|
 | ctrl+z |Stops the current command, resume with `fg` in the foreground or `bg` in the background|
-| ctrl+w |Erases one word in the current line|
 | ctrl+u |Erases the whole line|
 | ctrl+r |Type to bring up a recent command|
 | exit |Logout the current session|
