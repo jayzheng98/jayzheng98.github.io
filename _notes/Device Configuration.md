@@ -18,6 +18,7 @@ toc_label: "Contents"
 As mentioned in the [project](), I've set up a simulation shooting range in my laboratory according to the network topology of high-speed railway signal system, and the topology diagram is shown below. This article roughly records my networking process
 
 <div align="center"> <img alt="dc1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="720px"> </div>
+
 <br>
 
 # Layer 3 Switch
@@ -83,7 +84,7 @@ show ip route
 
  - *The final configuration of my range is shown below, it is exactly the same with the topology. Then I only need to configure the network of every computer and server and connect their network cards to the switch interfaces accordingly*
  
-<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="450px">   <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="450px"> </div> 
+<div align="center"> <img alt="dc8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc7.png?raw=true" width="430px">   <img alt="dc9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc8.png?raw=true" width="430px"> </div> 
 
 ## H3C
 **1. Device overview**
@@ -123,6 +124,7 @@ display int vlan xx
 ```
 
 <div align="center"> <img alt="dc10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc9.jpg?raw=true" width="550px"> </div>
+
 <br>
 
 # Router
@@ -135,7 +137,15 @@ display int vlan xx
 <div align="center"> <img alt="dc12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc11.jpg?raw=true" width="550px"> </div><br>
 
 **2. Connect for configuration**
- - *Use a PC to connect to its <u>LAN</u> interface, then input the IP address of this LAN to login the configuration website (The default IP of my device is 192.168.1.1)*
+ - *Use a PC to connect to its LAN interface, then open the browser and input the IP address of this LAN to login the configuration page (The default IP of my device is 192.168.1.1)*
 
+**3. Configure**
+ - *Usually we only need to focus on the configuration of **LAN interfaces** and the **static route** (Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1)*
+
+<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="340px">   <img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="500px"> </div> 
+
+**4. Further explanation**
+ - *Here I want to emphasize the role of **static route**. In case you have to connect 2 networks that are **not** in the same segment, you have to configure the static route of both network bridges*
+ - *In my case, network bridges are [Cisco Layer 3 switch](#cisco) and [UTT router](#utt). Devices in network segment 172.110.2.0/24 access devices in segment 192.168.3.0/24, 192.168.4.0/24 and 10.10.10.0/24 via the router's LAN4 (192.168.2.2), which is in the same network segment with switch's VLAN40 (192.168.2.1), vice versa*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
