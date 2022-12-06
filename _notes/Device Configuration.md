@@ -140,9 +140,10 @@ display int vlan xx
  - *Use a PC to connect to its LAN interface, then open the browser and input the IP address of this LAN to login the configuration page (The default IP of my device is 192.168.1.1)*
 
 **3. Configure**
- - *Usually we only need to focus on the configuration of **LAN interfaces** and the **static route** (Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1)*
+ - *Usually we only need to focus on the configuration of **LAN interfaces**(left) and the **static route**(right)*
+ - *Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1)*
 
-<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="340px">   <img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="480px"> </div> 
+<div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="340px">   <img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="460px"> </div> 
 
 **4. Further explanation**
  - *Here I want to emphasize the role of **static route**. In case you have to connect 2 networks that are **not** in the same segment, you have to configure the static route of both network bridges*
