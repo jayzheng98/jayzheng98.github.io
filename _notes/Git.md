@@ -29,8 +29,6 @@ toc_label: "Contents"
 
 Some of the content and pictures in this article are excerpted from the [CS-Notes](https://github.com/CyC2018/CS-Notes/blob/master/notes/Git.md). If there is infringement, please inform to delete
 
-## a test
-
 <br>
 
 # Common Commands
