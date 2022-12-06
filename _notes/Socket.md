@@ -1,11 +1,13 @@
 ---
-layout: archive
+layout: single
 collection: notes
 permalink: /notes/socket
 title: "Socket"
 author_profile: false
 redirect_from: 
   - /socket/
+toc: true
+toc_label: "Contents"
 ---
 
 <a name="top"></a>
