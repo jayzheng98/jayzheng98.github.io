@@ -1,4 +1,5 @@
 ---
+layout: single
 title: Sticky table of contents sidebar
 toc: true
 toc_label: "Contents"
