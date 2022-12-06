@@ -20,7 +20,7 @@ This article mainly records the problems & solutions I've met when operating Lin
 # Common Commands
 <hr>
  
-**1. More Specific [Instruction](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)** 
+**1. A specific [instruction](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)** 
  
 **2. Table** 
 
