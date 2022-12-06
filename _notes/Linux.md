@@ -24,7 +24,7 @@ This article mainly records the problems & solutions I've met when operating Lin
 
 | Command | Description |
 |:--------|:--------:|
-|***File Commands:***|
+|***File Commands:***||
 | ls |Directory listing|
 | ls -al |Formatted listing with hidden files|
 | ls -lt |Sort the Formatted listing by time modification|
@@ -43,21 +43,21 @@ This article mainly records the problems & solutions I've met when operating Lin
 | cp file1 file2 |Copy the contents of file1 to file2|
 | cp -r dir1 dir2 |Copy dir1 to dir2; create dir2 if not present|
 | mv file1 file2 |Rename or move file1 to file2, if file2 is an existing directory|
-|***Process management:***|
+|***Process management:***||
 | ps |To display the currently working processes|
 | top |Display all running process|
 | kill pid |Kill the process with given pid|
 | killall proc |Kill all the process named proc|
 | bg |List stopped or background jobs, resume a stopped job in the background|
 | fg n |Brings job n to the foreground|
-|***Searching:***|
+|***Searching:***||
 | grep pattern file |Search for pattern in file|
 | grep -r pattern dir |Search recursively for pattern in dir|
 | command \| grep pattern |Search pattern in the output of another command|
 | locate file |Find all instances of file|
 | find . -name filename |Searches in the directory (represented by ".") and below it, for files and directories with names starting with filename|
 | pgrep pattern |Searches for all the named processes, that matches with the pattern and, by default, returns their ID|
-|***System Info:***|
+|***System Info:***||
 | w |Display who is on line|
 | whoami |Who you are logged in as|
 | finger user |Display information about user|
@@ -69,27 +69,27 @@ This article mainly records the problems & solutions I've met when operating Lin
 | free |Show memory and swap usage|
 | whereis app |Show possible locations of app|
 | which app |Show which applications will be run by default|
-|***Compression:***|
+|***Compression:***||
 | tar cf file.tar file |Create tar named file.tar containing file|
 | tar xf file.tar |Extract the files from file.tar|
 | tar czf file.tar.gz files |Create a tar with Gzip compression|
 | tar xzf file.tar.gz |Extract a tar using Gzip|
 | gzip file |Compresses file and renames it to file.gz|
 | gzip -d file.gz |Decompresses file.gz back to file|
-|***Network:***|
+|***Network:***||
 | ping | Ping host and output results|
 | whois domain |Get whois information for domains|
 | dig domain |Get DNS information for domain|
 | wget file |Download file|
 | wget -c file |Continue a stopped download|
-|***Shortcuts:***|
+|***Shortcuts:***||
 | ctrl+c |Halts the current command|
 | ctrl+z |Stops the current command, resume with `fg` in the foreground or `bg` in the background|
 | ctrl+w |Erases one word in the current line|
 | ctrl+u |Erases the whole line|
 | ctrl+r |Type to bring up a recent command|
 | exit |Logout the current session|
-|***Shutdown:***|
+|***Shutdown:***||
 | shutdown -h |Shut down immediately after services are stopped|
 | shutdown -r |Restart after services are stopped|
 
