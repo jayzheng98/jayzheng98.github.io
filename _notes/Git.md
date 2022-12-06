@@ -33,7 +33,7 @@ Some of the content and pictures in this article are excerpted from the [CS-Note
 
 # Common Commands
 <hr>
-   
+
 | Command | Object | Description |
 |:--------|:-------:|:--------:|
 |git add | filename | Add files to the staging area |
