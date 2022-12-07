@@ -146,7 +146,7 @@ display int vlan xx
 
 <div align="center"> <img alt="dc13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc12.png?raw=true" width="260px"><img alt="dc14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc13.png?raw=true" width="470px"> </div> 
 
- - *Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1)*
+ - *Notice that if you changed the IP of LAN interface, the address of configuration page will change accordingly. In my case, it has changed to 172.110.2.1*
 
 **4. Further explanation**
  - *Here I want to emphasize the role of **static route**. In case you have to connect 2 networks that are **not** in the same segment, you have to configure the static route of both network bridges*
