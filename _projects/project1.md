@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "Verification and recurrence of ***** vulnerability in the wireless communication system of China Urban Rail Transit"
 collection: projects
 permalink: /projects/project1
