@@ -27,8 +27,9 @@ toc_label: "Contents"
 |:---:|:---:|:---:|
 |IDE|Keil uVision5||
 |Circuit design|Altium Designer||
-|microcontroller|STC15W408AS|x1|
+|Microcontroller|STC15W408AS|x1|
 |Electronic components|LED, DuPont line, capacitor...|xN|
+|Lamp sets||x1|
 
 <br>
 
@@ -46,7 +47,7 @@ toc_label: "Contents"
  - *Pulse-Width Modulation(PWM)*
  - *Analog to Digital(AD) sampling (collect luminance and current values)*
  - *traffic light control*
- - *Fault detection*
+ - *Failure detection*
 
 **3.** This design takes <u>STC15</u> as the controller, and uses the photoresistor to collect the environment luminance for LED brightness adjustment, and uses the built-in AD function of MCU to calculate the value of LED lighting current as the judgment basis for whether lights fail
 
@@ -61,9 +62,9 @@ toc_label: "Contents"
 
 **2. PCB diagram**
 
-<div align="center"> <img alt="p3-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-2.png?raw=true" width="460px"> </div> 
+<div align="center"> <img alt="p3-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-2.png?raw=true" width="460px"> </div> <br>
 
-**3. Source Code (C)**
+**3. Source Code**
 
 ```c
 #include <STC15F2K60S2.H>
@@ -183,7 +184,7 @@ void main(void) {
     P3 &= 0x37;            // 0011 0111
     Timer0Init();          // Start timer 0
     while (1) {
-        /*------------------------------Fault detection-----------------------------*/
+        /*------------------------------Failure detection-----------------------------*/
         if (label != 0) {
             // Collect the current values now
             EA = 0;
@@ -290,7 +291,7 @@ void main(void) {
     }
 }
 
-/*-----------------------Traffic light control------------------------*/
+/*-----------------------Traffic light color control------------------------*/
 void Timer0_Int(void) interrupt 1 {
     Num_50Ms++;
     if (Num_50Ms >= 10){                     // 0.5s?
@@ -315,7 +316,7 @@ void Timer0_Int(void) interrupt 1 {
                             flagy = 0;
                             Second = 0;
                             Minute++; 
-                            label = 1;       // Start fault detection
+                            label = 1;       // Start failure detection
                         }
                     }
                 }
@@ -326,7 +327,7 @@ void Timer0_Int(void) interrupt 1 {
 ```
 
 **4. Figure**
- - *Connect our circuit board between the power supply of the traffic light and the lamp set*
+ - *Connect our circuit board between the power supply of the traffic light and the lamp sets*
 
 <div align="center"> <img alt="p3-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-8.jpg?raw=true" width="580px"></div>
 <br>
@@ -339,12 +340,12 @@ void Timer0_Int(void) interrupt 1 {
 
 <img alt="p3-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-3.png?raw=true" width="375px"> <img alt="p3-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-4.png?raw=true" width="375px">
 
-**2. Function of fault detection**
+**2. Function of failure detection**
  - *Normally, both alarm LEDs(left bottom) are unlit*
 
 <div align="center"><img alt="p3-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-5.png?raw=true" width="500px"></div>
 
- - *Then we removed several beads of green lamp through soldering, and the green alarm LED lights up after the periodical fault detection*
+ - *Then we removed several beads of green lamp through soldering, and the green alarm LED lights up after the periodical failure detection*
 
 <img alt="p3-6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-6.png?raw=true" width="325px"> <img alt="p3-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-7.png?raw=true" width="425px">
 
