@@ -227,7 +227,7 @@ void main(void) {
             }
             o = atoi(T1);
 
-            // If detected values < threshold, turn on the corresponding alerting LED
+            // If detected values < threshold, turn on the corresponding alarm LED
             if (p < (75 * q) / 100) { P14 = 0; }
             if (r < (75 * o) / 100) { P13 = 0; }
 
@@ -326,11 +326,26 @@ void Timer0_Int(void) interrupt 1 {
 ```
 
 **4. Figure**
+ - *Connect our circuit board between the power supply of the traffic light and the lamp set*
 
 <div align="center"> <img alt="p3-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-8.jpg?raw=true" width="580px"></div>
 <br>
 
 # Experiment
 <hr>
+
+**1. Function of brightness-adaptive**
+ - *We can see the traffic light become brighter when the environment luminance become higher*
+
+<img alt="p3-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-3.png?raw=true" width="375px"> <img alt="p3-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-4.png?raw=true" width="375px">
+
+**2. Function of fault detection**
+ - *Normally, both alarm LEDs(left bottom) are unlit*
+
+<div align="center"><img alt="p3-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-5.png?raw=true" width="500px"></div>
+
+ - *Then we removed several beads of green lamp through soldering, and the green alarm LED lights up after the periodical fault detection*
+
+<img alt="p3-6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-6.png?raw=true" width="325px"> <img alt="p3-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj3-7.png?raw=true" width="425px">
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
