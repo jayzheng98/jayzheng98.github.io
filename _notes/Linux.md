@@ -63,8 +63,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 | uname -a |Show kernel information|
 | cat /proc/cpuinfo |CPU information|
 | cat /proc/meminfo |Memory information|
-| df |Show the disk usage|
-| du |Show directory space usage|
 | free |Show memory and swap usage|
 | whereis app |Show possible locations of app|
 | which app |Show which applications will be run by default|
