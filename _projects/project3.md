@@ -26,10 +26,11 @@ toc_label: "Contents"
 |Category|Specification|Number|
 |:---:|:---:|:---:|
 |IDE|Keil uVision5||
-|Circuit design|Altium Designer||
+|Circuit Design|Altium Designer||
 |Microcontroller|STC15W408AS|x1|
-|Electronic components|LED, DuPont line, capacitor...|xN|
-|Lamp sets||x1|
+|Electronic Components|LED<br>DuPont line<br>Capacitor<br>...|xN|
+|Traffic Light|Green<br>Red<br>Yellow|x1<br>x1<br>x1|
+|PC|ThinkPad S5|x1|
 
 <br>
 
