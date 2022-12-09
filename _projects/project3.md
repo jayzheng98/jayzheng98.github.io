@@ -74,7 +74,7 @@ toc_label: "Contents"
 #include <stdlib.h>
 
 unsigned char Hour, Minute, Second, Num_50Ms, Eeprom_Data, T[5], T1[5];
-unsigned int AD_Val, AD_Cur, AD_Cur1, m = 0, x, x1, label = 0, Eeprom_Addr, flagr = 1, flagg = 0, flagy = 0, flaggs = 0;
+unsigned int AD_Val, x, x1, label = 0, Eeprom_Addr, flagr = 1, flagg = 0, flagy = 0, flaggs = 0;
 unsigned long p = 0, q = 0, o = 0, r = 0;
 
 void Delay1000ms(){        // @11.0592MHz
@@ -123,12 +123,27 @@ void Timer0Init(void){      // 50ms@11.0592MHz
     EA = 1;
 }
 
+unsigned long AD_sampling(unsigned int in, unsigned int compensate){
+    unsigned long out=0, tmp=0;
+    unsigned int AD_Cur, m=0;
+    while (m != 100) {
+        ADC_CONTR = in;
+        while ((ADC_CONTR & 0x10) == 0) {}
+        AD_Cur = (ADC_RES << 8) + ADC_RESL;
+        tmp = AD_Cur + compensate;
+        out = out + tmp;
+        m++;
+    }
+    out = out / m;
+    return out;
+}
+
 void main(void) {
-    unsigned int AD_Ini, AD_Ini1, y, z, i, j = 0;
+    unsigned int i, j = 0;
     P3M1 = 0x00;
-    P3M0 |= 0xc8;          // 1100 1000
-    P1M1 |= 0x07;          // 0000 0111
-    P1M0 = 0x00;           // 0000 0000
+    P3M0 |= 0xc8;             // 1100 1000
+    P1M1 |= 0x07;             // 0000 0111
+    P1M0 = 0x00;              // 0000 0000
     UartInit();
     TI = 1;
     P1ASF = 0x07;
@@ -138,28 +153,8 @@ void main(void) {
 
     /*----------------------AD collect current values----------------------*/
     // Collect normal current values when the system starts for the first time
-    while (m != 100) {
-        ADC_CONTR = 0xE8;    // 1000
-        while ((ADC_CONTR & 0x10) == 0) {}
-        AD_Ini = (ADC_RES << 8) + ADC_RESL;
-        z = AD_Ini;
-        q = q + z;
-        m++;
-    }
-    q = q / m;
-    m = 0;
-    z = 0;
-    while (m != 100) {
-        ADC_CONTR = 0xEA;    // 1010
-        while ((ADC_CONTR & 0x10) == 0) {}
-        AD_Ini1 = (ADC_RES << 8) + ADC_RESL;
-        y = AD_Ini1;
-        o = o + y;
-        m++;
-    }
-    o = o / m;
-    m = 0;
-    y = 0;
+    q= AD_sampling(0xE8, 0);  // 1000
+    o= AD_sampling(0xEA, 0);  // 1010
 
     //T & T1 represent the normal value of green & red light respectively
     sprintf(T, "%ld", q);
@@ -184,33 +179,14 @@ void main(void) {
     P3 &= 0x37;            // 0011 0111
     Timer0Init();          // Start timer 0
     while (1) {
-        /*------------------------------Failure detection-----------------------------*/
+        /*-----------------------------Fault detection----------------------------*/
         if (label != 0) {
-            // Collect the current values now
             EA = 0;
             P3 |= ~0x37;   // 0011 0111
-            while (m != 100) {
-                ADC_CONTR = 0xE8;
-                while ((ADC_CONTR & 0x10) == 0) {}
-                AD_Cur = (ADC_RES << 8) + ADC_RESL;
-                z = AD_Cur + 4;
-                p += z;
-                m++;
-            }
-            p = p / m;
-            m = 0;
-            z = 0;
-            while (m != 100) {
-                ADC_CONTR = 0xEA;    //1010
-                while ((ADC_CONTR & 0x10) == 0) {}
-                AD_Cur1 = (ADC_RES << 8) + ADC_RESL;
-                y = AD_Cur1 + 7;
-                r += y;
-                m++;
-            }
-            r = r / m;
-            m = 0;
-            y = 0;
+
+            // Collect the current values now
+            p= AD_sampling(0xE8, 4);
+            r= AD_sampling(0xEA, 7);
             Delay1000ms();
 
             // Read the current values stored in EEPROM for comparison
@@ -228,7 +204,7 @@ void main(void) {
             }
             o = atoi(T1);
 
-            // If detected values < threshold, turn on the corresponding alarm LED
+            // If detected values < threshold, turn on the corresponding alerting LED
             if (p < (75 * q) / 100) { P14 = 0; }
             if (r < (75 * o) / 100) { P13 = 0; }
 
@@ -291,7 +267,7 @@ void main(void) {
     }
 }
 
-/*-----------------------Traffic light color control------------------------*/
+/*-----------------------Traffic light control------------------------*/
 void Timer0_Int(void) interrupt 1 {
     Num_50Ms++;
     if (Num_50Ms >= 10){                     // 0.5s?
@@ -315,8 +291,8 @@ void Timer0_Int(void) interrupt 1 {
                             flagr = 1;
                             flagy = 0;
                             Second = 0;
-                            Minute++; 
-                            label = 1;       // Start failure detection
+                            Minute++;
+                            label = 1;       // Start the current value check
                         }
                     }
                 }
