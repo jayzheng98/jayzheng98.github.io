@@ -49,7 +49,7 @@ toc_label: "Contents"
  - *traffic light control*
  - *Failure detection*
 
-**3.** This design takes <u>STC15</u> as the controller, and uses the photoresistor to collect the environment luminance for LED brightness adjustment, and uses the built-in AD function of MCU to calculate the value of LED lighting current as the judgment basis for whether lights fail
+**3.** This design takes <u>STC15</u> as the controller, and uses the photoresistor to collect the environment luminance for LED brightness adjustment, and uses the built-in AD function of MCU to calculate the value of LED lighting current as the judgment basis (According to Ohm's law I=U/R, we can directly judge the failure through the voltage obtained by AD sampling)
 
 <br>
 
