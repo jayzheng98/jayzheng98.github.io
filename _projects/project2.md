@@ -16,7 +16,7 @@ toc_label: "Contents"
 
 **1.** Most parts of this project is also my graduation design. At present, I am still studying how to correlate abnormal data (attacks) mixed in system log data through knowledge graph
 
-**2.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats. On the one hand, the attack surface is expanding because of the deep integration of networking, information and control technology. On the other hand, we lack effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of high-speed railway signal system
+**2.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and we lack effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of high-speed railway signal system
  - *It can be divided into 3 parts, and their relationships are shown below:*
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="260px"> </div>
@@ -47,7 +47,7 @@ toc_label: "Contents"
 
 **2.** Because this paper has not been published for the time being and the project is currently working on the construction of the final graph, here I could only provide a prototype of the graphical analysis output
 
-<div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="650px"> </div>
+<div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="680px"> </div>
 <br>
 
 # Simulation Attack 
@@ -59,12 +59,12 @@ toc_label: "Contents"
 |:---:|:---:|:---:|
 |IDE|PyCharm2019||
 |Database|Elasticsearch7.8.0||
-|Data Sensor|Sysmon<br>SysmonForLinux<br>Nxlog-EE|x7<br>x2<br>x9|
+|Data Sensor|Sysmon<br>SysmonForLinux<br>Nxlog-EE|x6<br>x2<br>x8|
 |PC|Lenovo ThinkCentre|x1|
 |Server|Lenovo ThinkServer RD640|x5|
-|OS|Windows10<br>Ubuntu18.04<br>Kali Linux2020|x7<br>x2<br>x1|
+|OS|Windows10<br>Ubuntu18.04<br>Kali Linux2020<br>WinServer2008|x7<br>x2<br>x1<br>x1|
 |Network Device|Cisco Catalyst 3560G<br>UTT HiPER 840G<br>Cable|x1<br>x1<br>xN|
-|Security Tool|Metasploit<br>MITRE Caldera<br>Windows Defender<br>ClamAV|x1<br>x1<br>x7<br>x2|
+|Security Tool|Metasploit<br>MITRE Caldera|x1<br>x1|
 
 <br>
 
