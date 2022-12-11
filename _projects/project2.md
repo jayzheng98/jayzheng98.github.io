@@ -75,17 +75,16 @@ toc_label: "Contents"
 ### Simulation range
 **1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system. I've recorded my networking process [here](/notes/DC)
 
-<div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> 
-<div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> 
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> 
-<br>
+<div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
+<div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> <br>
 
 **2.** Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) mainframe(3rd pic above)
  - Actually the deployment of the 3 tools mentioned above deserves 3 individual blogs to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
    - Sysmom(windows): please refer to file in this [repository](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
    - Sysmon(linux): please refer to file in this [repository](https://github.com/microsoft/MSTIC-Sysmon/blob/main/linux/configs/main.xml)
    - Nxlog: The configuration files I wrote on windows and linux have been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
-   - ELK: Generally only the configuration of "logstash" need to be customized, the file I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
+   - ELK: Generally only the configuration of "logstash" needs to be customized, the file I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
 
 ### Dataset
 **1.** 
