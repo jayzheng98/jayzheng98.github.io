@@ -34,7 +34,7 @@ toc_label: "Contents"
 **1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the Process-Oriented and Coalescent Analysis (POCA). Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
  - *The overall framework of this methodology is shown below:*
 
-<div align="center"> <img alt="p2-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/pub1-1.png?raw=true" width="580px"> </div><br>
+<div align="center"> <img alt="p2-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/pub1-1.png?raw=true" width="620px"> </div><br>
 
 **2.** The POCA consists of two major parts. They are oriented toward functional safety and cyber security respectively, and POCA achieves a coalescence of these two attributes by drawing the two parts together
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
@@ -53,6 +53,9 @@ toc_label: "Contents"
 # Simulation Attack 
 <hr>
 
+## Introduction
+**1.** The main purpose of this part is to create our own dataset. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented, while external attacks such as Web attacks cannot be implemented. Therefore, common datasets that include both inner and outer attacks cannot be directly used for the subsequent analysis, and the datasets include attacks against railway signal system are very rare and difficult to obtain
+
 ## Environment and Tools
 
 |Category|Specification|Number|
@@ -67,6 +70,19 @@ toc_label: "Contents"
 |Security Tool|Metasploit<br>MITRE Caldera|x1<br>x1|
 
 <br>
+
+## Design
+**1.** First, I built a simulation shooting range in my laboratory according to the network structure of the railway signal system. I've recorded my networking process [here](/notes/DC)
+ - *Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) mainframe(3rd pic below)*
+
+<div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="720px"> </div>
+<br>
+<div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div>
+<br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div>
+<br>
+
+**2.** 
 
 # Anomaly Detection
 <hr>
