@@ -73,7 +73,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 ## Design
 ### Simulation range
-**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system, I've recorded my networking process [here](/notes/DC). The topology diagram and physical diagram are as follows:
+**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system (Due to limited conditions, I can only simulate its network structure at present), I've recorded my networking process [here](/notes/DC). The topology diagram and physical diagram are as follows:
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
@@ -105,14 +105,14 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the *Sysmonlogs* to the *techniques* of [MITRE ATT&CK](https://attack.mitre.org/) by adding the "RuleName" field
  - *With such "label", it will be easier for us to correlate logs with knowledge bases in the final graph*
 
-<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="600px"> </div> <br>
+<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
 
 **3.** However, the mapping of config files is kind of rudimentary since **98%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
  - *For example, attacks achieved by Powershell will all be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to execute detections within tremendous data quickly*
- - *This rule set integrates 774 attack abilities, covering all 12 tactics and about 240 techniques (60%) of ATT&CK*
+ - *This rule set integrates 774 attack abilities, covering all 12 tactics and about 240 techniques (60%) of ATT&CK. It is still at an **elementary stage** and needs further development*
 
 <br>
 
