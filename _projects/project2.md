@@ -74,7 +74,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Design
 ### Simulation range
 **1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system, I've recorded my networking process [here](/notes/DC). The topology diagram and physical diagram are as follows:
- - *Due to limited conditions, I can only simulate its network structure at present, which means there is no actual service scenario operated within the range*
+ - *Due to limited conditions, I can only simulate its network structure at present, which means there is no highly simulated service scenario operated within the range*
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
