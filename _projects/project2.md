@@ -102,17 +102,17 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Development
 **1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
 
-**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the Sysmon logs to the techniques of [MITRE ATT&CK](https://attack.mitre.org/) by adding the "RuleName" field. With such "label", it will be easier for us to correlate logs with knowledge bases in the final graph
+**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the *Sysmonlogs* to the *techniques* of [MITRE ATT&CK](https://attack.mitre.org/) by adding the "RuleName" field
+ - *With such "label", it will be easier for us to correlate logs with knowledge bases in the final graph*
 
-<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="550px"> </div>
+<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="600px"> </div> <br>
 
-**3.** However, the mapping of config files is kind of rudimentary since 98% of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
+**3.** However, the mapping of config files is kind of rudimentary since **98%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
  - *For example, attacks achieved by Powershell will all be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
-**4.** Therefore, we've written a set of more precise **detection rules** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
+**4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to execute detections within tremendous data quickly*
  - *This rule set integrates 774 attack abilities, covering all 12 tactics and about 240 techniques (60%) of ATT&CK*
- - *For more information about the detection rule, please refer to this [repository](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)*
 
 <br>
 
