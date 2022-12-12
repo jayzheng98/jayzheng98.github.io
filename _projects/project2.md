@@ -14,9 +14,9 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** Most parts of this project is also my graduation design. At present, I am still studying how to correlate abnormal data (attacks) mixed in system log data through knowledge graph
+**1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and we lack effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of cyber-physical systems
 
-**2.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and we lack effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of high-speed railway signal system
+**2.** Most contents of this project is also my **graduation project**. At present, I am still studying how to correlate abnormal data (attacks) mixed in system logs through the knowledge graph
  - *It can be divided into 3 parts, and their relationships are shown below:*
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="260px"> </div>
@@ -40,7 +40,7 @@ toc_label: "Contents"
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
-**3.** Actually I've written an academic paper about the work of this part for publication. For more information, please refer to [here](/publication/paper-number-1)
+**3.** Actually I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication.
 
 ## Experiment
 **1.** The results of this theoretical analysis are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so its output will be part of the input to the final graph as well
@@ -73,7 +73,7 @@ toc_label: "Contents"
 
 ## Design
 ### Simulation range
-**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system. I've recorded my networking process [here](/notes/DC)
+**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system, I've recorded my networking process [here](/notes/DC). The topology diagram and physical diagram are as follows:
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
