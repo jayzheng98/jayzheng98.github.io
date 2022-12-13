@@ -103,7 +103,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Development
 **1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
 
-**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the *Sysmonlogs* to the *techniques* of [MITRE ATT&CK](https://attack.mitre.org/) by adding the "RuleName" field
+**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the **Sysmonlogs** to the **techniques** of [MITRE ATT&CK](https://attack.mitre.org/) by adding the "RuleName" field
  - *With such "label", it will be easier for us to correlate logs with knowledge bases in the final graph*
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
@@ -124,11 +124,11 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <hr>
 
 ## Introduction
-**1.** Each cyberattack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process, etc.) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost point-to-point. Although they can accurately detect vulnerabilities, viruses and even abnormal behaviors, they are not able to further correlate these events
+**1.** Each attack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process...) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost **point-to-point**. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they are not able to further correlate these events
 
 **2.** We believe the Knowledge Graph (KG) will be a plausible **complement** to the traditional security tools since it can mine, analyze and construct the relationships among various entities to correlate attack events and restore the attack chain as complete as possible
 
-**3.** In this final stage, we intend to merge all the outputs of previous work with a well-developed cybersecurity KG to further construct **the KG of the railway signal system**, and write a set of preliminary reasoning rules to drive the graph to automatically dig out the attack chains hide in normal data
+**3.** We intend to merge all the outputs of previous work with a well-developed cybersecurity KG to further construct **the KG of railway signal system**, and write a set of preliminary rules to drive the graph to automatically dig out attack chains hide in normal data
 <br>
 
 ## Environment and Tools
