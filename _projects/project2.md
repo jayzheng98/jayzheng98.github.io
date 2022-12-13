@@ -67,7 +67,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 |Server|Lenovo ThinkServer RD640|x5|
 |OS|Windows10<br>Ubuntu18.04<br>Kali Linux2020<br>WinServer2008|x7<br>x2<br>x1<br>x1|
 |Network Device|Cisco Catalyst 3560G<br>UTT HiPER 840G<br>Cable|x1<br>x1<br>xN|
-|Security Tool|Metasploit<br>MITRE Caldera|x1<br>x1|
+|Security Platform|Metasploit<br>MITRE Caldera|x1<br>x1|
 
 <br>
 
@@ -124,6 +124,12 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <hr>
 
 ## Introduction
+**1.** Each cyberattack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process, etc.) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost point-to-point. Although they can accurately detect vulnerabilities, viruses and even abnormal behaviors, they are not able to further correlate these events
+
+**2.** We believe the Knowledge Graph (KG) will be a plausible **complement** to the traditional security tools since it can mine, analyze and construct the relationships among various entities to correlate attack events and restore the attack chain as complete as possible
+
+**3.** In this final stage, we intend to merge all the outputs of previous work with a well-developed cybersecurity KG to further construct **the KG of the railway signal system**, and write a set of preliminary reasoning rules to drive the graph to automatically dig out the attack chains hide in normal data
+<br>
 
 ## Environment and Tools
 
