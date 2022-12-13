@@ -19,7 +19,7 @@ toc_label: "Contents"
 **2.** Most contents (more specific, exclude prediction) of this project is also my **graduation project**. At present, I am still studying how to correlate abnormal data (attacks) mixed in system logs through the knowledge graph
  - *It can be divided into 3 parts, and their relationships are shown below:*
 
-<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="260px"> </div>
+<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"> </div>
 <br>
 
 # Threat Analysis 
@@ -128,7 +128,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 **2.** We believe the Knowledge Graph (KG) will be a plausible **complement** to the traditional security tools since it can mine, analyze and construct the relationships among various entities to correlate attack events and restore the attack chain as complete as possible
 
-**3.** We intend to merge all the outputs of previous work with a well-developed cybersecurity KG to further construct **the KG of railway signal system**, and write a set of preliminary rules to drive the graph to automatically dig out attack chains hide in normal data
+**3.** We intend to merge all the outputs of previous work with a well-developed cybersecurity KG to further construct the **KG of railway signal system**, and write a set of preliminary rules to drive the graph to automatically dig out attack chains hide in normal data
 <br>
 
 ## Environment and Tools
