@@ -113,8 +113,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 **4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to execute detections within tremendous data quickly*
- - *This rule set integrates 774 attack abilities, covering all 12 tactics and about 240 techniques (60%) of ATT&CK.  It is still at an **elementary stage** and needs further development*
-
+ - *This rule set integrates 774 attack abilities, covering 11 tactics and about 240 techniques (60%) of ATT&CK.  It is still at an **elementary stage** and needs further development*
 <br>
 
 ## Experiment
