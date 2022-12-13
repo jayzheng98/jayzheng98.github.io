@@ -16,7 +16,7 @@ toc_label: "Contents"
 
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and we lack effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of cyber-physical systems
 
-**2.** Most contents (more specific, exclude prediction) of this project is also my **graduation project**. At present, I am still studying how to correlate abnormal data (attacks) mixed in system logs through the knowledge graph
+**2.** Most contents (exclude prediction) of this project is also my **graduation project**. At present, I am still studying how to correlate abnormal data (attacks) mixed in system logs through the knowledge graph
  - *It can be divided into 3 parts, and their relationships are shown below:*
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"> </div>
