@@ -142,7 +142,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **2.** On the basis of this template, we have incorporated our own contents. The **conceptual structure** of the final KG of this project is as follows:
  - *The "POCA", "topology" and "Sysmonlogs" are already described in previous sections. Next, we need to transform and merge them into the aforementioned cybersecurity KG(BRON) to finally combine the 4 parts together*
 
-<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="820px"> </div> 
+<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="780px"> </div> 
 <br>
 
 ## Development
@@ -153,7 +153,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our subsequent work will mainly depend on it as well
  - *You can have a view of my notes [here](/notes/arangodb)*
 
-<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="800px"> </div> 
+<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="780px"> </div> 
 <br>
 
 **Updating...** <br>
