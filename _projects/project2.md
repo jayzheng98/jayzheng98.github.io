@@ -143,24 +143,26 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <br>
 
 ## Design
-**1.** A review article [Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287) provides us with a general experiment architecture of KG:
+**1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general experiment architecture of KG:
 
-<div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="560px"> </div>
+<div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="520px"> </div>
 
 **2.** On the basis of this template, we have incorporated our own contents. The **conceptual structure** of the final KG of this project is as follows:
- - *The "POCA", "topology" and "Sysmonlogs" are already described in previous sections* 
- - *Next, we need to transform and merge them into the aforementioned cybersecurity KG(BRON) to finally combine the 4 parts together*
+ - *The "POCA", "topology" and "Sysmonlogs" are already described in previous sections. Next, we need to transform and merge them into the aforementioned cybersecurity KG(BRON) to finally combine the 4 parts together*
 
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="800px"> </div> 
 <br>
 
 ## Development
 ### Knowledge data(BRON)
-**1.** Knowledge data from [MITRE ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [MITRE D3FEND](https://d3fend.mitre.org/) are already linked together in a graph called [BRON](https://github.com/ALFA-group/BRON)
+**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together in a graph called "[BRON](https://github.com/ALFA-group/BRON)"
  - *For more details about BRON please refer to their [academic paper](https://arxiv.org/pdf/2010.00533.pdf)*
 
-**2.** The database that drives BRON is [ArangoDB](https://www.arangodb.com/), you can also have a view of my [notes](/notes/arangodb)
+**2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our subsequent work will mainly depend on it as well
+ - *You can have a view of my notes [here](/notes/arangodb)*
 
+<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="760px"> </div> 
+<br>
 **Updating...** <br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
