@@ -18,21 +18,21 @@ Education
 * **2020-2023: M.Res in Computer Science and Technology, Southwest Jiaotong University, China**
     * Thesis Title: Research on Behavior based Cybersecurity Threat Analysis and Anomaly <br>Detection of Railway System
     * Supervisor: Prof. Lianshan Yan
-
+<br>
 
 Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+<br>  
   
 Research experience
 ======
 
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
-**Time:** 2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **Role:** Principal Investigator <br><br>
-**Abstract:**&ensp;&ensp;*After preliminary theoretical research, a high-risk vulnerability in the subway communication system was found. Thus a confidential project is established, which mainly includes: referring to the "aLTEr" attack scheme, building a pseudo base-station experimental platform for the recurrence and verification of the <u>man-in-the-middle attack</u> against the LTE communication system of subway*
+**Time:** 2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **Role:** Principal Investigator <br>
+**Abstract:**&ensp;&ensp;<font size='6'>*After preliminary theoretical research, a high-risk vulnerability in the subway communication system was found. Thus a confidential project is established, which mainly includes: referring to the "aLTEr" attack scheme, building a pseudo base-station experimental platform for the recurrence and verification of the <u>man-in-the-middle attack</u> against the LTE communication system of subway*</font>
 <br>
 
 - **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
@@ -45,7 +45,6 @@ Abstract:
 Abstract: 
 <br>
 
-  
 Skills
 ======
 * Skill 1
@@ -54,4 +53,3 @@ Skills
   * Sub-skill 2.2
   * Sub-skill 2.3
 * Skill 3
-
