@@ -10,23 +10,26 @@ redirect_from:
 {% include base_path %}
 <img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/1.jpg?raw=true" width="160" height="233">
 <br>
+
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* **2016-2020: B.Eng in Network engineering, Southwest Jiaotong University, Sichuan, China**
+    * GPA 83.61, ranked 24/168 (14%) in major
+* **2020-2023: M.Res in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China**
+    * Thesis Title: Research on Behavior based Cybersecurity Threat Analysis and Anomaly Detection of Railway System. Supervised by Prof. Lianshan Yan.
 
-Work experience
+
+Publications
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+  <ul>{% for post in site.publications %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+Research experience
+======
+  <ul>{% for post in site.projects %}
+    {% include archive-single-talk-cv.html %}
+  {% endfor %}</ul>
   
 Skills
 ======
@@ -37,24 +40,3 @@ Skills
   * Sub-skill 2.3
 * Skill 3
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
