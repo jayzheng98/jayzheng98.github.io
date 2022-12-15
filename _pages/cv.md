@@ -30,19 +30,19 @@ Publications
 Research experience
 ======
 
-- **[<font size='6'>Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit</font>](/projects/project1)** <br>
-**Time:** 2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **Role:** Principal Investigator <br>
-**Abstract:**&ensp;&ensp;<font size='4'>After preliminary theoretical research, a high-risk vulnerability in the subway communication system was found. Thus a confidential project is established, which mainly includes: referring to the "aLTEr" attack scheme, building a pseudo base-station experimental platform for the recurrence and verification of the <u>man-in-the-middle attack</u> against the LTE communication system of subway</font>
+- **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
+**<font size='4'>Time:</font>** <font size='4'>2022.04.15 - Now</font> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **<font size='4'>Role:</font>** <font size='4'>Principal Investigator</font> <br>
+**<font size='4'>Abstract:</font>**&ensp;&ensp;<font size='4'>After preliminary theoretical research, a high-risk vulnerability in the subway communication system was found. Thus a confidential project is established, which mainly includes: referring to the "aLTEr" attack scheme, building a pseudo base-station experimental platform for the recurrence and verification of the <u>man-in-the-middle attack</u> against the LTE communication of subway</font>
 <br>
 
-- **[<font size='6'>Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph</font>](/projects/project2)** <br>
-**Time:** 2021.04.05 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **Role:** Principal Investigator <br>
-Abstract:
+- **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
+**<font size='4'>Time:</font>** <font size='4'>2021.04.05 - Now</font> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **<font size='4'>Role:</font>** <font size='4'>Principal Investigator</font> <br>
+**<font size='4'>Abstract:</font>** <font size='4'>  </font>
 <br>
 
-- **[<font size='6'>Design of LED traffic light brightness-adaptive system based on microcontroller</font>](/projects/project3)** <br>
-**Time:** 2018.04.20 - 2019.05.04 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **Role:** Project Leader <br>
-Abstract: 
+- **[Design of LED traffic light brightness-adaptive system based on microcontroller](/projects/project3)** <br>
+**<font size='4'>Time:</font>** <font size='4'>2018.04.20 - 2019.05.04</font> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **<font size='4'>Role:</font>** <font size='4'>Project Leader</font> <br>
+**<font size='4'>Abstract:</font>** <font size='4'>  </font>
 <br>
 
 Skills
