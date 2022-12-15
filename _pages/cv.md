@@ -14,7 +14,7 @@ redirect_from:
 
 Education
 ======
-* **2016-2020: B.Eng in Network engineering, Southwest Jiaotong University, Sichuan, China**
+* **2016-2020: B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China**
     * <font size='4'>GPA 83.61, ranked 24/168 (14%) in major</font>
 * **2020-2023: M.Res in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China**
     * <font size='4'>Thesis Title: Research on Behavior based Cybersecurity Threat Analysis and Anomaly Detection of Railway System</font>
