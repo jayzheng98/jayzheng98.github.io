@@ -32,7 +32,7 @@ Research experience
 
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
 **<font size='4'>Time:</font>** <font size='4'>2022.04.15 - Now</font> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **<font size='4'>Role:</font>** <font size='4'>Principal Investigator</font> <br>
-**<font size='4'>Abstract:</font>**&ensp;&ensp;<font size='4'>After preliminary theoretical research, a high-risk vulnerability in the subway communication system was found. Thus a confidential project is established, which mainly includes: referring to the "aLTEr" attack scheme, building a pseudo base-station experimental platform for the recurrence and verification of the <u>man-in-the-middle attack</u> against the LTE communication of subway</font>
+**<font size='4'>Abstract:</font>**&ensp;&ensp;<font size='4'>After preliminary theoretical research, a high-risk vulnerability in the subway communication system was found. Thus a confidential project is established, which mainly includes: building a pseudo base-station experimental platform for the recurrence and verification of the <u>man-in-the-middle attack</u> against the LTE communication of subway</font>
 <br>
 
 - **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
