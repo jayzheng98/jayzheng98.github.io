@@ -43,7 +43,7 @@ Research experience
 
 - **[Design of LED traffic light brightness-adaptive system based on microcontroller](/projects/project3)** <br>
 **<font size='4'>Time:</font>** <font size='4'>2018.04.20 - 2019.05.04</font> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; **<font size='4'>Role:</font>** <font size='4'>Project Leader</font> <br>
-**<font size='4'>Abstract:</font>**&ensp;<font size='4'>  </font>
+**<font size='4'>Abstract:</font>**&ensp;<font size='4'>The LED traffic lights currently used in various working conditions are mostly of constant luminance, while light sources with constant luminance are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
 <br>
 
