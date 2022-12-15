@@ -5,7 +5,7 @@ collection: projects
 permalink: /projects/project2
 excerpt: "*Applied Basic Research Project of Science & Technology Department of Sichuan Province [grant 21YYJC3147]*"
 date: 2021-04-05
-venu: test
+venue: test
 toc: true
 toc_label: "Contents"
 ---
