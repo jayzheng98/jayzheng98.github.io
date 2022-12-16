@@ -53,9 +53,9 @@ Skills
 - **Database** <br>
 **<font size='4'>Master:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 - **Networking** <br>
-**<font size='4'>Computer network:</font>**<font size='4'>&ensp;Know well of the network equipment and the network configuration of various OSes (See the </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> I built)</font><br>
+**<font size='4'>Computer network:</font>**<font size='4'>&ensp;Know well of the use of network equipment and the network configuration of various OSes (See the </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> I built)</font><br>
 **<font size='4'>Wireless network:</font>**
-   - **<font size='4'>LTE:</font>**<font size='4'>&ensp;Familiar with the LTE network construction based on Software Defined Radio(SDR) equipments<br>&ensp;&ensp;&ensp;&ensp; Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
+  - **<font size='4'>LTE:</font>**<font size='4'>&ensp;Familiar with the LTE network construction based on Software Defined Radio(SDR) equipments<br>&ensp;&ensp;&ensp;&ensp; Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
 - **Security** <br>
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
 **<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit Framework and MITRE Caldera Platform</font><br>
