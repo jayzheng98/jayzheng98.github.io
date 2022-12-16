@@ -96,7 +96,7 @@ void dfs(int n, int m){
  - **BM57 Number of islands** needs to use loops to find 1 to define the entrance of an island. Every time we pass in a position in an island, 0 should be set first, but it cannot be restored to 1 after passing out! Otherwise, we would enter the same island multiple times during the loops
 
 ### HJ67 & HJ89 24-point game (24点游戏)
-**1.** Use array "rec" to mark whether the number is used to achieve the full arrangement：
+**1.** Use array "rec" to mark whether the number has been used, to further achieve the full arrangement：
 
 ```c
 for(int j=0;j<4;j++){
