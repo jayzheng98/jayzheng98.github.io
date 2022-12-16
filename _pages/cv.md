@@ -60,7 +60,15 @@ Skills
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
 **<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit Framework and MITRE Caldera Platform</font><br>
 **<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&thinsp; Familiar with ATT&CK and CAPEC knowledge bases</font>
-- **<font size='4'>Embedded development: (haven't touched for some time)</font>** <br>
+- **Embedded development: (haven't touched for some time)** <br>
 **<font size='4'>MCU:</font>**<font size='4'>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times</font><br>
 **<font size='4'>Circuit design:</font>**<font size='4'>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font><br>
-**<font size='4'>Modules:</font>**<font size='4'>&ensp;Familiar with OLED (0.96 inch), UART, OpenMV camera, steering engine, gyro&accelerometer, blue-tooth, laser range finder and so on</font>
+
+Awards & Honors
+======
+- 05/2021 - **Regional Award**(National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. *Dijkstra Sect: Traffic Data Forecast.* **Zhongyi Zheng** <br>
+- 12/2019 - **Second Class Scholarship** and **Outstanding Student Leaders**, Southwest Jiaotong University <br>
+- 08/2019 - Provincial **2nd Prize**, 2019 National Undergraduate Electronic Design Competition. *[Subject H: Analog Electromagnetic Curved Gun](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg).* **Zhongyi Zheng**, Zhuocheng Shi, Feifan Lei<br>
+- 04/2019 - **1st Prize**(No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. *Electronic Firefly.* **Zhongyi Zheng** <br>
+- 12/2018 - **Second Class Scholarship** and **Merit Student**, Southwest Jiaotong University <br>
+- 11/2017 - **Second Class Scholarship** and **Mingcheng Award**, Southwest Jiaotong University <br>
