@@ -47,12 +47,12 @@ Skills
 ======
 
 - **Programming Language** <br>
-**<font size='4'>Master:</font>**&ensp;C, Python &ensp;&ensp;&ensp;&ensp;**<font size='4'>Familiar:</font>**&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;**<font size='4'>Understand:</font>**&ensp;Matlab, C#</font>
+**<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#</font>
  
 - **Programming Ability** <br>
-&thinsp;<font size='4'>I've been accepted for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u>, see my note [here](/notes/OP)</font>
+&thinsp;<font size='4'>I've been accepted for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u>, see my note </font>[<font size='4'>here</font>](/notes/OP)
 
 - **Database** <br>
-**<font size='4'>Master:</font>**&ensp;[Mysql](/notes/mysql) &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;**<font size='4'>Familiar:</font>**&ensp;[ArangoDB](/notes/arangodb) &ensp;&ensp;&ensp;&ensp;&ensp;**<font size='4'>Understand:</font>**&ensp;Neo4j</font>
+**<font size='4'>Master:</font>**<font size='4'>&ensp;[Mysql](/notes/mysql) &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;[ArangoDB](/notes/arangodb) &ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 
 
