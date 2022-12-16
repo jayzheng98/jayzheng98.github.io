@@ -29,7 +29,7 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** At first, I practiced my online programming on the well-known [Leetcode](https://leetcode.com/problemset/all/). However, I found some paid functions on Leetcode, such as *Debug* and *spell check*, are free on [Nowcoder](https://www.nowcoder.com/), so I mainly use Nowcoder to train my programming now
+**1.** At first, I practiced my online programming on the well-known [Leetcode](https://leetcode.com/problemset/all/). However, I found some paid functions on Leetcode, such as *Debug* and *spell check*, are free on [Nowcoder](https://www.nowcoder.com/exam/oj), so I mainly use Nowcoder to train my programming now
 
 **2.** The reason why I choose *C* for online programming is that *C* is relatively rudimentary and does not have many powerful built-in functions that *Python* and *C++* have. So programming with *C* allows me to have a more comprehensive and in-depth understanding of data structure & algorithm
 
