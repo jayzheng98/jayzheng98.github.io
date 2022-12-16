@@ -46,13 +46,13 @@ Research experience
 Skills
 ======
 
-- Programming Language <br>
+- **Programming Language** <br>
 **<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#</font>
-- Programming Ability <br>
+- **Programming Ability** <br>
 &thinsp;<font size='4'>I've been accepted for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u>, see my note </font>[<font size='4'>here</font>](/notes/OP)
-- Database <br>
+- **Database** <br>
 **<font size='4'>Master:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
-- Networking <br>
+- **Networking** <br>
 &thinsp;<font size='4'>I'm familiar with the network configuration of various OSes and the use of network equipments. I've built an </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> in my lab</font>
-- Security <br>
+- **Security** <br>
 &thinsp;<font size='4'>I'm familiar with <u>Commandline</u>, <u>Powershell</u> and <u>Terminal</u></font><br>
