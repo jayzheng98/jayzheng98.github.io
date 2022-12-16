@@ -47,7 +47,7 @@ Skills
 ======
 
 - **Programming Language** <br>
- Master:&ensp;C, Python &ensp;&ensp;&ensp;&ensp;Familiar:&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;Understand:&ensp;Matlab, C#
+&ensp;<font size='4'>Master:&ensp;C, Python &ensp;&ensp;&ensp;&ensp;Familiar:&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;Understand:&ensp;Matlab, C#</font>
  
 - **Programming Ability** <br>
  <font size='4'>I've been accepted for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u>, see my note [here](/notes/OP)</font>
