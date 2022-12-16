@@ -53,6 +53,6 @@ Skills
 - **Database** <br>
 **<font size='4'>Master:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 - **Networking** <br>
-&thinsp;<font size='4'>I'm familiar with the network configuration of various OSes and the use of network equipments. I've built an </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> in my lab</font>
+&thinsp;<font size='4'>I'm familiar with the network configuration of various OSes and the use of network equipments as well. I've built an </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> in my lab</font>
 - **Security** <br>
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and Terminal(Linux)</font><br>
