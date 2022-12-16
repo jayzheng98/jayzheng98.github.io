@@ -47,10 +47,10 @@ Skills
 ======
 
 - **Programming Language** <br>
- <font size='4'>Master:&ensp;C, Python &ensp;&ensp;&ensp;&ensp;Familiar:&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;Understand:&ensp;Matlab, C#</font><br>
+ Master:&ensp;C, Python &ensp;&ensp;&ensp;&ensp;Familiar:&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;Understand:&ensp;Matlab, C#
  
-- Programming Ability <br>
- <font size='4'>I've been accepted for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u>, see my note [here](/notes/OP)</font><br>
+- **Programming Ability** <br>
+ <font size='4'>I've been accepted for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u>, see my note [here](/notes/OP)</font>
 
-- Database <br>
+- **Database** <br>
  <font size='4'>Master:&ensp;[Mysql](/notes/mysql) &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Familiar:&ensp;[ArangoDB](/notes/arangodb) &ensp;&ensp;&ensp;&ensp;&ensp;Understand:&ensp;Neo4j</font>
