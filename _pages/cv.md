@@ -66,7 +66,7 @@ Skills
 
 Awards & Honors
 ======
-- <font size='4'>2021.05:</font> **<font size='4'>Regional Award</font>**<font size='4'>(National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. </font>*<font size='4'>"Dijkstra Sect: Traffic Data Forecast".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
+- <font size='4'>2021.05: **</font><font size='4'>Regional Award</font>**<font size='4'>(National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. </font>*<font size='4'>"Dijkstra Sect: Traffic Data Forecast".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
 - <font size='4'>2019.12: **<font size='4'>Second Class Scholarship</font>**<font size='4'> and </font>**<font size='4'>Outstanding Student Leaders</font>**<font size='4'>, Southwest Jiaotong University</font> <br>
 - <font size='4'>2019.08: Provincial </font>**<font size='4'>2nd Prize</font>**<font size='4'>, 2019 National Undergraduate Electronic Design Competition. </font>*[<font size='4'>"Subject H: Analog Electromagnetic Curved Gun".</font>](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true)* **<font size='4'>Zhongyi Zheng</font>**<font size='4'>, Zhuocheng Shi, Feifan Lei</font><br>
 - <font size='4'>2019.04: **<font size='4'>1st Prize</font>**<font size='4'>(No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. </font>*<font size='4'>"Electronic Firefly".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
