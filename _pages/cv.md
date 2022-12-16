@@ -55,4 +55,4 @@ Skills
 - **Networking** <br>
 &thinsp;<font size='4'>I'm familiar with the network configuration of various OSes and the use of network equipments. I've built an </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> in my lab</font>
 - **Security** <br>
-&thinsp;<font size='4'>I'm familiar with <u>Commandline</u>, <u>Powershell</u> and <u>Terminal</u></font><br>
+**<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and Terminal(Linux)</font><br>
