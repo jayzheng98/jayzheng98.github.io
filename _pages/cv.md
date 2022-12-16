@@ -43,10 +43,12 @@ Research experience
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>The LED traffic lights currently used in various working conditions are mostly of constant luminance, while light sources with constant luminance are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
 
-
 Skills
 ======
-* Skill 1
+* Programming Language
+  * <font size='4'>Master:&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;C,&ensp;Python
+  * Familiar:&ensp;&ensp;&ensp;&ensp;&ensp;PHP,&ensp;C++
+  * Understand: &ensp;Matlab,&ensp;C#</font>
 * Skill 2
   * Sub-skill 2.1
   * Sub-skill 2.2
