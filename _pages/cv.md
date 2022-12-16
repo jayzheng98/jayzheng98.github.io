@@ -45,8 +45,11 @@ Research experience
 
 Skills
 ======
-* Programming Language <br>
+- Programming Language <br>
 <font size='4'>Master:&ensp;C, Python &ensp;&ensp;&ensp;&ensp;Familiar:&ensp;PHP, C++ &ensp;&ensp;&ensp;&ensp;Understand:&ensp;Matlab, C#</font>
-* Programming Ability <br>
+
+- Programming Ability <br>
 <font size='4'>I've been accepted for about 250 problems on Leetcode and Nowcoder, see my note [here](/notes/OP)</font>
-* Skill 3
+
+- Database <br>
+<font size='4'>Master:&ensp;Mysql &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Familiar:&ensp;ArangoDB &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Understand:&ensp;Neo4j</font>
