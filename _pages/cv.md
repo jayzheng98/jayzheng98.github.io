@@ -45,12 +45,8 @@ Research experience
 
 Skills
 ======
-* Programming Language
-  * <font size='4'>Master:&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;C,&ensp;Python
-  * Familiar:&ensp;&ensp;&ensp;&ensp;&ensp;PHP,&ensp;C++
-  * Understand: &ensp;Matlab,&ensp;C#</font>
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
+* Programming Language <br>
+<font size='4'>Master:&ensp;C, Python &ensp;&ensp;&ensp;&ensp;Familiar:&ensp;PHP, C++ &ensp;&ensp;&ensp;&ensp;Understand:&ensp;Matlab, C#</font>
+* Programming Ability <br>
+<font size='4'>I've been accepted for about 250 problems on Leetcode and Nowcoder, see my note [here](/notes/OP)</font>
 * Skill 3
