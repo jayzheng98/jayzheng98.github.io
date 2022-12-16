@@ -59,5 +59,6 @@ Skills
 - **Security** <br>
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
 **<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit Framework and MITRE Caldera Platform</font><br>
-**<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Familiar with ATT&CK and CAPEC knowledge bases</font>
+**<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&thinsp; Familiar with ATT&CK and CAPEC knowledge bases</font>
+- **Others (haven't touched for some time)** <br>
 
