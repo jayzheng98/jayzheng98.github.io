@@ -56,3 +56,6 @@ Skills
 &thinsp;<font size='4'>I'm familiar with the network configuration of various OSes and the use of network equipments as well. I've built an </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> in my lab</font>
 - **Security** <br>
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and Terminal(Linux)</font><br>
+**<font size='4'>Red tool:</font>**<font size='4'>&ensp;Familiar with Metasploit Framework and MITRE Caldera Platform</font><br>
+**<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon<br> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Familiar with ATT&CK and CAPEC knowledge bases</font>
+- **Wireless Communication** <br>
