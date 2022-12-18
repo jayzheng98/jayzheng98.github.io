@@ -18,7 +18,6 @@ toc_label: "Contents"
  - *Tutorial2: [Operate it with Python](https://www.arangodb.com/tutorials/tutorial-python/)*
 
 **2.** This note will mianly record my operations on ArangoDB while working on [this project](/projects/project2)
-
 <br>
 
 
