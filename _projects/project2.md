@@ -150,10 +150,8 @@ The main purpose of this part is to create our **own dataset**. Due to the close
  - *For more details about BRON please refer to their [academic paper](https://arxiv.org/pdf/2010.00533.pdf)*
 
 **2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our subsequent work will mainly depend on it as well
- - *You can have a view of my notes [here](/notes/arangodb)*
+ - *Part of the construction process is recorded [here](/notes/arangodb)*
 
-<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="780px"> </div> 
-<br>
 
 **Updating...** <br>
 
