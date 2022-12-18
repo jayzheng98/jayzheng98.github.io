@@ -13,7 +13,7 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** There are already very detailed [official tutorials](https://www.arangodb.com/docs/stable/) about ArangoDB, so it is meaningless to reproduce them here
+**1.** There are already very detailed [official tutorials](https://www.arangodb.com/docs/stable/) about ArangoDB, so it will be meaningless for me to reproduce them here
  - *Tutorial1: If you were familiar with SQL, you can get started quickly with AQL by referring [this](https://www.arangodb.com/community-server/sql-aql-comparison/)*
  - *Tutorial2: [Operate it with Python](https://www.arangodb.com/tutorials/tutorial-python/)*
 
