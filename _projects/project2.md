@@ -150,7 +150,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
  - *For more details about BRON please refer to their [academic paper](https://arxiv.org/pdf/2010.00533.pdf)*
 
 **2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our subsequent work will mainly depend on it as well
- - *Part of the construction process is recorded [here](/notes/arangodb)*
+ - *Part of the specific graph construction is recorded [here](/notes/arangodb), and I won't describe such work in detail later in this article*
 
 
 **Updating...** <br>
