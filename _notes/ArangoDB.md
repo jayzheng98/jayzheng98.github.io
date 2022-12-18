@@ -29,7 +29,7 @@ toc_label: "Contents"
 <hr>
 
 **1.** To begin with, let's sort out all the analysis results of my paper. Since the collection(table) of Arango is in the format of JSON, we have to decide how many collections should be derived from these knowledges, and write them into JSON format files separately. According to my paper, the threat knowledges of railway signal system can be divided into:
- - *Accident, Hazard, Service(include "control action" & "weakness"), Safety Constraint, Asset and Threat Scenario*
+ - *Accident, Hazard, Service, Control Action, Weakness, Safety Constraint, Asset and Threat Scenario*
 
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
