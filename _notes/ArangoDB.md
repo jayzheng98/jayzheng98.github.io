@@ -14,7 +14,7 @@ toc_label: "Contents"
 <hr>
 
 **1.** There are already very detailed [official tutorials](https://www.arangodb.com/docs/stable/) about ArangoDB, so it will be meaningless for me to reproduce them here
- - *[Tutorial1](https://www.arangodb.com/community-server/sql-aql-comparison/): If you were familiar with SQL, you can get started quickly with AQL*
+ - *[Tutorial1](https://www.arangodb.com/community-server/sql-aql-comparison/): If you were familiar with SQL, you can get started with AQL quickly*
  - *[Tutorial2](https://www.arangodb.com/tutorials/tutorial-python/): Drive it with Python*
 
 **2.** This note will mainly record my operations on ArangoDB while working on this [project](/projects/project2). To be more specific, it will show you the processes of importing the output of this [academic paper](/publication/paper-number-1) into the "BRON" graph that was already constructed
@@ -54,7 +54,7 @@ arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection NAME --create-co
 **2.** Results:
  - *The import processes of "Control Action", "Weakness", "Safety Constraint", "Asset" and "Threat Scenario" are omitted here*
 
-<div align="center"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="600px"> </div><br>
+<div align="center"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="760px"> </div><br>
 <div align="center"> <img alt="arango3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango3.png?raw=true" width="760px"> </div><br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
