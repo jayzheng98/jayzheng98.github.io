@@ -81,14 +81,14 @@ FOR r IN AccidentHazard
 ```
 <div align="center"> <img alt="arango5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango5.png?raw=true" width="360px"> </div><br>
 
-**3.** **Traverse** to check whether our collections are correlated together (start from service/S8):
+**3.** **Traverse** to check whether our collections are correlated together (start from "service/S8"):
  - `FOR` *vertex(, edge)(, path)*
- - `IN min..max` *defines the minimal and maximal depth for the traversal (If not specified min defaults to 1 and max defaults to min)*
+ - `IN min..max` *defines the minimal and maximal depth for the traversal (min defaults to 1 and max defaults to min)*
  - `OUTBOUND/INBOUND/ANY` *defines the direction of your search*
- - *The subsequent format is* `'StartVertex' edge_collection1, edge_collection2, ...`
+ - *The subsequent format is 'StartVertex' edge_collection1, edge_collection2, ...*
 
 ```sql
--- Traversal follows outgoing edges, only returns accidents caused by "S8" (Result: left pic)
+-- Traversal follows outgoing edges, only returns "accidents" caused by "S8" (Result: left pic)
 FOR v, e, p IN 1..3 OUTBOUND 'service/S8' HazardService, AccidentHazard
   RETURN p
 
