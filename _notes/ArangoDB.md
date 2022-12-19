@@ -31,11 +31,19 @@ toc_label: "Contents"
 **1.** To begin with, let's sort out all the analysis results of my paper. Since the collection(table) of Arango is in the format of `JSON`, we have to decide how many collections should be derived from these knowledges, and import them to `JSON` format files separately. According to my paper, the threat knowledges of railway signal system can be divided into:
  - *Accident, Hazard, Service, Control Action, Weakness, Safety Constraint, Asset and Threat Scenario*
 
-**2.** Actually we don't need to transform all the knowledges into `JSON` format which is elusive directly, but could write them in the format of `CSV`, the "accident.csv", "AccidentHazard.csv(relation)" and the "hazard.csv" is shown below:
+**2.** Actually we don't need to transform all the knowledges into `JSON` format which is elusive directly, but could write them in the format of `CSV`
+ - *For example, the "accident.csv", "AccidentHazard.csv(relation)" and the "hazard.csv" is shown below:*
 
+<div align="center"> <img alt="arango1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango1.png?raw=true" width="225px"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="300px"> <img alt="arango3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango3.png?raw=true" width="225px"></div><br>
 
-**3.** Then import them to the ArangoDB by running the following on your command line (single line):
+# Create Collections
+<hr>
+
+**1.** Import the aforementioned `CSV` files one by one to the ArangoDB by running the following on your command-line:
 ```shell
-arangoimport --file <font style="background: red">path to ".csv" on your machine</font> --collection airports --create-collection true --type csv
+arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection airports --create-collection true --type csv
 ```
+
+<div align="center"> <img alt="arango4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango4.png?raw=true" width="700px"> </div><br>
+
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
