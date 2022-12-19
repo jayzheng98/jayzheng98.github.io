@@ -36,6 +36,11 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="arango1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango1.png?raw=true" width="750px"></div><br>
 
+**3.** You can see that ArangoDB uses an individual file to correlate two collections like "Mysql", such isolation allows us to easily and accurately modify the contents of the database 
+ - *The* `_from` *and* `_to` *attributes of the "edge" file form the graph by referencing document* `_ids`
+ - *The* `_id` *is automatically generated while importing by concatenating the "collection name" and `_key` with "/"*
+<br>
+
 # Create Collections
 <hr>
 
@@ -54,5 +59,10 @@ arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection NAME --create-co
 **2.** Results (The import processes of "Control Action", "Weakness", "Safety Constraint", "Asset" and "Threat Scenario" are omitted here):
 <div align="center"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="760px"> </div><br>
 <div align="center"> <img alt="arango3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango3.png?raw=true" width="760px"> </div><br>
+
+# AQL Query
+<hr>
+
+**1.** We can execute some query sentences to check whether our collections are correlated together
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
