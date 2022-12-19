@@ -51,9 +51,7 @@ arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection NAME --create-co
 arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection NAME --create-collection true --type csv --create-collection-type edge
 ```
 
-**2.** Results:
- - *The import processes of "Control Action", "Weakness", "Safety Constraint", "Asset" and "Threat Scenario" are omitted here*
-
+**2.** Results (The import processes of "Control Action", "Weakness", "Safety Constraint", "Asset" and "Threat Scenario" are omitted here):
 <div align="center"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="760px"> </div><br>
 <div align="center"> <img alt="arango3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango3.png?raw=true" width="760px"> </div><br>
 
