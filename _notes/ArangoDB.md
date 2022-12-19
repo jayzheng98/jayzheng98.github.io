@@ -16,6 +16,7 @@ toc_label: "Contents"
 **1.** There are already very detailed [official tutorials](https://www.arangodb.com/docs/stable/) about ArangoDB, so it will be meaningless for me to reproduce them here
  - *[Tutorial1](https://www.arangodb.com/community-server/sql-aql-comparison/): If you were familiar with SQL, you can get started with AQL quickly*
  - *[Tutorial2](https://www.arangodb.com/tutorials/tutorial-python/): Drive it with Python*
+ - *[Tutorial3](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/ArangoDB-GraphCourse_Beginners.pdf?raw=true): A basic but comprehensive graph course for freshers*
 
 **2.** This note will mainly record my operations on ArangoDB while working on this [project](/projects/project2). To be more specific, it will show you the processes of importing the output of this [academic paper](/publication/paper-number-1) into the "BRON" graph that was already constructed
 
@@ -38,13 +39,13 @@ toc_label: "Contents"
 
 **3.** You can see that ArangoDB uses an individual file to correlate two collections like "Mysql", such isolation allows us to easily and accurately modify the contents of the database 
  - *The* `_from` *and* `_to` *attributes of the "edge" file form the graph by referencing document* `_ids`
- - *The* `_id` *is automatically generated while importing by concatenating the "collection name" and `_key` with "/"*
+ - *The* `_id` *is automatically generated while importing by concatenating the "collection name" and* `_key` *with "/"*
 <br>
 
 # Create Collections
 <hr>
 
-**1.** Import the aforementioned `CSV` files one by one to the ArangoDB by running the following on your command-line:
+**1.** Import the aforementioned `CSV` files one-by-one to the ArangoDB by running the following on your command-line:
  - *Document*
 
 ```shell
@@ -60,9 +61,21 @@ arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection NAME --create-co
 <div align="center"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="760px"> </div><br>
 <div align="center"> <img alt="arango3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango3.png?raw=true" width="760px"> </div><br>
 
-# AQL Query
+# Query & Traversal
 <hr>
 
-**1.** We can execute some query sentences to check whether our collections are correlated together
+**1.** To find out how many "services" have "abbreviation":
+```aql
+For s in service
+  FILTER s.abbreviation
+  RETURN s.name
+```
+<div align="center"> <img alt="arango4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango4.png?raw=true" width="500px"> </div><br>
+
+**2.** Check whether our collections are correlated together:
+```aql
+
+```
+
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
