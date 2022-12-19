@@ -28,8 +28,14 @@ toc_label: "Contents"
 # Preparation
 <hr>
 
-**1.** To begin with, let's sort out all the analysis results of my paper. Since the collection(table) of Arango is in the format of JSON, we have to decide how many collections should be derived from these knowledges, and write them into JSON format files separately. According to my paper, the threat knowledges of railway signal system can be divided into:
+**1.** To begin with, let's sort out all the analysis results of my paper. Since the collection(table) of Arango is in the format of `JSON`, we have to decide how many collections should be derived from these knowledges, and import them to `JSON` format files separately. According to my paper, the threat knowledges of railway signal system can be divided into:
  - *Accident, Hazard, Service, Control Action, Weakness, Safety Constraint, Asset and Threat Scenario*
 
+**2.** Actually we don't need to transform all the knowledges into `JSON` format which is elusive directly, but could write them in the format of `CSV`, the "accident.csv", "AccidentHazard.csv(relation)" and the "hazard.csv" is shown below:
 
+
+**3.** Then import them to the ArangoDB by running the following on your command line (single line):
+```shell
+arangoimport --file <font style="background: red">path to ".csv" on your machine</font> --collection airports --create-collection true --type csv
+```
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
