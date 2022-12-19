@@ -32,9 +32,9 @@ toc_label: "Contents"
  - *Accident, Hazard, Service, Control Action, Weakness, Safety Constraint, Asset and Threat Scenario*
 
 **2.** Actually we don't need to transform all the knowledges into `JSON` format which is elusive directly, but could write them in the format of `CSV`
- - *For example, the "accident.csv", "AccidentHazard.csv(relation)" and the "hazard.csv" is shown below:*
+ - *For example, the "accident.csv", "AccidentHazard.csv(relation)", "hazard.csv", "HazardService.csv(relation)" and "service.csv" is shown below:*
 
-<div align="center"> <img alt="arango1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango1.png?raw=true" width="225px"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="300px"> <img alt="arango3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango3.png?raw=true" width="225px"></div><br>
+<div align="center"> <img alt="arango1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango1.png?raw=true" width="700px"></div><br>
 
 # Create Collections
 <hr>
@@ -44,6 +44,6 @@ toc_label: "Contents"
 arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection airports --create-collection true --type csv
 ```
 
-<div align="center"> <img alt="arango4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango4.png?raw=true" width="700px"> </div><br>
+<div align="center"> <img alt="arango2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango2.png?raw=true" width="700px"> </div><br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
