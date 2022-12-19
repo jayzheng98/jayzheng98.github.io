@@ -18,7 +18,7 @@ toc_label: "Contents"
  - *[Tutorial2](https://www.arangodb.com/tutorials/tutorial-python/): Drive it with Python*
  - *[Tutorial3](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/ArangoDB-GraphCourse_Beginners.pdf?raw=true): A basic but comprehensive graph course for freshers*
 
-**2.** This note will mainly record my operations on ArangoDB while working on this [project](/projects/project2). To be more specific, it will show you the processes of importing the output of this [academic paper](/publication/paper-number-1) into the "BRON" graph that was already constructed
+**2.** This note will mainly record my operations on ArangoDB while working on this [project](/projects/project2). To be more specific, **the next 3 chapters** will be a practical tutorial and show you the processes of importing the output of this [ paper](/publication/paper-number-1) into the "BRON" graph that was already constructed
 
 <div align="center"> <img alt="arango0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango0.png?raw=true" width="760px"> </div><br>
 
@@ -64,18 +64,38 @@ arangoimport --file PATH TO ".csv" ON YOUR MACHINE --collection NAME --create-co
 # Query & Traversal
 <hr>
 
-**1.** To find out how many "services" have "abbreviation":
-```aql
-For s in service
+**1.** **Query** to find out how many "services" have "abbreviation":
+
+```python
+FOR s IN service
   FILTER s.abbreviation
   RETURN s.name
 ```
 <div align="center"> <img alt="arango4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango4.png?raw=true" width="500px"> </div><br>
 
-**2.** Check whether our collections are correlated together:
-```aql
+**2.** **Query** to see the relationship between "accident" and "hazard":
 
+```python
+FOR r IN AccidentHazard
+  RETURN r
 ```
+<div align="center"> <img alt="arango5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango5.png?raw=true" width="400px"> </div><br>
 
+**3.** **Traverse** to check whether our collections are correlated together (start from service/S8):
+ - `FOR` *vertex(, edge)(, path)*
+ - `IN min..max` *defines the minimal and maximal depth for the traversal (If not specified min defaults to 1 and max defaults to min)*
+ - `OUTBOUND/INBOUND/ANY` *defines the direction of your search*
+ - *The subsequent format is* `'StartVertex' edge_collection1, edge_collection2, ...`
+
+```python
+# Traversal follows outgoing edges, only returns accidents caused by "S8" (Result: left pic)
+For v, e, p IN 1..3 OUTBOUND 'service/S8' HazardService, AccidentHazard
+  RETURN p
+
+# Traversal follows edges pointing in any direction, will return more contents like "S4" (Result: right pic)
+For v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
+  RETURN p
+```
+<div align="center"> <img alt="arango6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango6.png?raw=true" width="350px"> <img alt="arango7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango7.png?raw=true" width="400px"></div><br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
