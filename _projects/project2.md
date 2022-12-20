@@ -139,6 +139,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="520px"> </div><br>
 
 **2.** On the basis of this template, we have incorporated our own contents. The **conceptual structure** of the final KG of this project is as follows:
+ - *Red arrows represent the element that binds two parts together*
 
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="780px"> </div> 
 <br>
@@ -152,7 +153,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
  - *We need to transform and merge the other 3 parts into BRON to finally combine the 4 parts together*
 
 ### CTI & Environment data
-**1.** The ["POCA"](#threat-analysis) and ["Topology"](#simulation-range) are already described in previous sections. Part of the specific graph construction is recorded [here](/notes/arangodb), and I won’t describe such work in detail later in this article
+**1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" are already described in previous sections. Part of the specific graph construction is recorded [here](/notes/arangodb), and I won’t describe such work in detail later in this article
 
 ### Behavior data
 
