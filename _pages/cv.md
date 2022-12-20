@@ -51,7 +51,7 @@ Skills
 - **Programming Ability** <br>
 &thinsp;<font size='4'>I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (See my </font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
 - **Database** <br>
-**<font size='4'>Master:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
+**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql), [<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 - **Networking** <br>
 **<font size='4'>Computer network:</font>**<font size='4'>&ensp;Know well of the use of network equipment and the network configuration of various OSes (See the </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> I built)</font><br>
 **<font size='4'>Wireless network:</font>**
