@@ -139,7 +139,6 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="520px"> </div><br>
 
 **2.** On the basis of this template, we have incorporated our own contents. The **conceptual structure** of the final KG of this project is as follows:
- - *The "POCA", "topology" and "Sysmonlogs" are already described in previous sections. Next, we need to transform and merge them into the aforementioned cybersecurity KG(BRON) to finally combine the 4 parts together*
 
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="780px"> </div> 
 <br>
@@ -149,9 +148,13 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together in a graph called "[BRON](https://github.com/ALFA-group/BRON)"
  - *For more details about BRON please refer to their [academic paper](https://arxiv.org/pdf/2010.00533.pdf)*
 
-**2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our subsequent work will mainly depend on it as well
- - *Part of the specific graph construction is recorded [here](/notes/arangodb), and I won't describe such work in detail later in this article*
+**2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well
+ - *We need to transform and merge the other 3 parts into BRON to finally combine the 4 parts together*
 
+### CTI & Environment data
+**1.** The ["POCA"](#threat-analysis) and ["Topology"](#simulation-range) are already described in previous sections. Part of the specific graph construction is recorded [here](/notes/arangodb), and I won’t describe such work in detail later in this article
+
+### Behavior data
 
 **Updating...** <br>
 
