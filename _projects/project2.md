@@ -45,7 +45,7 @@ toc_label: "Contents"
 ## Experiment
 **1.** The results of this theoretical analysis are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so its output will be part of the input to the final graph as well
 
-**2.** Because this paper has not been published for the time being and the project is currently working on the construction of the final graph, here I could only provide a prototype of the graphical analysis output
+**2.** Because this paper has not been published for the time being and the project is currently working on the construction of the final graph, here I could only provide a prototype of the graphical analysis output (some contents have changed later)
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="680px"> </div>
 <br>
