@@ -96,6 +96,6 @@ FOR v, e, p IN 1..3 OUTBOUND 'service/S8' HazardService, AccidentHazard
 FOR v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
   RETURN p
 ```
-<div align="center"> <img alt="arango6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango6.png?raw=true" width="330px"> &ensp; <img alt="arango7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango7.png?raw=true" width="330px"></div><br>
+<div align="center"> <img alt="arango6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango6.png?raw=true" width="335px"> &ensp;&ensp; <img alt="arango7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango7.png?raw=true" width="320px"></div><br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
