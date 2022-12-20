@@ -47,7 +47,7 @@ Skills
 ======
 
 - **Programming Language** <br>
-**<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#</font>
+**<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#</font>
 - **Programming Ability** <br>
 &thinsp;<font size='4'>I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (See my </font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
 - **Database** <br>
