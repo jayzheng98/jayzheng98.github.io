@@ -96,14 +96,14 @@ FOR v, e, p IN 1..3 OUTBOUND 'service/S8' HazardService, AccidentHazard
 FOR v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
   RETURN p
 ```
-<div align="center"> <img alt="arango6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango6.png?raw=true" width="335px"> &ensp;&ensp; <img alt="arango7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango7.png?raw=true" width="320px"></div><br>
+<div align="center"> <img alt="arango6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango6.png?raw=true" width="325px"> &ensp;&ensp; <img alt="arango7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango7.png?raw=true" width="310px"></div><br>
 
 # Create Graphs
 <hr>
 
 **1.** In ArngoDB we can directly construct a graph to view the whole structure of our knowleges. The **abstract structure** of all POCA analysis results is shown below:
 
-<div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="700px"> </div><br>
+<div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="370px"> </div><br>
 
 **2.** According to the abstract structure, we can use our collections to construct the graph with Arango, it is pretty simple:
 
