@@ -26,7 +26,8 @@ As mentioned in the [project](/projects/project2), I've set up a simulation shoo
 
 ## Cisco 
 **1. Device overview**
- - *The layer 3 switch in the pic is [Catalyst 3560G series](https://www.cisco.com/c/en/us/support/switches/catalyst-3560-series-switches/series.html)*
+ - *This device corresponds to the **SSDN switch** in the figure*
+ - *The layer 3 switch is [Catalyst 3560G series](https://www.cisco.com/c/en/us/support/switches/catalyst-3560-series-switches/series.html):*
 
 <div align="center"> <img alt="dc2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc1.jpg?raw=true" width="550px"> </div><br>
 
@@ -134,7 +135,8 @@ display int vlan xx
 
 ## UTT 
 **1. Device overview**
- - *The router in the pic is [HiPER 840G](https://www.utt.com.cn/productdetail.php?modelid=178)*
+ - *This device corresponds to the **Router** in the figure*
+ - *The router is [HiPER 840G](https://www.utt.com.cn/productdetail.php?modelid=178):*
 
 <div align="center"> <img alt="dc12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/dc11.jpg?raw=true" width="550px"> </div><br>
 
