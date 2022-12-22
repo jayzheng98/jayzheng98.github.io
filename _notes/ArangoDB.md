@@ -101,7 +101,7 @@ FOR v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
 # Create Graphs
 <hr>
 
-**1.** In ArngoDB we can directly construct a graph to **view** the whole structure of our knowleges. Notice that this is only a **viewing tool**, all the collections in a database are already a comprehensive graph
+**1.** In ArngoDB we can directly construct a graph to **view** the whole structure of our knowleges. Notice that this is only a **visual tool**, all the collections in a database are already a comprehensive graph
  - *The **abstract structure** of all POCA analysis results is shown below:*
 
 <div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="350px"> </div>
