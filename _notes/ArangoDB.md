@@ -108,7 +108,7 @@ FOR v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
   
 **2.** According to the abstract structure, we can use corresponding collections to construct the graph with ArangoDB, it is pretty simple:
 
-<div align="center"> <img alt="arango9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="325px">  <img alt="arango10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango10.png?raw=true" width="425px"></div>
+<div align="center"> <img alt="arango9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango9.png?raw=true" width="325px">  <img alt="arango10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango10.png?raw=true" width="425px"></div>
 
 **3.** The final graph of POCA analysis results in ArangoDB is shown below:
 
