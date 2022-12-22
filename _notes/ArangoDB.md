@@ -101,10 +101,17 @@ FOR v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
 # Create Graphs
 <hr>
 
-**1.** In ArngoDB we can directly construct a graph to view the whole structure of our knowleges. The **abstract structure** of all POCA analysis results is shown below:
+**1.** In ArngoDB we can directly construct a graph to **view** the whole structure of our knowleges. Notice that this is only a **viewing tool**, all the collections in a database are already a comprehensive graph
+ - *The **abstract structure** of all POCA analysis results is shown below:*
 
 <div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="350px"> </div>
   
 **2.** According to the abstract structure, we can use corresponding collections to construct the graph with ArangoDB, it is pretty simple:
+
+<div align="center"> <img alt="arango9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="325px">  <img alt="arango10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango10.png?raw=true" width="425px"></div>
+
+**3.** The final graph of POCA analysis results in ArangoDB is shown below:
+
+<div align="center"> <img alt="arango11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango11.png?raw=true" width="725px"></div>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
