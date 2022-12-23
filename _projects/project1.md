@@ -74,7 +74,7 @@ What we have to do is to insert the relay pseudo base station into the normal co
 
 <div align="center"> <img alt="p1-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-5.png?raw=true" width="740px"> </div>
 
-**3.** To realize the relay, or in other words, to establish a LTE connection, we have to go through the following stages: 
+**3.** To realize the relay, or in other words, to establish the LTE connection, we have to go through the following steps: 
  - *In fact, there is a process called PLMN selection (including cell search) before them. But this part has no relation with our research, so we skip it here*
 
 <div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="700px"> </div>
