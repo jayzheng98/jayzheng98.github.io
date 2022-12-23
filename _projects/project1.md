@@ -22,11 +22,19 @@ date: 2022-04-15
 # Notice
 <hr>
 
-**1.** Since this project is about to be finished, quite a lot of the trial and error processes I recorded earlier in this article have been deleted, leaving only the last feasible solution
+Since this project is about to be finished, **quite a lot** of the trial and error processes I recorded earlier in this article have been deleted, leaving only the last feasible solution
  - *For example, as for the LTE networking devices. At first, we even used a [real 4G base station](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-0.jpg?raw=true). Later, we chose an elementary (cheap) kind of Software Defined Radio(SDR) equipment called "[LimeSDR](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/limesdr.jpg?raw=true)". Finally, we adopted the more professional USRP equipment*
 <br>
 
 # Environment and Tools
 <hr>
 
-This is a description of your talk, which is a markdown files that can be all markdown-ified like any other post. Yay markdown!
+|Category|Specification|Number|
+|:---:|:---:|:---:|
+|IDE|Clion2022||
+|LTE Stack|srsRAN 21.04||
+|SDR|Ettus USRP b200mini|x4|
+|PC|Desktop<br>Laptop|x1<br>x2|
+|OS|Ubuntu18.04|x3|
+|Antenna||xN|
+|Metallic Enclosure|Iron box<br>Aluminum box|x2<br>x2|
