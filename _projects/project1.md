@@ -14,9 +14,16 @@ date: 2022-04-15
 
 **2.** Then you may ask that **am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks, obviously people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
-**3.** According to the theoretic instruction, another group of people (me and two younger students) are summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE (the version used in subway) experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
+**3.** According to the theoretic instruction, another group of people (me and 2 younger students) are summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE (the version used in subway) experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
  - *Notice that we only implement basic MITM attack without further exploiting this vulnerability (Otherwise we would become secret-related as well* 🤐 *)*
 
+<br>
+
+# Notice
+<hr>
+
+**1.** Since this project is about to be finished, quite a lot of the trial and error processes I recorded earlier in this article have been deleted, leaving only the last feasible solution
+ - *For example, as for the LTE networking devices. At first, we even used a [real 4G base station](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-0.jpg?raw=true). Later, we chose an elementary (cheap) kind of Software Defined Radio(SDR) equipment called "[LimeSDR](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/limesdr.jpg?raw=true)". Finally, we adopted the more professional USRP equipment*
 <br>
 
 # Environment and Tools
