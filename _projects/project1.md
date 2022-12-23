@@ -54,7 +54,7 @@ Since this project is about to be finished, **quite a lot** of the trial and err
 **1.** Thanks to researchers from German for publishing the paper "[Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335)" which provides us with lots of instructions on MITM or named in the paper as "aLTEr" attack against LTE. However, these instructions only stay at the **theoretical level**, which means that we still need to do a lot of groping work for the actual implementation of this attack
 
 **2.** A normal LTE communication is like:
-<div align="center"> <img alt="p1-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-2.png?raw=true" width="350px"> </div> <br>
+<div align="center"> <img alt="p1-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-2.png?raw=true" width="360px"> </div> <br>
 
 What we have to do is to insert the relay pseudo base station into the normal communication link and tamper with a piece of data:
 <div align="center"> <img alt="p1-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-3.png?raw=true" width="750px"> </div> <br>
