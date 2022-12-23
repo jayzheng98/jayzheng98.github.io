@@ -26,7 +26,7 @@ toc_label: "Contents"
 # Notice
 <hr>
 
-Since this project is about to be finished, **quite a lot** of the trial and error processes I recorded earlier in this article have been deleted, leaving only the last feasible solution
+Since this project is about to be finished, **quite a lot** of the trial and error processes I recorded earlier in this article have been deleted, leaving only the **last feasible solution**
  - *For example, as for the LTE networking devices. At first, we even used a [real 4G base station](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-0.jpg?raw=true). Later, we chose an elementary (cheap) kind of Software Defined Radio(SDR) equipment called "[LimeSDR](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/limesdr.jpg?raw=true)". Finally, we adopted the more professional USRP equipment*
 
 <br>
@@ -54,7 +54,7 @@ Since this project is about to be finished, **quite a lot** of the trial and err
 **1.** Thanks to researchers from German for publishing the paper "[Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335)" which provides us with lots of instructions on MITM or named in the paper as "aLTEr" attack against LTE. However, these instructions only stay at the **theoretical level**, which means that we still need to do a lot of groping work for the actual implementation of this attack
 
 **2.** A normal LTE communication is like:
-<div align="center"> <img alt="p1-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-2.png?raw=true" width="350px"> </div> 
+<div align="center"> <img alt="p1-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-2.png?raw=true" width="350px"> </div> <br>
 
 What we have to do is to insert the relay pseudo base station into the normal communication link and tamper with a piece of data:
 <div align="center"> <img alt="p1-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-3.png?raw=true" width="750px"> </div> <br>
@@ -73,5 +73,12 @@ What we have to do is to insert the relay pseudo base station into the normal co
  - *As the PDCP layer of our pseudo station doesn't have the right key to decrypt data, we cannot let the data continually going upper but relay the ciphertext directly*
 
 <div align="center"> <img alt="p1-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-5.png?raw=true" width="740px"> </div>
+
+**3.** To realize the relay, or in other words, to establish a LTE connection, we have to go through the following stages: 
+ - *In fact, there is a process called PLMN selection (including cell search) before them. But this part has no relation with our research, so we skip it here*
+
+<div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="700px"> </div>
+
+
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
