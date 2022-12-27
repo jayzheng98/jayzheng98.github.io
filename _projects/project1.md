@@ -77,16 +77,17 @@ What we have to do is to insert the pseudo base station into the normal communic
 **3.** To realize the relay, or in other words, to establish the LTE connection, we have to go through the following steps: 
  - *In fact, there is a process called PLMN selection (including cell search) before them. But this part has no relation with our research, so we skip it here*
 
-<div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="700px"> </div><br>
+<div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="720px"> </div><br>
 
 **4.** There are 3 transmission modes of RLC layer: **Transparent Mode (TM), Acknowledged Mode (AM) and Unacknowledged Mode (UM)**. The "TM" and "AM" mode are used to transmit data for the connection establishment; "UM" mode is later used to transmit the user data, so it doesn't appear in the pic above
  - ***step 1-6: RRC connection***
    - *1-2: TM mode*
-   - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, so we don't need to modify any content of them*
+   - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, we don't need to modify any content of them*
+   - *Many tests have proved that RRC connection can be completed directly by pseudo equipment without forwarding the reply of normal equipment. So, to realize the relay connection, we only need to focus on the subsequent steps*
  - ***step 7-16: RRC connection reconfiguration & Attach***
 
 ## User data Tampering
 
-**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE of specific version lacks <u>integrity protection</u>
+**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks <u>integrity protection</u>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
