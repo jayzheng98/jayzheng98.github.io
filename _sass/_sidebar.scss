@@ -57,7 +57,7 @@
     float: right !important; /* added to make toc scroll with page */
     top: 0;
     right: 0;
-    width: 250px;
+    width: 280px;
     margin-right: -310px;
     // padding-left: 1em;
     padding-top: 1em !important; /* added to make toc scroll with page */
@@ -65,7 +65,7 @@
   }
 
   @include breakpoint($x-large) {
-    width: 250px;
+    width: 280px;
   }
 }
 
