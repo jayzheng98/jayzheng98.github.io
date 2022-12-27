@@ -82,7 +82,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 **4.** There are 3 transmission modes of RLC layer: **Transparent Mode (TM), Acknowledged Mode (AM) and Unacknowledged Mode (UM)**. The "TM" and "AM" mode are used to transmit data for the connection establishment; "UM" mode is later used to transmit the user data, so it doesn't appear in the pic above
  - ***step 1-6: RRC connection***
    - *1-2: TM mode*
-   - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, we don't need to modify any content of them*
+   - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, we don't need to modify them*
    - *Many tests have proved that RRC connection can be completed directly by pseudo equipment without forwarding the reply of normal equipment. So, to realize the relay connection, we only need to focus on the subsequent steps*
  - ***step 7-16: RRC connection reconfiguration & Attach***
 
