@@ -11,7 +11,7 @@ redirect_from:
  
 * Hi! Thank you for your visit
 
-* I’m Zhongyi, an academic master student (similar with M.Res) at the Southwest Jiaotong University (SWJTU), majoring in **Computer Science and Technology**. Currently, I am doing research in the field of cybersecurity supervised by [Prof. Lianshan Yan](https://faculty.swjtu.edu.cn/yanlianshan/en/index.htm) in the CIPC lab
+* I’m Zhongyi, an academic master student (similar with MPhil) at the Southwest Jiaotong University (SWJTU), majoring in **Computer Science and Technology**. Currently, I am doing research in the field of cybersecurity supervised by [Prof. Lianshan Yan](https://faculty.swjtu.edu.cn/yanlianshan/en/index.htm) in the CIPC lab
 
 * To be more specific, my current research interest is in **Anomaly Detection** and **Wireless Communication Security**
 
