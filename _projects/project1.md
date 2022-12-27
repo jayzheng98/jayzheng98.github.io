@@ -77,10 +77,13 @@ What we have to do is to insert the pseudo base station into the normal communic
 **3.** To realize the relay, or in other words, to establish the LTE connection, we have to go through the following steps: 
  - *In fact, there is a process called PLMN selection (including cell search) before them. But this part has no relation with our research, so we skip it here*
 
-<div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="700px"> </div>
+<div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="700px"> </div><br>
 
-**4.** There are 3 kinds of transmission mode of RLC layer: Transparent Mode (TM), Acknowledged Mode (AM) and Unacknowledged Mode (UM). The "TM" and "AM" mode are used to transmit data for the connection establishment; the "UM" mode is mainly used to transmit user data, so it is not shown in the pic above
- - ***1-2:***
+**4.** There are 3 transmission modes of RLC layer: **Transparent Mode (TM), Acknowledged Mode (AM) and Unacknowledged Mode (UM)**. The "TM" and "AM" mode are used to transmit data for the connection establishment; "UM" mode is later used to transmit the user data, so it doesn't appear in the pic above
+ - ***step 1-6: RRC connection***
+   - *1-2: TM mode*
+   - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, so we don't need to modify any content of them*
+ - ***step 7-16: RRC connection reconfiguration & Attach***
 
 ## User data Tampering
 
