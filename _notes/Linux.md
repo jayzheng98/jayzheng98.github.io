@@ -35,7 +35,6 @@ This article mainly records the problems & solutions I've met when operating Lin
 | more file |Output the contents of the file|
 | tail -f file |Output the contents of file as it grows, starting with the last 10 lines|
 | touch file |Create or update file|
-| rm file |Delete the file|
 | rm -r dir |Delete the directory recursively|
 | rm -f file |Force to remove the file|
 | rm -rf dir |Force to remove the directory dir|
@@ -80,9 +79,7 @@ This article mainly records the problems & solutions I've met when operating Lin
 | wget file |Download file|
 | wget -c file |Continue a stopped download|
 |***Shortcuts:***||
-| ctrl+c |Halts the current command|
 | ctrl+z |Stops the current command, resume with `fg` in the foreground or `bg` in the background|
-| ctrl+u |Erases the whole line|
 | ctrl+r |Type to bring up a recent command|
 |***Shutdown:***||
 | shutdown -h |Shut down immediately after services are stopped|
