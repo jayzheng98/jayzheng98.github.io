@@ -60,7 +60,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 <div align="center"> <img alt="p1-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-3.png?raw=true" width="750px"> </div> <br>
 
 **3.** The problems and difficulties are:
- - *In LTE protocol, data will be encrypted or decrypted once enter the PDCP layer, but the pseudo base station does not have the key*
+ - *In LTE protocol, data will be encrypted or decrypted once enter the PDCP layer, but the pseudo base station does not have the valid key to do that*
  - *Some channel parameters change in real time, which makes it difficult for the pseudo base station to maintain a stable connection*
 
 
@@ -69,7 +69,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 **1.** A normal LTE uplink communication process is shown below: (The function of each layer please refer to [here](https://www.tutorialspoint.com/lte/lte_protocol_stack_layers.htm))
 <div align="center"> <img alt="p1-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-4.png?raw=true" width="320px"> </div> <br>
 
-**2.** To cope with the first problem mentioned above, we could only relay data under the PDCP layer by <u>Socket</u>: 
+**2.** To cope with the first problem mentioned above, we could only relay data under the PDCP layer by <u>socket</u>: 
  - *As the PDCP layer of our pseudo station doesn't have the right key to decrypt data, we cannot let the data continually going upper but relay the ciphertext directly*
 
 <div align="center"> <img alt="p1-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-5.png?raw=true" width="740px"> </div>
@@ -80,5 +80,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 <div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="700px"> </div>
 
 ## User data Tampering
+
+**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks <u>integrity protection</u>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
