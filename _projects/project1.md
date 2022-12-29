@@ -80,19 +80,20 @@ What we have to do is to insert the pseudo base station into the normal communic
 <div align="center"> <img alt="p1-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-7.png?raw=true" width="720px"> </div><br>
 
 **4.** There are 3 transmission modes of RLC layer: **Transparent Mode (TM), Acknowledged Mode (AM) and Unacknowledged Mode (UM)**. The "TM" and "AM" mode are used to transmit data for the connection establishment; "UM" mode is later used to transmit the user data, so it doesn't appear in the pic above
- - ***step 1-6: RRC connection***
-   - *1-2: TM mode*
+ - ***step 1-6: RRC connection (1-2 in TM mode)***
    - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, we don't need to modify them*
    - *Many tests have proved that RRC connection can be completed directly by pseudo equipment without forwarding the reply of normal equipment. So, to realize the relay connection, **we only need to relay all data in subsequent steps***
- - ***step 7-16: RRC connection reconfiguration & Attach***
+ - ***step 7-16: RRC connection reconfiguration & Attach (All in AM mode)***
    - *7: Attach request and PDN connectivity request (PDN connectivity request aims to establish the "default bearer" between UE and P-GW)*
    - *8-9: Authentication (Confirm the identity between UE and MME and establish the EPS security context)*
    - *10-13: Security mode (This process will enable the EPS security context to activate the communication between UE and MME through the confirmed code)*
-   - *14-16: When 14 arrives, UE and MME will establish the EMM-CONNECTED status, then MME will send the UE an "activate default/dedicated bearer context request", and UE will send the corresponding "accept" for confirmation, then the two will establish the EPS bearer*
-   - ***To be honest, we don't need to know every step very well while relaying them, just locate "AM" mode in the source code and forward all the data transmitted by it***
+   - *14-16: When 14 arrives, UE and MME will establish the EMM-CONNECTED status, then MME will send UE an "activate default/dedicated bearer context request", and UE will reply a corresponding "accept" for confirmation, then the two will establish the EPS bearer*
+   - ***To be honest, we don't need to know every step very well while relaying them, just locate "AM" mode in the source code and forward all the data come through***
 
 ## User data Tampering
 
-**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks <u>integrity protection</u>
+**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks the <u>integrity protection</u>
+
+<div align="center"> <img alt="p1-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-8.png?raw=true" width="760px"> </div><br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
