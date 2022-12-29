@@ -87,7 +87,7 @@ What we have to do is to insert the pseudo base station into the normal communic
    - *7: Attach request and PDN connectivity request (PDN connectivity request aims to establish the "default bearer" between UE and P-GW)*
    - *8-9: Authentication (Confirm the identity between UE and MME and establish the EPS security context)*
    - *10-13: Security mode (This process will enable the EPS security context to activate the communication between UE and MME through the confirmed code)*
-   - *14-16: When 14 arrives, UE and MME will establish the EMM-CONNECTED status, then MME will send UE an "activate default/dedicated bearer context request", and UE will reply a corresponding "accept" for confirmation, then the two will establish the EPS bearer*
+   - *14-16: When 14 arrives, UE and MME will establish the EMM-CONNECTED status, then MME will send UE an "activate default/dedicated bearer context request", and UE will reply a corresponding "accept" to establish the EPS bearer*
    - ***To be honest, we don't need to know every step very well while relaying them, just locate "AM" mode in the source code and forward all the data come through***
 
 ## User data Tampering
