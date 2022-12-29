@@ -83,8 +83,13 @@ What we have to do is to insert the pseudo base station into the normal communic
  - ***step 1-6: RRC connection***
    - *1-2: TM mode*
    - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, we don't need to modify them*
-   - *Many tests have proved that RRC connection can be completed directly by pseudo equipment without forwarding the reply of normal equipment. So, to realize the relay connection, **we only need to relay all data in subsequent steps*
+   - *Many tests have proved that RRC connection can be completed directly by pseudo equipment without forwarding the reply of normal equipment. So, to realize the relay connection, **we only need to relay all data in subsequent steps***
  - ***step 7-16: RRC connection reconfiguration & Attach***
+   - *7: Attach request and PDN connectivity request (PDN connectivity request aims to establish the "default bearer" between UE and P-GW)*
+   - *8-9: Authentication (Confirm the identity between UE and MME and establish the EPS security context)*
+   - *10-13: Security mode (This process will enable the EPS security context to activate the communication between UE and MME through the confirmed code)*
+   - *14-16: When 14 arrives, UE and MME will establish the EMM-CONNECTED status, then MME will send the UE an "activate default/dedicated bearer context request", and UE will send the corresponding "accept" for confirmation, then the two will establish the EPS bearer*
+   - ***To be honest, we don't need to know every step very well while relaying them, just locate "AM" mode in the source code and forward all the data transmitted by it***
 
 ## User data Tampering
 
