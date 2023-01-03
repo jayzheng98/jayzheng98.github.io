@@ -101,7 +101,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
 
-**3.** However, the mapping of config files is kind of rudimentary since about **96%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
+**3.** However, the mapping of config files is kind of rudimentary since about **93%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
  - *For example, operations achieved by Powershell will all be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
