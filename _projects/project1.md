@@ -92,7 +92,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 
 ## User data Tampering
 
-**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks the <u>integrity protection</u>
+**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, **although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks the <u>integrity protection</u>**
 
 <div align="center"> <img alt="p1-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-8.png?raw=true" width="760px"> </div><br>
 
