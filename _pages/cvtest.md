@@ -4,11 +4,10 @@ permalink: /cvtest/
 author_profile: false
 ---
 
+<img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/11.jpg?raw=true" width="160" height="212">
 {% include base_path %}
 
-<img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/11.jpg?raw=true" width="160" height="233">
-
-CV<br>Zheng Zhongyi
+<font size='7'>CV</font> <br>Zheng Zhongyi
 ======
 <br>
 
