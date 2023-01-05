@@ -7,7 +7,7 @@ author_profile: false
 <img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/11.jpg?raw=true" width="160" height="212">
 {% include base_path %}
 
-**<font size='8'>CV</font>** <br>
+**<font size='9'>CV</font>** <br>
 
 Zheng Zhongyi
 ======
