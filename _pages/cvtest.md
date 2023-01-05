@@ -7,7 +7,7 @@ author_profile: false
 <img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/11.jpg?raw=true" width="152" height="202">
 {% include base_path %}
 
-**<font size='28px'>CV</font>** <br>
+**<font size='24px'>CV</font>** <br>
 
 Zheng Zhongyi
 ======
@@ -44,6 +44,7 @@ Research projects
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>The LED traffic lights currently used in various working conditions are mostly of constant luminance, while light sources with constant luminance are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
 <br><br>
+<br>
 
 Skills
 ======
