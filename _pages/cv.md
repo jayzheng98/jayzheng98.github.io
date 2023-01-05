@@ -2,14 +2,14 @@
 layout: archive
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
-<!-- <img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/1.jpg?raw=true" width="160" height="233">
-<br> -->
+<img align="right" alt="standard" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/11.jpg?raw=true" width="160" height="233">
+<br>
 <br>
 
 Education
