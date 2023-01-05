@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Zhongyi Zheng"
   avatar           : "1.jpg"
-  bio              : There's a long way to go<br><br><br>
-                     <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" alt="C++" title="C++">
+  bio              : The quieter you become, the more you are able to hear<br><br><br>
+                     <!--<img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" alt="C++" title="C++">
                      <img width="25" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/logo-php-36013.png?raw=true" alt="PHP" title="PHP">
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python" title="Python">
                      <img width="25" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/logo-elastic.png?raw=true" alt="ELK" title="ELK">
@@ -102,7 +102,7 @@ author:
                      <img width="25" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/kali linux.png?raw=true" alt="Kali" title="Kali">
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ubuntu/ubuntu.png" alt="Ubuntu" title="Ubuntu">
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" alt="Linux" title="Linux">
-                     <br><br>
+                     --><br><br>
   location         : "Chengdu, China"
   employer         :
   pubmed           : 
