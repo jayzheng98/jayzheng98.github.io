@@ -101,9 +101,9 @@ What we have to do is to insert the pseudo base station into the normal communic
 
 ## Experimental Platform
 
-**1.** The conceptual diagram of the platform structure is shown below:
+**1.** The conceptual structure of the platform is shown below:
 
-<div align="center"> <img alt="p1-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-9.png?raw=true" width="560px"> </div><br>
+<div align="center"> <img alt="p1-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-9.png?raw=true" width="540px"> </div><br>
 
 **2.** The physical establishment of the platform is shown below:
  - *In the middle are actually 2 displayer screens we've connected to the single **desktop***
@@ -112,7 +112,14 @@ What we have to do is to insert the pseudo base station into the normal communic
 <div align="center"> <img alt="p1-6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-6.png?raw=true" width="760px"> </div><br>
 
 ### Hardware
+**1. SDR-USRP B200mini:** We could deploy LTE stack on such device to simulate the UE and eNodeB+EPC separately. (base station and core network should be deployed on a single SDR) It can be easily connected to a computer by its self-contained USB cable
 
+<div align="center"> <img alt="p1-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-1.jpg?raw=true" width="400px"> </div><br>
+
+**2. Shield box:** During our early experiments, we found that the connection between 2 SDR device would be frequently disturbed by the wireless signal of the national communication carriers. Thus, we decide to build 2 shield boxes to isolate our device from the public network (in our case, we can operate under ideal conditions)
+
+<div align="center"> <img alt="p1-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-10.jpg?raw=true" width="600px"> </div>
+<div align="center"> <img alt="p1-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-11.jpg?raw=true" width="600px"> </div><br>
 
 ### Software
 
