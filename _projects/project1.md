@@ -90,10 +90,19 @@ What we have to do is to insert the pseudo base station into the normal communic
    - *14-16: When 14 arrives, UE and MME will establish the EMM-CONNECTED status, then MME will send UE an "activate default/dedicated bearer context request", and UE will reply a corresponding "accept" to establish the "EPS bearer"*
    - ***To be honest, we don't need to know every step very well while relaying them, just locate "AM" mode in the source code and forward all the data come through***
 
-## User data Tampering
+## User Data Tampering
 
 **1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, **although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks the <u>integrity protection</u>**
 
 <div align="center"> <img alt="p1-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-8.png?raw=true" width="760px"> </div><br>
+
+# Development
+<hr>
+
+## Experimental Platform
+
+
+## LTE Source Code Modification
+
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
