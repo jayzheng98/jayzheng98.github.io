@@ -51,7 +51,7 @@ Since this project is about to be finished, **quite a lot** of the trial and err
 
 ## Overview
 
-**1.** Thanks to researchers from German for publishing the paper "[Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335)" which provides us with lots of instructions on MITM or named in the paper as "aLTEr" attack against LTE. However, these instructions only stay at the **theoretical level**, which means that we still need to do a lot of groping work for the actual implementation of this attack
+**1.** Thanks to researchers from German for publishing the paper "[Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335)" which provides us with lots of instructions on MITM or named in the paper as "aLTEr" attack against LTE. However, their instructions only stay at the **theoretical level**, which means that we still need to do a lot of groping work for the actual implementation of this attack
 
 **2.** A normal LTE communication is like:
 <div align="center"> <img alt="p1-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-2.png?raw=true" width="360px"> </div> <br>
@@ -112,14 +112,14 @@ What we have to do is to insert the pseudo base station into the normal communic
 <div align="center"> <img alt="p1-6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-6.png?raw=true" width="760px"> </div><br>
 
 ### Hardware
-**1. SDR-USRP B200mini:** We could deploy LTE stack on such device to simulate the UE and eNodeB+EPC separately. (base station and core network should be deployed on a single SDR) It can be easily connected to a computer by its self-contained USB cable
+**1. SDR-USRP B200mini:** We could deploy LTE stack on such device to simulate the UE and eNodeB+EPC separately. (Base station and core network should be deployed on a single SDR) It can be easily connected to a computer by its self-contained USB cable
 
 <div align="center"> <img alt="p1-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-1.jpg?raw=true" width="400px"> </div><br>
 
-**2. Shield box:** During our early experiments, we found that the connection between 2 SDR device would be frequently disturbed by the wireless signal of the national communication carriers. Thus, we decide to build 2 shield boxes to isolate our device from the public network (in our case, we can operate under ideal conditions)
+**2. Shield box:** During our early experiments, we found that the connection between 2 SDR device would be frequently disturbed by the wireless signal of the national communication carriers. Thus, we decide to build 2 shield boxes to isolate our device from the public network
 
-<div align="center"> <img alt="p1-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-10.jpg?raw=true" width="600px"> </div>
-<div align="center"> <img alt="p1-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-11.jpg?raw=true" width="600px"> </div><br>
+<div align="center"> <img alt="p1-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-10.jpg?raw=true" width="660px"> </div>
+<div align="center"> <img alt="p1-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-11.jpg?raw=true" width="660px"> </div><br>
 
 ### Software
 
