@@ -103,7 +103,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 
 **1.** The conceptual structure of the platform is shown below:
 
-<div align="center"> <img alt="p1-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-9.png?raw=true" width="540px"> </div><br>
+<div align="center"> <img alt="p1-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-9.png?raw=true" width="500px"> </div><br>
 
 **2.** The physical establishment of the platform is shown below:
  - *In the middle are actually 2 displayer screens we've connected to the single **desktop***
@@ -116,12 +116,56 @@ What we have to do is to insert the pseudo base station into the normal communic
 
 <div align="center"> <img alt="p1-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-1.jpg?raw=true" width="400px"> </div><br>
 
-**2. Shield box:** During our early experiments, we found that the connection between 2 SDR device would be frequently disturbed by the wireless signal of the national communication carriers. Thus, we decide to build 2 shield boxes to isolate our device from the public network
+**2. Shield box:** During our early experiments, we found that the connection between 2 SDR device would be frequently disturbed by the wireless signal of the national communication carriers. Thus, we decide to craft 2 shield boxes to isolate our device from the public network
 
 <div align="center"> <img alt="p1-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-10.jpg?raw=true" width="660px"> </div>
 <div align="center"> <img alt="p1-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-11.jpg?raw=true" width="660px"> </div><br>
 
 ### Software
+**1. OS:** All 3 computers are installed with "Ubuntu 18.04" operating system. After trying versions as 16, 18 and 20, we found the "18.04" has the best compatibility with the srsRAN stack and the USRP environment
+
+**2. USRP Hardware Driver(UHD):** Install the environment on each PC to drive USRP device
+ - *Dependence:*
+
+``` shell
+sudo apt-get install libboost-all-dev libusb-1.0-0-dev doxygen python3-docutils python3-mako python3-numpy python3-requests python3-ruamel.yaml python3-setuptools cmake build-essential
+```
+
+ - *Installation:*
+ 
+```shell
+cd /home             
+mkdir workarea-uhd
+cd workarea-uhd/
+git clone https://github.com/EttusResearch/uhd 
+cd uhd
+git tag -l                               //Get the full list of the published versions
+git checkout v3.15.0.0                   //Choose a specific version (3.15_LTS)
+
+cd host
+mkdir build  
+cd build
+cmake ../
+make
+ 
+sudo make install 
+sudo ldconfig
+export LD_LIBRARY_PATH=/usr/local/lib    //Update the environment variable
+```
+
+ - *UHD FPGA image file:*
+ 
+```shell
+sudo uhd_images_downloader
+```
+ 
+ - *test (without device):*
+
+```shell
+sudo uhd_find_devices
+sudo uhd_usrp_probe        //Show device info
+```
+<div align="center"> <img alt="p1-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-12.png?raw=true" width="740px"> </div><br>
 
 
 ## LTE Source Code Modification
