@@ -122,7 +122,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 <div align="center"> <img alt="p1-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-11.jpg?raw=true" width="660px"> </div><br>
 
 ### Software
-**1. OS:** All 3 computers are installed with "Ubuntu 18.04" operating system. After trying versions as 16, 18 and 20, we found the "18.04" has the best compatibility with the srsRAN stack and the USRP environment
+**1. OS:** All 3 computers are installed with "Ubuntu 18.04" operating system. After trying versions as 16, 18 and 20, we found the "18.04" has the best compatibility with the USRP environment and the srsRAN stack
 
 **2. USRP Hardware Driver(UHD):** Install the environment on each PC to drive USRP device
  - *Dependence:*
@@ -159,14 +159,15 @@ export LD_LIBRARY_PATH=/usr/local/lib    //Update the environment variable
 sudo uhd_images_downloader
 ```
  
- - *test (without device):*
+ - *Test (without device):*
 
 ```shell
-sudo uhd_find_devices
-sudo uhd_usrp_probe        //Show device info
+uhd_find_devices
+uhd_usrp_probe        //Show device info
 ```
-<div align="center"> <img alt="p1-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-12.png?raw=true" width="740px"> </div><br>
+<div align="center"> <img alt="p1-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-12.png?raw=true" width="760px"> </div><br>
 
+**3. srsRAN stack:**
 
 ## LTE Source Code Modification
 
