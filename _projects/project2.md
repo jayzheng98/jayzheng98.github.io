@@ -79,7 +79,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> <br>
 
 **2.** Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) search engine(3rd pic above)
- - Actually the deployment of the 3 tools mentioned above deserves 3 individual blogs to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
+ - Actually the deployment of the 3 tools mentioned above deserves an individual blog to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
    - Sysmom(windows): please refer to this [repository](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
    - Sysmon(linux): please refer to this [repository](https://github.com/microsoft/MSTIC-Sysmon/blob/main/linux/configs/main.xml)
    - Nxlog: The configuration files I wrote for windows and linux have been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
@@ -162,6 +162,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
  - *All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)*
 
 ### Behavior data
+**1.** To begin with, we should have an in-depth understanding of the Sysmon logs. Luckily, there are already pioneers who drew a [conclusion](https://rootdse.org/posts/understanding-sysmon-events/) for us, this webpage provides us with detailed information of each kind of "Event" as well as the fields in it.
 
 **Updating...** <br>
 
