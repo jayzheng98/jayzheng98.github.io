@@ -169,9 +169,9 @@ sudo uhd_images_downloader
 sudo apt-get install build-essential cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev
 ```
 
- - *Installation: For the further development on source code, we simply download the [source code](https://github.com/srsran/srsRAN/archive/refs/heads/master.zip) instead of using "Terminal" to directly install. Then open it with IDE "[Clion](https://www.jetbrains.com/clion/)" for both editting and building*
+ - *Installation: For the further development on source code, we simply download the [source code](https://github.com/srsran/srsRAN/archive/refs/heads/master.zip) instead of direct installation. Then open it with IDE "[Clion](https://www.jetbrains.com/clion/)" for both editting and building*
 
- - *Configuration: Generally, there are several fields in the configuration file of each LTE element(ue.conf, enb.conf, epc.conf) need to be customized. However, to save space, such processes are not recorded here* 
+ - *Configuration: Generally, there are several fields in the configuration file of each LTE element (ue.conf, enb.conf, epc.conf) need to be customized. However, to save space, such processes are not recorded here* 
 
 ### Joint Debugging
 
