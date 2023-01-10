@@ -162,10 +162,11 @@ sudo uhd_images_downloader
  - *Test (without device):*
 <div align="center"> <img alt="p1-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-12.png?raw=true" width="760px"> </div><br>
 
-**3. srsRAN stack:** [srsRAN](https://www.srsran.com) is a 4G/5G (we only focus on 4G) software radio suite developed by [SRS](http://www.srs.io) in <u>C++</u>. It includes:
-  * **srsUE:** a full-stack SDR 4G UE application
-  * **srsENB:** a full-stack SDR 4G eNodeB application
-  * **srsEPC:** a light-weight 4G core network implementation with MME, HSS and S/P-GW
+**3. srsRAN stack:** [srsRAN](https://www.srsran.com) is a 4G/5G (we only focus on 4G) software radio suite developed by [SRS](http://www.srs.io) in *C++*. It includes:<br>&ensp;&ensp;
+  **srsUE:** a full-stack SDR 4G UE application<br>&ensp;&ensp;
+  **srsENB:** a full-stack SDR 4G eNodeB application<br>&ensp;&ensp;
+  **srsEPC:** a light-weight 4G core network implementation with MME, HSS and S/P-GW<br>
+
  - *Dependence:*
 
 ``` shell
@@ -173,6 +174,11 @@ sudo apt-get install build-essential cmake libfftw3-dev libmbedtls-dev libboost-
 ```
 
  - *Installation: For the further development on source code, we simply download the [source code](https://github.com/srsran/srsRAN/archive/refs/heads/master.zip) instead of using "Terminal" to directly install. Then open it with IDE "[Clion](https://www.jetbrains.com/clion/)" for both editting and building*
+
+ - *Configuration: There are several fields in the configuration file of each LTE element(ue.conf, enb.conf, epc.conf) need to be customized. However, to save space such processes are not recorded here* 
+
+### Joint Debugging
+
 
 ## Source Code Modification
 
