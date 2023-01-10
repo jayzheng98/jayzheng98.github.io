@@ -110,7 +110,7 @@ FOR v, e, p IN 1..5 ANY 'service/S8' HazardService, AccidentHazard
 
 <div align="center"> <img alt="arango9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango9.png?raw=true" width="300px">  <img alt="arango10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango10.png?raw=true" width="450px"></div><br>
 
-**3.** The final graph of POCA analysis results in ArangoDB is shown below:
+**3.** The final graph of the "POCA analysis results" in ArangoDB is shown below:
 
 <div align="center"> <img alt="arango11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango11.png?raw=true" width="725px"></div>
 
