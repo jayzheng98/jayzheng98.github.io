@@ -162,7 +162,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
  - *All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)*
 
 ### Behavior data
-**1.** To begin with, we should have an in-depth understanding of the Sysmon logs. Luckily, there are already pioneers who drew a [conclusion](https://rootdse.org/posts/understanding-sysmon-events/) for us, this webpage provides us with detailed information of each kind of "Event" as well as the fields in it.
+**1.** To begin with, we should have an in-depth understanding of the Sysmon logs. This [webpage](https://rootdse.org/posts/understanding-sysmon-events/) provides us with detailed information of each "Event" as well as the fields in it.
 
 **Updating...** <br>
 
