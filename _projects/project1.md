@@ -162,11 +162,7 @@ sudo uhd_images_downloader
  - *Test (without device):*
 <div align="center"> <img alt="p1-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-12.png?raw=true" width="760px"> </div><br>
 
-**3. srsRAN stack:** [srsRAN](https://www.srsran.com) is a 4G/5G (we only focus on 4G) software radio suite developed by [SRS](http://www.srs.io) in *C++*. It includes:<br>&ensp;&ensp;
-  **srsUE:** a full-stack SDR 4G UE application<br>&ensp;&ensp;
-  **srsENB:** a full-stack SDR 4G eNodeB application<br>&ensp;&ensp;
-  **srsEPC:** a light-weight 4G core network implementation with MME, HSS and S/P-GW<br>
-
+**3. srsRAN stack:** [srsRAN](https://www.srsran.com) is a 4G/5G (we only focus on 4G part) software radio suite developed by [SRS](http://www.srs.io) in *C++*. It consists of **srsUE** (SDR UE application), **srsENB** (SDR eNodeB application) and **srsEPC** (Core network implementation with MME, HSS and S/P-GW)
  - *Dependence:*
 
 ``` shell
