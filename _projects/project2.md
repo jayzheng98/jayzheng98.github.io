@@ -152,19 +152,21 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 ## Development
 ### Knowledge data(BRON)
-**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together in a graph called "[BRON](https://github.com/ALFA-group/BRON)"
- - *For more details about BRON please refer to their [academic paper](https://arxiv.org/pdf/2010.00533.pdf)*
+**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together in an [open source](https://github.com/ALFA-group/BRON) graph called "[BRON](https://arxiv.org/pdf/2010.00533.pdf)"
 
-**2.** The database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well
+**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well
 
 ### CTI(POCA) & Environment data(Topology)
-**1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction processes are recorded [here](/notes/arangodb), and I won’t describe such work in detail later in this article
- - *All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)*
+**1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction processes are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
+ 
+ **2.** All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)
 
 ### Behavior data(Sysmonlogs)
 **1.** To begin with, we should have an in-depth understanding of the Sysmon logs. This [webpage](https://rootdse.org/posts/understanding-sysmon-events/) provides us with detailed information of each "Event" as well as the fields in it
 
-**2.** 
+**2.** In short, logs labelled with "EventID 1 (ProcessCreate)" or "EventID 10 (ProcessAccess)" contain information that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 relations to form a graph
+
+**3.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
 
 **Updating...** <br>
 
