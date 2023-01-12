@@ -47,7 +47,7 @@ toc_label: "Contents"
 
 **2.** Because this paper has not been published for the time being, here I could only provide a prototype of the graphical analysis output (some contents have been changed later)
 
-<div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="680px"> </div>
+<div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 <br>
 
 # Simulation Attack 
