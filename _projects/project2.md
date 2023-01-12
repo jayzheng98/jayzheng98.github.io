@@ -169,7 +169,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **3.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
 
 ### Final graph
-**1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
+**1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below (The internal structure of "BRON" is omitted here):
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="620px"> </div> 
 <br>
 
