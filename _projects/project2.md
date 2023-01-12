@@ -170,7 +170,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 ### Final graph
 **1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
-<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="640px"> </div> 
+<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="620px"> </div> 
 <br>
 
 **Updating...** <br>
