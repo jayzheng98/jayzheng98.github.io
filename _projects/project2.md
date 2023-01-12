@@ -168,6 +168,11 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 **3.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
 
+### The final graph
+**1.** The relations for merging all the 4 parts above are very clear. An abstract structure of the final graph based on the "node" and "edge" files is shown below:
+<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="750px"> </div> 
+<br>
+
 **Updating...** <br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
