@@ -111,7 +111,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Experiment
 **1.** We separately implemented the pre and post penetration by Kali in the shooting range. All the behavior data (about 200k logs) before and after the implementation (total 3 days) have been saved as the **raw dataset**
 
-**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it may overwrite the original "RuleName" field of some logs with more precise technique ids and add a new field "RiskLevel" to all logs. Then it will export the processed dataset in `.csv` format (To facilitate the subsequent import into the graph database) 
+**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original "RuleName" field of some logs with more precise technique ids, and add a new field "RiskLevel" to all logs. Then it will export the processed dataset as `syslog.csv` 
  - *RiskLevel-0: Log that doesn't have a "RuleName"*
  - *RiskLevel-1: Log that has a RuleName which has not been overwritten*
  - *RiskLevel-2: Log that has a RuleName which has been overwritten*
@@ -148,7 +148,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="780px"> </div> 
 <br>
 
-**3.** In the "development" section, we are going to separately transform the raw materials of the 4 parts into **graph structure** and eventually merge them together
+**3.** In the "development" section, we are going to separately transform the raw materials of the 4 parts into **graph structure**, and eventually merge them together
 
 ## Development
 ### Knowledge data(BRON)
@@ -159,12 +159,12 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 ### CTI(POCA) & Environment data(Topology)
 **1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction processes are recorded [here](/notes/arangodb), and I won’t describe such work in detail later in this article
- - *All the source materials(.csv) as well as their relations of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)*
+ - *All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)*
 
 ### Behavior data(Sysmonlogs)
 **1.** To begin with, we should have an in-depth understanding of the Sysmon logs. This [webpage](https://rootdse.org/posts/understanding-sysmon-events/) provides us with detailed information of each "Event" as well as the fields in it
 
-**2.** Suppose that you are already familiar with Sysmonlogs and have obtained the `syslog.csv` by running the aforementioned `test_in_my_case.py`, 
+**2.** 
 
 **Updating...** <br>
 
