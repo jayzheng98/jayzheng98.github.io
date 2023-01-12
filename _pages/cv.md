@@ -59,9 +59,9 @@ Skills
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
 **<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit Framework and MITRE Caldera Platform</font><br>
 **<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&thinsp; Familiar with ATT&CK and CAPEC knowledge bases</font>
-- **Embedded development: (haven't touched for some time)** <br>
+<!-- - **Embedded development: (haven't touched for some time)** <br>
 **<font size='4'>MCU:</font>**<font size='4'>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times</font><br>
-**<font size='4'>Circuit design:</font>**<font size='4'>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font><br>
+**<font size='4'>Circuit design:</font>**<font size='4'>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font><br> -->
 
 Awards & Honors
 ======
