@@ -96,7 +96,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Development
 **1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
 
-**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the **Sysmonlogs** to the **techniques** of [MITRE ATT&CK](https://attack.mitre.org/) by adding the "RuleName" field
+**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the **Sysmonlogs** to the **techniques** of [MITRE ATT&CK](https://attack.mitre.org/) by adding the `RuleName` field
  - *With such "label", it will be easier for us to correlate logs with knowledge bases in the final graph*
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
@@ -111,7 +111,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Experiment
 **1.** We separately implemented the pre and post penetration by Kali in the shooting range. All the behavior data (about 200k logs) before and after the implementation (total 3 days) have been saved as the **raw dataset**
 
-**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original "RuleName" field of some logs with more precise technique ids, and add a new field "RiskLevel" to all logs. Then it will export the processed dataset as `syslog.csv` 
+**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original "RuleName" field of some logs with more precise technique ids, and add a new field `RiskLevel` to all logs. Then it will export the processed dataset as `syslog.csv` 
  - *RiskLevel-0: Log that doesn't have a "RuleName"*
  - *RiskLevel-1: Log that has a RuleName which has not been overwritten*
  - *RiskLevel-2: Log that has a RuleName which has been overwritten*
@@ -145,7 +145,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **2.** On the basis of this template, we have incorporated our own contents. The **conceptual structure** of the final KG of this project is as follows:
  - *Red arrows represent the element that binds two parts together*
 
-<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="780px"> </div> 
+<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="760px"> </div> 
 <br>
 
 **3.** In the "development" section, we are going to separately transform the raw materials of the 4 parts into **graph structure**, and eventually merge them together
@@ -157,20 +157,20 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well
 
 ### CTI(POCA) & Environment data(Topology)
-**1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction processes are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
+**1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
  
  **2.** All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)
 
 ### Behavior data(Sysmonlogs)
 **1.** To begin with, we should have an in-depth understanding of the Sysmon logs. This [webpage](https://rootdse.org/posts/understanding-sysmon-events/) provides us with detailed information of each "Event" as well as the fields in it
 
-**2.** In short, logs labelled with "EventID 1 (ProcessCreate)" or "EventID 10 (ProcessAccess)" contain information that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 relations to form a graph
+**2.** In short, logs labelled with `EventID: 1 (ProcessCreate)` or `EventID: 10 (ProcessAccess)` contain information that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 relations to form a graph
 
 **3.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
 
-### The final graph
-**1.** The relations for merging all the 4 parts above are very clear. An abstract structure of the final graph based on the "node" and "edge" files is shown below:
-<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="750px"> </div> 
+### Final graph
+**1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
+<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="680px"> </div> 
 <br>
 
 **Updating...** <br>
