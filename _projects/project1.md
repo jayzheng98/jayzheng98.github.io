@@ -169,14 +169,12 @@ sudo uhd_images_downloader
 sudo apt-get install build-essential cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev
 ```
 
- - *Installation: For the further development on source code, we download the [source code](https://github.com/srsran/srsRAN/archive/refs/heads/master.zip) instead of direct installation. Then open it with IDE "[Clion](https://www.jetbrains.com/clion/)" for both coding and building (After building, the source code will generate the corresponding executable cpp files: srsue/srsenb/srsepc)*
+ - *Installation: For the further development on source code, we download the [source code](https://github.com/srsran/srsRAN/archive/refs/heads/master.zip) instead of direct installation. Then edit and build it with IDE "[Clion](https://www.jetbrains.com/clion/)" (After building, the source code will generate the corresponding executable cpp files: srsue/srsenb/srsepc)*
 
  - *Configuration: Generally, there are several fields in the configuration file of each LTE element (ue.conf, enb.conf, epc.conf) need to be customized. However, to save space, such processes are not recorded here* 
 
 ### Joint Debugging
-**1.** Once you've completed steps above, you can start testing the normal connections between SDR(UE) and SDR(eNB+EPC)
-
-**2.** The template shell command to enable each device is:
+**1.** The template shell command to enable each device is:
 ```shell
 sudo PATH_TO_THE_EXECUTABLE_FILE PATH_TO_THE_CONFIGURATION_FILE 
 ```
@@ -192,14 +190,20 @@ sudo /home/lte/Desktop/srsRAN1/cmake-build-debug/srsepc/src/srsepc /Desktop/conf
 sudo /home/lte/Desktop/srsRAN1/cmake-build-debug/srsenb/src/srsenb /Desktop/conf/enb/enb.conf
 ```
 
-**3.** After executing the above commands, you can open a new terminal and input `ifconfig`. You will see there is a **new network element** on each computer:
-<div align="center"> <img alt="p1-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-13.jpg?raw=true" width="620px"> </div><br>
-<div align="center"> <img alt="p1-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-14.jpg?raw=true" width="620px"> </div><br>
+**3.** After executing the above commands, you can open a new terminal and input `ifconfig`. There will be a **new network element** on each computer:
+<br><img alt="p1-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-13.jpg?raw=true" width="375px"> <img alt="p1-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-14.jpg?raw=true" width="375px"> </div><br>
 
-If 2 device are successfully connected, you can `ping` each other to test the connection. In the pic below, I use PC with **SDR(UE)** to ping PC with **SDR(eNB+EPC)**:
+If 2 device were successfully connected, you can `ping` each other to test the connection. In the pic below, I use PC with **SDR(UE)** to ping PC with **SDR(eNB+EPC)**:
  - *Because we've write several* `printf()` *functions in the source code, the data flow during the* `ping` *is also shown in the right terminal which is enabling UE*<br>
 
-<div align="center"> <img alt="p1-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-15.jpg?raw=true" width="750px"> </div><br>
+<div align="center"> <img alt="p1-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-15.jpg?raw=true" width="760px"> </div><br>
+
+**4.** We also used the "Wireshark" to capture the data flow of SDR(UE). We found **the actual interactions basically match the conceptual steps** mentioned above (3rd pic in [this section](#malicious-relay-establishment)):
+ - ***step 1-6: RRC connection (1-2 in TM mode)***
+<div align="center"> <img alt="p1-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-16.png?raw=true" width="750px"> </div>
+
+ - ***step 7-16: RRC connection reconfiguration & Attach (All in AM mode)***
+<div align="center"> <img alt="p1-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-17.png?raw=true" width="750px"> </div><br>
 
 ## Source Code Modification
 
