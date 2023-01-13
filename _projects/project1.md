@@ -198,10 +198,10 @@ If 2 device were successfully connected, you can `ping` each other to test the c
 <div align="center"> <img alt="p1-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-15.jpg?raw=true" width="760px"> </div><br>
 
 **4.** We also used the "Wireshark" to capture the data flow of SDR(UE). We found **the actual interactions basically match the conceptual steps** mentioned above (3rd pic in [this section](#malicious-relay-establishment)):
- - ***step 1-6: RRC connection (1-2 in TM mode)***
+ - ***step 1-7:***
 <div align="center"> <img alt="p1-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-16.png?raw=true" width="750px"> </div>
 
- - ***step 7-16: RRC connection reconfiguration & Attach (All in AM mode)***
+ - ***step 8-16:***
 <div align="center"> <img alt="p1-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-17.png?raw=true" width="750px"> </div><br>
 
 ## Source Code Modification
