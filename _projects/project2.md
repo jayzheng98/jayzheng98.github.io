@@ -164,7 +164,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ### Behavior data(Sysmonlogs)
 **1.** To begin with, we should have an in-depth understanding of the Sysmon logs. This [webpage](https://rootdse.org/posts/understanding-sysmon-events/) provides us with detailed information of each "Event" as well as the fields in it
 
-**2.** In short, logs labelled with `EventID: 1 (ProcessCreate)` or `EventID: 10 (ProcessAccess)` contain information that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 relations to form a graph
+**2.** In short, logs labelled with `EventID: 1 (ProcessCreate)` or `EventID: 10 (ProcessAccess)` contain information that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a graph
 
 **3.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
 
