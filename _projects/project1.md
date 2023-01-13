@@ -14,9 +14,9 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** First let me explain why there are "\*" in the title. Since this vulnerability currently exists in many subway lines of China, once it is disclosed before CNNVD officially publishes the announcement (after the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm. Therefore, **part of this project is confidential**, and I don't even know the specific name of this vulnerability
+**1.** First let me explain why there are "\*" in the title. This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it (Once the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm. Therefore, **part of this project is confidential**, and I don't even know the name of this vulnerability
 
-**2.** Then you may ask that **am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks, obviously people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
+**2.** **Am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks. Obviously, people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
 **3.** According to the theoretic instruction, another group of people (me and 2 younger students) are summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE (the version used in subway) experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
  - *Notice that we only implement basic MITM attack without further exploiting this vulnerability (Otherwise we would become secret-related as well* 🤐 *)*
@@ -185,13 +185,12 @@ sudo /home/Desktop/srsRAN1/cmake-build-debug/srsue/src/srsue /Desktop/srsRAN1/sr
 Since eNB should be running together with EPC on another computer, usually I open 2 terminals and execute the following commands separately:
 ```shell
 sudo /home/lte/Desktop/srsRAN1/cmake-build-debug/srsepc/src/srsepc /Desktop/conf/epc/epc.conf
-```
-```shell
+
 sudo /home/lte/Desktop/srsRAN1/cmake-build-debug/srsenb/src/srsenb /Desktop/conf/enb/enb.conf
 ```
 
 **3.** After executing the above commands, you can open a new terminal and input `ifconfig`. There will be a **new network element** on each computer:
-<br><img alt="p1-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-13.jpg?raw=true" width="375px"> <img alt="p1-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-14.jpg?raw=true" width="375px"> </div><br>
+<br><img alt="p1-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-13.jpg?raw=true" width="375px"> <img alt="p1-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-14.jpg?raw=true" width="375px"><br>
 
 If 2 device were successfully connected, you can `ping` each other to test the connection. In the pic below, I use PC with **SDR(UE)** to ping PC with **SDR(eNB+EPC)**:
  - *Because we've write several* `printf()` *functions in the source code, the data flow during the* `ping` *is also shown in the right terminal which is enabling UE*<br>
