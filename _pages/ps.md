@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /notes/ps
+permalink: /ps/
 title: "Personal Statement"
 author_profile: false
 ---
