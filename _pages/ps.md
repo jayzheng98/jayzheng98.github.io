@@ -13,11 +13,13 @@ author_profile: false
 -->
 <br>
 
-<font size=4>
+<font size=5>
 &ensp;&ensp;&ensp;I am applying for a PhD candidate to conduct research in the field of cybersecurity. To be more specific, I want to be dedicated to improving the safety and security of cyber-physical system (CPS) via threat modeling and anomaly detection techniques. Different from Internet systems, CPSs are integrations of networking, computing systems and actual facilities that monitor and control entities in the physical environment. This means it will be ineffective to simply apply the cybersecurity research outputs for the Internet system to CPS. Taking the railway as an example, attackers targeting such critical infrastructure will never stop at stealing passenger information or blackmailing computers like they usually do against Internet systems, but will try to disrupt the normal service process of the system to further cause severe safety accidents, such as derailment and train collision. This kind of advanced attack indicates that the consideration of combining safety and security is an inevitable research trend of CPS.
-
+</font>
+<font size=5>
 &ensp;&ensp;&ensp;
-
+</font>
+<font size=5>
 &ensp;&ensp;&ensp;At the theoretical level, threats can be captured by the aforementioned threat modeling methodology; at the practical level, threats can be identified by anomaly detection techniques. At present, mature anomaly detection tools are almost point-to-point. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they are incompetent to show the correlation between anomalies. However, the particularity of CPS will create a very tricky situation: if an attack chain is realized by an abnormal combination of normal operations, you will not find any abnormalities by detecting each operation, but only after correlating these together can you recognize that this is an attack behavior. To cope with such challenge, the knowledge graph (KG), with its competence of describing knowledge and modeling the relationship between entities, is considered to have great research value in the field of anomaly detection. 
 
 &ensp;&ensp;&ensp;A cybersecurity KG is made up of nodes and edges that constitute a large-scale security semantic network, providing an intuitive modeling method for various attacks and defense scenarios in the practical security world. 
