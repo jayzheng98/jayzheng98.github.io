@@ -10,7 +10,7 @@ author_profile: false
 4. 解释一些可能被误会的地方
 5. 总结
 -->
-<font size='7'><b>Personal Statement</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <font size='4'>[Download PDF]()</font>
+<font size='7'><b>Personal Statement</b></font>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[<font size='4'>Download PDF</font>]()
 <br>
 
 <font size='4'>
