@@ -1,6 +1,7 @@
 ---
 layout: single
 permalink: /ps/
+title: "Personal Statement"
 author_profile: false
 ---
 <!-- 
@@ -10,7 +11,7 @@ author_profile: false
 4. 解释一些可能被误会的地方
 5. 总结
 -->
-<font size='7'><b>Personal Statement</b></font>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[<font size='4'>Download PDF</font>]()
+[<font size='4'>Download PDF</font>]()
 <br>
 
 <font size='4'>
@@ -18,7 +19,7 @@ author_profile: false
 
 &ensp;&ensp;&ensp;At the theoretical level, threats can be captured by the aforementioned threat modeling methodology; at the practical level, threats can be identified by anomaly detection techniques. At present, mature anomaly detection tools are almost point-to-point. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they are incompetent to show the correlation between anomalies. However, the particularity of CPS will create a very tricky situation: if an attack chain is realized by an abnormal combination of normal operations, you will not find any abnormalities by detecting each operation, but only after correlating these together can you recognize that this is an attack behavior. To cope with such challenge, the knowledge graph (KG), with its competence of describing knowledge and modeling the relationship between entities, is considered to have great research value in the field of anomaly detection.<br><br>
 </font>
-
+<font size='4'>
 &ensp;&ensp;&ensp;While working on this [<font size='4'>project</font>](https://jayzheng98.github.io/projects/project2)<font size='4'> as the principal investigator, I've built a basic KG based on ArangoDB for the railway signal system. There are two advantages of utilizing KG under my circumstance. First, it realizes a combination of theory and practice. It not only consists of knowledge data (</font>[<font size='4'>BRON</font>](https://github.com/ALFA-group/BRON)<font size='4'>), environment data (assets and topology) and behavior data (system logs), but also effectively integrates the aforementioned threat modeling outputs as the cyber threat intelligence (CTI). Second, it endows subsequent development the explainable attribute. It can be the foundation to develop model-based AI techniques for explainable representing, analysing and reasoning about the security and safety of CPS.</font><br><br>
 
 <font size='4'>
