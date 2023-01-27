@@ -10,7 +10,7 @@ author_profile: false
 4. 解释一些可能被误会的地方
 5. 总结
 -->
-<font size='6'><b>Personal Statement</b></font> <div style="float:right;"><font size='4'>Download PDF</font></div>
+<h1><b>Personal Statement</b></h1> <div style="float:right;"><font size='4'>Download PDF</font></div>
 <br>
 
 <font size='4'>
