@@ -11,7 +11,7 @@ author_profile: false
 5. 总结
 -->
 <style>h1{font-weight:normal}</style>
-<style>body{line-height:1.3}</style>
+<style>body{line-height:1.2; text-align: justify}</style>
 <h1><b>Personal Statement</b> <div style="float:right;"><font size='4'><a href="https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files">[Download PDF]</a>&ensp;&ensp;</font></div></h1>
 
 <font size='4'><br>
