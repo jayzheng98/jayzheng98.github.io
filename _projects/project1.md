@@ -83,7 +83,7 @@ What we have to do is to insert the pseudo base station into the normal communic
  - ***step 1-6: RRC connection (1-2 in TM mode)***
    - *Generally, these steps are used to establish the **initial connection** between normal devices and our pseudo devices, we don't need to modify them*
    - *Many tests have proved that RRC connection can be completed directly by pseudo equipment without forwarding the reply of normal equipment. So, to realize the relay connection, **we only need to relay all data in subsequent steps***
- - ***step 7-16: RRC connection reconfiguration & Attach (All in AM mode)***
+ - ***step 7-16: Attach & RRC connection reconfiguration (All in AM mode)***
    - *7: Attach request and PDN connectivity request (PDN connectivity request aims to establish the "default bearer" between UE and P-GW)*
    - *8-9: Authentication (Confirm the identity between UE and MME and establish the EPS security context)*
    - *10-13: Security mode (This process will enable the EPS security context to activate the communication between UE and MME through the confirmed code)*
@@ -206,5 +206,23 @@ If 2 device were successfully connected, you can `ping` each other to test the c
 
 ## Source Code Modification
 
+**1.** Due to the sensitivity of this project, I cannot show the specific working process here, but can only briefly describe the steps from an abstract level (Apparently, all modifications are implemented on our pseudo-relay device)
+ - ***AM (Before RRC reconfiguration)***
+   - *Find interfaces that belong to "AM mode" between RLC and PDCP layer in the source code*
+   - *Insert Socket functions to relay data that flow through the interface*
+ - ***AM (After RRC reconfiguration)***
+   - *Since the RRC connection is reconfigured, our pseudo device do not know the new parameters to maintain the connection*
+   - *Thus, we can only conduct the parameter guessing. Luckily, I only need to guess 2 parameters:*
+     - *Channel Quality Indication (CQI)*
+     - *SR (Scheduling Request)*
+   - *Once we got the correct parameters, we could establish the stable connections*
+   - *Use Socket functions to relay the remaining data interactions of "AM mode"*
+ - ***UM (User data transmission)***
+   - *Locate the targeted data package in the data flow through obvious features such as length*
+   - *Conduct manipulation based on the cyphertext*
 
+# Experiment
+<hr>
+
+**Updating...**
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
