@@ -206,7 +206,7 @@ If 2 device were successfully connected, you can `ping` each other to test the c
 
 ## Source Code Modification
 
-**1.** Due to the sensitivity of this project, I cannot show the specific working process here, but can only briefly describe the steps from an abstract level (Apparently, all modifications are implemented on our pseudo-relay device)
+**1.** Due to the sensitivity of this project, I cannot show the specific working process here, but can only briefly describe the steps from a very **abstract level** (Apparently, all modifications are implemented on our pseudo-relay device)
  - ***AM (Before RRC reconfiguration)***
    - *Find interfaces that belong to "AM mode" between RLC and PDCP in the source code*
    - *Insert Socket functions to relay data that flow through the interface*
@@ -219,7 +219,7 @@ If 2 device were successfully connected, you can `ping` each other to test the c
    - *Use Socket functions to relay the remaining data interactions of "AM mode"*
  - ***UM (User data transmission)***
    - *Locate the targeted data package in the flow through obvious features such as length*
-   - *Conduct manipulation based on the cyphertext*
+   - *Conduct manipulation on the cyphertext*
 
 # Experiment
 <hr>
