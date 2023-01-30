@@ -18,7 +18,7 @@ toc_label: "Contents"
 
 **2.** **Am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks. Obviously, people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
-**3.** According to the theoretic instruction, another group of people (me and 2 younger students) are summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE (the version used in subway) experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
+**3.** According to the theoretic instruction, another group of people (me and 2 younger students) were summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE (in version used by subway) experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
  - *Notice that we only implement basic MITM attack without further exploiting this vulnerability (Otherwise we would become secret-related as well* 🤐 *)*
 
 <br>
@@ -26,7 +26,7 @@ toc_label: "Contents"
 # Notice
 <hr>
 
-Since this project is about to be finished, **quite a lot** of the trial and error processes I recorded earlier in this article have been deleted, leaving only the **last feasible solution**
+Since this project is about to be finished, **quite a lot of** the trial and error processes I recorded earlier in this article have been deleted, leaving only the **last feasible solution**
  - *For example, as for the LTE networking devices. At first, we even used a [real 4G base station](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-0.jpg?raw=true). Later, we chose an elementary (cheap) kind of Software Defined Radio(SDR) equipment called "[LimeSDR](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/limesdr.jpg?raw=true)". Finally, we adopted the more professional USRP equipment*
 
 <br>
@@ -92,7 +92,7 @@ What we have to do is to insert the pseudo base station into the normal communic
 
 ## User Data Tampering
 
-**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, **although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form since LTE in specific version lacks the <u>integrity protection</u>**
+**1.** The rationale behind user data tampering is already illustrated in detail in the [Breaking LTE on layer two](https://ieeexplore.ieee.org/document/8835335). In short, **although there is <u>confidentiality protection</u>(encryption) in LTE, we could still tamper with data in cyphertext form, since LTE in specific version lacks the <u>integrity protection</u>**
 
 <div align="center"> <img alt="p1-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-8.png?raw=true" width="760px"> </div><br>
 
@@ -206,7 +206,9 @@ If 2 device were successfully connected, you can `ping` each other to test the c
 
 ## Source Code Modification
 
-**1.** Due to the sensitivity of this project, I cannot show the specific working process here, but can only briefly describe the steps from a very **abstract level** (Apparently, all modifications are implemented on our pseudo-relay device)
+**1.** Works above are actually regular setups of an LTE network. To achieve the malicious relay, we have to modify the source code of LTE stacks running on our pseudo-relay device
+
+**2.** Due to the sensitivity of this project, I cannot show the specific modification process here, but can only briefly describe the steps from a very **abstract level**
  - ***AM (Before RRC reconfiguration)***
    - *Find interfaces that belong to "AM mode" between RLC and PDCP in the source code*
    - *Insert Socket functions to relay data that flow through the interface*
