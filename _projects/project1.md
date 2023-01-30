@@ -208,17 +208,17 @@ If 2 device were successfully connected, you can `ping` each other to test the c
 
 **1.** Due to the sensitivity of this project, I cannot show the specific working process here, but can only briefly describe the steps from an abstract level (Apparently, all modifications are implemented on our pseudo-relay device)
  - ***AM (Before RRC reconfiguration)***
-   - *Find interfaces that belong to "AM mode" between RLC and PDCP layer in the source code*
+   - *Find interfaces that belong to "AM mode" between RLC and PDCP in the source code*
    - *Insert Socket functions to relay data that flow through the interface*
  - ***AM (After RRC reconfiguration)***
    - *Since the RRC connection is reconfigured, our pseudo device do not know the new parameters to maintain the connection*
-   - *Thus, we can only conduct the parameter guessing. Luckily, we only need to guess 2 parameters:*
+   - *Thus, we can only guess the parameters. Specifically, 2 parameters:*
      - *[Channel Quality Indication](https://www.sharetechnote.com/html/Handbook_LTE_CQI.html) (CQI)*
      - *[Scheduling Request](https://www.sharetechnote.com/html/Handbook_LTE_SR.html) (SR)*
    - *Once we got the correct parameters, we could establish the stable connections*
    - *Use Socket functions to relay the remaining data interactions of "AM mode"*
  - ***UM (User data transmission)***
-   - *Locate the targeted data package in the data flow through obvious features such as length*
+   - *Locate the targeted data package in the flow through obvious features such as length*
    - *Conduct manipulation based on the cyphertext*
 
 # Experiment
