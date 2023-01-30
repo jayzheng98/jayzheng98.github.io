@@ -13,7 +13,7 @@ author_profile: false
 -->
 <style>h1{font-weight:normal}</style>
 <style>body{line-height:1.2; text-align: justify}</style>
-<h1><b>Personal Statement</b> <div style="float:right;"><font size='4'><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/b69898392b8d346c97c1aeab1359f6562a84f365/files/ps.pdf?raw=true">[Download PDF]</a></font></div></h1>
+<h1><b>Personal Statement</b> <div style="float:right;"><font size='4'><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/e94f06cf63f64749e140e8ac28a6504d9bf87906/files/ps.pdf?raw=true">[Download PDF]</a></font></div></h1>
 
 <font size='4'><br>
 &ensp;&ensp;&ensp;I am applying for the PhD candidate to conduct research in the field of cybersecurity. To be more specific, I want to be dedicated to improving the safety and security of cyber-physical system (CPS) via threat modeling and anomaly detection techniques. Different from Internet systems, CPSs are integrations of networking, computing systems and actual facilities that monitor and control entities in the physical environment. This means it will be ineffective to simply apply the cybersecurity research outputs for the Internet system to CPS. Taking the railway as an example, attackers targeting such critical infrastructure will never stop at stealing passenger information or blackmailing computers like they usually do against Internet systems, but will try to disrupt the normal service process of the system to further cause severe safety accidents, such as derailment and train collision. This kind of advanced attack indicates that the consideration of combining safety and security is an inevitable research trend of CPS.<br><br>
