@@ -213,8 +213,8 @@ If 2 device were successfully connected, you can `ping` each other to test the c
  - ***AM (After RRC reconfiguration)***
    - *Since the RRC connection is reconfigured, our pseudo device do not know the new parameters to maintain the connection*
    - *Thus, we can only conduct the parameter guessing. Luckily, I only need to guess 2 parameters:*
-     - *Channel Quality Indication (CQI)*
-     - *SR (Scheduling Request)*
+     - *[Channel Quality Indication](https://www.sharetechnote.com/html/Handbook_LTE_CQI.html) (CQI)*
+     - *[Scheduling Request](https://www.sharetechnote.com/html/Handbook_LTE_SR.html) (SR)*
    - *Once we got the correct parameters, we could establish the stable connections*
    - *Use Socket functions to relay the remaining data interactions of "AM mode"*
  - ***UM (User data transmission)***
