@@ -151,17 +151,17 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **3.** In the "development" section, we are going to separately transform the raw materials of the 4 parts into **graph structure**, and eventually merge them together
 
 ## Development
-### Knowledge data(BRON)
+### Knowledge data
 **1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together in an [open source](https://github.com/ALFA-group/BRON) graph called "[BRON](https://arxiv.org/pdf/2010.00533.pdf)"
 
 **2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well
 
-### CTI(POCA) & Environment data(Topology)
+### CTI & Environment data
 **1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
  
  **2.** All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)
 
-### Behavior data(Sysmonlogs)
+### Behavior data
 **1.** To begin with, we should have an in-depth understanding of the Sysmon logs. This [webpage](https://rootdse.org/posts/understanding-sysmon-events/) provides us with detailed information of each "Event" as well as the fields in it
 
 **2.** In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a graph
@@ -173,6 +173,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="620px"> </div> 
 <br>
 
+## Experiment
 **Updating...** <br>
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
