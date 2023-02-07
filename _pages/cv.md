@@ -17,7 +17,6 @@ Education
     * <font size='4'>GPA 83.61, ranked 24/168 (14%) in major</font>
 * **2020-2023: M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China**
     * <font size='4'>Thesis Title: Research on Behavioural-based Cybersecurity Threat Analysis and Anomaly Detection of Railway System</font>
-    * <font size='4'>Supervisor: Prof. Lianshan Yan</font>
 
 Publications
 ======
