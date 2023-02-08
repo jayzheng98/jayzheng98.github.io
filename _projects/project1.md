@@ -107,7 +107,6 @@ What we have to do is to insert the pseudo base station into the normal communic
 
 **2.** The physical establishment of the platform is shown below:
  - *In the middle are actually 2 displayer screens we've connected to the single **desktop***
- - *The 2 "silver" boxes under the laptops are the **shield boxes** which seal **2 SDR device** in separately*
 
 <div align="center"> <img alt="p1-6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-6.png?raw=true" width="760px"> </div><br>
 
