@@ -31,7 +31,7 @@ toc_label: "Contents"
 **2.** How to testify that there are indeed security issues in the system? You may say we can conduct penetration tests in a simulation environment, but how can you figure out the route and the goal of attacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
 
 ## Design
-**1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the Process-Oriented and Coalescent Analysis (POCA). Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
+**1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the <u>Process-Oriented and Coalescent Analysis (POCA)</u>. Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
  - *The overall framework of this methodology is shown below:*
 
 <div align="center"> <img alt="p2-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/pub1-1.png?raw=true" width="620px"> </div><br>
