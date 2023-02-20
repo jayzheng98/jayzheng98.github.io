@@ -44,10 +44,9 @@ Research projects
 Skills
 ======
 
-- **Programming Language** <br>
-**<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#</font>
-- **Programming Ability** <br>
-&thinsp;<font size='4'>I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (See my </font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
+- **Programming** <br>
+**<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#</font><br>
+<font size='4'>I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (See my </font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
 - **Database** <br>
 **<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql), [<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 - **Networking** <br>
@@ -55,8 +54,8 @@ Skills
 **<font size='4'>Wireless network:&ensp;LTE)</font>**<font size='4'>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
 - **Security** <br>
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
-**<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit Framework and MITRE Caldera Platform</font><br>
-**<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&thinsp; Familiar with ATT&CK and CAPEC knowledge bases</font>
+**<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit and MITRE Caldera Platform</font><br>
+**<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon
 <!-- - **Embedded development: (haven't touched for some time)** <br>
 **<font size='4'>MCU:</font>**<font size='4'>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times</font><br>
 **<font size='4'>Circuit design:</font>**<font size='4'>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font><br> -->
