@@ -18,7 +18,7 @@ toc_label: "Contents"
 
 **2.** Most contents (exclude prediction) of this project is also my **graduation project**. It consists of 4 parts, and their relationships are shown below:
 
-<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"> </div>
+<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="340px"> </div>
 <br>
 
 # Threat Analysis 
