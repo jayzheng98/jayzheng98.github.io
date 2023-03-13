@@ -86,7 +86,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 ### Dataset
 **1.** We've designed a complete cyberattack path against the signal system based on one of the threat analysis results(threat scenarios)
- - *This attack set covers all 12 tactics and includes 22 techniques of [MITRE ATT&CK](https://attack.mitre.org/)*
+ - *This attack set covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)*
  - *The "PS(powershell) script" mentioned in the pic has been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/file_monitor.ps1)*
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="600px"> </div> <br>
