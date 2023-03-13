@@ -110,10 +110,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 ## Experiment
 **1.** We separately implemented the pre and post penetration by Kali in the shooting range. All the behavior data (about 200k logs) before and after the implementation (total 3 days) have been saved as the **raw dataset**
 
-**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original `RuleName` field of some logs with more precise technique ids, and add a new field `RiskLevel` to all logs. Then it will export the processed dataset as `syslog.csv` 
- - *RiskLevel-0: Log that doesn't have a "RuleName"*
- - *RiskLevel-1: Log that has a RuleName which has not been overwritten*
- - *RiskLevel-2: Log that has a RuleName which has been overwritten*
+**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original `RuleName` field of some logs with more precise technique_ids, and then export the processed dataset from ELK as `syslog.csv` 
 
 <br>
 
@@ -125,7 +122,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 **2.** We believe the Knowledge Graph (KG) will be an advanced **complement** to the traditional security tools since it can mine, analyze and construct the relationships among various entities to correlate attack events and restore the attack tree as complete as possible
 
-**3.** We intend to merge all the outputs of previous work with a well-developed [cybersecurity KG](#knowledge-databron) to further construct the **KG of railway signal system**, and write a set of preliminary rules to drive the graph to automatically dig out attack chains hide in normal data
+**3.** We intend to merge all the outputs of previous work with a well-developed [cybersecurity KG](#knowledge-databron) to further construct the **KG of railway signal system**, and write a set of preliminary rules to drive the graph to automatically dig out anomalies hide in normal data
 
 ## Environment and Tools
 
