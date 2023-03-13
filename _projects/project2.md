@@ -49,7 +49,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 <br>
 
-# Simulation Attack 
+# Threat Simulation
 <hr>
 
 ## Introduction
@@ -114,7 +114,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 
 <br>
 
-# Knowledge graph construction
+# Graph construction
 <hr>
 
 ## Introduction
