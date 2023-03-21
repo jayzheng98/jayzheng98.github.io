@@ -162,7 +162,7 @@ The main purpose of this part is to create our **own dataset**. Due to the close
 **2.** In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parent-child(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a graph
 
 ### Final graph
-**1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below (The internal structure of "BRON" is omitted here):
+**1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="620px"> </div> 
 <br>
 
