@@ -90,7 +90,6 @@ The main purpose of this part is to create our **own dataset**. Due to the close
  - *The "PS(powershell) script" mentioned in the pic has been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/file_monitor.ps1)*
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="600px"> </div> <br>
-<div align="center"> <img alt="p2-6" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-6.jpg?raw=true" width="600px"> </div> <br>
 
 ## Development
 **1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
