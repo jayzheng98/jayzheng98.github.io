@@ -34,7 +34,7 @@ toc_label: "Contents"
 
 **1.** Actually the complex rationale behind Socket is not recorded in this article. The aim of this page is to help people get started quickly. They can modify the templates according to their needs
 
-**2.** Besides the common data types such as "number" and "string", Socket can also transmit "structure" and "class" which is shown in [UDP Client](#u\-client)
+**2.** Besides the common data types such as "number" and "string", Socket can also transmit "structure" and "class" (shown in [UDP Client](#u\-client))
 
 **3.** All codes are written in *C++* 
 
