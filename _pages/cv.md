@@ -15,9 +15,9 @@ Education
 ======
 <hr>
 
-- B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China <div style="float:right;"><b>2016-2020</b></div><br>
+ B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China <div style="float:right;"><b>2016-2020</b></div><br>
     <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
-- M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China <div style="float:right;"><b>2020-2023</b></div><br>
+ M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China <div style="float:right;"><b>2020-2023</b></div><br>
     <font size='4'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
 
 Publications
