@@ -40,6 +40,16 @@ Research projects
 **<font size='4'>Time:</font>**&ensp;<font size='4'>2018.04.20 - 2019.05.04&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Project Leader</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>The LED traffic lights currently used in various working conditions are mostly of constant luminance, which are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
+Awards & Honors
+======
+- 2021.05: **<font size='4'>Regional Award</font>**<font size='4'>(National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. </font>*<font size='4'>"Dijkstra Sect: Traffic Data Forecast".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
+- 2019.08: <font size='4'>Provincial </font>**<font size='4'>2nd Prize</font>**<font size='4'>, 2019 National Undergraduate Electronic Design Competition. </font>*[<font size='4'>"Subject H: Analog Electromagnetic Curved Gun".</font>](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true)* **<font size='4'>Zhongyi Zheng</font>**<font size='4'>, Zhuocheng Shi, Feifan Lei</font><br>
+- 2019.04: **<font size='4'>1st Prize</font>**<font size='4'>(No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. </font>*<font size='4'>"Electronic Firefly".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
+
+Patents
+======
+
+- 李赛飞，**郑中一**，闫连山，张丽杰. “一种信息物理融合的铁路信号控制系统威胁分析方法[P]”. 四川省：CN114978569A,2022-08-30.
 
 Skills
 ======
@@ -59,9 +69,3 @@ I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</
 <!-- - **Embedded development: (haven't touched for some time)** <br>
 **<font size='4'>MCU:</font>**<font size='4'>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times</font><br>
 **<font size='4'>Circuit design:</font>**<font size='4'>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font><br> -->
-
-Awards & Honors
-======
-- 2021.05: **<font size='4'>Regional Award</font>**<font size='4'>(National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. </font>*<font size='4'>"Dijkstra Sect: Traffic Data Forecast".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
-- 2019.08: <font size='4'>Provincial </font>**<font size='4'>2nd Prize</font>**<font size='4'>, 2019 National Undergraduate Electronic Design Competition. </font>*[<font size='4'>"Subject H: Analog Electromagnetic Curved Gun".</font>](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true)* **<font size='4'>Zhongyi Zheng</font>**<font size='4'>, Zhuocheng Shi, Feifan Lei</font><br>
-- 2019.04: **<font size='4'>1st Prize</font>**<font size='4'>(No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. </font>*<font size='4'>"Electronic Firefly".</font>* **<font size='4'>Zhongyi Zheng</font>** <br>
