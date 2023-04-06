@@ -42,8 +42,8 @@ Research projects
 Awards & Honors
 ======
 - <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font><br>
-- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. [<i>"Subject H: Analog Electromagnetic Curved Gun".</i>](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true) <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font><br>
-- <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font><br>
+- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. <i>["Subject H: Analog Electromagnetic Curved Gun".](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true)</i> <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font><br>
+- <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font>
 
 Patents
 ======
