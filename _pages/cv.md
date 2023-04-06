@@ -21,7 +21,7 @@ redirect_from:
 ## Education 
 <hr>
  
- <div style="float:right; text-align:right"; margin-top: 12px><b>2016-2020</b></div>
+ <div style="float:right; text-align:right; margin-top:12px"><b>2016-2020</b></div>
 
 - <b>B.Eng</b> in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
    <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
