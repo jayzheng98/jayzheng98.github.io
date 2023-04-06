@@ -11,6 +11,8 @@ redirect_from:
 ## Education 
 <hr>
 
+<div style="float:right; text-align:right">明月几时有？把酒问青天。</div>
+
 - B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China 2016-2020<br>
    <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
 - M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China 2020-2023<br>
@@ -49,7 +51,7 @@ redirect_from:
 ## Patents 
 <hr>
 
-- <font size='4'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，专利号：2022102297873.</font>
+- <font size='4'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，专利号：2022102297873</font>
 
 ## Skills 
 <hr>
