@@ -11,9 +11,9 @@ redirect_from:
 ## Education 
 <hr>
 
-<div style="float:right; text-align:right">明月几时有？把酒问青天。</div>
+<div style="float:right; text-align:right"><b>2016-2020</b><br><b>2020-2023</b></div>
 
-- B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China 2016-2020<br>
+- B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
    <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
 - M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China 2020-2023<br>
    <font size='4'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
@@ -41,17 +41,17 @@ redirect_from:
 **<font size='4'>Time:</font>**&ensp;<font size='4'>2018.04.20 - 2019.05.04&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Project Leader</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>The LED traffic lights currently used in various working conditions are mostly of constant luminance, which are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
+## Patents 
+<hr>
+
+- <font size='4'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，专利号：2022102297873</font>
+
 ## Awards & Honors 
 <hr>
 
 - <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
 - <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. <i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">"Subject H: Analog Electromagnetic Curved Gun"</a></i>. <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
 - <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font>
-
-## Patents 
-<hr>
-
-- <font size='4'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，专利号：2022102297873</font>
 
 ## Skills 
 <hr>
