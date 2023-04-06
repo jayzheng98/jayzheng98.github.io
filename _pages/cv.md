@@ -11,10 +11,12 @@ redirect_from:
 ## Education 
 <hr>
 
-<div style="float:right; text-align:right"><b>2016-2020</b><br><br><b>2020-2023</b></div>
+<div style="float:right; text-align:right"><b>2016-2020</b></div>
 
 - <b>B.Eng</b> in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
    <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
+<div style="float:right; text-align:right"><b>2016-2020</b></div>
+
 - <b>M.Phil</b> in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China<br>
    <font size='4'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
 
