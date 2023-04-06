@@ -14,9 +14,9 @@ redirect_from:
 Education
 ======
 * **2016-2020:** B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
-    <font size='4'>GPA 83.61, ranked 24/168 (14%) in major</font>
+    <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
 * **2020-2023:** M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China<br>
-    <font size='4'>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</font>
+    <font size='4'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
 
 Publications
 ======
@@ -41,13 +41,13 @@ Research projects
 
 Awards & Honors
 ======
-- <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. </font>*<font size='4'>"Dijkstra Sect: Traffic Data Forecast".</font>* <b>Zhongyi Zheng</b>. 2021.05</font><br>
-- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. </font>*[<font size='4'>"Subject H: Analog Electromagnetic Curved Gun".</font>](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true)* <font size='4'><b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font><br>
-- <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. </font>*<font size='4'>"Electronic Firefly".</font>* <font size='4'><b>Zhongyi Zheng</b>. 2019.04</font>** <br>
+- <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font><br>
+- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. [<i>"Subject H: Analog Electromagnetic Curved Gun".</i>](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true) <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font><br>
+- <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font><br>
 
 Patents
 ======
-- <font size='4'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “</font>*<font size='4'>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</font>*<font size='4'>”，CN114978569A，2022-08-30，专利号：2022102297873.</font>
+- <font size='4'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，专利号：2022102297873.</font>
 
 Skills
 ======
