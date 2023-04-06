@@ -25,7 +25,6 @@ Publications
   
 Research projects
 ======
-
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
 **<font size='4'>Time:</font>**&ensp;<font size='4'>2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Principal Investigator</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>A high-risk vulnerability (CNNVD-202204-3571) in the subway communication system is proposed by our preliminary theoretical research. Then a confidential project is established, and aims to build a pseudo base-station experimental platform for the recurrence of the <u>man-in-the-middle</u> attack against the LTE communication used in subway</font>
@@ -48,14 +47,10 @@ Awards & Honors
 
 Patents
 ======
-
-<font size='4'>
-- 李赛飞，**郑中一**，闫连山，张丽杰. “一种信息物理融合的铁路信号控制系统威胁分析方法[P]”，CN114978569A，2022-08-30，专利号：2022102297873.
-</font>
+- <font size='4'>李赛飞，**郑中一**，闫连山，张丽杰. “一种信息物理融合的铁路信号控制系统威胁分析方法[P]”，CN114978569A，2022-08-30，专利号：2022102297873.</font>
 
 Skills
 ======
-
 - **Programming** <br>
 **<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#<br>
 I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (See my </font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
