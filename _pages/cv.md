@@ -13,9 +13,9 @@ redirect_from:
 
 Education
 ======
-* **2016-2020:** B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
+* B.Eng in Network Engineering, Southwest Jiaotong University, Sichuan, China <div align="right"><b>2016-2020</b></div><br>
     <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
-* **2020-2023:** M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China<br>
+* M.Phil in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China <div align="right"><b>2020-2023</b></div><br>
     <font size='4'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
 
 Publications
@@ -41,8 +41,8 @@ Research projects
 
 Awards & Honors
 ======
-- <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font><br>
-- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. <i>["Subject H: Analog Electromagnetic Curved Gun".](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true)</i> <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font><br>
+- <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
+- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. <i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">"Subject H: Analog Electromagnetic Curved Gun"</a></i>. <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
 - <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font>
 
 Patents
