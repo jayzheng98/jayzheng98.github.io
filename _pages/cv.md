@@ -8,11 +8,15 @@ redirect_from:
 
 {% include base_path %}
 
-<style>hr {margin: 0.3em 0;
+<style>
+  hr {margin: 0.3em 0;
     border: 0;
-    border-top: 1.8px solid #788383;}
+    border-top: 1.8px solid #c8d3d3;}
 </style>
-<style>h2 {line-height:0.6;}</style>
+<style>
+  h2 {margin: 1.5em 0 0.5em;
+  line-height:0.6;}
+</style>
 
 ## Education 
 <hr>
