@@ -8,7 +8,7 @@ date: 2022-04-15
 toc: true
 toc_label: "Contents"
 ---
-
+<style>body{text-align: justify}</style>
 <a name="top"></a>
 
 # Introduction
