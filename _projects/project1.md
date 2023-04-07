@@ -14,7 +14,7 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** First let me explain why there are "\*" in the title. This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it (Once the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm. Therefore, **part of this project is confidential**, and I don't even know the name of this vulnerability
+**1.** First let me explain why there are "\*" in the title. This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it (Once the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm. Therefore, **part of this project is confidential**
 
 **2.** **Am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks. Obviously, people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
@@ -26,7 +26,7 @@ toc_label: "Contents"
 # Notice
 <hr>
 
-Since this project is about to be finished, **quite a lot of** the trial and error processes I recorded earlier in this article have been deleted, leaving only the **last feasible solution**
+Since this project was finished, **quite a lot of** the trial and error processes I recorded earlier in this article have been deleted, leaving only the **last feasible solution**
  - *For example, as for the LTE networking devices. At first, we even used a [real 4G base station](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj1-0.jpg?raw=true). Later, we chose an elementary (cheap) kind of Software Defined Radio(SDR) equipment called "[LimeSDR](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/limesdr.jpg?raw=true)". Finally, we adopted the more professional USRP equipment*
 
 <br>
@@ -225,5 +225,5 @@ If 2 device were successfully connected, you can `ping` each other to test the c
 # Experiment
 <hr>
 
-**Updating...**
+<b>For security reasons, the experiment process and result are unavailable for now.</b>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
