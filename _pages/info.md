@@ -1,9 +1,7 @@
 ---
-permalink: /
+permalink: /info/
 title: "About me"
 author_profile: true
-redirect_from: 
-  - /info/
 ---
  
 * Hi! Thank you for your visit
