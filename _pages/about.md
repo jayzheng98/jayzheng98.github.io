@@ -8,6 +8,7 @@ redirect_from:
   - /about.html
 ---
 <!-- * To be more specific, my current research interest is in **Anomaly Detection** and **Wireless Communication Security** -->
+<style>body{text-align: justify}</style>
  
 * Hi! Thank you for your visit
 
