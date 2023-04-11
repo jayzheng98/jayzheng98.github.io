@@ -39,11 +39,11 @@ redirect_from:
 <hr>
 
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
-**<font size='4'>Time:</font>**&ensp;<font size='4'>2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Main participant</font> <br>
+**<font size='4'>Time:</font>**&ensp;<font size='4'>2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Main Participant</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>A high-risk vulnerability (CNNVD-202204-3571) in the subway communication system is proposed by our preliminary theoretical research. Then a confidential project is established, and aims to build a pseudo base-station experimental platform for the recurrence of the <u>man-in-the-middle</u> attack against the LTE communication used in subway</font>
 
 - **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
-**<font size='4'>Time:</font>**&ensp;<font size='4'>2021.04.05 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Main participant</font> <br>
+**<font size='4'>Time:</font>**&ensp;<font size='4'>2021.04.05 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Main Participant</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>This project studies the application of cybersecurity <u>knowledge graph</u> in the high-speed railway signal system (cyber-physical system). The main contents include: 1) Threat modeling 2) Knowledge graph construction 3) Anomaly detection and attack prediction of railway signal system</font>
 
 - **[Design of LED traffic light brightness-adaptive system based on microcontroller](/projects/project3)** <br>
