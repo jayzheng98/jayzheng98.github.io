@@ -25,9 +25,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introducton
-**1.** I have to emphasize that this project does not simply transplant some novel AI methods into an unexploited field of research, but tries to transform plausible advanced technique to addrress issues already exist in the rail transit
-
-**2.** How to testify that there are indeed security issues in the system? You may say we can conduct penetration tests in a simulation environment, but how can you figure out the route and the goal of attacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
+**1.** This project does not simply transplant some novel AI methods into an unexploited field of research, but tries to transform plausible advanced technique to addrress issues already exist in the rail transit. How to testify that there are indeed security issues in the system? Maybe we can conduct penetration tests in a simulation environment, but how to figure out the route and the goal of attacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
 
 ## Design
 **1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the <u>Process-Oriented and Coalescent Analysis (POCA)</u>. Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
@@ -43,8 +41,7 @@ toc_label: "Contents"
 
 ## Experiment
 **1.** The results of this theoretical analysis are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so its output will be part of the input to the final graph as well
-
-**2.** Because this paper has not been published for the time being, here I could only provide a prototype of the graph-structured analysis output (some contents have been changed later)
+ - Because this paper has not been published for the time being, here I could only provide a prototype of the graph-structured analysis output (some contents have been changed later)
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 <br>
