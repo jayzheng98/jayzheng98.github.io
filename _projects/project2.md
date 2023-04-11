@@ -50,7 +50,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** The main purpose of this part is to create our **own dataset**. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented, while external attacks such as Web attacks cannot be implemented. Therefore, common datasets that include both inner and outer attacks cannot be directly used for the subsequent analysis, and the datasets include attacks against railway signal system are very rare and difficult to obtain
+**1.** This part not only preliminarily verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented, while external attacks such as Web attacks cannot be implemented. Therefore, common datasets that include both inner and outer attacks cannot be directly used for the subsequent analysis, and the datasets include attacks against railway signal system are very rare and difficult to obtain
 
 ## Environment and Tools
 
