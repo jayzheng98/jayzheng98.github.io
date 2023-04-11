@@ -47,7 +47,7 @@ redirect_from:
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>This project studies the application of cybersecurity <u>knowledge graph</u> in the high-speed railway signal system (cyber-physical system). The main contents include: 1) Threat modeling 2) Knowledge graph construction 3) Anomaly detection and attack prediction of railway signal system</font>
 
 - **[Design of LED traffic light brightness-adaptive system based on microcontroller](/projects/project3)** <br>
-**<font size='4'>Time:</font>**&ensp;<font size='4'>2018.04.20 - 2019.05.04&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Project Leader</font> <br>
+**<font size='4'>Time:</font>**&ensp;<font size='4'>2018.04.20 - 2019.05.04&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Principal Investigator</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>The LED traffic lights currently used in various working conditions are mostly of constant luminance, which are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
 ## Patents 
