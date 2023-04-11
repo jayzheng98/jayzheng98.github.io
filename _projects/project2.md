@@ -50,7 +50,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** This part not only preliminarily verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented, while external attacks such as Web attacks cannot be implemented. Therefore, common datasets that include both inner and outer attacks cannot be directly used for the subsequent analysis, and the datasets include attacks against railway signal system are very rare and difficult to obtain
+**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented, while external attacks such as Web attacks cannot be implemented. Therefore, common datasets that include both inner and outer attacks cannot be directly used for the subsequent analysis, and the datasets include attacks against railway signal system are very rare and difficult to obtain
 
 ## Environment and Tools
 
@@ -68,7 +68,6 @@ toc_label: "Contents"
 ## Design
 ### Simulation range
 **1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system, I've recorded my networking process [here](/notes/DC). The topology diagram and physical diagram are as follows:
- - *Due to limited conditions, I can only simulate its network structure at present, which means there is no highly simulated service scenario operated within the range*
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
@@ -81,7 +80,7 @@ toc_label: "Contents"
    - Nxlog: The configuration files I wrote for windows and linux have been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
    - ELK: Generally only the "logstash" needs to be customized, the configuration I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/logstash.conf)
 
-### Dataset
+### Simulation attack
 **1.** We've designed a complete cyberattack path against the signal system based on one of the threat analysis results(threat scenarios)
  - *This attack set covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)*
  - *The "PS(powershell) script" mentioned in the pic has been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/file_monitor.ps1)*
