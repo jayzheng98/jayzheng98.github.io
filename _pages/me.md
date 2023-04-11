@@ -12,6 +12,6 @@ author_profile: true
 
 * To know more about me, you can have a view on following materials:
   * [CV](/cv)
-  * [Undergraduate Transcript](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/Undergraduate%20Transcript.pdf)
-  * [Graduate Transcript](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/Graduate%20Transcript.pdf)
+  * [Undergraduate Transcript](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/Undergraduate%20Transcript.pdf?raw=true)
+  * [Graduate Transcript](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/Graduate%20Transcript.pdf?raw=true)
 
