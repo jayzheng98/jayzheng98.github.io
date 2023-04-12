@@ -25,7 +25,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introducton
-**1.** This project does not simply transplant some novel techniques into an unexploited field of research, but tries to transform plausible methods to addrress issues already exist in the rail transit. How to testify that there are indeed security issues in the system? Maybe we can conduct penetration tests in a simulation environment, but how to figure out the route and the goal of attacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
+**1.** This project does not simply transplant some novel techniques into an unexploited field of research, but tries to transform plausible methods to addrress issues already exist. How to testify that there are indeed security issues in the rail transit? Maybe we can conduct penetration tests in a simulation environment. But how to figure out the route and goal of cyberattacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
 
 ## Design
 **1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the <u>Process-Oriented and Coalescent Analysis (POCA)</u>. Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
@@ -90,9 +90,9 @@ toc_label: "Contents"
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
 ### Simulation attack
-**1.** I designed a complete attack strategy against the signal system based on the POCA analysis result "threat scenario 2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete attack strategy against the signal system based on POCA analysis result "threat scenario 2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="640px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
  
 ## Development
 **1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
