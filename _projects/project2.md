@@ -50,11 +50,11 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway signal system are difficult to obtain. Thus, we have to generate our own dataset
+**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway signal system are difficult to obtain. Thus, we have to generate our own dataset
 
 ## Design
 ### Simulation range
-**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
+**1.** I built a simulation range in my laboratory according to the network structure of the railway signal system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
@@ -73,7 +73,7 @@ toc_label: "Contents"
 - **Data Collection and Analysis Terminal**
   - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** The configuration of equipment in the range is shown in the table below. Each virtual machine is installed with simulation software to initially simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) log sensor and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) transmit tool are also installed to realize syslog generation and forwarding separately.
+**3.** The configuration of equipment in the range is shown in the table below. Each virtual machine is installed with simulation software to initially simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately.
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
@@ -96,7 +96,7 @@ toc_label: "Contents"
    - ELK: Generally only the "logstash" needs to be customized, the configuration I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/logstash.conf)-->
 
 ### Simulation attack
-**1.** I designed a complete cyberattack strategy against the signal system based on the POCA analysis results (threat scenario 2). This attack set covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete cyberattack strategy against the signal system based on the POCA analysis results (threat scenario 2). It covers all tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="600px"> </div> <br>
  
