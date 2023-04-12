@@ -73,7 +73,7 @@ toc_label: "Contents"
 - **Data Collection and Analysis Terminal**
   - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** Detailed configuration of this range is shown in the table below. Each virtual machine is installed with simulation software to initially simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately.
+**3.** Detailed configuration of the range is shown in the table below. Each virtual machine is installed with simulation software to initially simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately.
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
@@ -89,14 +89,8 @@ toc_label: "Contents"
 | Kali Linux | Kali Linux 2020 | 192.168.4.211 | | Metasploit<br>MITRE Caldera |
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
-<!--Actually the deployment of the 3 tools mentioned above deserves an individual blog to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
-   - Sysmom(windows): please refer to this [repository](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
-   - Sysmon(linux): please refer to this [repository](https://github.com/microsoft/MSTIC-Sysmon/blob/main/linux/configs/main.xml)
-   - Nxlog: The configuration files I wrote for windows and linux have been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
-   - ELK: Generally only the "logstash" needs to be customized, the configuration I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/logstash.conf)-->
-
 ### Simulation attack
-**1.** I designed a complete cyberattack strategy against the signal system based on the POCA analysis result "threat scenario 2". It covers all tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete attack strategy against the signal system based on the POCA analysis result "threat scenario 2". It covers all tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="600px"> </div> <br>
  
