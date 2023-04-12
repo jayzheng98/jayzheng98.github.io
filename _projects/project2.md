@@ -50,9 +50,30 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented, while external attacks such as Web attacks cannot be implemented. Therefore, common datasets that include both inner and outer attacks cannot be directly used for the subsequent analysis, and the datasets include attacks against railway signal system are very rare and difficult to obtain
+**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as web penetration are not suitable for the subsequent research. Meanwhile, the datasets include attacks against railway signal system are very rare and difficult to obtain, so we have to generate our own dataset
 
-## Environment and Tools
+## Design
+### Simulation range
+**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system (networking processes are recorded [here](/notes/DC)). The topology diagram and physical diagram are as follows:
+
+<div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
+<div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> <br>
+
+**2.** This range is composed of the network equipment and 3 main parts:
+- **Network Equipment**
+  - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs (VLAN1, VLAN2) configured within it*
+
+- **Data Generation Area(Environment data)**
+  - *The data generation area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those physical servers actually act as switches. In addition, the LAN of the CTC equipment is configured as a "domain" that can be accessed and managed by the domain administrator account*
+
+- **Attacker**
+  - *The attacker operates a Kali host which has already connected to the ISDN server within the LAN of switch 3*
+
+- **Data Collection and Analysis Terminal**
+  - *This terminal consists of a host that is isolated from the experimental environment by a firewall*
+
+**3.** The main software configurations of equipment in the range are shown in the table below
 
 |Category|Specification|Number|
 |:---:|:---:|:---:|
@@ -64,27 +85,6 @@ toc_label: "Contents"
 |OS|Windows10<br>Ubuntu18.04<br>Kali Linux2020<br>WinServer2008|x7<br>x2<br>x1<br>x1|
 |Network Device|Cisco Catalyst 3560G<br>UTT HiPER 840G<br>Cable|x1<br>x1<br>xN|
 |Security Platform|Metasploit<br>MITRE Caldera|x1<br>x1|
-
-## Design
-### Simulation range
-**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system (networking processes are recorded [here](/notes/DC)). The topology diagram and physical diagram are as follows:
-
-<div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
-<div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> <br>
-
-**2.** This range is composed of the network equipment and 3 main parts:
-- Network Equipment
-  - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs (VLAN1, VLAN2) configured within it*
-
-- Data Generation Area(Environment data)
-  - *The data generation area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those physical servers actually act as switches. In addition, the LAN of the CTC equipment is configured as a "domain" that can be accessed and managed by the domain administrator account*
-
-- Attacker
-  - *The attacker operates a Kali host which has already connected to the ISDN server within the LAN of switch 3*
-
-- Data Collection and Analysis Terminal
-  - *This terminal consists of a host that is isolated from the experimental environment by a firewall*
 
 <!--**2.** Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) search engine(3rd pic above)
  - Actually the deployment of the 3 tools mentioned above deserves an individual blog to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
