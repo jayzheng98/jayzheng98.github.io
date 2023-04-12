@@ -50,11 +50,11 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as web penetration are not suitable for the subsequent research. Meanwhile, the datasets include attacks against railway signal system are very rare and difficult to obtain, so we have to generate our own dataset
+**1.** This part not only verifies the usability of POCA analysis results, but also provides a **dataset** for subsequent research. Due to the closed nature of the railway system network, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway signal system are difficult to obtain. Thus, we have to generate our own dataset
 
 ## Design
 ### Simulation range
-**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system (networking processes are recorded [here](/notes/DC)). The topology diagram and physical diagram are as follows:
+**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
@@ -62,21 +62,21 @@ toc_label: "Contents"
 
 **2.** This range is composed of the network equipment and 3 main parts:
 - **Network Equipment**
-  - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs (VLAN1, VLAN2) configured within it*
+  - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs configured within it*
 
 - **Data Generation Area(Environment data)**
-  - *This area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those servers actually act as "switches". In addition, the LAN of the CTC equipment is configured as a "domain" that can be accessed and managed by the domain administrator*
+  - *This area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those servers actually act as "switches". In addition, the LAN of CTC is configured as a "domain"*
 
 - **Attacker**
-  - *The attacker operates a Kali host which has already connected to the ISDN server within the LAN of switch 3*
+  - *The attacker operates a Kali Linux host which has already connected to the ISDN server within the LAN of switch 3*
 
 - **Data Collection and Analysis Terminal**
   - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** The main configurations of equipment in the range are shown in the table below. Each virtual machine in the data generation area is installed with simulation software to initially simulate service scenarios of the train control system, and [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) log sensor and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) transmit tool are also installed to realize syslog generation and forwarding separately.
+**3.** The configuration of equipment in the range is shown in the table below. Each virtual machine is installed with simulation software to initially simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) log sensor and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) transmit tool are also installed to realize syslog generation and forwarding separately.
 
 | Device | Operating System | IP | Security Tool | Main Software |
-| ---- | ----------------- | ---------- | ------------- | ------------- |
+| :----: | :-----------------: | :----------: | :-------------: | :-------------: |
 | RBC active | Windows 10 | 192.168.4.203 | 360 Security<br>Windows Defender | RBC Simulation Software<br>Sysmon<br>NXlog |
 | RBC standby | Windows 10 | 192.168.3.105 | Same with active | Same with active |
 | ISDN Server active | Ubuntu 18.04 | 192.168.4.206 | ClamAV | ISDN Simulation Software<br>SysmonForLinux<br>NXlog |
@@ -96,9 +96,7 @@ toc_label: "Contents"
    - ELK: Generally only the "logstash" needs to be customized, the configuration I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/logstash.conf)-->
 
 ### Simulation attack
-**1.** We've designed a complete cyberattack path against the signal system based on one of the threat analysis results(threat scenarios)
- - *This attack set covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)*
- - *The "PS(powershell) script" mentioned in the pic has been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/file_monitor.ps1)*
+**1.** I designed a complete cyberattack strategy against the signal system based on the POCA analysis results (threat scenario 2). This attack set covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="600px"> </div> <br>
  
