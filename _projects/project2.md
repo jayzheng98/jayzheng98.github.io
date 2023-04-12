@@ -65,29 +65,31 @@ toc_label: "Contents"
   - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs (VLAN1, VLAN2) configured within it*
 
 - **Data Generation Area(Environment data)**
-  - *The data generation area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those physical servers actually act as switches. In addition, the LAN of the CTC equipment is configured as a "domain" that can be accessed and managed by the domain administrator account*
+  - *This area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those servers actually act as "switches". In addition, the LAN of the CTC equipment is configured as a "domain" that can be accessed and managed by the domain administrator*
 
 - **Attacker**
   - *The attacker operates a Kali host which has already connected to the ISDN server within the LAN of switch 3*
 
 - **Data Collection and Analysis Terminal**
-  - *This terminal consists of a host that is isolated from the experimental environment by a firewall*
+  - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** The main software configurations of equipment in the range are shown in the table below
+**3.** The main configurations of equipment in the range are shown in the table below. Each virtual machine in the data generation area is installed with simulation software to initially simulate service scenarios of the train control system, and [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) log sensor and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) transmit tool are also installed to realize syslog generation and forwarding separately.
 
-|Category|Specification|Number|
-|:---:|:---:|:---:|
-|IDE|PyCharm2019||
-|Database|Elasticsearch7.8.0||
-|Data Sensor|Sysmon<br>SysmonForLinux<br>Nxlog-EE|x6<br>x2<br>x8|
-|PC|Lenovo ThinkCentre|x1|
-|Server|Lenovo ThinkServer RD640|x5|
-|OS|Windows10<br>Ubuntu18.04<br>Kali Linux2020<br>WinServer2008|x7<br>x2<br>x1<br>x1|
-|Network Device|Cisco Catalyst 3560G<br>UTT HiPER 840G<br>Cable|x1<br>x1<br>xN|
-|Security Platform|Metasploit<br>MITRE Caldera|x1<br>x1|
+| Device | Operating System | IP | Security Tool | Main Software |
+| ---- | ----------------- | ---------- | ------------- | ------------- |
+| RBC active | Windows 10 | 192.168.4.203 | 360 Security<br>Windows Defender | RBC Simulation Software<br>Sysmon<br>NXlog |
+| RBC standby | Windows 10 | 192.168.3.105 | Same with active | Same with active |
+| ISDN Server active | Ubuntu 18.04 | 192.168.4.206 | ClamAV | ISDN Simulation Software<br>SysmonForLinux<br>NXlog |
+| ISDN Server standby | Ubuntu 18.04 | 192.168.3.106 | Same with active | Same with active |
+| TSRS active | Windows 10 | 192.168.4.200 | 360 Security<br>Windows Defender | TSRS Simulation Software<br>Sysmon<br>NXlog<br>EasyFileSharing |
+| TSRS standby | Windows 10 | 192.168.3.103 | Same with active | Same with active |
+| TSR Interface Server | Windows Server 2008 | 172.110.2.11 | 360 Security<br>Windows Defender | Sysmon<br>NXlog |
+| CTC active | Windows 10 | 172.110.2.12 | 360 Security<br>Windows Defender | CTC Simulation Software<br>Sysmon<br>NXlog |
+| CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon<br>NXlog<br>EasyFileSharing |
+| Kali Linux | Kali Linux 2020 | 192.168.4.211 | | Metasploit<br>MITRE Caldera |
+| ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
-<!--**2.** Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) search engine(3rd pic above)
- - Actually the deployment of the 3 tools mentioned above deserves an individual blog to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
+<!--Actually the deployment of the 3 tools mentioned above deserves an individual blog to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
    - Sysmom(windows): please refer to this [repository](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
    - Sysmon(linux): please refer to this [repository](https://github.com/microsoft/MSTIC-Sysmon/blob/main/linux/configs/main.xml)
    - Nxlog: The configuration files I wrote for windows and linux have been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
