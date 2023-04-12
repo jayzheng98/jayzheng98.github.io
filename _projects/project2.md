@@ -56,9 +56,9 @@ toc_label: "Contents"
 ### Simulation range
 **1.** I built a simulation range in my laboratory according to the network structure of the railway signal system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
 
-<div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
-<div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> <br>
+<div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div><br>
+<div align="center"><img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"></div><br>
+<div align="center"><img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"></div><br>
 
 **2.** This range is composed of the network equipment and 3 main parts:
 - **Network Equipment**
@@ -73,7 +73,7 @@ toc_label: "Contents"
 - **Data Collection and Analysis Terminal**
   - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** Detailed configuration of the range is shown in the table below. Each virtual machine is installed with simulation software to initially simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately
+**3.** Detailed configuration of this range is shown in the table below. Each virtual machine is installed with simulation software to simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
@@ -90,9 +90,9 @@ toc_label: "Contents"
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
 ### Simulation attack
-**1.** I designed a complete attack strategy against the signal system based on the POCA analysis result "threat scenario 2". It covers all tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete attack strategy against the signal system based on the POCA analysis result "threat scenario 2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="600px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="640px"> </div> <br>
  
 ## Development
 **1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
