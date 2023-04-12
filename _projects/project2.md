@@ -40,7 +40,7 @@ toc_label: "Contents"
 **3.** Actually I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication.
 
 ## Experiment
-**1.** The results of this theoretical analysis are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so its output will be part of the input to the final graph as well
+**1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the railway signal system. The analysis results are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so the output of POCA will be part of the final knowledge graph as well
  - *Because this paper has not been published for the time being, here I could only provide a prototype of the graph-structured analysis output (some contents have been changed later)*
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
@@ -67,18 +67,31 @@ toc_label: "Contents"
 
 ## Design
 ### Simulation range
-**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system, I've recorded my networking process [here](/notes/DC). The topology diagram and physical diagram are as follows:
+**1.** I built a simulation shooting range in my laboratory according to the network structure of the railway signal system (networking processes are recorded [here](/notes/DC)). The topology diagram and physical diagram are as follows:
 
 <div align="center"> <img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"> </div> <br>
 <div align="center"> <img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"> </div> <br>
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"> </div> <br>
 
-**2.** Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) search engine(3rd pic above)
+**2.** This range is composed of the network equipment and 3 main parts:
+- Network Equipment
+  - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs (VLAN1, VLAN2) configured within it*
+
+- Data Generation Area(Environment data)
+  - *The data generation area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those physical servers actually act as switches. In addition, the LAN of the CTC equipment is configured as a "domain" that can be accessed and managed by the domain administrator account*
+
+- Attacker
+  - *The attacker operates a Kali host which has already connected to the ISDN server within the LAN of switch 3*
+
+- Data Collection and Analysis Terminal
+  - *This terminal consists of a host that is isolated from the experimental environment by a firewall*
+
+<!--**2.** Each device(virtual machine) is equipped with "sensor" to generate environment data. In this project I choose [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) as the data(log) sensor and use [Nxlog](https://nxlog.co/products/nxlog-enterprise-edition) to transmit data to [ELK](https://www.elastic.co/what-is/elasticsearch) search engine(3rd pic above)
  - Actually the deployment of the 3 tools mentioned above deserves an individual blog to illustrate. However, for now I don't have enough time to do so, I will roughly summarize the configuration of them here:
    - Sysmom(windows): please refer to this [repository](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
    - Sysmon(linux): please refer to this [repository](https://github.com/microsoft/MSTIC-Sysmon/blob/main/linux/configs/main.xml)
    - Nxlog: The configuration files I wrote for windows and linux have been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/tree/master/files)
-   - ELK: Generally only the "logstash" needs to be customized, the configuration I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/logstash.conf)
+   - ELK: Generally only the "logstash" needs to be customized, the configuration I wrote has also been submitted to my [repository](https://github.com/jayzheng98/jayzheng98.github.io/blob/master/files/logstash.conf)-->
 
 ### Simulation attack
 **1.** We've designed a complete cyberattack path against the signal system based on one of the threat analysis results(threat scenarios)
