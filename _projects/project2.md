@@ -14,7 +14,7 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and we lack effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of cyber-physical systems
+**1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of railway signal system
 
 **2.** Most contents (exclude prediction) of this project is also my **graduation project**. It consists of 4 parts, and their relationships are shown below:
 
@@ -60,7 +60,7 @@ toc_label: "Contents"
 <div align="center"><img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"></div><br>
 <div align="center"><img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"></div><br>
 
-**2.** This range is composed of the network equipment and 3 main parts:
+**2.** This range is composed of the network equipment and other 3 parts:
 - **Network Equipment**
   - *The range uses switches to carry communication between the ground equipment of the train control system, and uses routers to connect ground equipment and Centralized Traffic Control (CTC) equipment. Specifically, the switch consists of a three-layer switch and 2 VLANs configured within it*
 
@@ -73,7 +73,7 @@ toc_label: "Contents"
 - **Data Collection and Analysis Terminal**
   - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** Detailed configuration of this range is shown in the table below. Each virtual machine is installed with simulation software to simulate service scenarios of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately
+**3.** Detailed configuration of this range is shown in the table below. Each virtual machine is installed with simulation software to simulate services of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
@@ -93,26 +93,25 @@ toc_label: "Contents"
 **1.** I designed a complete attack strategy against the signal system based on POCA analysis result "threat scenario 2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
+
+**2.** I separately implemented the pre and post penetration by Kali, and all the behavior data (total 3 days) have been saved as the **raw dataset**
  
 ## Development
-**1.** Before inputting the raw dataset into the final knowledge graph, we have to do some **preprocessing**
+**1.** Due to the large amount of textual information contained in logs, direct analysis on them will greatly increase the workload and difficulty, so it is necessary to **preprocess** the dataset. Specifically, to try to add a concise "label" to each log.
 
-**2.** The configuration files of Sysmon mentioned [earlier](#simulation-range) have actually helped us take the first step, that is, they can map the **Sysmonlogs** to the **techniques** of [MITRE ATT&CK](https://attack.mitre.org/) by adding the `RuleName` field
+**2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map the **Sysmonlogs** to the **techniques** of [MITRE ATT&CK](https://attack.mitre.org/) in the `RuleName` field
  - *With such "label", it will be easier for us to correlate logs with knowledge bases in the final graph*
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
 
-**3.** However, the mapping of config files is kind of rudimentary since about **93%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
+**3.** However, the mapping of config files is kind of rudimentary, since about **93%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
  - *For example, operations achieved by Powershell will all be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to execute detections within tremendous data quickly*
  - *This rule set integrates 770 attack abilities, covering 11 tactics and about 240 techniques (60%) of ATT&CK.  It is still at an **elementary stage** and needs further development*
 
-## Experiment
-**1.** We separately implemented the pre and post penetration by Kali in the shooting range. All the behavior data (about 200k logs) before and after the implementation (total 3 days) have been saved as the **raw dataset**
-
-**2.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original `RuleName` field of some logs with more precise technique_ids, and then export the processed dataset from ELK as `syslog.csv` 
+**5.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original `RuleName` field of some logs with more precise technique_ids, and then export the processed dataset from ELK as `syslog.csv` 
 
 <br>
 
