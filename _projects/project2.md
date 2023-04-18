@@ -94,10 +94,10 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
-**2.** I separately implemented the pre and post penetration by Kali, and all the behavior data (total 3 days) have been saved as the **raw dataset**
+**2.** I separately implemented the pre and post penetration by Kali, and all logs (total 3 days) have been saved as the **raw dataset**
  
 ## Development
-**1.** Due to the large amount of textual information contained in logs, direct analysis on them will greatly increase the workload and difficulty, so it is necessary to **preprocess** the dataset: try to add a concise "label" to each log.
+**1.** Due to the large amount of textual information contained in logs, direct analysis on them will greatly increase the workload and difficulty, so it is necessary to **preprocess** the dataset: try to add a concise "label" to each log
 
 **2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map **logs** to the **techniques** of ATT&CK in the `RuleName` field, which plays the role as "label"
 
