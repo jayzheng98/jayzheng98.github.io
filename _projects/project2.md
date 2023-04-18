@@ -97,13 +97,14 @@ toc_label: "Contents"
 **2.** I separately implemented the pre and post penetration by Kali, and all logs (total 3 days) have been saved as the **raw dataset**
  
 ## Development
+### Log labelling
 **1.** Due to the large amount of textual information contained in logs, direct analysis on them will greatly increase the workload and difficulty, so it is necessary to **preprocess** the dataset: try to add a concise "label" to each log
 
 **2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map **logs** to the **techniques** of ATT&CK in the `RuleName` field, which plays the role as "label"
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
 
-**3.** However, the mapping of config files is kind of rudimentary, since about **93%** of logs will be labeled. In other words, its strong generalization results in low identification of real attack techniques
+**3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack techniques
  - *For example, operations achieved by Powershell will all be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
@@ -111,7 +112,6 @@ toc_label: "Contents"
  - *This rule set integrates 770 attack abilities, covering 11 tactics and about 240 techniques (60%) of ATT&CK.  It is still at an **elementary stage** and needs further development*
 
 **5.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original `RuleName` field of some logs with more precise technique_ids, and then export the processed dataset from ELK as `syslog.csv` 
-
 <br>
 
 # Graph construction
