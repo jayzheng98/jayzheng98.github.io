@@ -77,15 +77,15 @@ toc_label: "Contents"
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
-| RBC active | Windows 10 | 192.168.4.203 | 360 Security<br>Windows Defender | RBC Simulation Software<br>Sysmon<br>NXlog |
+| RBC active | Windows 10 | 192.168.4.203 | 360 Security<br>Windows Defender | RBC Simulation Software<br>Sysmon+NXlog |
 | RBC standby | Windows 10 | 192.168.3.105 | Same with active | Same with active |
-| ISDN Server active | Ubuntu 18.04 | 192.168.4.206 | ClamAV | ISDN Simulation Software<br>SysmonForLinux<br>NXlog |
+| ISDN Server active | Ubuntu 18.04 | 192.168.4.206 | ClamAV | ISDN Simulation Software<br>SysmonForLinux+NXlog |
 | ISDN Server standby | Ubuntu 18.04 | 192.168.3.106 | Same with active | Same with active |
-| TSRS active | Windows 10 | 192.168.4.200 | 360 Security<br>Windows Defender | TSRS Simulation Software<br>Sysmon<br>NXlog<br>EasyFileSharing |
+| TSRS active | Windows 10 | 192.168.4.200 | 360 Security<br>Windows Defender | TSRS Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
 | TSRS standby | Windows 10 | 192.168.3.103 | Same with active | Same with active |
-| TSR Interface Server | Windows Server 2008 | 172.110.2.11 | 360 Security<br>Windows Defender | Sysmon<br>NXlog |
-| CTC active | Windows 10 | 172.110.2.12 | 360 Security<br>Windows Defender | CTC Simulation Software<br>Sysmon<br>NXlog |
-| CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon<br>NXlog<br>EasyFileSharing |
+| TSR Interface Server | Windows Server 2008 | 172.110.2.11 | 360 Security<br>Windows Defender | Sysmon+NXlog |
+| CTC active | Windows 10 | 172.110.2.12 | 360 Security<br>Windows Defender | CTC Simulation Software<br>Sysmon+NXlog |
+| CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
 | Kali Linux | Kali Linux 2020 | 192.168.4.211 | | Metasploit<br>MITRE Caldera |
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
@@ -107,11 +107,9 @@ toc_label: "Contents"
 **3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack behaviors
  - *For example, all operations achieved by Powershell will be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
-**4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
- - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to execute detections within tremendous data quickly*
- - *This rule set integrates 770 attack abilities, covering 11 tactics and about 240 techniques (60%) of ATT&CK.  It is still at an **elementary stage** and needs further development*
-
-**5.** By running the `test_in_my_case.py` in **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)**, it will overwrite the original `RuleName` field of some logs with more precise technique_ids, and then export the processed dataset from ELK as `syslog.csv` 
+**4.** Therefore, we've written another set of **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** specialized for the commandline inputs. It integrates 770 attack abilities of [MITRE Caldera platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
+ - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to drive detections within tremendous data quickly*
+ - *By running the `test_in_my_case.py` in the repository, it will overwrite the `RuleName` of some logs with more precise "technique_ids", and then export the processed dataset from ELK as `syslog.csv` at once*
 <br>
 
 # Graph construction
