@@ -110,6 +110,7 @@ toc_label: "Contents"
 **4.** Therefore, we've written another set of **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** specialized for the commandline(powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE Caldera platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to drive detections within tremendous data quickly*
  - *By running the* `test_in_my_case.py` *in the repository, it will overwrite the* `RuleName` *of some logs with more precise "technique_ids", and then export the processed dataset from ELK as* `syslog.csv` *at once*
+
 <br>
 
 # Graph construction
@@ -134,21 +135,17 @@ toc_label: "Contents"
 ## Design
 **1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general experiment architecture of KG:
 
-<div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="520px"> </div><br>
+<div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div><br>
 
-**2.** On the basis of this template, we have incorporated our own contents. The **conceptual structure** of the final KG of this project is as follows:
- - *Red arrows represent the element that binds two parts together*
-
-<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="760px"> </div> 
-<br>
-
-**3.** In the "development" section, we are going to separately transform the raw materials of the 4 parts into **graph structure**, and eventually merge them together
+**2.** On the basis of this template, we are going to transform the raw data of each part into **graph structure**, and eventually merge them together to construct the knowledge graph
 
 ## Development
 ### Knowledge data
-**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together in an [open source](https://github.com/ALFA-group/BRON) graph called "[BRON](https://arxiv.org/pdf/2010.00533.pdf)"
+**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph, called "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
 
-**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well
+<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="660px"> </div> 
+<br>
+<!--**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well-->
 
 ### CTI & Environment data
 **1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
