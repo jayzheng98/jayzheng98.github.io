@@ -98,14 +98,14 @@ toc_label: "Contents"
  
 ## Development
 ### Log labelling
-**1.** Due to the large amount of textual information contained in logs, direct analysis on them will greatly increase the workload and difficulty, so it is necessary to **preprocess** the dataset: try to add a concise "label" to each log
+**1.** The large amount of textual information contained in logs will greatly increase the workload and difficulty of analysis, so it is necessary to **preprocess** the dataset: try to add a "label" to each log
 
-**2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map **logs** to the **techniques** of ATT&CK in the `RuleName` field, which plays the role as "label"
+**2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map logs to the **ATT&CK techniques** in the `RuleName` field, which plays the role as "label"
 
-<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="650px"> </div> <br>
+<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="700px"> </div> <br>
 
-**3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack techniques
- - *For example, operations achieved by Powershell will all be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
+**3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack behaviors
+ - *For example, all operations achieved by Powershell will be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written a set of more precise **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** by referring to several opensource attack libraries and abstracting keywords from attack statements executed in the commandline
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to execute detections within tremendous data quickly*
