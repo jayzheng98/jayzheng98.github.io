@@ -98,7 +98,7 @@ toc_label: "Contents"
  
 ## Development
 ### Log labelling
-**1.** The large amount of textual information contained in logs will greatly increase the workload and difficulty of analysis, so it is necessary to **preprocess** the dataset: try to add a "label" to each log
+**1.** The highly-textual information contained in logs will greatly increase the workload and difficulty of analysis, so it's necessary to **preprocess** the dataset: try to add a "label" to each log
 
 **2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map logs to the **ATT&CK techniques** in the `RuleName` field, which plays the role as "label"
 
@@ -131,13 +131,13 @@ toc_label: "Contents"
 **2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
 
 ### Knowledge data
-**1.** *Knowledge data* from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
+**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
 
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="440px"> </div> 
 <br>
 
 ### Environment data
-**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between *behavior data* and *cyber threat intelligence* (CTI)
+**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between <u>behavior data</u> and <u>cyber threat intelligence (CTI)</u>
  - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" entity in the following work*
 
 ### CTI
