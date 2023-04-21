@@ -110,7 +110,6 @@ toc_label: "Contents"
 **4.** Therefore, we've written another set of **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** specialized for the commandline(powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE Caldera platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to drive detections within tremendous data quickly*
  - *By running the* `test_in_my_case.py` *in the repository, it will overwrite the* `RuleName` *of some logs with more precise "technique_ids", and then export the processed dataset from ELK as* `syslog.csv` *at once*
-
 <br>
 
 # Graph construction
@@ -119,11 +118,11 @@ toc_label: "Contents"
 ## Introduction
 <!--**1.** Each attack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process...) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost **point-to-point**. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they can neither trace the attack route nor predict the subsequent plausible anomalies-->
 
-**1.** The scale of cyberspace is gradually expanding from the traditional internet to multiple domains, resulting in a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. Therefore, the main challenge in current security analysis is not the shortage of data, but how to combine information from various sources into a single model to better represent the security situation
+**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to combine information from various sources into a single model to better represent the security situation
 
-**2.** Cybersecurity knowledge graph is a large-scale security semantic model composed of vertices and edges. It provides an intuitive modeling method for various attack and defense scenarios. Entities or abstract concepts, such as vulnerabilities, attack patterns, and product names, can be represented as nodes in the graph. The relationships between entities can be represented as edges connecting the nodes
+**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various cybersecurity scenarios. Entities or abstract concepts, such as vulnerabilities, attack patterns, and product names, can be represented as nodes in the graph. The relationships between entities can be represented as edges connecting the nodes
 
-**3.** This section intends to merge all the outputs of previous work with some existing achievements to construct the **KG of railway signal system**, which will further drive the anomaly detection experiment
+**3.** This section intends to merge all the outputs of aforementioned work and some existing achievements to construct a **KG of railway signal system**, which will further be the foundation of the anomaly detection experiment
 
 ## Design
 **1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general experiment architecture of KG:
