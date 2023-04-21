@@ -146,18 +146,20 @@ toc_label: "Contents"
  **2.** All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)
 
 ### Behavior data
-**1.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
+**1.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Syslog-Graph)
 
-<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="380px"> </div><br>
+<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="280px"> </div><br>
 
 **2.** In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**
 
 ### Final graph
 **1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
-<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="730px"> </div><br>
+<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div><br>
 
 ## Development
 <!--**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well-->
+
+<br>
 
 # Anomaly Detection
 <hr>
