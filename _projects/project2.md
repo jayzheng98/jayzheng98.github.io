@@ -137,8 +137,8 @@ toc_label: "Contents"
 <br>
 
 ### Environment data
-**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the railway signal system, but also acts as a bridge between the behavior data and cyber threat intelligence (CTI)
- - *The environment data of this project has been provided in [Section 2](#simulation-range), it is represented as the "asset" entity in the following work*
+**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between the behavior data and cyber threat intelligence (CTI)
+ - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" entity in the following work*
 
 ### CTI
 **1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
@@ -148,12 +148,13 @@ toc_label: "Contents"
 ### Behavior data
 **1.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Structurize-Syslogs-as-Graph)
 
-**2.** In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a syslog graph
+<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="380px"> </div><br>
+
+**2.** In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**
 
 ### Final graph
 **1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
-<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="720px"> </div> 
-<br>
+<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="730px"> </div><br>
 
 ## Development
 <!--**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well-->
