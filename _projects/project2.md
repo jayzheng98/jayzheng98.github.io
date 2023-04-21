@@ -141,23 +141,21 @@ toc_label: "Contents"
  - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" entity in the following work*
 
 ### CTI
-**1.** The "[POCA](#threat-analysis)" and "[Topology](#simulation-range)" in the pic above are already described in previous sections. Part of their graph construction are recorded [here](/notes/arangodb), so I won’t describe such work in detail later
+**1.** The "[POCA](#threat-analysis)" are already described in previous sections. 
  
  **2.** All the source materials(.csv) of this 2 parts have been committed to this [repository](https://github.com/jayzheng98/Analysis-result-of-POCA)
 
 ### Behavior data
-**1.** I specifically summarized the details of this part in this [repository](https://github.com/jayzheng98/Syslog-Graph)
+**1.** Details of this part are summarized in this [repository](https://github.com/jayzheng98/Syslog-Graph). In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp" and "process-process". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**:
 
-<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="280px"> </div><br>
-
-**2.** In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp(1)" and "process-process(10)". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**
+<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="270px"> </div><br>
 
 ### Final graph
 **1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
 <div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div><br>
 
 ## Development
-<!--**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", our final graph will mainly depend on it as well-->
+<!--**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", Part of their graph construction are recorded [here](/notes/arangodb)-->
 
 <br>
 
