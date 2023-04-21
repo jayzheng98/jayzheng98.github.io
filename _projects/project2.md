@@ -94,7 +94,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
-**2.** I separately implemented the pre and post penetration by Kali, and all logs (total 3 days) have been saved as the **raw dataset**
+**2.** I separately implemented the pre and post penetration by Kali in the range, and all logs (total 3 days) have been saved as the **raw dataset**
  
 ## Development
 ### Log labelling
@@ -102,7 +102,7 @@ toc_label: "Contents"
 
 **2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map logs to the **ATT&CK techniques** in the `RuleName` field, which plays the role as "label"
 
-<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div> <br>
+<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div>
 
 **3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack behaviors
  - *For example, all operations achieved by Powershell will be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
