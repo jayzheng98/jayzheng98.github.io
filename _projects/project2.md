@@ -57,8 +57,6 @@ toc_label: "Contents"
 **1.** I built a simulation range in my laboratory according to the network structure of the railway signal system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
 
 <div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div><br>
-<div align="center"><img alt="p2-4" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-2.jpg?raw=true" width="700px"></div><br>
-<div align="center"><img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-3.jpg?raw=true" width="700px"></div><br>
 
 **2.** This range is composed of the network equipment and other 3 parts:
 - **Network Equipment**
@@ -104,7 +102,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div><br>
 
-**3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack behaviors
+**3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled. In other words, its strong generalization results in low identification of real attack behaviors
  - *For example, all operations achieved by Powershell will be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written another set of **[detection rules](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)** specialized for the commandline (powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE Caldera platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
