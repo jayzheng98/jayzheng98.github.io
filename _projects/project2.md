@@ -94,7 +94,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
-**2.** I separately implemented the pre and post penetration by Kali in the range, and all logs (total 3 days) have been saved as the **raw dataset**
+**2.** I separately implemented the pre and post penetration by Kali in the range, and all logs (total 3 days) are saved as the **raw dataset**
  
 ## Development
 ### Log labelling
@@ -102,7 +102,7 @@ toc_label: "Contents"
 
 **2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step, it can map logs to the **ATT&CK techniques** in the `RuleName` field, which plays the role as "label"
 
-<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div>
+<div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div><br>
 
 **3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled by the config file. In other words, its strong generalization results in low identification of real attack behaviors
  - *For example, all operations achieved by Powershell will be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
@@ -117,20 +117,13 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** Each attack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process...) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost **point-to-point**. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they can neither trace the attack route nor predict the subsequent plausible anomalies
+<!--**1.** Each attack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process...) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost **point-to-point**. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they can neither trace the attack route nor predict the subsequent plausible anomalies-->
 
-**2.** We believe the Knowledge Graph (KG) will be an advanced **complement** to the traditional security tools since it can mine, analyze and construct the relationships among various entities to correlate attack events and restore the attack tree as complete as possible
+**1.** The scale of cyberspace is gradually expanding from the traditional internet to multiple domains, resulting in a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. Therefore, the main challenge in current security analysis is not the shortage of data, but how to combine information from various sources into a single model to better represent the security situation
 
-**3.** We intend to merge all the outputs of previous work with a well-developed [cybersecurity KG](#knowledge-data) to further construct the **KG of railway signal system**, and write a set of preliminary rules to drive the graph to automatically dig out anomalies hide in normal data
+**2.** Cybersecurity knowledge graph is a large-scale security semantic model composed of vertices and edges. It provides an intuitive modeling method for various attack and defense scenarios. Entities or abstract concepts, such as vulnerabilities, attack patterns, and product names, can be represented as nodes in the graph. The relationships between entities can be represented as edges connecting the nodes
 
-## Environment and Tools
-
-|Category|Specification|Number|
-|:---:|:---:|:---:|
-|IDE|PyCharm2019||
-|Database|Arangodb3.9.2||
-|PC|ThinkPad S5|x1|
-|OS|Windows10|x1|
+**3.** This section intends to merge all the outputs of previous work with some existing achievements to construct the **KG of railway signal system**, which will further drive the anomaly detection experiment
 
 ## Design
 **1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general experiment architecture of KG:
