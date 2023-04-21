@@ -137,7 +137,7 @@ toc_label: "Contents"
 <br>
 
 ### Environment data
-**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between the behavior data and cyber threat intelligence (CTI)
+**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between behavior data and cyber threat intelligence (CTI)
  - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" entity in the following work*
 
 ### CTI
@@ -151,7 +151,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="270px"> </div><br>
 
 ### Final graph
-**1.** An abstract structure of the final graph based on the "node" and "edge" files is shown below:
+**1.** The abstract structure of the final KG based on the aforementioned dimensions and relationships is shown below:
 <div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div><br>
 
 ## Development
