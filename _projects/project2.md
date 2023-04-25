@@ -151,11 +151,11 @@ toc_label: "Contents"
  - *The table below shows an example of the reformatted "file stealing" attack*
 
 ||Tactic|Technique| Procedure |
-| :----: | :----------: | :-------------: | :-------------: |
+| :----: | :----------: | :------------- | :------------- |
 |1	|Collection	|T1074.001: Local Data Staging	|Create a folder on the target device for file collection|
-|2	| 	         |T1005: Data from Local System	|Search target files by keywords (filename, suffixes)|
-|3	|           |T1074.001: Local Data Staging	|Copy the searched files to the pre-built folder|
-|4	|           |T1560.001: Archive via Utility|Pack and compress the collected target files|
+|2	| Collection |T1005: Data from Local System	|Search target files by keywords (filename, suffixes)|
+|3	| Collection |T1074.001: Local Data Staging	|Copy the searched files to the pre-built folder|
+|4	| Collection|T1560.001: Archive via Utility|Pack and compress the collected target files|
 |5	|Exfiltration|T1041: Exfiltration Over C2 Channel|	Establish a command and control (C2) channel using the HTTP protocol to return packaged files|
 
 <br>
@@ -179,7 +179,7 @@ toc_label: "Contents"
 ## Development
 **1.** As for the development, knowledge graph can be constructed through graph database. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic info and usage are recorded [here](/notes/arangodb)
 
-**2.** Since it is impossible to clearly visualize a graph model with large amount of data, I only take the <u>specific railway CTI</u> and <u>environmental data</u> dimensions as examples to display the nodes and edges in the constructed graph database:
+**2.** Since it is impossible to clearly visualize a graph model with large amount of data, I only take the <u>specific railway CTI</u> and <u>environmental data</u> 2 dimensions as examples to display the nodes and edges in the constructed graph database:
 
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="720px"> </div><br>
 
