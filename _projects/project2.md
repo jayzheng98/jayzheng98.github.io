@@ -154,7 +154,7 @@ toc_label: "Contents"
 
 <table>
 	<tr>
-            <th></th>
+            <th>Order</th>
 	    <th>Tactic</th>
 	    <th>Technique</th>
 	    <th>Procedure</th>
@@ -214,8 +214,9 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div><br>
 
 ## Development
-<!--**2.** The graph database that drives BRON is "[ArangoDB](https://www.arangodb.com/)", Part of their graph construction are recorded [here](/notes/arangodb)-->
+**1.** As for the development, knowledge graph can be constructed through graph database, this project chooses the [ArangoDB](https://www.arangodb.com/)
 
+**2.** The basic info and utility instructions of ArangoDB are recorded [here](/notes/arangodb)
 <br>
 
 # Anomaly Detection
