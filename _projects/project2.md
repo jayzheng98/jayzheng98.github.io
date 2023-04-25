@@ -8,7 +8,8 @@ date: 2021-04-05
 toc: true
 toc_label: "Contents"
 ---
-<style>body{text-align: justify}</style>
+<style>body{text-align:justify}</style>
+<style>td{text-align:center}</style>
 <a name="top"></a>
 
 # Introduction
@@ -151,7 +152,6 @@ toc_label: "Contents"
  - *The table below shows an example of the reformatted "file stealing" attack*
 
 <table>
-<style>td{text-align:center;}</style>
 	<tr>
             <th></th>
 	    <th>Tactic</th>
