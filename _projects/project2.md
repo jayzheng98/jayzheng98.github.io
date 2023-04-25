@@ -10,6 +10,7 @@ toc_label: "Contents"
 ---
 <style>body{text-align:justify}</style>
 <style>td{text-align:center}</style>
+<style>th{text-align:center}</style>
 <a name="top"></a>
 
 # Introduction
@@ -159,28 +160,28 @@ toc_label: "Contents"
 	    <th>Procedure</th>
 	</tr>
 	<tr>
-     <td>1</td>
+            <td>1</td>
 	    <td rowspan="4">Collection</td>
 	    <td>T1074.001: Local Data Staging</td>
 	    <td>Create a folder on the target device for file collection</td>
 	</tr>
 	<tr>
-     <td>2</td>
+            <td>2</td>
 	    <td>T1005: Data from Local System</td>
 	    <td>Search target files by keywords (filename, suffixes)</td>
 	</tr>
 	<tr>
-     <td>3</td>
+            <td>3</td>
 	    <td>T1074.001: Local Data Staging</td>
 	    <td>Copy the searched files to the pre-built folder</td>
 	</tr>
 	<tr>
-     <td>4</td>
+            <td>4</td>
 	    <td>T1560.001: Archive via Utility</td>
 	    <td>Pack and compress the collected target files</td>
 	</tr>
 	<tr>
-     <td>5</td>
+            <td>5</td>
 	    <td>Exfiltration</td>
 	    <td>T1041: Exfiltration Over C2 Channel</td>
 	    <td>Establish a command and control (C2) channel using the HTTP protocol to return packaged files</td>
