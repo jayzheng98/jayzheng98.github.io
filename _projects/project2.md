@@ -16,7 +16,7 @@ toc_label: "Contents"
 
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of railway signal system
 
-**2.** Most contents (exclude prediction) of this project is also my **graduation project**. It consists of 4 parts, and their relationships are shown below:
+**2.** Most contents (exclude "prediction") of this project is also my **graduation project**. It consists of 4 parts, and their relationships are shown below:
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.svg?raw=true" width="340px"> </div>
 <br>
@@ -25,7 +25,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introducton
-**1.** This project does not simply transplant some novel techniques into an unexploited field of research, but tries to transform plausible methods to addrress issues already exist. How to testify that there are indeed security issues in the rail transit? Maybe we can conduct penetration tests in a simulation environment. But how to figure out the route and goal of cyberattacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
+**1.** How to testify that there are security issues in the rail transit? Maybe we can conduct penetration tests in a simulation environment. But how to figure out the route and goal of cyberattacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
 
 ## Design
 **1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the <u>Process-Oriented and Coalescent Analysis (POCA)</u>. Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
@@ -71,7 +71,9 @@ toc_label: "Contents"
 - **Data Collection and Analysis Terminal**
   - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
 
-**3.** Detailed configuration of this range is shown in the table below. Each virtual machine is installed with simulation software to simulate services of the train control system. [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately
+**3.** Detailed configuration of this range is shown in the table below:
+ - *Each virtual machine is installed with simulation software to simulate services of the train control system*
+ - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize syslog generation and forwarding separately*
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
@@ -122,11 +124,11 @@ toc_label: "Contents"
 **2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various cybersecurity scenarios. This section intends to merge all the outputs of aforementioned work and some existing achievements to construct a **KG of railway signal system**, which will further be the foundation of the anomaly detection experiment
 
 ## Design
+### Overview
 **1.** The review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture with 4 dimensions of KG:
+ - *On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph*
 
 <div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div><br>
-
-**2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
 
 ### Knowledge data
 **1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
