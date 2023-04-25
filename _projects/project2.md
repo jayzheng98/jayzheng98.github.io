@@ -145,7 +145,7 @@ toc_label: "Contents"
 ### CTI
 **1.** There are 2 kinds of CTI sources in my KG: <u>General security CTI</u> and <u>Specific railway CTI</u>
 
-**2. General security CTI** is completed with the help of existing achievement. MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform [TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791). As shown below, TRAM can associate the input attack procedure (left) with the ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
+**2. General security CTI** is completed with the help of existing achievement. MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)". As shown below, TRAM can associate the input attack procedure (left) with the ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
 
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="660px"> </div><br>
 
@@ -154,14 +154,14 @@ toc_label: "Contents"
 
 <table>
 	<tr>
-            <th>Order</th>
+            <th></th>
 	    <th>Tactic</th>
 	    <th>Technique</th>
 	    <th>Procedure</th>
 	</tr>
 	<tr>
             <td>1</td>
-	    <td rowspan="4">Collection</td>
+	    <td >Collection</td>
 	    <td>T1074.001: Local Data Staging</td>
 	    <td>Create a folder on the target device for file collection</td>
 	</tr>
@@ -216,12 +216,12 @@ toc_label: "Contents"
 ## Development
 **1.** As for the development, knowledge graph can be constructed through graph database, this project chooses the [ArangoDB](https://www.arangodb.com/)
 
-**2.** The basic info and utility instructions of ArangoDB are recorded [here](/notes/arangodb)
+**2.** The basic info and usage of ArangoDB are recorded [here](/notes/arangodb)
 <br>
 
 # Anomaly Detection
 <hr>
-
+rowspan="4"
 
 
 <br>
