@@ -235,9 +235,9 @@ toc_label: "Contents"
 **2.** As the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the log node combinations that match the TTPs in general security CTI according to their ATT&CK labels
  - *The AQL code for this detection work is as follows:*
  
- '''aql
- FOR v,e,p IN ANY 'CTI/steal1'
- '''
+```aql
+FOR v,e,p IN ANY 'CTI/steal1'
+```
 
 **3.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
 
