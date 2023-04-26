@@ -211,7 +211,7 @@ toc_label: "Contents"
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework**, which defines 3 kinds of behaviors according to the threat level from low to high:
  - *<b>System device behavior</b> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
- - *<b>Security threat behavior</b> is also composed of logs with ATT&CK label. However, these <u>system device behavior</u> further satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
+ - *<b>Security threat behavior</b> is detected when some <u>system device behavior</u> satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
  - *<b>Service anomaly behavior</b> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
 
 ### Two detection modes
@@ -221,7 +221,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="460px"> </div><br>
 
-**3.** However, considering the complexity of attacks, as well as the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, the more flexible **bi-directional** detection should be widely applied
+**3.** However, considering the complexity of attacks and the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, the more flexible **bi-directional** detection should be widely applied
 
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="460px"> </div><br>
 
