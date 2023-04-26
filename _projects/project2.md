@@ -187,13 +187,13 @@ toc_label: "Contents"
 
 | Indicator | Definition | Value | Explanation |
 | :---: | :---: | :---: | :---: |
-| Nodes | Total number of nodes | $500966$ |  |
-| Edges | Total number of edges |$1685976$| The graph is a directed graph |
-| Isolated Nodes | Total number of nodes with no edges | $22368$ | As some nodes in BRON are isolated, this graph is a disconnected graph |
+| Nodes | Number of nodes | $500966$ |  |
+| Edges | Number of edges |$1685976$| The graph is a directed graph |
+| Isolated Nodes | Number of nodes with no edges | $22368$ | As some nodes in BRON are isolated, this graph is a disconnected graph |
 | Network Density | Ratio of actual edges to possible edges | $6.72\times10^{-6}$ | The density is close to 0, indicating that the graph is sparse |
 | Average Degree | The sum of degrees of all nodes divided by the number of nodes | $6.73$ | On average, each node has connected with 6.73 edges |
 | Maximum Depth | The longest path from the root node to a leaf node | $10$ | The graph has the maximum depth when its root is the "accident" layer and its leaf is the "CVE" layer |
-| Network Diameter | The longest shortest path between any two nodes | $14$ | Such path is found between a "accident" node and a "CVE" node |
+| Network Diameter | The longest shortest path between any two nodes | $14$ | Such path is found between an "accident" node and a "CVE" node |
 
 <br>
 
@@ -214,16 +214,16 @@ toc_label: "Contents"
  - *<u>Security threat behavior</u> is also composed of logs with ATT&CK label. However, these data further satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
  - *<u>Service anomaly behavior</u> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
 
-### 2 Detection modes
-**1.** As for the application, this framework can perform 2 modes of detection: bottom-up detection and bi-directional detection
+### Two detection modes
+**1.** As for the application, this framework can perform 2 detection modes: bottom-up and bi-directional
 
 **2. Bottom-up** means the detection is from the low-level all the way up to the high-level, and directly achieves the anomaly detection
 
-<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="460px"> </div><br>
 
-**3.** However, considering the flexibility and complexity of cyberattacks, as well as the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, a more flexible mode - **bi-directional** detection - should be more widely applied
+**3.** However, considering the flexibility and complexity of attacks, as well as the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, the more flexible **bi-directional** detection should be widely applied
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="460px"> </div><br>
 
 ## Experiment
 
