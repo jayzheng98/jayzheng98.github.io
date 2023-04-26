@@ -183,17 +183,19 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="720px"> </div><br>
 
-**3.** Some basic indicators of the constructed KG is shown below:
+**3.** Some basic indicators of the constructed KG:
 
 | Indicator | Definition | Value | Explanation |
 | :---: | :---: | :---: | :---: |
-| Nodes | Total number of nodes in the graph | 500966 |  |
-| Edges | Total number of edges in the graph |1685976| The graph is a directed graph |
-| Isolated Nodes | Total number of nodes with no edges in the graph | 22368 | As some nodes in BRON are isolated, this graph is a disconnected graph |
-| Network Density | Ratio of actual edges to possible edges in the graph | $6.72\times10^{-6}$ | The density is close to 0, indicating that the graph is sparse |
-| Average Degree | The sum of degrees of all nodes divided by the number of nodes | 6.73 | On average, each node has connected with 6.73 edges |
-| Maximum Depth | The longest path from the root node to a leaf node | 10 | The graph has the maximum depth when its root is the "accident" layer and its leaf is the "CVE" layer |
-| Network Diameter | The longest shortest path between any two nodes | 14 | Such path in the graph is found between a "accident" node and a "CVE" node |
+| Nodes | Total number of nodes | $500966$ |  |
+| Edges | Total number of edges |$1685976$| The graph is a directed graph |
+| Isolated Nodes | Total number of nodes with no edges | $22368$ | As some nodes in BRON are isolated, this graph is a disconnected graph |
+| Network Density | Ratio of actual edges to possible edges | $6.72\times10^{-6}$ | The density is close to 0, indicating that the graph is sparse |
+| Average Degree | The sum of degrees of all nodes divided by the number of nodes | $6.73$ | On average, each node has connected with 6.73 edges |
+| Maximum Depth | The longest path from the root node to a leaf node | $10$ | The graph has the maximum depth when its root is the "accident" layer and its leaf is the "CVE" layer |
+| Network Diameter | The longest shortest path between any two nodes | $14$ | Such path in the graph is found between a "accident" node and a "CVE" node |
+
+<br>
 
 # Anomaly Detection
 <hr>
@@ -208,15 +210,15 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="580px"> </div><br>
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework**, which defines 3 kinds of behaviors according to the threat level from low to high:
- - *The <u>system device behavior</u> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
- - *The <u>security threat behavior</u> is also composed of logs with ATT&CK label. However, these data further satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
- - *The <u>service anomaly behavior</u> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
+ - *<u>system device behavior</u> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
+ - *<u>security threat behavior</u> is also composed of logs with ATT&CK label. However, these data further satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
+ - *<u>service anomaly behavior</u> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
 
 ### 2 Detection modes
 
-<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="540px"> </div><br>
+<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="500px"> </div><br>
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="540px"> </div><br>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="500px"> </div><br>
 
 ## Experiment
 
