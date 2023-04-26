@@ -119,9 +119,9 @@ toc_label: "Contents"
 ## Introduction
 <!--**1.** Each attack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process...) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost **point-to-point**. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they can neither trace the attack route nor predict the subsequent plausible anomalies-->
 
-**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to combine information from various sources into a single model
+**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to effectively combine information from various sources
 
-**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various cybersecurity scenarios. This section intends to merge all the outputs of aforementioned work with some existing achievements to construct a **KG of railway signal system**
+**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various scenarios. This section intends to merge all the outputs of aforementioned work with some existing achievements to construct a **KG of railway signal system**
 
 ## Design
 ### Overview
@@ -186,7 +186,19 @@ toc_label: "Contents"
 # Anomaly Detection
 <hr>
 
+## Introduction
+**1.** Modern cyberattacks, such as APT attack, are often carried out in a concealed and highly variable style, which lack obvious features and patterns. As a result, traditional technologies are difficult to effectively identify them. Therefore, anomaly detection based on "behavior" has become an important idea, which identifies potential threats by modeling system behaviors and detecting abnormal ones on this basis
+
+## Detection framework
+**1.** From a macro perspective, the behavior studied in this project is mainly divided into two categories: the first category is the abstract system abnormal behavior obtained through theoretical analysis, and the second category is the specific system behavior collected through actual experiments. If a bridge can be constructed to bridge the gap between theoretical results and actual data, anomaly detection can be accurately and effectively achieved. Based on this idea, this project designs a **behavior-based anomaly detection framework**. The framework defines 3 behaviors according to the threat level from low to high: system device behavior, security threat behavior, and service anomaly behavior
+
+<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="620px"> </div><br>
+
+**2.** The low-level system device behavior is characterized by ATT&CK technology in system logs. Due to the large volume of log data and the high coverage of markers, it is not possible to directly identify a small amount of abnormal data hidden in a large amount of normal data in this layer. Instead, it is necessary to combine general network security threat intelligence to filter low-level behaviors and obtain network threat behaviors
+
+**3.** The middle-level network threat behavior is actually a system log marked with ATT&CK technology, but this data further satisfies a certain attack behavior in general network security threat intelligence, that is, there is a high probability that it is behavioral data left behind by hackers carrying out specific network attacks. However, relying solely on network threat behavior is not enough to understand the hacker's attack intent and see the full picture of the attack
+
+**4.** High level business abnormal behavior is the abnormal analysis result obtained from the screening of railway system security threat intelligence for medium level network threat behavior. If a certain amount of network threat behavior further conforms to the threat scenario described in the threat intelligence, it can be basically concluded that a certain business scenario has experienced abnormal behavior due to being exposed to network threats. Security personnel should take timely mitigation or remedial measures based on the detection results
 
 <br>
-
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
