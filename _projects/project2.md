@@ -255,7 +255,7 @@ RETURN p
  
  - *File stealing*
 
-<div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
+<div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px" height="380px"> </div><br>
 
 ### Service anomaly behavior detection
 
