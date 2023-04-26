@@ -59,7 +59,7 @@ redirect_from:
 <hr>
 
 - <font size='4'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
-- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. <i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">"Subject H: Analog Electromagnetic Curved Gun"</a></i>. <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
+- <font size='4'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. "<i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">Subject H: Analog Electromagnetic Curved Gun</a></i>". <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
 - <font size='4'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font>
 
 ## Skills 
@@ -67,11 +67,11 @@ redirect_from:
 
 - **Programming** <br>
 **<font size='4'>Master:</font>**<font size='4'>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>PHP</font>](/notes/php)<font size='4'>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Matlab, C#<br>
-I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (See my </font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
+I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (</font>[<font size='4'>note</font>](/notes/OP)<font size='4'>)</font>
 - **Database** <br>
 **<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql), [<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 - **Networking** <br>
-**<font size='4'>Computer network:</font>**<font size='4'>&ensp;Know well of the use of network equipment (See the </font>[<font size='4'>experimental range</font>](/notes/DC)<font size='4'> I built)</font><br>
+**<font size='4'>Computer network:</font>**<font size='4'>&ensp;Know well of the use of network equipment (</font>[<font size='4'>note</font>](/notes/DC)<font size='4'>)</font><br>
 **<font size='4'>Wireless network:&ensp;LTE)</font>**<font size='4'>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
 - **Security** <br>
 **<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
