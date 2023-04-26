@@ -233,10 +233,19 @@ toc_label: "Contents"
 **1.** This part corresponds to the mapping process from **low-level** to **middle-level**
 
 **2.** As the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the log node combinations that match the TTPs in general security CTI according to their ATT&CK labels
- - *The AQL code for this detection work is as follows:*
+ - *The AQL code for this detection is as follows:*
  
-```aql
+```sql
 FOR v,e,p IN ANY 'CTI/steal1'
+                CTICTI,
+                CTITTP,
+                OUTBOUND TechniqueTechnique_mitigation,
+                INBOUND SyslogTTP,
+                INBOUND ProcessSyslog,
+                INBOUND ParentpChildp,
+                INBOUND AssetProcess
+    OPTIONS {bfs:ture}
+RETURN p
 ```
 
 **3.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
