@@ -119,9 +119,9 @@ toc_label: "Contents"
 ## Introduction
 <!--**1.** Each attack event can be expressed as a specific **behavior** on a specific **entity** (system, file, process...) at a specific **time**. These events do not exist independently but have causal relationships and chronological orders. However, current security tools are almost **point-to-point**. Although they can accurately detect vulnerabilities, viruses and abnormal behaviors, they can neither trace the attack route nor predict the subsequent plausible anomalies-->
 
-**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to effectively combine information from various sources
+**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to combine information from various sources
 
-**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various scenarios. This section intends to merge all the outputs of aforementioned work with some existing achievements to construct a **KG of railway signal system**
+**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various cybersecurity scenarios. This section intends to merge all the outputs of aforementioned work with existing achievements to construct a **KG of railway signal system**
 
 ## Design
 ### Overview
@@ -187,7 +187,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** Modern cyberattacks, such as APT attack, are often carried out in a concealed and highly variable style, which lack obvious features and patterns. As a result, traditional technologies are difficult to effectively identify them. Therefore, anomaly detection based on "behavior" has become an important idea, which identifies potential threats by modeling system behaviors and detecting abnormal ones on this basis
+**1.** Modern cyberattacks are often carried out in a concealed and highly variable style, which lack obvious features or patterns. Thus, traditional methods are difficult to effectively identify them. Therefore, behavior-based anomaly detection has become an important idea, which identifies potential threats by modeling system behaviors and detecting abnormal ones on this basis
 
 ## Detection framework
 **1.** From a macro perspective, the behavior studied in this project is mainly divided into two categories: the first category is the abstract system abnormal behavior obtained through theoretical analysis, and the second category is the specific system behavior collected through actual experiments. If a bridge can be constructed to bridge the gap between theoretical results and actual data, anomaly detection can be accurately and effectively achieved. Based on this idea, this project designs a **behavior-based anomaly detection framework**. The framework defines 3 behaviors according to the threat level from low to high: system device behavior, security threat behavior, and service anomaly behavior
