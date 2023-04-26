@@ -18,7 +18,7 @@ toc_label: "Contents"
 
 **2.** **Am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks. Obviously, people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
-**3.** According to the theoretic instruction, another group of people (me and 2 younger students) were summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE (in version used by subway) experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
+**3.** According to the theoretic instruction, another group of people (me and 2 younger students) were summoned to achieve the recurrence and verification of the MITM attack in the subway wireless communication system, which becomes the second part(practical) of the project. **To be more specific**, we have to build an LTE experimental platform to actually conduct the MITM to prove that this attack indeed can be implemented in the system
  - *Notice that we only implement basic MITM attack without further exploiting this vulnerability*
 
 <br>
