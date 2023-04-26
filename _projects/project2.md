@@ -193,7 +193,7 @@ toc_label: "Contents"
 | Network Density | Ratio of actual edges to possible edges | $6.72\times10^{-6}$ | The density is close to 0, indicating that the graph is sparse |
 | Average Degree | The sum of degrees of all nodes divided by the number of nodes | $6.73$ | On average, each node has connected with 6.73 edges |
 | Maximum Depth | The longest path from the root node to a leaf node | $10$ | The graph has the maximum depth when its root is the "accident" layer and its leaf is the "CVE" layer |
-| Network Diameter | The longest shortest path between any two nodes | $14$ | Such path in the graph is found between a "accident" node and a "CVE" node |
+| Network Diameter | The longest shortest path between any two nodes | $14$ | Such path is found between a "accident" node and a "CVE" node |
 
 <br>
 
@@ -207,16 +207,21 @@ toc_label: "Contents"
 ### Detection framework
 **1.** From a macro perspective, the behavior studied in this project can be divided into 2 categories: abstract abnormal behavior obtained through theoretical analysis, and specific system behavior collected through practical experiments. Once a bridge is built to cross the gap between theoretical results and actual data, effective anomaly detection can be achieved
 
-<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="580px"> </div><br>
+<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="540px"> </div><br>
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework**, which defines 3 kinds of behaviors according to the threat level from low to high:
- - *<u>system device behavior</u> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
- - *<u>security threat behavior</u> is also composed of logs with ATT&CK label. However, these data further satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
- - *<u>service anomaly behavior</u> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
+ - *<u>System device behavior</u> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
+ - *<u>Security threat behavior</u> is also composed of logs with ATT&CK label. However, these data further satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
+ - *<u>Service anomaly behavior</u> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
 
 ### 2 Detection modes
+**1.** As for the application, this framework can perform 2 modes of detection: bottom-up detection and bi-directional detection
+
+**2. Bottom-up** means the detection is from the low-level all the way up to the high-level, and directly achieves the anomaly detection
 
 <div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="500px"> </div><br>
+
+**3.** However, considering the flexibility and complexity of cyberattacks, as well as the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, a more flexible mode - **bi-directional** detection - should be more widely applied
 
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="500px"> </div><br>
 
