@@ -219,17 +219,27 @@ toc_label: "Contents"
 
 **2. Bottom-up** means the detection is from the low-level all the way up to the high-level, and directly achieves the anomaly detection
 
-<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="460px"> </div><br>
+<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="440px"> </div><br>
 
 **3.** However, considering the complexity of attacks and the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, the more flexible **bi-directional** detection should be widely applied
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="460px"> </div><br>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="440px"> </div><br>
 
 ## Experiment
-**1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) traversal algorithm has higher applicability and efficiency
- - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple fundamental algorithms including BFS, so we could develop detection functions based on it*
+**1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) has higher applicability and efficiency
+ - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple basic algorithms including BFS, so we could develop detection functions based on it*
 
 ### Security threat behavior detection
+**1.** This part corresponds to the mapping process from **low-level** to **middle-level**
+
+**2.** As the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the log node combinations that match the TTPs in general security CTI according to their ATT&CK labels
+ - *The AQL code for this detection work is as follows:*
+ 
+ '''aql
+ FOR v,e,p IN ANY 'CTI/steal1'
+ '''
+
+**3.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
 
 ### Service anomaly behavior detection
 
