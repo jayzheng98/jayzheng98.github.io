@@ -212,7 +212,7 @@ toc_label: "Contents"
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework**, which defines 3 kinds of behaviors according to the threat level from low to high:
  - *<b>System device behavior</b> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
  - *<b>Security threat behavior</b> is detected when some <u>system device behavior</u> satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
- - *<b>Service anomaly behavior</b> is the detection result obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of middle-level behavior further conforms to threat scenarios described in that CTI, it can be concluded that certain services may have experienced anomalies due to security threats*
+ - *<b>Service anomaly behavior</b> is detected when a certain amount of <u>security threat behavior</u> further conforms to threat scenarios described in <u>specific railway CTI</u>, indicating that certain system service may have experienced anomalies due to security threats*
 
 ### Two detection modes
 **1.** As for the application, this framework can perform 2 detection modes: bottom-up and bi-directional
