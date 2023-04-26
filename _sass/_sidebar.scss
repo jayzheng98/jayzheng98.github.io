@@ -57,15 +57,15 @@
     float: right !important; /* added to make toc scroll with page */
     top: 0;
     right: 0;
-    width: 280px;
-    margin-right: -310px;
+    width: 260px;
+    margin-right: -320px;
     // padding-left: 1em;
     padding-top: 1em !important; /* added to make toc scroll with page */
     z-index: 10;
   }
 
   @include breakpoint($x-large) {
-    width: 280px;
+    width: 260px;
   }
 }
 
