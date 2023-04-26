@@ -232,7 +232,7 @@ toc_label: "Contents"
 ### Security threat behavior detection
 **1.** This part corresponds to the mapping process from **low-level** to **middle-level**
 
-**2.** As the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the log node combinations that match the TTPs in general security CTI according to their ATT&CK labels
+**2.** Since the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the syslog node combinations that match the TTPs of general security CTI according to their ATT&CK labels
  - *The AQL code for this detection is as follows:*
  
 ```sql
@@ -249,6 +249,13 @@ RETURN p
 ```
 
 **3.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
+ - *Lateral movement*
+ 
+<div align="center"> <img alt="p2-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-17.png?raw=true" width="740px"> </div><br>
+ 
+ - *File stealing*
+
+<div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="740px"> </div><br>
 
 ### Service anomaly behavior detection
 
