@@ -37,7 +37,7 @@ toc_label: "Contents"
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
-**3.** Actually I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication.
+**3.** Actually I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication
 
 ## Experiment
 **1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the railway signal system. The analysis results are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so the output of POCA will be part of the final knowledge graph as well
@@ -105,7 +105,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div><br>
 
 **3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled. In other words, its strong generalization results in low identification of real attack behaviors
- - *For example, all operations achieved by Powershell will be labeled as "[T1059.001 Powershell](https://attack.mitre.org/techniques/T1059/001/)", while they can actually be divided more specifically*
+ - *For example, all operations achieved by Powershell will be labeled as "T1059.001 Powershell", while they can actually be divided more specifically*
 
 **4.** Therefore, we've written another set of **detection rules** ([repository](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)) specialized for the commandline (powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE Caldera platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
  - *This rule set conforms to the query statement [DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) of ELK engine, so we can utilize ELK to drive detections within tremendous data quickly*
@@ -121,7 +121,7 @@ toc_label: "Contents"
 
 **1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to combine information from various sources into a single model
 
-**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various cybersecurity scenarios. This section intends to merge all the outputs of aforementioned work and some existing achievements to construct a **KG of railway signal system**, which will further be the foundation of the anomaly detection experiment
+**2.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various cybersecurity scenarios. This section intends to merge all the outputs of aforementioned work with some existing achievements to construct a **KG of railway signal system**
 
 ## Design
 ### Overview
@@ -151,7 +151,7 @@ toc_label: "Contents"
  - *The table below shows an example of the reformatted "file stealing" attack*
 
 ||Tactic|Technique| Procedure |
-| :----: | :----------: | :------------- | :------------- |
+| :----: | :----------: | :-------------: | :-------------: |
 |1	|Collection	|T1074.001: Local Data Staging	|Create a folder on the target device for file collection|
 |2	| Collection |T1005: Data from Local System	|Search target files by keywords (filename, suffixes)|
 |3	| Collection |T1074.001: Local Data Staging	|Copy the searched files to the pre-built folder|
@@ -179,7 +179,7 @@ toc_label: "Contents"
 ## Development
 **1.** As for the development, knowledge graph can be constructed through graph database. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic info and usage are recorded [here](/notes/arangodb)
 
-**2.** Since it is impossible to clearly visualize a graph model with large amount of data, I only take the <u>specific railway CTI</u> and <u>environmental data</u> 2 dimensions as examples to display the nodes and edges in the constructed graph database:
+**2.** Since it is impossible to clearly visualize a graph model with large amount of data, here I only take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the nodes and edges in the constructed graph database:
 
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="720px"> </div><br>
 
