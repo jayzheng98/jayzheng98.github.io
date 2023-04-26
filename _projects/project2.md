@@ -18,7 +18,7 @@ toc_label: "Contents"
 
 **2.** Most contents (exclude "prediction") of this project is also my **graduation project**. It consists of 4 parts, and their relationships are shown below:
 
-<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.svg?raw=true" width="340px"> </div>
+<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="340px"> </div>
 <br>
 
 # Threat Analysis 
@@ -191,18 +191,21 @@ toc_label: "Contents"
 
 ## Design
 ### Detection framework
-**1.** From a macro perspective, the behavior studied in this project is mainly divided into two categories: the first category is the abstract system abnormal behavior obtained through theoretical analysis, and the second category is the specific system behavior collected through actual experiments. If a bridge can be constructed to bridge the gap between theoretical results and actual data, anomaly detection can be accurately and effectively achieved. Based on this idea, this project designs a **behavior-based anomaly detection framework**. The framework defines 3 behaviors according to the threat level from low to high: system device behavior, security threat behavior, and service anomaly behavior
- - *The low-level system device behavior is characterized by ATT&CK technology in system logs. Due to the large volume of log data and the high coverage of markers, it is not possible to directly identify a small amount of abnormal data hidden in a large amount of normal data in this layer. Instead, it is necessary to combine general network security threat intelligence to filter low-level behaviors and obtain network threat behaviors*
- -  *The middle-level network threat behavior is actually a system log marked with ATT&CK technology, but this data further satisfies a certain attack behavior in general network security threat intelligence, that is, there is a high probability that it is behavioral data left behind by hackers carrying out specific network attacks. However, relying solely on network threat behavior is not enough to understand the hacker's attack intent and see the full picture of the attack*
- -  *High level business abnormal behavior is the abnormal analysis result obtained from the screening of railway system security threat intelligence for medium level network threat behavior. If a certain amount of network threat behavior further conforms to the threat scenario described in the threat intelligence, it can be basically concluded that a certain business scenario has experienced abnormal behavior due to being exposed to network threats. Security personnel should take timely mitigation or remedial measures based on the detection results*
+**1.** From a macro perspective, the behavior studied in this project can be divided into 2 categories: abstract abnormal behavior obtained through theoretical analysis, and specific system behavior collected through practical experiments. Once a bridge is built to cross the gap between theoretical results and actual data, effective anomaly detection can be achieved
 
-<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="620px"> </div><br>
+<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="580px"> </div><br>
+
+**2.** Based on this idea, I've designed a **behavior-based anomaly detection framework**, which defines 3 kinds of behaviors according to the threat level from low to high:
+ - *The low-level <u>system device behavior</u> refers to syslogs described by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify a small amount of abnormal data hidden in massive normal data at this level*
+ - *The middle-level <u>security threat behavior</u> is also composed of logs with ATT&CK label. However, these data further satisfy several attack behaviors recorded in the <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
+ - *The high-level <u>service anomaly behavior</u> is the anomaly detection results obtained by screening the <u>security threat behavior</u> through <u>specific railway CTI</u>. If a certain amount of security threat behavior further conforms to threat scenarios described in that CTI, it can be basically concluded that certain service scenarios have experienced abnormal behaviors due to the security threats*
+
 
 ### 2 Detection modes
 
-<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="640px"> </div><br>
+<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="600px"> </div><br>
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="640px"> </div><br>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="600px"> </div><br>
 
 ## Experiment
 
