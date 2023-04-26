@@ -226,6 +226,8 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="460px"> </div><br>
 
 ## Experiment
+**1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) traversal algorithm has higher applicability and efficiency
+ - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple fundamental algorithms including BFS, so we could develop detection functions based on it*
 
 ### Security threat behavior detection
 
