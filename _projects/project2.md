@@ -292,10 +292,12 @@ RETURN p
  - *traverse downward to the "syslog" layer for each step to find related logs*
  - *output the traversal path as the detection result*
 
-**2.** The AQL template of bi-directional detection is shown below:
+**2.** At first, node "TS2.1" was read, which involves tampering with the "TSR cancel" command file. However, since this file was tampered with locally by the attacker, no relevant logs can be detected
+
+**3.** Then, continue traversing to the "TS2.1.1" node, which involves leakage of the "TSR execution reminder" command file. By executing the following AQL code, logs related to the behavior of operating such command file were detected:
 
 ```sql
-FOR v,e,p IN 1..7 ANY 'threat_ scenario/TS2'
+FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
                      TSTS,
                      INBOUND TSWeakness,
                      OUTBOUND CAWeakness,
@@ -305,13 +307,36 @@ FOR v,e,p IN 1..7 ANY 'threat_ scenario/TS2'
                      OUTBOUND ProcessSyslog
      OPTIONS {bfs: true}
      FILTER p.vertices[*]._id ANY == "asset/8"
-        OR p.vertices[*]._ id ANY == "asset/9"
-     FILTER p.vertices [*].comand ANY == "TSR_ ExecutionReminder"
-        AND p.vertices[*].security_ threat ANY == "Leakage"
+        OR p.vertices[*]._id ANY == "asset/9"
+     FILTER p.vertices[*].command ANY == "TSR_ExecutionReminder"
+        AND p.vertices[*].security_threat ANY == "Leakage"
      FILTER p.vertices[*].TargetFilename
-        AND p.vertices[*].TargetFilename LIKE "%TSR_ ExecutionReminder%"
+        AND p.vertices[*].TargetFilename LIKE "%TSR_ExecutionReminder%"
 RETURN p
 ```
 
+<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="580px"> </div><br>
+**4.** 
+
+**5.**
+
+```sql
+FOR v,e,p IN 1..8 ANY 'threat_ scenario/TS2'
+                     TSTS,
+                     INBOUND TSWeakness,
+                     OUTBOUND CANeakness,
+                     OUTBOUND AssetCA,
+                     OUTBOUND AssetProcess,
+                     OUTBOUND ParentpChildp,
+                     OUTBOUND ProcessSyslog
+     OPTIONS {bfs: true}
+     FILTER p.vertices[*]._id ANY == "asset/8"
+        OR p.vertices[*]._id ANY == "asset/9"
+     FILTER p.vertices[*].command ANY = "TSR_Execution"
+        AND p.vertices[*].security_threat ANY == "Counterfeit"
+     FILTER p.vertices[*].TargetFilename
+        AND p.vertices[*].TargetFilename LIKE "%TSR_ Execution%"
+RETURN p
+```
 <br>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
