@@ -258,6 +258,13 @@ RETURN p
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
 ### Service anomaly behavior detection
+**1.** This part corresponds to the mapping process from **middle-level** to **high-level** (based on the former detection results)
+
+**2.** The basis for mapping from mid-level to high-level behavior in this project is the **command files** in device. When an attack pattern involves the operation of certian command file of railway service scenarios, it can be associated with the <u>specific railway CTI</u>
+
+**3.** For the detected "lateral movement" attack, it does not involve any service command file and will not be discussed in detail here; For the "file stealing" attack, the commandline input content of the log "syslog/23647" corresponding to the third step in this mode is shown in Figure 5-7. It can be seen that it used the "Copy Item" instruction of Powershell to copy the "TSR_Cancel. CONF" file to a folder, involving operations on business command files. It can be determined that the target of this attack mode theft is the "TSR cancel" command file
+
+<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="560px"> </div><br>
 
 <br>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
