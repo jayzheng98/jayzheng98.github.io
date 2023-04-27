@@ -266,12 +266,16 @@ RETURN p
 
 <div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="520px"> </div><br>
 
-**4.** According to the <u>specific railway CTI</u>, the control action related to "TSR cancel" command is "CA0". Based on this clue, this detected attack can be further mapped to the high-level service anomaly behavior through the following AQL template:
- - *The general idea is: based on the traversal path of the middle-level detection result, set filter conditions to continue traversing upwards*
+**4.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack can be further mapped to the high-level service anomaly behavior through the following AQL template:
+ - *The general idea is: based on the traversal result of the middle-level detection, set filter conditions to continue traversing upwards*
 
 ```sql
 FOR 
 ```
+
+**5.** 
+
+<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="320px"> </div><br>
 
 <br>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
