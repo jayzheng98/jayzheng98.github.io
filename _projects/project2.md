@@ -258,13 +258,20 @@ RETURN p
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
 ### Service anomaly behavior detection
-**1.** This part corresponds to the mapping process from **middle-level** to **high-level** (based on the former detection results)
+**1.** This part corresponds to the mapping process from **middle-level** to **high-level**
 
-**2.** The basis for mapping from mid-level to high-level behavior in this project is the **command files** in device. When an attack pattern involves the operation of certian command file of railway service scenarios, it can be associated with the <u>specific railway CTI</u>
+**2.** The basis for mapping from mid-level to high-level in this project is the **command files** in device. When an attack pattern involves the operation of certian command file of railway service scenarios, it can be associated with the <u>specific railway CTI</u>
 
-**3.** For the detected "lateral movement" attack, it does not involve any service command file and will not be discussed in detail here; For the "file stealing" attack, the commandline input content of the log "syslog/23647" corresponding to the third step in this mode is shown in Figure 5-7. It can be seen that it used the "Copy Item" instruction of Powershell to copy the "TSR_Cancel. CONF" file to a folder, involving operations on business command files. It can be determined that the target of this attack mode theft is the "TSR cancel" command file
+**3.** For the detected "lateral movement", it does not involve any service command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
 
-<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="560px"> </div><br>
+<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="520px"> </div><br>
+
+**4.** According to the <u>specific railway CTI</u>, the control action related to "TSR cancel" command is "CA0". Based on this clue, this detected attack can be further mapped to the high-level service anomaly behavior through the following AQL template:
+ - *The general idea is: based on the traversal path of the middle-level detection result, set filter conditions to continue traversing upwards*
+
+```sql
+FOR 
+```
 
 <br>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
