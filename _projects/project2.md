@@ -229,10 +229,8 @@ toc_label: "Contents"
 **1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) is more applicable and efficient
  - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple basic algorithms including BFS, so we could develop detection functions based on it*
 
-### Security threat behavior detection
-**1.** This part corresponds to the mapping process from **low-level** to **middle-level**
-
-**2.** Since the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the syslog node combinations that match the TTPs of general security CTI according to their ATT&CK labels
+### Security threat behavior detection (low → middle)
+**1.** Since the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the syslog node combinations that match the TTPs of <u>general security CTI</u> according to their ATT&CK labels
  - *The AQL code for this detection is as follows:*
  
 ```sql
@@ -248,7 +246,7 @@ FOR v,e,p IN ANY 'CTI/steal1'
 RETURN p
 ```
 
-**3.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
+**2.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
  - *Lateral movement*
  
 <div align="center"> <img alt="p2-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-17.png?raw=true" width="740px"> </div><br>
@@ -257,16 +255,14 @@ RETURN p
 
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
-### Service abnormal behavior detection
-**1.** This part corresponds to the mapping process from **middle-level** to **high-level**
+### Service abnormal behavior detection (middle → high)
+**1.** The basis for mapping from mid-level to high-level in this project is the **command files**
 
-**2.** The basis for mapping from mid-level to high-level in this project is the **command files** in device. When an attack pattern involves the operation of certian command file of railway service scenarios, it can be associated with the <u>specific railway CTI</u>
+**2.** For the detected "lateral movement", it does not involve any service command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
 
-**3.** For the detected "lateral movement", it does not involve any service command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
+<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="500px"> </div><br>
 
-<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="520px"> </div><br>
-
-**4.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack can be further mapped to the high-level service abnormal behavior through the following AQL template:
+**3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack may be further mapped to the high-level service abnormal behavior through the following AQL template:
  - *The general idea is: based on the traversal result of the middle-level detection, set filter conditions to continue traversing upwards*
 
 ```sql
@@ -286,9 +282,36 @@ FOR v,e,p IN 1..8 ANY 'CTI/steal3'
 RETURN p
 ```
 
-**5.** After executing the above code, only the first step in threat scenario 2 (node "TS2") was matched, indicating that the bottom-up mode is not sufficient to identify the service abnormal behavior in our dataset. Therefore, bi-directional detection should be used to continue mining the traces of subsequent steps in this threat scenario
+**4.** After executing the above code, only the first step of threat scenario 2 (node "TS2") was matched, suggesting that bottom-up detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, bi-directional detection is required to further trace subsequent steps in threat scenario 2
 
-<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="270px"> </div><br>
+<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="260px"> </div><br>
+
+### Service abnormal behavior detection (high → low)
+**1.** The process of bi-directional detection is:
+ - *traverse within the "threat_scenario" layer (current location) to obtain the remaining steps*
+ - *traverse downward to the "syslog" layer for each step to find related logs*
+ - *output the traversal path as the detection result*
+
+**2.** The AQL template of bi-directional detection is shown below:
+
+```sql
+FOR v,e,p IN 1..7 ANY 'threat_ scenario/TS2'
+                     TSTS,
+                     INBOUND TSWeakness,
+                     OUTBOUND CAWeakness,
+                     OUTBOUND AssetCA,
+                     OUTBOUND AssetProcess,
+                     OUTBOUND ParentpChildp,
+                     OUTBOUND ProcessSyslog
+     OPTIONS {bfs: true}
+     FILTER p.vertices[*]._id ANY == "asset/8"
+        OR p.vertices[*]._ id ANY == "asset/9"
+     FILTER p.vertices [*].comand ANY == "TSR_ ExecutionReminder"
+        AND p.vertices[*].security_ threat ANY == "Leakage"
+     FILTER p.vertices[*].TargetFilename
+        AND p.vertices[*].TargetFilename LIKE "%TSR_ ExecutionReminder%"
+RETURN p
+```
 
 <br>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
