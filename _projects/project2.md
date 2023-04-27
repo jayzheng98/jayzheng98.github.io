@@ -183,7 +183,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="720px"> </div><br>
 
-**3.** Some basic indicators of the constructed KG:
+**3.** Basic indicators of the constructed KG:
 
 | Indicator | Definition | Value | Explanation |
 | :---: | :---: | :---: | :---: |
@@ -214,7 +214,7 @@ toc_label: "Contents"
  - *<b>Security threat behavior</b> is detected when some <u>system device behavior</u> satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
  - *<b>Service anomaly behavior</b> is detected when a certain amount of <u>security threat behavior</u> further conforms to threat scenarios described in <u>specific railway CTI</u>, indicating that certain system service may have experienced anomalies due to security threats*
 
-### Two detection modes
+### Detection modes
 **1.** As for the application, this framework can perform 2 detection modes: bottom-up and bi-directional
 
 **2. Bottom-up** means the detection is from the low-level all the way up to the high-level, and directly achieves the anomaly detection
@@ -226,7 +226,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="420px"> </div><br>
 
 ## Experiment
-**1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) has higher applicability and efficiency
+**1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) is more applicable and efficient
  - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple basic algorithms including BFS, so we could develop detection functions based on it*
 
 ### Security threat behavior detection
