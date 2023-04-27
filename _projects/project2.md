@@ -205,7 +205,7 @@ toc_label: "Contents"
 
 ## Design
 ### Detection framework
-**1.** From a macro perspective, the behavior studied in this project can be divided into 2 categories: abstract abnormal behavior obtained through theoretical analysis, and specific system behavior collected through practical experiments. Once a bridge is built to cross the gap between theoretical results and actual data, effective anomaly detection can be achieved
+**1.** From a macro perspective, the behavior studied in this project can be divided into 2 categories: <u>abstract abnormal behavior</u> recorded as theoretical CTI, and <u>specific system behavior</u> collected through practical experiments. Once a bridge is built to cross the gap between theoretical results and actual data, effective anomaly detection can be achieved
 
 <div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="540px"> </div><br>
 
@@ -282,19 +282,19 @@ FOR v,e,p IN 1..8 ANY 'CTI/steal3'
 RETURN p
 ```
 
-**4.** After executing the above code, only the first step of threat scenario 2 (node "TS2") was matched, suggesting that bottom-up detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, bi-directional detection is required to further trace subsequent steps in threat scenario 2
+**4.** After executing the above code, only the first step of threat scenario 2 (node "TS2") was matched, suggesting that **bottom-up** detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario 2
 
 <div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="260px"> </div><br>
 
 ### Service abnormal behavior detection (high → low)
-**1.** The process of bi-directional detection is:
- - *traverse within the "threat_scenario" layer (current location) to obtain the remaining steps*
- - *traverse downward to the "syslog" layer for each step to find related logs*
+**1.** The workflow of bi-directional detection is:
+ - *traverse within the "threat_scenario" layer (current location) to obtain remaining steps (CTI)*
+ - *traverse downward to the "syslog" layer for each step to find related logs (behavior data)*
  - *output the traversal path as the detection result*
 
-**2.** At first, node "TS2.1" was read, which involves tampering with the "TSR cancel" command file. However, since this file was tampered with locally by the attacker, no relevant logs can be detected
+**2.** At first, node "TS2.1" was read, which involves tampering with the "TSR cancel" command file. However, since this file was tampered locally by the attacker, no relevant logs can be detected
 
-**3.** Then, continue traversing to the "TS2.1.1" node, which involves leakage of the "TSR execution reminder" command file. By executing the following AQL code, logs related to the behavior of operating such command file were detected:
+**3.** Then, continue traversing to the "TS2.1.1" node, which involves leakage of the "TSR execution reminder" command file
 
 ```sql
 FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
@@ -315,10 +315,10 @@ FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
 RETURN p
 ```
 
-<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="580px"> </div><br>
-**4.** 
+**4.** By executing the following AQL code, abnormal behavior of operating such command file were detected:
 
-**5.**
+<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="520px"> </div><br>
+**5.** 
 
 ```sql
 FOR v,e,p IN 1..8 ANY 'threat_ scenario/TS2'
