@@ -212,7 +212,7 @@ toc_label: "Contents"
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework**, which defines 3 kinds of behaviors according to the threat level from low to high:
  - *<b>System device behavior</b> refers to syslogs labelled by ATT&CK technique. Due to the high proportion of labelled logs, it is hard to directly identify the small amount of abnormal data hidden in massive normal data at this level*
  - *<b>Security threat behavior</b> is detected when some <u>system device behavior</u> satisfy the attack behaviors recorded in <u>general security CTI</u>, indicating a high probability of behavior data that left by the hacker during attacks*
- - *<b>Service anomaly behavior</b> is detected when a certain amount of <u>security threat behavior</u> further conforms to threat scenarios described in <u>specific railway CTI</u>, indicating that certain system service may have experienced anomalies due to security threats*
+ - *<b>Service abnormal behavior</b> is detected when a certain amount of <u>security threat behavior</u> further conforms to threat scenarios described in <u>specific railway CTI</u>, indicating that certain system service may have experienced anomalies due to security threats*
 
 ### Detection modes
 **1.** As for the application, this framework can perform 2 detection modes: bottom-up and bi-directional
@@ -257,7 +257,7 @@ RETURN p
 
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
-### Service anomaly behavior detection
+### Service abnormal behavior detection
 **1.** This part corresponds to the mapping process from **middle-level** to **high-level**
 
 **2.** The basis for mapping from mid-level to high-level in this project is the **command files** in device. When an attack pattern involves the operation of certian command file of railway service scenarios, it can be associated with the <u>specific railway CTI</u>
@@ -266,16 +266,29 @@ RETURN p
 
 <div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="520px"> </div><br>
 
-**4.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack can be further mapped to the high-level service anomaly behavior through the following AQL template:
+**4.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack can be further mapped to the high-level service abnormal behavior through the following AQL template:
  - *The general idea is: based on the traversal result of the middle-level detection, set filter conditions to continue traversing upwards*
 
 ```sql
-FOR 
+FOR v,e,p IN 1..8 ANY 'CTI/steal3'
+                     CTITTP,
+                     INBOUND SyslogTTP,
+                     INBOUND ProcessSyslog,
+                     INBOUND ParentpChildp,
+                     INBOUND AssetProcess,
+                     INBOUND AssetCA,
+                     INBOUND CAWeakness,
+                     OUTBOUND TSweakness
+     OPTIONS {bfs: true}
+     FILTER p.vertices[*]._ key ANY == "23647"
+        AND p.vertices[*].command ANY == "TSR_ Cancel"
+        AND p.vertices[*].security_threat ANY == "Leakage"
+RETURN p
 ```
 
-**5.** 
+**5.** After executing the above code, only the first step in threat scenario 2 (node "TS2") was matched, indicating that the bottom-up mode is not sufficient to identify the service abnormal behavior in our dataset. Therefore, bi-directional detection should be used to continue mining the traces of subsequent steps in this threat scenario
 
-<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="320px"> </div><br>
+<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="270px"> </div><br>
 
 <br>
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
