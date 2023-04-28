@@ -79,7 +79,7 @@ redirect_from:
 - **Security** <br>
   <font size='4'><b>Command-line shell:</b>&ensp;Familiar with CMD, Powershell and <a href="https://jayzheng98.github.io/notes/linux">Terminal(Linux)</a><br>
   <b>Red tool:</b>&ensp; Familiar with Metasploit and MITRE Caldera Platform<br>
-  <b>Blue tool:</b>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon
+  <b>Blue tool:</b>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon</font>
 <!-- - **Embedded development: (haven't touched for some time)** <br>
   <b>MCU:</b>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times<br>
   <b>Circuit design:</b>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font> -->
