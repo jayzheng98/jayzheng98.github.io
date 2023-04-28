@@ -23,11 +23,11 @@ redirect_from:
 <div style="float:right; text-align:right; margin-top:12px"><b>2020-2023</b></div>
 
 - <b>M.Phil</b> in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China<br>
-   <font size='3'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
+   <font size='4'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
 <div style="float:right; text-align:right"><b>2016-2020</b></div>
 
 - <b>B.Eng</b> in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
-   <font size='3'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
+   <font size='4'><i>GPA 83.61, ranked 24/168 (14%) in major</i></font>
    
 ## Publications 
 <hr>
@@ -39,7 +39,7 @@ redirect_from:
 <hr>
 
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
-**<font size='4'>Time:</font>**&ensp;<font size='4'>2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</font> **<font size='4'>Role:</font>**&ensp;<font size='4'>Main Participant</font> <br>
+<font size='4'><b>Time:</b></font>&ensp;<font size='4'>2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b></font>&ensp;<font size='4'>Main Participant</font> <br>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>A high-risk vulnerability (CNNVD-202204-3571) in the subway communication system is proposed by our preliminary theoretical research. Then a confidential project is established, and aims to build a pseudo base-station experimental platform for the recurrence of the <u>man-in-the-middle</u> attack against the LTE communication used in subway</font>
 
 - **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
