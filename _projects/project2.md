@@ -260,7 +260,7 @@ RETURN p
 
 **2.** For the detected "lateral movement", it does not involve any service command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
 
-<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="480px"> </div><br>
 
 **3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack may be further mapped to the high-level service abnormal behavior through the following AQL template:
  - *The general idea is: based on the traversal result of the middle-level detection, set filter conditions to continue traversing upwards*
@@ -284,7 +284,7 @@ RETURN p
 
 **4.** After executing the above code, only the first step of threat scenario 2 (node "TS2") was matched, suggesting that **bottom-up** detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario 2
 
-<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="260px"> </div><br>
+<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="250px"> </div><br>
 
 ### Service abnormal behavior detection (high → low)
 **1.** The workflow of bi-directional detection is:
@@ -315,9 +315,9 @@ FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
 RETURN p
 ```
 
-**4.** By executing the following AQL code, abnormal behavior of operating such command file were detected:
+**4.** By executing the above AQL code, abnormal behavior of operating such command file were detected:
 
-<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="520px"> </div><br>
+<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="500px"> </div><br>
 **5.** 
 
 ```sql
