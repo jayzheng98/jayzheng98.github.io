@@ -14,7 +14,7 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** First let me explain why there are "\*" in the title. This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it (Once the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm. Therefore, **part of this project is confidential**
+**1.** This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it (Once the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm. Therefore, **part of this project is confidential**
 
 **2.** **Am I secret-related personnel?** No, I am not. In effect, the project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks. Obviously, people working on this part are secret-related. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
