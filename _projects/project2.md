@@ -90,7 +90,7 @@ toc_label: "Contents"
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
 ### Simulation attack
-**1.** I designed a complete attack strategy against the signal system based on POCA analysis result "threat scenario 2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete attack strategy against the signal system based on POCA analysis result "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
@@ -281,7 +281,7 @@ FOR v,e,p IN 1..8 ANY 'CTI/steal3'
 RETURN p
 ```
 
-**4.** After executing the above code, only the first step of threat scenario 2 (node "TS2") was matched, suggesting that **bottom-up** detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario 2
+**4.** After executing the above code, only the first step of threat scenario2 (node "TS2") was matched, suggesting that **bottom-up** detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario2
 
 <div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="250px"> </div><br>
 
@@ -340,12 +340,13 @@ RETURN p
 
 **6.** Through the above code, abnormal behavior of operating such command file was detected:
  - *Firstly, this log corresponds to **event 11**, which is generated when a new file is created or the original **file is overwritten**. It is consistent with the fact that the attacker replaced the "TSR execute" with the stolen "TSR cancel" command file*
- - *Secondly, the process path related to file operations recorded in* `Image` *field includes **cmd.exe**, indicating that the attacker replaced file through remote commandline*
- - *Then, same abnormal behavior was detected on both CTC active (asset8) and standby (asset9), indicating that the attacker had replaced files on both devices*
- - *Finally, the* `TargetFilename` *field clearly reveals that the attacker's target is "TSR_execution.CONF" for TSR execution commands*
+ - *Secondly, the process path recorded in* `Image` *field includes **cmd.exe**, indicating that the attacker replaced file through remote commandline*
+ - *Then, same abnormal behavior was detected on CTC active (asset8) and standby (asset9), indicating that the attacker had replaced files on both devices*
+ - *Finally,* `TargetFilename` *field clearly reveals that the attacker's target is **TSR_execution.CONF***
 
-<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="580px"> </div><br>
-**7.** At this point, main abnormal behaviors related to threat scenario 2 in the dataset have been effectively detected
+<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="600px"> </div><br>
+**7.** So far, main abnormal behaviors related to threat scenario2 in the dataset have been detected
+<br>
 
 # Conclusion
 <hr>
