@@ -292,9 +292,9 @@ RETURN p
  - *traverse downward to the "syslog" layer for each step to find related logs (behavior data)*
  - *output the traversal path as the detection result*
 
-**2.** At first, node "TS2.1" was read, which involves tampering with the "TSR cancel" command file. However, since this file was tampered locally by the attacker, no relevant logs can be detected
+**2.** At first, node "TS2.1" was read, which involves **tampering** with the **TSR cancel** command file. However, since this file was tampered locally by the attacker, no relevant logs can be detected
 
-**3.** Then, continue traversing to the "TS2.1.1" node, which involves leakage of the "TSR execution reminder" command file
+**3.** Then, continue traversing to the "TS2.1.1" node, which involves **leakage** of the **TSR execution reminder** command file
 
 ```sql
 FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
@@ -315,13 +315,13 @@ FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
 RETURN p
 ```
 
-**4.** By executing the above AQL code, abnormal behavior of operating such command file were detected:
+**4.** Through the above code, abnormal behavior of operating such command file was detected:
 
 <div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="500px"> </div><br>
-**5.** 
+**5.** Continue traversing within the "threat scenario" layer to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file
 
 ```sql
-FOR v,e,p IN 1..8 ANY 'threat_ scenario/TS2'
+FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
                      TSTS,
                      INBOUND TSWeakness,
                      OUTBOUND CANeakness,
@@ -335,8 +335,23 @@ FOR v,e,p IN 1..8 ANY 'threat_ scenario/TS2'
      FILTER p.vertices[*].command ANY = "TSR_Execution"
         AND p.vertices[*].security_threat ANY == "Counterfeit"
      FILTER p.vertices[*].TargetFilename
-        AND p.vertices[*].TargetFilename LIKE "%TSR_ Execution%"
+        AND p.vertices[*].TargetFilename LIKE "%TSR_Execution%"
 RETURN p
 ```
-<br>
+
+**6.** Through the above code, abnormal behavior of operating such command file was detected. At this point, main abnormal behaviors related to threat scenario 2 in the dataset have been effectively detected
+
+<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="530px"> </div><br>
+
+# Conclusion
+<hr>
+**1.** This project focuses on threat modeling and anomaly detection research for railway signal system. The main contributions are:
+ - *A novel threat modeling approach is proposed, which integrates security analysis with the process of system service to achieve the coalescence of functional safety and cyber security of cyber-physical systems*
+ -	*A cybersecurity knowledge graph of railway signal system is constructed, which provides researchers with a global analysis perspective by using multidimensional data to model the behavior of railway systems*
+ -	*A behavior-based abnormal detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
+
+**2.** Although certain results have been achieved, there are still limitations and future researchable issues:
+ - *On the one hand, the theoretical analysis method POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph, and indirectly increases the difficulty of bi-directional anomaly detection as well*
+ - *On the other hand, manual analysis is still used to assist the graph model in making judgments in the bi-directional mode. With the development of AI technology, the attack and defense scenarios in the future will gradually become intelligent. Our knowledge graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
+
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
