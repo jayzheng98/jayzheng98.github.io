@@ -69,8 +69,8 @@ redirect_from:
 <hr>
 
 - **Programming** <br>
-  <font size='4'><b>Master:</b>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Familiar:</b>&ensp;[PHP](/notes/php), C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Matlab, C#<br>
-  I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> ([note](/notes/OP))</font>
+  <font size='4'><b>Master:</b>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/php">PHP</a>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Matlab, C#<br>
+  I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (<a href="https://jayzheng98.github.io/notes/OP">note</a>)</font>
 - **Database** <br>
 **<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql), [<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
 - **Networking** <br>
