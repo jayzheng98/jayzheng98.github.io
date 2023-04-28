@@ -346,6 +346,7 @@ RETURN p
 
 <div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="600px"> </div><br>
 **7.** So far, main abnormal behaviors related to threat scenario2 in the dataset have been detected
+
 <br>
 
 # Conclusion
@@ -357,7 +358,7 @@ RETURN p
  -	*A behavior-based abnormal detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
 
 **2.** Although certain results have been achieved, there are still limitations and researchable issues:
- - *The POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph, and indirectly increases the difficulty of bi-directional anomaly detection as well*
+ - *The POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph*
  - *Manual analysis is still used to assist the graph model in making judgments in the bi-directional mode. With the development of AI technology, the attack and defense scenarios will gradually become intelligent. Our graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
