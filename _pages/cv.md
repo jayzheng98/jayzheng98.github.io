@@ -39,7 +39,7 @@ redirect_from:
 <hr>
 
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
-<font size='4'><b>Time:</b>&ensp;2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Main Participant</font> <br>
+ <font size='4'><b>Time:</b>&ensp;2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Main Participant</font>
 **<font size='4'>Abstract:</font>**&ensp;<font size='4'>A high-risk vulnerability (CNNVD-202204-3571) in the subway communication system is proposed by our preliminary theoretical research. Then a confidential project is established, and aims to build a pseudo base-station experimental platform for the recurrence of the <u>man-in-the-middle</u> attack against the LTE communication used in subway</font>
 
 - **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
