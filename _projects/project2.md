@@ -338,20 +338,25 @@ FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
 RETURN p
 ```
 
-**6.** Through the above code, abnormal behavior of operating such command file was detected. At this point, main abnormal behaviors related to threat scenario 2 in the dataset have been effectively detected
+**6.** Through the above code, abnormal behavior of operating such command file was detected:
+ - *Firstly, this log corresponds to **event 11**, which is generated when a new file is created or the original **file is overwritten**. It is consistent with the fact that the attacker replaced the "TSR execute" with the stolen "TSR cancel" command file*
+ - *Secondly, the process path related to file operations recorded in* `Image` *field includes **cmd.exe**, indicating that the attacker replaced file through remote commandline*
+ - *Then, same abnormal behavior was detected on both CTC active (asset8) and standby (asset9), indicating that the attacker had replaced files on both devices*
+ - *Finally, the* `TargetFilename` *field clearly reveals that the attacker's target is "TSR_execution.CONF" for TSR execution commands*
 
-<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="560px"> </div><br>
+<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="580px"> </div><br>
+**7.** At this point, main abnormal behaviors related to threat scenario 2 in the dataset have been effectively detected
 
 # Conclusion
 <hr>
 
-**1.** This project focuses on threat modeling and anomaly detection research for railway signal system. The main contributions are:
+**1.** This thesis focuses on **threat modeling** and **anomaly detection** research for railway signal system. The main contributions are:
  - *A novel threat modeling approach is proposed, which integrates security analysis with the process of system service to achieve the coalescence of functional safety and cyber security of cyber-physical systems*
  -	*A cybersecurity knowledge graph of railway signal system is constructed, which provides researchers with a global analysis perspective by using multidimensional data to model the behavior of railway systems*
  -	*A behavior-based abnormal detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
 
 **2.** Although certain results have been achieved, there are still limitations and researchable issues:
- - *The theoretical analysis method POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph, and indirectly increases the difficulty of bi-directional anomaly detection as well*
+ - *The POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph, and indirectly increases the difficulty of bi-directional anomaly detection as well*
  - *Manual analysis is still used to assist the graph model in making judgments in the bi-directional mode. With the development of AI technology, the attack and defense scenarios will gradually become intelligent. Our graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
