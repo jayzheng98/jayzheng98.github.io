@@ -72,14 +72,14 @@ redirect_from:
   <font size='4'><b>Master:</b>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/php">PHP</a>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Matlab, C#<br>
   I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (<a href="https://jayzheng98.github.io/notes/OP">note</a>)</font>
 - **Database** <br>
-**<font size='4'>Familiar:</font>**<font size='4'>&ensp;</font>[<font size='4'>Mysql</font>](/notes/mysql), [<font size='4'>ArangoDB</font>](/notes/arangodb)<font size='4'> &ensp;&ensp;&ensp;&ensp;&ensp;</font>**<font size='4'>Understand:</font>**<font size='4'>&ensp;Neo4j</font>
+  <font size='4'><b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/mysql">Mysql</a>, <a href="https://jayzheng98.github.io/notes/arangodb">ArangoDB</a> &ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Neo4j</font>
 - **Networking** <br>
-**<font size='4'>Computer network:</font>**<font size='4'>&ensp;Know well of the use of network equipment (</font>[<font size='4'>note</font>](/notes/DC)<font size='4'>)</font><br>
-**<font size='4'>Wireless network:&ensp;LTE)</font>**<font size='4'>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
+  <font size='4'><b>Computer network:</b>&ensp;Know well of the use of network equipment (<a href="https://jayzheng98.github.io/notes/DC">note</a>)<br>
+  <b>Wireless network:&ensp;LTE)</b>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
 - **Security** <br>
-**<font size='4'>Command-line shell:</font>**<font size='4'>&ensp;Familiar with CMD, Powershell and </font>[<font size='4'>Terminal(Linux)</font>](/notes/linux)<br>
-**<font size='4'>Red tool:</font>**<font size='4'>&ensp; Familiar with Metasploit and MITRE Caldera Platform</font><br>
-**<font size='4'>Blue tool:</font>**<font size='4'>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon
+  <font size='4'><b>Command-line shell:</b>&ensp;Familiar with CMD, Powershell and <a href="https://jayzheng98.github.io/notes/linux">Terminal(Linux)</a><br>
+  <b>Red tool:</b>&ensp; Familiar with Metasploit and MITRE Caldera Platform<br>
+  <b>Blue tool:</b>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon
 <!-- - **Embedded development: (haven't touched for some time)** <br>
-**<font size='4'>MCU:</font>**<font size='4'>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times</font><br>
-**<font size='4'>Circuit design:</font>**<font size='4'>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font><br> -->
+  <b>MCU:</b>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times<br>
+  <b>Circuit design:</b>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font> -->
