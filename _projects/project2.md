@@ -250,7 +250,6 @@ RETURN p
  - *Lateral movement*
  
 <div align="center"> <img alt="p2-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-17.png?raw=true" width="740px"> </div><br>
- 
  - *File stealing*
 
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
@@ -341,7 +340,7 @@ RETURN p
 
 **6.** Through the above code, abnormal behavior of operating such command file was detected. At this point, main abnormal behaviors related to threat scenario 2 in the dataset have been effectively detected
 
-<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="530px"> </div><br>
+<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="560px"> </div><br>
 
 # Conclusion
 <hr>
@@ -351,8 +350,8 @@ RETURN p
  -	*A cybersecurity knowledge graph of railway signal system is constructed, which provides researchers with a global analysis perspective by using multidimensional data to model the behavior of railway systems*
  -	*A behavior-based abnormal detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
 
-**2.** Although certain results have been achieved, there are still limitations and future researchable issues:
- - *On the one hand, the theoretical analysis method POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph, and indirectly increases the difficulty of bi-directional anomaly detection as well*
- - *On the other hand, manual analysis is still used to assist the graph model in making judgments in the bi-directional mode. With the development of AI technology, the attack and defense scenarios in the future will gradually become intelligent. Our knowledge graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
+**2.** Although certain results have been achieved, there are still limitations and researchable issues:
+ - *The theoretical analysis method POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph, and indirectly increases the difficulty of bi-directional anomaly detection as well*
+ - *Manual analysis is still used to assist the graph model in making judgments in the bi-directional mode. With the development of AI technology, the attack and defense scenarios will gradually become intelligent. Our graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
