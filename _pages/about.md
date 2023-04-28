@@ -12,8 +12,8 @@ redirect_from:
  
 * Hi! Thank you for your visit
 
-* I’m Zhongyi, a MPhil at the Southwest Jiaotong University ([SWJTU](https://en.wikipedia.org/wiki/Southwest_Jiaotong_University)), majoring in **Computer Science and Technology**. Currently, I am doing research in the field of cybersecurity supervised by [Prof. Lianshan Yan](https://scholar.google.com/citations?hl=en&user=2ciZC4EAAAAJ) in the CIPC lab
+* I’m Zhongyi, a MPhil at the Southwest Jiaotong University ([SWJTU](https://en.wikipedia.org/wiki/Southwest_Jiaotong_University)), majoring in **Computer Science and Technology**. Currently, I am doing research in the field of <u>cybersecurity</u> supervised by [Prof. Lianshan Yan](https://scholar.google.com/citations?hl=en&user=2ciZC4EAAAAJ) in the CIPC lab
 
-* Before that, I was an undergraduate student majoring in **Network Engineering** at SWJTU. My interest at that time mainly focused on the **Embedded System** developing. I am in the top 14% of my major and have obtained the **Postgraduate Recommendation** to pursue a master degree without attending the exam
+* I used to be an undergraduate majoring in **Network Engineering** at SWJTU. My interest at that time mainly focused on the <u>embedded system</u> developing. I am in the top 14% of my major and have obtained the qualification for direct admission to graduate school
 
 * I have the habit of summarizing learning contents, see my notes [here](/notes)
