@@ -217,13 +217,11 @@ toc_label: "Contents"
 ### Detection modes
 **1.** As for the application, this framework can perform 2 detection modes: bottom-up and bi-directional
 
+<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="750px"> </div>
+
 **2. Bottom-up** means the detection is from the low-level all the way up to the high-level, and directly achieves the anomaly detection
 
-<div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="420px"> </div><br>
-
 **3.** However, considering the complexity of attacks and the incompleteness of CTI in the KG, high-level abnormal behavior usually cannot be directly mapped through the bottom-up detection. Therefore, the more flexible **bi-directional** detection should be widely applied
-
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="420px"> </div><br>
 
 ## Experiment
 **1.** Graph traversal is the technical carrier of this detection experiment. Since our KG has a relatively large depth, the Breadth-First Search (BFS) is more applicable and efficient
