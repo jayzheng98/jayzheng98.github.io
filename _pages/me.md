@@ -16,5 +16,5 @@ author_profile: true
   * [CV](/cv)
   * [Undergraduate transcript](https://jayzheng98.github.io/files/Undergraduate%20Transcript.pdf)
   * [Graduate transcript](https://jayzheng98.github.io/files/Graduate%20Transcript.pdf)
-  * [Master's thesis (short English ver.)](https://jayzheng98.github.io/projects/project2)
+  * [Master's thesis (Blog ver.)](https://jayzheng98.github.io/projects/project2)
 
