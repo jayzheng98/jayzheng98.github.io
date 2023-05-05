@@ -323,7 +323,7 @@ RETURN p
 FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
                      TSTS,
                      INBOUND TSWeakness,
-                     OUTBOUND CANeakness,
+                     OUTBOUND CAWeakness,
                      OUTBOUND AssetCA,
                      OUTBOUND AssetProcess,
                      OUTBOUND ParentpChildp,
@@ -331,7 +331,7 @@ FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
      OPTIONS {bfs: true}
      FILTER p.vertices[*]._id ANY == "asset/8"
         OR p.vertices[*]._id ANY == "asset/9"
-     FILTER p.vertices[*].command ANY = "TSR_Execution"
+     FILTER p.vertices[*].command ANY == "TSR_Execution"
         AND p.vertices[*].security_threat ANY == "Counterfeit"
      FILTER p.vertices[*].TargetFilename
         AND p.vertices[*].TargetFilename LIKE "%TSR_Execution%"
