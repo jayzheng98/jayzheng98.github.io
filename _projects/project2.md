@@ -275,8 +275,8 @@ FOR v,e,p IN 1..8 ANY 'CTI/steal3'
                      INBOUND CAWeakness,
                      OUTBOUND TSweakness
      OPTIONS {bfs: true}
-     FILTER p.vertices[*]._ key ANY == "23647"
-        AND p.vertices[*].command ANY == "TSR_ Cancel"
+     FILTER p.vertices[*]._key ANY == "23647"
+        AND p.vertices[*].command ANY == "TSR_Cancel"
         AND p.vertices[*].security_threat ANY == "Leakage"
 RETURN p
 ```
