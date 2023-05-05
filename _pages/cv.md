@@ -35,7 +35,7 @@ redirect_from:
 ## Publications 
 <hr>
 
-- *<font size='3'>Zhongyi Zheng, Saifei Li, Xiong Deng, Lianshan Yan. "A Process-Oriented and Coalescent Analysis Method for Safety and Security in Railway Systems." <b>(In submission, 2022)</b></font>*
+- *<font size='3'>Zhongyi Zheng, Saifei Li, Xiong Deng, Lianshan Yan. "<a href="https://jayzheng98.github.io/publication/paper-number-1">A Process-Oriented and Coalescent Analysis Method for Safety and Security in Railway Systems.</a>" <b>(In submission, 2022)</b></font>*
   
 ## Research projects 
 <hr>
