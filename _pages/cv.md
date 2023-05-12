@@ -26,7 +26,7 @@ redirect_from:
 <div style="float:right; text-align:right; margin-top:12px"><b>2020-2023</b></div>
 
 - <b>M.Phil</b> in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China<br>
-   <font size='3'><i>Thesis Title: Research on Behavior-based Cyber Threat Analysis and Anomaly Detection of Railway System</i></font>
+   <font size='3'><i>Thesis Title: Behavior-based Cyber Threat Analysis and Anomaly Detection of Train Control System</i></font>
 <div style="float:right; text-align:right"><b>2016-2020</b></div>
 
 - <b>B.Eng</b> in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
@@ -55,7 +55,7 @@ redirect_from:
 ## Patents 
 <hr>
 
-- <font size='3'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，专利号：2022102297873</font>
+- <font size='3'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P](A cyber-physical threat analysis method for railway signal control system)</i>”，CN114978569A，2022-08-30，专利号：202210229787.3</font>
 
 ## Awards & Honors 
 <hr>
