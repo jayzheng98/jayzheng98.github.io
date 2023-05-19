@@ -63,7 +63,7 @@ toc_label: "Contents"
   - *The range uses switches to carry communication between the ground equipment, and uses router to connect ground equipment and Centralized Traffic Control (CTC). Specifically, the switch consists of a three-layer switch and 2 VLANs configured within it*
 
 - **Data Generation Area(Environment data)**
-  - *This area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of train control system. Since the network cards of virtual machines are configured in "bridge mode", those servers actually act as "switches" too*
+  - *This area is composed of 5 servers, each running several virtual machines that simulate the ground equipment of the train control system. Since the network cards of the virtual machines are configured in 'bridge mode,' these servers also act as "switches"*
   - *The LAN of **Swithc1** is configured as "domain"*
 
 - **Attacker**
