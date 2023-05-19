@@ -16,7 +16,7 @@ toc_label: "Contents"
 
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of railway signal system
 
-**2.** Most contents (exclude "prediction") of this project is also my **graduation project**. It consists of 4 parts, and their relationships are shown below:
+**2.** This project mainly supported my **graduation thesis**, titled "Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System". The specific structure of my work is:
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"> </div>
 <br>
@@ -40,7 +40,7 @@ toc_label: "Contents"
 **3.** Actually I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication
 
 ## Experiment
-**1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the railway signal system. The analysis results are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so the output of POCA will be part of the final knowledge graph as well
+**1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system. The analysis results are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so the output of POCA will be part of the final knowledge graph as well
  - *Because this paper has not been published for the time being, here I could only provide a prototype of the graph-structured analysis output (some contents have been changed later)*
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
@@ -50,26 +50,28 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** This part not only verifies the usability of POCA analysis results, but also provides a dataset for subsequent research. Due to the closed nature of the railway system, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway signal system are difficult to obtain. Thus, we have to **generate our own dataset**
+**1.** This part not only verifies the usability of POCA analysis results, but also provides a dataset for subsequent research. Due to the closed nature of the railway system, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway systems are difficult to obtain. Thus, we have to **generate our own dataset**
 
 ## Design
 ### Simulation range
-**1.** I built a simulation range in my laboratory according to the network structure of the railway signal system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
+**1.** I built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
 
-<div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div><br>
+<div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div>
 
 **2.** This range is composed of the network equipment and other 3 parts:
 - **Network Equipment**
   - *The range uses switches to carry communication between the ground equipment, and uses router to connect ground equipment and Centralized Traffic Control (CTC). Specifically, the switch consists of a three-layer switch and 2 VLANs configured within it*
 
 - **Data Generation Area(Environment data)**
-  - *This area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of the train control system. Since the network cards of virtual machines are configured in "bridge mode", those servers actually act as "switches". In addition, the LAN of CTC is configured as a "domain"*
+  - *This area is composed of several virtual machines running on 5 servers separately. The virtual machines simulate the ground equipment of train control system. Since the network cards of virtual machines are configured in "bridge mode", those servers actually act as "switches" too*
+  - *The LAN of **Swithc1** is configured as "domain"*
 
 - **Attacker**
   - *The attacker operates a Kali Linux host which has already connected to the ISDN server within the LAN of switch 3*
 
 - **Data Collection and Analysis Terminal**
-  - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) data engine, which is responsible for collecting and processing data from the data generation area*
+  - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) engine, which is responsible for collecting and processing data from the data generation area*
+  - *The knowledge graph constructed later is also deployed on it*
 
 **3.** Detailed configuration of this range is shown in the table below:
  - *Each virtual machine is installed with software to simulate services of the train control system*
@@ -86,11 +88,11 @@ toc_label: "Contents"
 | TSR Interface Server | Windows Server 2008 | 172.110.2.11 | 360 Security<br>Windows Defender | Sysmon+NXlog |
 | CTC active | Windows 10 | 172.110.2.12 | 360 Security<br>Windows Defender | CTC Simulation Software<br>Sysmon+NXlog |
 | CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
-| Kali Linux | Kali Linux 2020 | 192.168.4.211 | | Metasploit<br>MITRE Caldera |
+| Kali Linux | Kali Linux 2020 | 192.168.4.211 |- | Metasploit<br>MITRE Caldera |
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
 ### Simulation attack
-**1.** I designed a complete attack strategy against the signal system based on POCA analysis result "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete attack strategy against the system based on POCA analysis output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/) base
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
@@ -352,10 +354,10 @@ RETURN p
 # Conclusion
 <hr>
 
-**1.** This thesis focuses on **threat modeling** and **anomaly detection** research for railway signal system. The main contributions are:
+**1.** This thesis focuses on **threat modeling** and **anomaly detection** research for train control system. The main contributions are:
  - *A novel threat modeling approach is proposed, which integrates security analysis with the process of system service to achieve the coalescence of functional safety and cyber security of cyber-physical systems*
- -	*A cybersecurity knowledge graph of railway signal system is constructed, which provides researchers with a global analysis perspective by using multidimensional data to model the behavior of railway systems*
- -	*A behavior-based abnormal detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
+ -	*A cybersecurity knowledge graph of railway train control system is constructed, which provides researchers with a global analysis perspective by using multidimensional data to model the behavior of railway systems*
+ -	*A abnormal behavior detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
 
 **2.** Although certain results have been achieved, there are still limitations and researchable issues:
  - *The POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph*
