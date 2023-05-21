@@ -18,7 +18,7 @@ toc_label: "Contents"
 
 **2.** This project mainly supported my **master's thesis**, titled "Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System". An overview(left) and the specific structure(right) of my work are shown below:
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="460px"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"></div>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="520px"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="240px"></div>
 <br>
 
 # Threat Analysis 
@@ -40,8 +40,8 @@ toc_label: "Contents"
 **3.** Actually I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication
 
 ## Experiment
-**1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system. The analysis results are set to be highly structured. As mentioned earlier, the core of this project is to use the knowledge graph for anomaly detection, so the output of POCA will be part of the final knowledge graph as well
- - *Because this paper has not been published for the time being, here I could only provide a prototype of the graph-structured analysis output (some contents have been changed later)*
+**1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system, and indeed identified several threat scenarios against the TSR service
+ - *Since this paper has not been published for the time being, here I could only provide part of the analysis output*
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 <br>
@@ -128,9 +128,10 @@ toc_label: "Contents"
 ## Design
 ### Overview
 **1.** The review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture with 4 dimensions of KG:
- - *On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph*
 
 <div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div><br>
+
+**2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
 
 ### Knowledge data
 **1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
@@ -140,16 +141,14 @@ toc_label: "Contents"
 
 ### Environment data
 **1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between <u>behavior data</u> and <u>cyber threat intelligence (CTI)</u>
- - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" entity in the following work*
+ - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" ontology in the following work*
 
-### CTI
-**1.** There are 2 kinds of CTI sources in my KG: General security CTI and Specific railway CTI
-
-**2. General security CTI** is completed with the help of existing achievement. MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)". As shown below, TRAM can associate the input attack procedure (left) with the ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
+### General security CTI
+**1.** General security CTI is completed with the help of existing achievement. MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)". As shown below, TRAM can associate the input attack procedure (left) with the ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
 
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="660px"> </div><br>
 
-**3.** Through the TRAM platform and manual verification, we've generated the **general security CTI** of some common attacks, which could be easily transformed into graph structure
+**2.** Through the TRAM platform and manual verification, we've generated the **general security CTI** of some common attacks, which could be easily transformed into graph structure
  - *The table below shows an example of the reformatted "file stealing" attack*
 
 ||Tactic|Technique| Procedure |
@@ -162,10 +161,11 @@ toc_label: "Contents"
 
 <br>
 
-**4. Specific railway CTI** refers to the threat modeling outputs of the system. In this project, it is generated by [POCA](#threat-analysis). The graph structure of POCA analysis results is shown below:
- - *Results such as "control action", "weakness" and "threat scenario" can be presented as entities*
- - *Results like "risk score" and "description" can be used as attributes of entities*
- - *Entities are associated through external and internal relationships. For example, nodes in the "threat scenario" entity can form a threat tree through the internal relationship "TS-TS"*
+### Specific railway CTI
+**1.** Specific railway CTI refers to the threat modeling outputs of the system. In this project, it is generated by [POCA](#threat-analysis). The graph structure of POCA analysis results is shown below:
+ - *Results such as "control action", "weakness" and "threat scenario" can be presented as ontologies*
+ - *Results like "risk score" and "description" can be used as attributes of ontologies*
+ - *Ontologies are associated through external and internal relationships. For example, nodes in the "threat scenario" can form a threat tree through the internal relationship "TS-TS"*
 
 <div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="300px"> </div><br>
 
