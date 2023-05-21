@@ -43,7 +43,7 @@ toc_label: "Contents"
 **1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system, and indeed identified several **threat scenarios** against the TSR service
  - *Since this paper has not been published, here I could only provide part of the analysis output*
 
-<div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
+
 <br>
 
 # Threat Simulation
@@ -129,7 +129,7 @@ toc_label: "Contents"
 ### Overview
 **1.** The review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture with 4 dimensions of KG:
 
-<div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div>
+<div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div><br>
 
 **2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
 
@@ -167,12 +167,16 @@ toc_label: "Contents"
  - *Results like "risk score" and "description" can be used as attributes of ontologies*
  - *Ontologies are associated through external and internal relations. For example, nodes in the "threat scenario" can form a threat tree through the internal relation "TS-TS"*
 
-<div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="290px"> </div><br>
+<div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="290px"> </div>
+
+**2.** The following is a display of entities and relationships in the specific railway CTI graph:
+
+<div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 
 ### Behavior data
 **1.** Details of this part are summarized in this [repository](https://github.com/jayzheng98/Syslog-Graph). In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp" and "process-process". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**:
 
-<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-111.png?raw=true" width="740px"> </div><br>
+<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="240px"> </div><br>
 
 ### Final graph
 **1.** The abstract structure of the final KG based on the aforementioned dimensions and relationships is shown below:
@@ -189,7 +193,7 @@ toc_label: "Contents"
 
 | Indicator | Definition | Value | Explanation |
 | :---: | :---: | :---: | :---: |
-| Nodes | Number of nodes | $500966$ |  |
+| Nodes | Number of nodes | $500966$ |-  |
 | Edges | Number of edges |$1685976$| The graph is a directed graph |
 | Isolated Nodes | Number of nodes with no edges | $22368$ | As some nodes in BRON are isolated, this graph is a disconnected graph |
 | Network Density | Ratio of actual edges to possible edges | $6.72\times10^{-6}$ | The density is close to 0, indicating that the graph is sparse |
