@@ -57,7 +57,7 @@ toc_label: "Contents"
 
 ## Design
 ### Simulation range
-**1.** I built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)). The topology diagram and physical diagram are as follows:
+**1.** I built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)). The topology diagram is:
 
 <div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div>
 
