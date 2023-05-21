@@ -14,13 +14,14 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="510px"></div>
-
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of railway signal system
+
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="620px"></div>
+
 
 **2.** This project mainly supported my **master's thesis**, titled <u>"Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System"</u>. An overview(left) and the specific structure(right) of my work are shown below:
 
-<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="350px"></div>
+<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"></div>
 <br>
 
 # Threat Analysis 
