@@ -16,9 +16,9 @@ toc_label: "Contents"
 
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of railway signal system
 
-**2.** This project mainly supported my **master's thesis**, titled "Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System". An overview(left) and the specific structure(right) of my work are shown below:
+**2.** This project mainly supported my **master's thesis**, titled <u>"Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System"</u>. An overview(left) and the specific structure(right) of my work are shown below:
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="510px"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="250px"></div>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="510px"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="255px"></div>
 <br>
 
 # Threat Analysis 
@@ -43,14 +43,14 @@ toc_label: "Contents"
 **1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system, and indeed identified several **threat scenarios** against the TSR service
  - *Since this paper has not been published, here I could only provide part of the analysis output*
 
-
+<div align="center"><img alt="p2-111" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-111.png?raw=true" width="750px"></div>
 <br>
 
 # Threat Simulation
 <hr>
 
 ## Introduction
-**1.** This part not only verifies the usability of POCA analysis results, but also provides a dataset for subsequent research. Due to the closed nature of the railway system, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway systems are difficult to obtain. Thus, we have to **generate our own dataset**
+**1.** This part not only **verifies the usability of POCA outputs**, but also **provides a dataset** for subsequent research. Due to the closed nature of the railway system, only internal attacks are likely to be implemented. Therefore, common datasets that include external attacks such as Web penetration are not suitable for our demand. Meanwhile, the datasets include attacks against railway systems are difficult to obtain. Thus, we have to generate our own dataset
 
 ## Design
 ### Simulation range
@@ -133,17 +133,12 @@ toc_label: "Contents"
 
 **2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
 
-### Knowledge data
+### 01 Knowledge data
 **1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
 
-<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="600px"> </div> 
-<br>
+<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="610px"> </div> 
 
-### Environment data
-**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between <u>behavior data</u> and <u>cyber threat intelligence (CTI)</u>
- - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" ontology in the following work*
-
-### General security CTI
+### 02 General security CTI
 **1.** General security CTI is completed with the help of existing achievement. MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)". As shown below, TRAM can associate the input attack procedure (left) with the ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
 
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="660px"> </div><br>
@@ -161,7 +156,7 @@ toc_label: "Contents"
 
 <br>
 
-### Specific railway CTI
+### 02 Specific railway CTI
 **1.** Specific railway CTI refers to the threat modeling outputs of the system. In this project, it is generated by [POCA](#threat-analysis). The graph structure of POCA analysis results is shown below:
  - *Results such as "control action", "hazard" and "threat scenario" can be presented as ontologies*
  - *Results like "risk score" and "description" can be used as attributes of ontologies*
@@ -173,10 +168,14 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 
-### Behavior data
+### 03 Environment data
+**1.** This dimension is generally based on the topology of the target system and includes attributes such as OS and IP of the equipment. It not only models the physical composition of the environment, but also acts as a bridge between <u>behavior data</u> and <u>cyber threat intelligence (CTI)</u>
+ - *The environment data of this project has been provided in [Section 2](#simulation-range). It is represented as the "asset" ontology in the following work*
+
+### 04 Behavior data
 **1.** Details of this part are summarized in this [repository](https://github.com/jayzheng98/Syslog-Graph). In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp" and "process-process". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**:
 
-<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="240px"> </div><br>
+<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="230px"> </div><br>
 
 ### Final graph
 **1.** The abstract structure of the final KG based on the aforementioned dimensions and relationships is shown below:
