@@ -16,7 +16,7 @@ toc_label: "Contents"
 
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and prediction technology of railway signal system
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="620px"></div>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="640px"></div><br>
 
 
 **2.** This project mainly supported my **master's thesis**, titled <u>"Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System"</u>. An overview(left) and the specific structure(right) of my work are shown below:
@@ -167,7 +167,8 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="290px"> </div>
 
-**2.** The following is a display of entities and relations in the specific railway CTI graph:
+**2.** The following is a conceptual display of entities and relations in the specific railway CTI graph:
+ - *A small part of the content in the figure is different from the actual one*
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="740px"> </div>
 
