@@ -89,7 +89,7 @@ toc_label: "Contents"
 **3.** Detailed configuration of this range is shown in the table below:
  - *Each virtual machine is installed with software to simulate services of the train control system*
  - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation and forwarding** separately*
-<details><summary style="text-align: center;"><b>Open to view range config</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Open to view range config</b></summary>
 <table>
   <thead>
     <tr>
@@ -278,7 +278,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div>
 
 **3.** Basic indicators of the constructed KG:
-<details><summary style="text-align: center;"><b>Open to view indicators</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Open to view indicators</b></summary>
 <table>
   <thead>
     <tr>
@@ -333,6 +333,7 @@ toc_label: "Contents"
     </tr>
   </tbody>
 </table>
+</details>
 <br>
 
 # Anomaly Detection
