@@ -80,22 +80,97 @@ toc_label: "Contents"
  - *Each virtual machine is installed with software to simulate services of the train control system*
  - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation and forwarding** separately*
 
-<details><summary>Open to view range config</summary>
- 
-| Device | Operating System | IP | Security Tool | Main Software |
-| :----: | :-----------------: | :----------: | :-------------: | :-------------: |
-| RBC active | Windows 10 | 192.168.4.203 | 360 Security<br>Windows Defender | RBC Simulation Software<br>Sysmon+NXlog |
-| RBC standby | Windows 10 | 192.168.3.105 | Same with active | Same with active |
-| ISDN Server active | Ubuntu 18.04 | 192.168.4.206 | ClamAV | ISDN Simulation Software<br>SysmonForLinux+NXlog |
-| ISDN Server standby | Ubuntu 18.04 | 192.168.3.106 | Same with active | Same with active |
-| TSRS active | Windows 10 | 192.168.4.200 | 360 Security<br>Windows Defender | TSRS Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
-| TSRS standby | Windows 10 | 192.168.3.103 | Same with active | Same with active |
-| TSR Interface Server | Windows Server 2008 | 172.110.2.11 | 360 Security<br>Windows Defender | Sysmon+NXlog |
-| CTC active | Windows 10 | 172.110.2.12 | 360 Security<br>Windows Defender | CTC Simulation Software<br>Sysmon+NXlog |
-| CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
-| Kali Linux | Kali Linux 2020 | 192.168.4.211 |- | Metasploit<br>MITRE Caldera |
-| ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
- 
+<details><summary>&ensp;Open to view range config</summary>
+<table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Operating System</th>
+      <th>IP</th>
+      <th>Security Tool</th>
+      <th>Main Software</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RBC active</td>
+      <td>Windows 10</td>
+      <td>192.168.4.203</td>
+      <td>360 Security<br>Windows Defender</td>
+      <td>RBC Simulation Software<br>Sysmon+NXlog</td>
+    </tr>
+    <tr>
+      <td>RBC standby</td>
+      <td>Windows 10</td>
+      <td>192.168.3.105</td>
+      <td>Same with active</td>
+      <td>Same with active</td>
+    </tr>
+    <tr>
+      <td>ISDN Server active</td>
+      <td>Ubuntu 18.04</td>
+      <td>192.168.4.206</td>
+      <td>ClamAV</td>
+      <td>ISDN Simulation Software<br>SysmonForLinux+NXlog</td>
+    </tr>
+    <tr>
+      <td>ISDN Server standby</td>
+      <td>Ubuntu 18.04</td>
+      <td>192.168.3.106</td>
+      <td>Same with active</td>
+      <td>Same with active</td>
+    </tr>
+    <tr>
+      <td>TSRS active</td>
+      <td>Windows 10</td>
+      <td>192.168.4.200</td>
+      <td>360 Security<br>Windows Defender</td>
+      <td>TSRS Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing</td>
+    </tr>
+    <tr>
+      <td>TSRS standby</td>
+      <td>Windows 10</td>
+      <td>192.168.3.103</td>
+      <td>Same with active</td>
+      <td>Same with active</td>
+    </tr>
+    <tr>
+      <td>TSR Interface Server</td>
+      <td>Windows Server 2008</td>
+      <td>172.110.2.11</td>
+      <td>360 Security<br>Windows Defender</td>
+      <td>Sysmon+NXlog</td>
+    </tr>
+    <tr>
+      <td>CTC active</td>
+      <td>Windows 10</td>
+      <td>172.110.2.12</td>
+      <td>360 Security<br>Windows Defender</td>
+      <td>CTC Simulation Software<br>Sysmon+NXlog</td>
+    </tr>
+    <tr>
+      <td>CTC standby</td>
+      <td>Windows 10</td>
+      <td>172.110.2.13</td>
+      <td>Same with active</td>
+      <td>CTC Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing</td>
+    </tr>
+    <tr>
+      <td>Kali Linux</td>
+      <td>Kali Linux 2020</td>
+      <td>192.168.4.211</td>
+      <td>-</td>
+      <td>Metasploit<br>MITRE Caldera</td>
+    </tr>
+    <tr>
+      <td>ELK mainframe</td>
+      <td>Windows 10</td>
+      <td>10.10.10.230</td>
+      <td>360 Security<br>Windows Defender</td>
+      <td>Elasticsearch</td>
+    </tr>
+  </tbody>
+</table>
 </details>
 
 ### Simulation attack
