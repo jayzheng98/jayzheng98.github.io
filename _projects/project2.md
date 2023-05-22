@@ -80,6 +80,8 @@ toc_label: "Contents"
  - *Each virtual machine is installed with software to simulate services of the train control system*
  - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation and forwarding** separately*
 
+<details><summary>Open to view range config</summary>
+ 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
 | RBC active | Windows 10 | 192.168.4.203 | 360 Security<br>Windows Defender | RBC Simulation Software<br>Sysmon+NXlog |
@@ -93,6 +95,7 @@ toc_label: "Contents"
 | CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
 | Kali Linux | Kali Linux 2020 | 192.168.4.211 |- | Metasploit<br>MITRE Caldera |
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
+</details>
 
 ### Simulation attack
 **1.** I designed a complete attack strategy against the system based on the aforementioned POCA output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
