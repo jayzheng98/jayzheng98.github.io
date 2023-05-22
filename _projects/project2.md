@@ -78,7 +78,7 @@ toc_label: "Contents"
 
 **3.** Detailed configuration of this range is shown in the table below:
  - *Each virtual machine is installed with software to simulate services of the train control system*
- - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are also installed to realize **syslog generation and forwarding** separately*
+ - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation and forwarding** separately*
 
 | Device | Operating System | IP | Security Tool | Main Software |
 | :----: | :-----------------: | :----------: | :-------------: | :-------------: |
@@ -95,7 +95,7 @@ toc_label: "Contents"
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
 
 ### Simulation attack
-**1.** I designed a complete attack strategy against the system based on aforementioned POCA output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
+**1.** I designed a complete attack strategy against the system based on the aforementioned POCA output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
@@ -103,9 +103,9 @@ toc_label: "Contents"
  
 ## Development
 ### Log labelling
-**1.** The highly-textual information contained in logs will greatly increase the workload and difficulty of analysis, so it's necessary to **preprocess** the dataset: try to add a "label" to each log to generalize its bahavior
+**1.** The highly-textual information contained in logs will greatly increase the workload and difficulty of analysis, so it's necessary to **preprocess** the dataset: try to add a "label" to each log to generalize its behavior
 
-**2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step. It can map logs to the **ATT&CK techniques** in the `RuleName` field, which could properly represent their security behavior
+**2.** A [configuration file](https://github.com/olafhartong/sysmon-modular) of Sysmon have actually helped us take the first step. It can map logs to the **ATT&CK techniques** in the `RuleName`, which could properly represent their security behavior
 
 <div align="center"> <img alt="p2-7" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-7.png?raw=true" width="720px"> </div><br>
 
@@ -123,7 +123,7 @@ toc_label: "Contents"
 ## Introduction
 **1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to combine information from various sources
 
-**2.** The previous chapters have generated various data, such as threat modeling, system architecture, and system logs. To effectively utilize these outputs, we need to address the **multi-source heterogeneous** issue. Knowledge graph, with its excellent data integration, correlation, and visualization capability, becomes the preferred technology
+**2.** Previous chapters have generated various data, such as threat modeling, system architecture, and system logs. To effectively utilize these outputs, we need to address the **multi-source heterogeneous** issue. Knowledge graph, with its excellent data integration, correlation, and visualization capability, becomes the preferred technology
 
 **3.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various security scenarios. This section intends to merge all the aforementioned outputs with existing achievements to construct a **cybersecurity KG of train control system**
 
