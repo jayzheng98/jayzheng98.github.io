@@ -95,6 +95,7 @@ toc_label: "Contents"
 | CTC standby | Windows 10 | 172.110.2.13 | Same with active | CTC Simulation Software<br>Sysmon+NXlog<br>EasyFileSharing |
 | Kali Linux | Kali Linux 2020 | 192.168.4.211 |- | Metasploit<br>MITRE Caldera |
 | ELK mainframe | Windows 10 | 10.10.10.230 | 360 Security<br>Windows Defender | Elasticsearch |
+ 
 </details>
 
 ### Simulation attack
