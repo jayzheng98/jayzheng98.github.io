@@ -9,6 +9,17 @@ toc: true
 toc_label: "Contents"
 ---
 <style>body{text-align:justify}</style>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+</style>
 <a name="top"></a>
 
 # Introduction
@@ -79,8 +90,7 @@ toc_label: "Contents"
 **3.** Detailed configuration of this range is shown in the table below:
  - *Each virtual machine is installed with software to simulate services of the train control system*
  - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation and forwarding** separately*
-
-<details><summary>&ensp;Open to view range config</summary>
+  <details><summary><b>Open to view range config</b></summary>
 <table>
   <thead>
     <tr>
