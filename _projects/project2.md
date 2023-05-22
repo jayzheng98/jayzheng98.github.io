@@ -164,7 +164,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="290px"> </div>
 
-**2.** The following is a conceptual display of entities and relations in the **specific railway CTI** graph:
+**2.** The following is a conceptual display of entities and relations in the **specific railway CTI**:
  - *A small part of the content in the figure is different from the actual one*
 
 <div align="center"> <img alt="p2-2" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-4.png?raw=true" width="760px"> </div>
