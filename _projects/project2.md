@@ -275,7 +275,7 @@ toc_label: "Contents"
 
 **2.** I take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the vertices and edges in the constructed graph database:
 
-<div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div>
+<div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div><br>
 
 **3.** Basic indicators of the constructed KG:
 <details><summary style="text-align: center; font-size: 14px;"><b>Open to view indicators</b></summary>
