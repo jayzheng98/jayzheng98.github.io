@@ -185,9 +185,9 @@ toc_label: "Contents"
 ## Development
 **1.** As for the development, knowledge graph can be constructed through **graph database**. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic info and usage are recorded [here](/notes/arangodb)
 
-**2.** Since it is impossible to clearly visualize a graph model with large amount of data, here I only take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the nodes and edges in the constructed graph database:
+**2.** I take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the vertices and edges in the constructed graph database:
 
-<div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div><br>
+<div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div>
 
 **3.** Basic indicators of the constructed KG:
 
