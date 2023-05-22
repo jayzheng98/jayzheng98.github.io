@@ -17,7 +17,6 @@ toc_label: "Contents"
   th, td {
     text-align: center;
     padding: 8px;
-    border: 1px solid black;
   }
 </style>
 <a name="top"></a>
@@ -279,17 +278,61 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div>
 
 **3.** Basic indicators of the constructed KG:
-
-| Indicator | Definition | Value | Explanation |
-| :---: | :---: | :---: | :---: |
-| Nodes | Number of nodes | $500966$ |-  |
-| Edges | Number of edges |$1685976$| The graph is a directed graph |
-| Isolated Nodes | Number of nodes with no edges | $22368$ | As some nodes in BRON are isolated, this graph is a disconnected graph |
-| Network Density | Ratio of actual edges to possible edges | $6.72\times10^{-6}$ | The density is close to 0, indicating that the graph is sparse |
-| Average Degree | The sum of degrees of all nodes divided by the number of nodes | $6.73$ | On average, each node has connected with 6.73 edges |
-| Maximum Depth | The longest path from the root node to a leaf node | $10$ | The graph has the maximum depth when its root is the "accident" layer and its leaf is the "CVE" layer |
-| Network Diameter | The longest shortest path between any two nodes | $14$ | Such path is found between an "accident" node and a "CVE" node |
-
+<details><summary><div style="text-align: center;"><u>Open to view indicators</u></div></summary>
+<table>
+  <thead>
+    <tr>
+      <th>Indicator</th>
+      <th>Definition</th>
+      <th>Value</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nodes</td>
+      <td>Number of nodes</td>
+      <td>$500966$</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Edges</td>
+      <td>Number of edges</td>
+      <td>$1685976$</td>
+      <td>The graph is a directed graph</td>
+    </tr>
+    <tr>
+      <td>Isolated Nodes</td>
+      <td>Number of nodes with no edges</td>
+      <td>$22368$</td>
+      <td>As some nodes in BRON are isolated, this graph is a disconnected graph</td>
+    </tr>
+    <tr>
+      <td>Network Density</td>
+      <td>Ratio of actual edges to possible edges</td>
+      <td>$6.72\times10^{-6}$</td>
+      <td>The density is close to 0, indicating that the graph is sparse</td>
+    </tr>
+    <tr>
+      <td>Average Degree</td>
+      <td>The sum of degrees of all nodes divided by the number of nodes</td>
+      <td>$6.73$</td>
+      <td>On average, each node has connected with 6.73 edges</td>
+    </tr>
+    <tr>
+      <td>Maximum Depth</td>
+      <td>The longest path from the root node to a leaf node</td>
+      <td>$10$</td>
+      <td>The graph has the maximum depth when its root is the "accident" layer and its leaf is the "CVE" layer</td>
+    </tr>
+    <tr>
+      <td>Network Diameter</td>
+      <td>The longest shortest path between any two nodes</td>
+      <td>$14$</td>
+      <td>Such path is found between an "accident" node and a "CVE" node</td>
+    </tr>
+  </tbody>
+</table>
 <br>
 
 # Anomaly Detection
