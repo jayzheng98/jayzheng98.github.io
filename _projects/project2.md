@@ -24,12 +24,12 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats, and it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT). Therefore, this project proposes study on cybersecurity threat analysis and defense technology of railway signal system
+**1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats. Since it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT), this project proposes study on cybersecurity threat analysis and defense technology of railway signal system
 
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="640px"></div><br>
 
-
-**2.** This project mainly supported my **master's thesis**, titled <u>"Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System"</u>. The specific structure of my work is shown below:
+**2.** This project mainly supported my **master's thesis**, titled <u>"Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System"</u>
+ - *The specific structure of my work is shown below:*
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="300px"></div>
 <br>
@@ -41,12 +41,12 @@ toc_label: "Contents"
 **1.** How to testify there are security issues in the rail transit? Maybe we can conduct penetration tests in a simulation environment. But how to figure out the route and goal of cyberattacks within such a complex system? The answer is to firstly conduct a **theoretical threat analysis**
 
 ## Design
-**1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely the <u>Process-Oriented and Coalescent Analysis (POCA)</u>. Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
+**1.** I've proposed a novel methodology for the coalescence analysis of safety and security in cyber-physical systems, namely <u>Process-Oriented and Coalescent Analysis (POCA)</u>. Different from the traditional **object-oriented** methods that directly start the analysis with system components or communication links, our method mainly focuses on the specific working process of the object, which is **process-oriented** analysis
  - *The overall framework of this methodology is shown below:*
 
 <div align="center"> <img alt="p2-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/pub1-1.png?raw=true" width="620px"> </div><br>
 
-**2.** The POCA consists of two major parts. They are oriented toward functional safety and cyber security respectively, and POCA achieves a coalescence of these two attributes by drawing the two parts together
+**2.** The POCA consists of two major parts. They are oriented toward **functional safety** and **cyber security** respectively, and POCA achieves a coalescence of these two attributes by drawing the two parts together
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
@@ -56,7 +56,7 @@ toc_label: "Contents"
 **1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system, and indeed identified several **threat scenarios** against the TSR service
  - *Since this paper has not been published, here I could only provide part of the analysis output*
 
-<div align="center"><img alt="p2-111" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-111.png?raw=true" width="750px"></div>
+<div align="center"><img alt="p2-111" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-111.png?raw=true" width="760px"></div>
 <br>
 
 # Threat Simulation
@@ -67,7 +67,7 @@ toc_label: "Contents"
 
 ## Design
 ### Simulation range
-**1.** I built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)). The topology diagram is:
+**1.** I built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)):
 
 <div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div>
 
@@ -187,7 +187,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
 
-**2.** I separately implemented the pre and post penetration by Kali in the range, and all logs (total 3 days) are saved as the **raw dataset**
+**2.** I separately implemented the pre and post penetration by Kali in the range, and all syslogs (total 3 days) are saved as the raw dataset
  
 ## Development
 ### Log labelling
@@ -209,9 +209,9 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not the shortage of data, but how to combine information from various sources
+**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not data shortage, but how to effectively combine information from multiple sources
 
-**2.** Previous chapters have generated various data, such as threat modeling, system architecture, and system logs. To effectively utilize these outputs, we need to address the **multi-source heterogeneous** issue. Knowledge graph, with its excellent data integration, correlation, and visualization capability, becomes the preferred technology
+**2.** Previous chapters have generated various data, such as threat modeling, system architecture, and system logs. To effectively utilize these outputs, we need to address the **multi-source heterogeneous** issue. Knowledge graph(KG), with its excellent data integration, correlation, and visualization capability, becomes the preferred technology
 
 **3.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various security scenarios. This section intends to merge all the aforementioned outputs with existing achievements to construct a **cybersecurity KG of train control system**
 
@@ -224,31 +224,32 @@ toc_label: "Contents"
 **2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
 
 ### ① Knowledge data
-**1.** Knowledge data from [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/) are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)". The graph structure of BRON's main part is shown below:
+**1.** Knowledge data from common cybersecurity knowledge bases, such as [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/), are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)"
+ - *The graph structure of BRON's main part is shown below:*
 
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="610px"> </div> 
 
 ### ② General security CTI
-**1.** MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)". As shown below, TRAM can associate the input attack procedure (left) with the ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
+**1.** MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)", which can associate the input attack procedure (left) with ATT&CK techniques and tactics (right) to help generate CTI in the form of "TTPs"
 
-<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="660px"> </div><br>
+<div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="640px"> </div><br>
 
 **2.** Through the TRAM platform and manual verification, we've generated the **general security CTI** of some common attacks, which could be easily transformed into graph structure
  - *The table below shows an example of the reformatted "file stealing" attack*
 
 ||Tactic|Technique| Procedure |
 | :----: | :----------: | :-------------: | :-------------: |
-|1	|Collection	|T1074.001: Local Data Staging	|Create a folder on the target device for file collection|
-|2	| Collection |T1005: Data from Local System	|Search target files by keywords (filename, suffixes)|
-|3	| Collection |T1074.001: Local Data Staging	|Copy the searched files to the pre-built folder|
-|4	| Collection|T1560.001: Archive via Utility|Pack and compress the collected target files|
-|5	|Exfiltration|T1041: Exfiltration Over C2 Channel|	Establish a command and control (C2) channel using the HTTP protocol to return packaged files|
+|1	|Collection	|T1074.001<br>Local Data Staging	|Create a folder on the target device for file collection|
+|2	| Collection |T1005<br>Data from Local System	|Search target files by keywords (filename, suffixes)|
+|3	| Collection |T1074.001<br>Local Data Staging	|Copy the searched files to the pre-built folder|
+|4	| Collection|T1560.001<br>Archive via Utility|Pack and compress the collected target files|
+|5	|Exfiltration|T1041<br>Exfiltration Over C2 Channel|	Establish a command and control (C2) channel using the HTTP protocol to return packaged files|
 
 ### ② Specific railway CTI
 **1.** This CTI refers to the threat modeling results of target system. In this project, it is generated by [POCA](#threat-analysis). The graph structure of POCA analysis results is shown below:
  - *Results such as "control action", "hazard" and "threat scenario" can be presented as ontologies*
  - *Results like "risk score" and "description" can be used as attributes of ontologies*
- - *Ontologies are associated through external and internal relations. For example, nodes in the "threat scenario" can form a threat tree through the internal relation "TS-TS"*
+ - *Ontologies are associated through external and internal relationships. For example, nodes in the "threat scenario" can form a threat tree through the internal relationship "TS-TS"*
 
 <div align="center"> <img alt="arango8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/arango8.png?raw=true" width="290px"> </div>
 
