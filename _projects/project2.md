@@ -19,10 +19,7 @@ toc_label: "Contents"
     padding: 8px;
   }
   summary {
-    margin-bottom: 0;
-  }
-  details > *:not(summary) {
-    margin-top: 0;
+    margin-bottom: 0.5;
   }
 </style>
 <a name="top"></a>
