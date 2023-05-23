@@ -74,21 +74,31 @@ toc_label: "Contents"
 **2.** This range is composed of the network equipment and other 3 parts:
 <details><summary style="text-align: center; font-size: 14px;"><b>Open to view range component</b></summary>
   
-- **Network Equipment**
-  - *The range uses switches to carry communication between the ground equipment, and uses router to connect ground equipment and Centralized Traffic Control (CTC)*
+  <ul>
+    <li><strong>Network Equipment</strong>
+      <ul>
+        <li><em>The range uses switches to carry communication between the ground equipment, and uses router to connect ground equipment and Centralized Traffic Control (CTC)</em></li>
+      </ul>
+    </li>
+    <li><strong>Data Generation Area(Environment data)</strong>
+      <ul>
+        <li><em>This area is composed of 5 servers, each running several virtual machines that simulate the ground equipment of the train control system. Since the network cards of the virtual machines are configured in "bridge mode", these servers also act as "switches"</em></li>
+        <li><em>The LAN of switch1 is configured as "domain"</em></li>
+      </ul>
+    </li>
+    <li><strong>Attacker</strong>
+      <ul>
+        <li><em>The attacker operates a Kali Linux host which has already connected to the ISDN server within the LAN of switch 3</em></li>
+      </ul>
+    </li>
+    <li><strong>Data Collection and Analysis Terminal</strong>
+      <ul>
+        <li><em>This terminal is a host that installs the <a href="https://www.elastic.co/what-is/elasticsearch">Elasticsearch</a> engine, which is responsible for collecting and processing data from the data generation area</em></li>
+        <li><em>The knowledge graph constructed later is also deployed on it</em></li>
+      </ul>
+    </li>
+  </ul></details>
 
-- **Data Generation Area(Environment data)**
-  - *This area is composed of 5 servers, each running several virtual machines that simulate the ground equipment of the train control system. Since the network cards of the virtual machines are configured in "bridge mode", these servers also act as "switches"*
-  - *The LAN of switch1 is configured as "domain"*
-
-- **Attacker**
-  - *The attacker operates a Kali Linux host which has already connected to the ISDN server within the LAN of switch 3*
-
-- **Data Collection and Analysis Terminal**
-  - *This terminal is a host that installs the [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) engine, which is responsible for collecting and processing data from the data generation area*
-  - *The knowledge graph constructed later is also deployed on it*
-</details>
-  
 **3.** Detailed configuration of this range is shown in the table below:
  - *Each virtual machine is installed with software to simulate services of the train control system*
  - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation** and **forwarding** separately*
