@@ -18,6 +18,12 @@ toc_label: "Contents"
     text-align: center;
     padding: 8px;
   }
+  summary {
+    margin-bottom: 0;
+  }
+  details > *:not(summary) {
+    margin-top: 0;
+  }
 </style>
 <a name="top"></a>
 
@@ -73,7 +79,6 @@ toc_label: "Contents"
 
 **2.** This range is composed of the network equipment and other 3 parts:
 <details><summary style="text-align: center; font-size: 14px;"><b>Open to view range component</b></summary>
-  
   <ul>
     <li><strong>Network Equipment</strong>
       <ul>
@@ -100,9 +105,16 @@ toc_label: "Contents"
   </ul></details>
 
 **3.** Detailed configuration of this range is shown in the table below:
- - *Each virtual machine is installed with software to simulate services of the train control system*
- - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation** and **forwarding** separately*
-<details><summary style="text-align: center; font-size: 14px;"><b>Open to view range config</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Open to view range configuration</b></summary>
+<ul>
+  <li>
+    <em>Each virtual machine is installed with software to simulate services of the train control system</em>
+  </li>
+  <li>
+    <em><a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon">Sysmon</a> and <a href="https://nxlog.co/products/nxlog-enterprise-edition">NXlog</a> are installed to realize <strong>syslog generation</strong> and <strong>forwarding</strong> separately</em>
+  </li>
+</ul>
+  
 <table>
   <thead>
     <tr>
