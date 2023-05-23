@@ -46,7 +46,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-1" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/pub1-1.png?raw=true" width="620px"> </div><br>
 
-**2.** The POCA consists of two major parts. They are oriented toward **functional safety** and **cyber security** respectively, and POCA achieves a coalescence of these two attributes by drawing the two parts together
+**2.** POCA consists of 2 major parts, which are oriented toward **functional safety** and **cyber security** respectively. POCA achieves a coalescence of these 2 attributes by drawing the 2 parts together
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
@@ -88,7 +88,7 @@ toc_label: "Contents"
 
 **3.** Detailed configuration of this range is shown in the table below:
  - *Each virtual machine is installed with software to simulate services of the train control system*
- - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation and forwarding** separately*
+ - *[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and [NXlog](https://nxlog.co/products/nxlog-enterprise-edition) are installed to realize **syslog generation** and **forwarding** separately*
 <details><summary style="text-align: center; font-size: 14px;"><b>Open to view range config</b></summary>
 <table>
   <thead>
