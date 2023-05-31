@@ -31,7 +31,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="640px"></div><br>
 
-**2.** This project mainly supported my **master's thesis**, titled <u>"Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System"</u>
+**2.** This project mainly supported my **master's thesis**, titled <u>"Analysis and Detection of Cyber Threat Behavior in Train Control System Based on Knowledge Graph"</u>
  - *The specific structure of my work is shown below:*
 
 <div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="320px"></div>
