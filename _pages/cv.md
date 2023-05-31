@@ -26,7 +26,7 @@ redirect_from:
 <div style="float:right; text-align:right; margin-top:12px"><b>2020-2023</b></div>
 
 - <b>M.Phil</b> in Computer Science and Technology, Southwest Jiaotong University, Sichuan, China<br>
-   <font size='3'><i>Thesis Title: Cyber Threat Behavior Analysis and Knowledge Graph Based Anomaly Detection in Train Control System</i></font>
+   <font size='3'><i>Thesis Title: Analysis and Detection of Cyber Threat Behavior in Train Control System Based on Knowledge Graph</i></font>
 <div style="float:right; text-align:right"><b>2016-2020</b></div>
 
 - <b>B.Eng</b> in Network Engineering, Southwest Jiaotong University, Sichuan, China<br>
