@@ -13,6 +13,7 @@ toc_label: "Contents"
   table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
   }
   th, td {
     text-align: center;
@@ -31,7 +32,7 @@ toc_label: "Contents"
 **2.** This project mainly supported my **master's thesis**, titled <u>"Analysis and Detection of Cyber Threat Behavior in Train Control System Based on Knowledge Graph"</u>
  - *The specific structure of my work is shown below:*
 
-<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="320px"></div>
+<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="520px"></div>
 <br>
 
 # Threat Analysis 
@@ -59,7 +60,7 @@ toc_label: "Contents"
     <th>Safety</th>
     <th>Security</th>
     <th>System Service</th>
-    <th>Component Layer Constraint</th>
+    <th>Component Constraint</th>
     <th>Threat Scenario</th>
     <th>TTPs Analysis</th>
     <th>Remediation</th>
@@ -311,7 +312,7 @@ toc_label: "Contents"
 ### Simulation attack
 **1.** I designed a complete attack strategy against the system based on the aforementioned POCA output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="660px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="760px"> </div> <br>
 
 **2.** I separately implemented the pre and post penetration by Kali in the range, and all syslogs (total 3 days) are saved as the raw dataset
  
