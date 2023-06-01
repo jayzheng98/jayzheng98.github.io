@@ -18,9 +18,6 @@ toc_label: "Contents"
     text-align: center;
     padding: 8px;
   }
-  summary {
-    margin-bottom: 0.5;
-  }
 </style>
 <a name="top"></a>
 
@@ -53,7 +50,110 @@ toc_label: "Contents"
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
-**3.** I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication
+**3.** I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication, and the comparison of POCA with some previous methods is shown below:
+
+<table>
+  <tr>
+    <th>Method</th>
+    <th>Safety</th>
+    <th>Security</th>
+    <th>System Service</th>
+    <th>Component Layer Constraint</th>
+    <th>Threat Scenario</th>
+    <th>TTPs Analysis</th>
+    <th>Remediation</th>
+  </tr>
+  <tr>
+    <td>Attack Trees</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>OCTAVE</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>STPA</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>TARA</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>Extended TVRA</td>
+    <td>√</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Threat Profile</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>-</td>
+    <td>√</td>
+    <td>√</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>STPA-Sec</td>
+    <td>-</td>
+    <td>√</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>STPA-SafeSec</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>-</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>POCA</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>√</td>
+    <td>-</td>
+  </tr>
+</table>
 
 ## Experiment
 **1.** I've applied POCA to the <u>Temporary Speed Restriction (TSR)</u> scenario of the train control system, and indeed identified several **threat scenarios** against the TSR service
@@ -288,7 +388,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div>
 
 ## Development
-**1.** As for the development, knowledge graph can be constructed through **graph database**. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic info and usage are recorded [here](/notes/arangodb)
+**1.** As for the development, knowledge graph can be constructed through **graph database**. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic construction processes are recorded [here](/notes/arangodb)
 
 **2.** I take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the actual vertices and edges in the constructed graph database:
 
