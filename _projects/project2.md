@@ -53,7 +53,8 @@ toc_label: "Contents"
 **3.** I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication, and the comparison of POCA with some previous methods is shown below:
 
 <table>
-  <tr>
+  <thead>
+   <tr>
     <th>Method</th>
     <th>Safety</th>
     <th>Security</th>
@@ -62,8 +63,10 @@ toc_label: "Contents"
     <th>Threat Scenario</th>
     <th>TTPs Analysis</th>
     <th>Remediation</th>
-  </tr>
-  <tr>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
     <td>Attack Trees</td>
     <td>-</td>
     <td>√</td>
@@ -72,8 +75,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>√</td>
     <td>-</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>OCTAVE</td>
     <td>-</td>
     <td>√</td>
@@ -82,8 +85,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>-</td>
     <td>√</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>STPA</td>
     <td>√</td>
     <td>-</td>
@@ -92,8 +95,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>-</td>
     <td>√</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>TARA</td>
     <td>-</td>
     <td>√</td>
@@ -102,8 +105,8 @@ toc_label: "Contents"
     <td>-</td>
     <td>√</td>
     <td>√</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>Extended TVRA</td>
     <td>√</td>
     <td>√</td>
@@ -112,8 +115,8 @@ toc_label: "Contents"
     <td>-</td>
     <td>√</td>
     <td>-</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>Threat Profile</td>
     <td>-</td>
     <td>√</td>
@@ -122,8 +125,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>√</td>
     <td>-</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>STPA-Sec</td>
     <td>-</td>
     <td>√</td>
@@ -132,8 +135,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>-</td>
     <td>√</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>STPA-SafeSec</td>
     <td>√</td>
     <td>√</td>
@@ -142,8 +145,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>-</td>
     <td>√</td>
-  </tr>
-  <tr>
+   </tr>
+   <tr>
     <td>POCA</td>
     <td>√</td>
     <td>√</td>
@@ -152,7 +155,8 @@ toc_label: "Contents"
     <td>√</td>
     <td>√</td>
     <td>-</td>
-  </tr>
+   </tr>
+ </tbody>
 </table>
 
 ## Experiment
@@ -175,7 +179,7 @@ toc_label: "Contents"
 <div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div>
 
 **2.** This range is composed of the network equipment and other 3 parts:
-<details><summary style="text-align: center; font-size: 14px;"><b>Open to view range component</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view range component</b></summary>
   <ul>
     <li><strong>Network Equipment</strong>
       <ul>
@@ -202,7 +206,7 @@ toc_label: "Contents"
   </ul></details>
 
 **3.** Detailed configuration of this range is shown in the table below:
-<details><summary style="text-align: center; font-size: 14px;"><b>Open to view range configuration</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view range configuration</b></summary>
 <ul>
   <li>
     <em>Each virtual machine is installed with software to simulate services of the train control system</em>
@@ -395,7 +399,7 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div><br>
 
 **3.** Basic indicators of the constructed KG:
-<details><summary style="text-align: center; font-size: 14px;"><b>Open to view indicators</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view indicators</b></summary>
 <table>
   <thead>
     <tr>
