@@ -50,7 +50,8 @@ toc_label: "Contents"
  - *The first part, as system service process analysis, abstracts service processes into analyzable objects by referring to the STPA method, which lays a foundation of "process-oriented"*
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
-**3.** I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication, and the comparison of POCA with some previous methods is shown below:
+**3.** I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication
+ - *The comparison of POCA with some previous methods is shown below:*
 
 <table style="table-layout: fixed">
   <thead>
@@ -311,7 +312,7 @@ toc_label: "Contents"
 ### Simulation attack
 **1.** I designed a complete attack strategy against the system based on the aforementioned POCA output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.png?raw=true" width="760px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.jpg?raw=true" width="760px"> </div> <br>
 
 **2.** I separately implemented the pre and post penetration by Kali in the range, and all syslogs (total 3 days) are saved as the raw dataset
  
