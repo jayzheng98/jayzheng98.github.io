@@ -51,7 +51,7 @@ toc_label: "Contents"
  - *Another part, as system cyber threat analysis, identifies potential cyber threats based on outputs of the first part according to common security analysis methods*
 
 **3.** I've written an [academic paper](/publication/paper-number-1) about the work of this part for publication
- - *The comparison of POCA with some previous methods is shown below:*
+ - *A comparison of POCA with some previous methods is shown below:*
 
 <table style="table-layout: fixed">
   <thead>
@@ -296,7 +296,7 @@ toc_label: "Contents"
       <td>Kali Linux 2020</td>
       <td>192.168.4.211</td>
       <td>-</td>
-      <td>Metasploit<br>MITRE Caldera</td>
+      <td>Metasploit<br>MITRE CALDERA</td>
     </tr>
     <tr>
       <td>ELK mainframe</td>
@@ -315,6 +315,9 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.png?raw=true" width="765px"> </div> <br>
 
 **2.** I separately implemented the pre and post penetration by Kali in the range, and all syslogs (total 3 days) are saved as the raw dataset
+ - *Below is a display showcasing Sysmon logs (in dataset) for 4 different types of events:*
+ 
+ <div align="center"> <img alt="p2-24" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-24.png?raw=true" width="640px"> </div>
  
 ## Development
 ### Log labelling
@@ -327,8 +330,8 @@ toc_label: "Contents"
 **3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled. In other words, its strong generalization results in low identification of real attack behaviors
  - *For example, all operations achieved by Powershell will be labeled as "T1059.001 Powershell", while they can actually be divided more specifically*
 
-**4.** Therefore, we've written another set of **detection rules** ([repository](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)) specialized for the commandline (powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE Caldera platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
- - *By running the* `test_in_my_case.py` *in the repository, it will overwrite the* `RuleName` *of some logs with more precise "technique_ids", and then export the processed dataset from ELK as* `syslog.csv` *at once*
+**4.** Therefore, we've written another set of **detection rules** ([repository](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)) specialized for the commandline (powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE CALDERA platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
+ - *By running the* `test_in_my_case.py` *in the repository, it will overwrite the* `RuleName` *of some logs with more precise "ATT&CK technique_ids", and then export the processed dataset from ELK as* `syslog.csv` *at once*
 
 <br>
 
