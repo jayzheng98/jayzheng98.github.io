@@ -370,7 +370,7 @@ toc_label: "Contents"
 ### ② General security CTI
 **1.** This dimension is represented as the "cyber threat intelligence(CTI)" ontology. At present, most common CTI exist in unstructured or semi-structured forms. In order to construct the KG of this dimension, we need to extract those CTI into **structured data**
 
-**2.** MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)", which can associate the input attack procedure (left) with ATT&CK techniques and tactics (right) to help generate CTI in a structured form of "TTPs"
+**2.** MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)", which can associate the input attack procedure (left) with ATT&CK techniques and tactics (right) to help generate CTI in a structured form as "TTPs"
 
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="640px"> </div><br>
 
