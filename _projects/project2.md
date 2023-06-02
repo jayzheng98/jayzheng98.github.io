@@ -355,7 +355,45 @@ toc_label: "Contents"
 **2.** On the basis of this template, we've designed the following ontology structure of our CSKG of train control system:
 
 <div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="760px"> </div><br>
-<details><summary style="text-align: center; font-size: 14px;"><b>Click to view edges meaning</b></summary>
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view meaning of edges between dimensions</b></summary>
+ <table>
+  <thead>
+  <tr>
+    <th>Dimension</th>
+    <th>Relationship</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>CTI-Knowledge data</td>
+    <td>CTI-TTP</td>
+    <td>The general security CTI is described by "technique" and "tactic" in knowledge data</td>
+  </tr>
+  <tr>
+    <td>Behavior data-Knowledge data</td>
+    <td>Syslog-TTP</td>
+    <td>The "RuleName" field of logs in behavior data records its association with the "technique" in knowledge data</td>
+  </tr>
+  <tr>
+    <td>Environment data-Behavior data</td>
+    <td>Asset-Process</td>
+    <td>The "process" in behavior data can be correlated with "assets" in environment data based on IP address</td>
+  </tr>
+  <tr>
+    <td>Environment data-CTI</td>
+    <td>Asset-CA</td>
+    <td>"Control action" in specific railway CTI are jointly carried out by "assets" in environment data</td>
+  </tr>
+  <tr>
+    <td>Environment data-CTI</td>
+    <td>Asset-Weakness</td>
+    <td>"Weakness" in specific railway CTI exists in specific "assets" in environment data</td>
+  </tr>
+  </tbody>
+ </table>
+</details>
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view meaning of edges within dimensions</b></summary>
   
 </details>
 
