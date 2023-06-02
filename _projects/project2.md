@@ -31,7 +31,7 @@ toc_label: "Contents"
 **2.** This project mainly supported my **master's thesis**, titled <u>"Analysis and Detection of Cyber Threat Behavior in Train Control System Based on Knowledge Graph"</u>
  - *The specific structure of my work is shown below:*
 
-<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="520px"></div>
+<div align="center"> <img alt="p2-0" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-0.png?raw=true" width="500px"></div>
 <br>
 
 # Threat Analysis 
@@ -315,10 +315,11 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.png?raw=true" width="765px"> </div> <br>
 
 **2.** I separately implemented the pre and post penetration by Kali in the range, and all syslogs (total 3 days) are saved as the raw dataset
- - *Below is a display showcasing Sysmon logs (in dataset) for 4 different types of events:*
- 
- <div align="center"> <img alt="p2-24" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-24.png?raw=true" width="640px"> </div>
- 
+
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view dataset example</b></summary>
+<div align="center"> <img alt="p2-24" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-24.png?raw=true" width="760px"> </div>
+</details>
+
 ## Development
 ### Log labelling
 **1.** The highly-textual information contained in logs will greatly increase the workload and difficulty of analysis, so it's necessary to **preprocess** the dataset: try to add a "label" to each log to generalize its behavior
@@ -346,18 +347,25 @@ toc_label: "Contents"
 **3.** Knowledge graph is a large-scale semantic model composed of vertices and edges. It can intuitively model various security scenarios. This section intends to merge all the aforementioned outputs with existing achievements to construct a **cybersecurity KG of train control system**
 
 ## Design
-### Overview
-**1.** The review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture with 4 dimensions of CSKG:
+### Ontology structure
+**1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture with 4 dimensions of CSKG:
 
 <div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div><br>
 
-**2.** On the basis of this template, we are going to transform the raw data of each dimension into **graph structure**, and eventually merge them together to construct the knowledge graph
+**2.** On the basis of this template, we've designed the following ontology structure of our CSKG of train control system:
+
+<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div>
+<details><summary style="text-align: center; font-size: 14px;"><b>Click to view edges meaning</b></summary>
+  
+</details>
+
+**3.** The following 4 sections will separately discuss each dimension in the ontology structure
 
 ### ① Knowledge data
 **1.** Knowledge data from common cybersecurity knowledge bases, such as [ATT&CK](https://attack.mitre.org/), [CAPEC](https://capec.mitre.org/), [CWE](https://cwe.mitre.org/) , [CVE](https://nvd.nist.gov), [MITRE Engage](https://engage.mitre.org/) and [D3FEND](https://d3fend.mitre.org/), are already linked together by researchers from MIT as an [open source](https://github.com/ALFA-group/BRON) graph "[BRON](https://arxiv.org/pdf/2010.00533.pdf)"
- - *The graph structure of BRON's main part is shown below:*
+ - *The ontology structure of BRON's main part is shown below:*
 
-<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="610px"> </div> 
+<div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="520px"> </div> 
 
 ### ② General security CTI
 **1.** MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)", which can associate the input attack procedure (left) with ATT&CK techniques and tactics (right) to help generate cyber threat intelligence(CTI) in the form of "TTPs"
@@ -389,11 +397,7 @@ toc_label: "Contents"
 ### ④ Behavior data
 **1.** Details of this part are summarized in this [repository](https://github.com/jayzheng98/Syslog-Graph). In short, logs whose `EventID` = `1 (ProcessCreate)` or `10 (ProcessAccess)` contain info that separately represent 2 kinds of process relations: "parentp-childp" and "process-process". We can utilize them as well as the inherent "time" as the 3 major relations to form a **syslog graph**:
 
-<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="230px"> </div><br>
-
-### Final graph
-**1.** The graph structure of the final KG based on aforementioned dimensions is shown below:
-<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="740px"> </div>
+<div align="center"> <img alt="p2-11" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-11.png?raw=true" width="230px"> </div>
 
 ## Development
 **1.** As for the development, knowledge graph can be constructed through **graph database**. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic construction processes are recorded [here](/notes/arangodb)
