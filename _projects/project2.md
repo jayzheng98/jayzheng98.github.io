@@ -404,7 +404,7 @@ toc_label: "Contents"
   </thead>
   <tbody>
   <tr>
-    <td>Knowledge data</td>
+    <td rowspan="8">Knowledge data</td>
     <td>Tactic-Technique</td>
     <td>Tactic includes multiple techniques</td>
   </tr>
@@ -444,7 +444,7 @@ toc_label: "Contents"
     <td>Weaknesses in components include multiple vulnerabilities</td>
   </tr>
   <tr>
-    <td>CTI</td>
+    <td rowspan="8">CTI</td>
     <td>CTI-CTI</td>
     <td>Sequential relationship exists among attack behaviors</td>
   </tr>
@@ -489,7 +489,7 @@ toc_label: "Contents"
     <td>Connection relationship exists among assets</td>
   </tr>
   <tr>
-    <td>Behavior Data</td>
+    <td rowspan="4">Behavior Data</td>
     <td>Syslog-Syslog</td>
     <td>Chronologic relationship exists among syslogs</td>
   </tr>
