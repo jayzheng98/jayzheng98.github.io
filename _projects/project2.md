@@ -26,7 +26,7 @@ toc_label: "Contents"
 
 **1.** In recent years, the signal system of High-speed Railway is facing unprecedented security threats. Since it lacks effective prediction or warning mechanisms for the Advanced Persistent Threats(APT), this project proposes study on cybersecurity threat analysis and defense technology of railway signal system
 
-<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="640px"></div><br>
+<div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-16.png?raw=true" width="620px"></div><br>
 
 **2.** This project mainly supported my **master's thesis**, titled <u>"Analysis and Detection of Cyber Threat Behavior in Train Control System Based on Knowledge Graph"</u>
  - *The specific structure of my work is shown below:*
@@ -394,7 +394,122 @@ toc_label: "Contents"
  </table>
 </details>
 <details><summary style="text-align: center; font-size: 14px;"><b>Click to view meaning of edges within dimensions</b></summary>
-  
+  <table>
+  <thead>
+  <tr>
+    <th>Dimension</th>
+    <th>Relationship</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Knowledge data</td>
+    <td>Tactic-Technique</td>
+    <td>Tactic includes multiple techniques</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Technique-Capec</td>
+    <td>ATT&CK techniques and CAPEC attack patterns have overlaps</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Technique-Technique</td>
+    <td>Parent-child relationship exists among techniques</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Capec-Capce</td>
+    <td>Parent-child relationship exists among attack patterns</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Technique-Technique_mitigation</td>
+    <td>Mitigations can reduce the impact of techniques</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Technique-Technique_detection</td>
+    <td>Detection methods can identify traces of techniques</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Capec-Cwe</td>
+    <td>Attack patterns exploit weaknesses in components</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Cwe-Cve</td>
+    <td>Weaknesses in components include multiple vulnerabilities</td>
+  </tr>
+  <tr>
+    <td>CTI</td>
+    <td>CTI-CTI</td>
+    <td>Sequential relationship exists among attack behaviors</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Accident-Hazard</td>
+    <td>System hazards can cause accidents</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Hazard-Service</td>
+    <td>Abnormalities in service can cause system hazards</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Service-CA</td>
+    <td>Services include multiple control actions</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>CA-Weakness</td>
+    <td>Control actions may lead to unsafe control actions</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Weakness-Weakness</td>
+    <td>Parent-child relationship exists among unsafe control actions</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>TS-Weakness</td>
+    <td>Threat scenarios include multiple unsafe control actions</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>TS-TS</td>
+    <td>Parent-child relationship exists among threat scenarios</td>
+  </tr>
+  <tr>
+    <td>Environment Data</td>
+    <td>Asset-Asset</td>
+    <td>Connection relationship exists among assets</td>
+  </tr>
+  <tr>
+    <td>Behavior Data</td>
+    <td>Syslog-Syslog</td>
+    <td>Chronologic relationship exists among syslogs</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Process-Syslog</td>
+    <td>Processes include multiple logs</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Process-Process</td>
+    <td>Access relationship exists among processes</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Parentp-Childp</td>
+    <td>Parent-child relationships exists among processes</td>
+  </tr>
+  </tbody>
+</table>
 </details>
 
 **3.** The following 4 sections will separately discuss each dimension in the ontology structure
