@@ -409,37 +409,30 @@ toc_label: "Contents"
     <td>Tactic includes multiple techniques</td>
   </tr>
   <tr>
-    <td></td>
     <td>Technique-Capec</td>
     <td>ATT&CK techniques and CAPEC attack patterns have overlaps</td>
   </tr>
   <tr>
-    <td></td>
     <td>Technique-Technique</td>
     <td>Parent-child relationship exists among techniques</td>
   </tr>
   <tr>
-    <td></td>
     <td>Capec-Capce</td>
     <td>Parent-child relationship exists among attack patterns</td>
   </tr>
   <tr>
-    <td></td>
     <td>Technique-Technique_mitigation</td>
     <td>Mitigations can reduce the impact of techniques</td>
   </tr>
   <tr>
-    <td></td>
     <td>Technique-Technique_detection</td>
     <td>Detection methods can identify traces of techniques</td>
   </tr>
   <tr>
-    <td></td>
     <td>Capec-Cwe</td>
     <td>Attack patterns exploit weaknesses in components</td>
   </tr>
   <tr>
-    <td></td>
     <td>Cwe-Cve</td>
     <td>Weaknesses in components include multiple vulnerabilities</td>
   </tr>
@@ -449,37 +442,30 @@ toc_label: "Contents"
     <td>Sequential relationship exists among attack behaviors</td>
   </tr>
   <tr>
-    <td></td>
     <td>Accident-Hazard</td>
     <td>System hazards can cause accidents</td>
   </tr>
   <tr>
-    <td></td>
     <td>Hazard-Service</td>
     <td>Abnormalities in service can cause system hazards</td>
   </tr>
   <tr>
-    <td></td>
     <td>Service-CA</td>
     <td>Services include multiple control actions</td>
   </tr>
   <tr>
-    <td></td>
     <td>CA-Weakness</td>
     <td>Control actions may lead to unsafe control actions</td>
   </tr>
   <tr>
-    <td></td>
     <td>Weakness-Weakness</td>
     <td>Parent-child relationship exists among unsafe control actions</td>
   </tr>
   <tr>
-    <td></td>
     <td>TS-Weakness</td>
     <td>Threat scenarios include multiple unsafe control actions</td>
   </tr>
   <tr>
-    <td></td>
     <td>TS-TS</td>
     <td>Parent-child relationship exists among threat scenarios</td>
   </tr>
@@ -494,17 +480,14 @@ toc_label: "Contents"
     <td>Chronologic relationship exists among syslogs</td>
   </tr>
   <tr>
-    <td></td>
     <td>Process-Syslog</td>
     <td>Processes include multiple logs</td>
   </tr>
   <tr>
-    <td></td>
     <td>Process-Process</td>
     <td>Access relationship exists among processes</td>
   </tr>
   <tr>
-    <td></td>
     <td>Parentp-Childp</td>
     <td>Parent-child relationships exists among processes</td>
   </tr>
@@ -521,14 +504,14 @@ toc_label: "Contents"
 <div align="center"> <img alt="p2-9" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-9.png?raw=true" width="460px"> </div> 
 
 ### ② General security CTI
-**1.** This dimension is represented as the "cyber threat intelligence(CTI)" ontology. At present, most common CTI exist in unstructured or semi-structured forms. In order to construct the KG of this dimension, we need to extract those CTI into **structured data**
+**1.** This dimension is represented as the "cyber threat intelligence(CTI)" ontology. At present, most common CTI exist in **unstructured** or **semi-structured** forms. In order to construct the KG of this dimension, we need to extract those CTI into **structured data**
 
 **2.** MITRE developed an [open source](https://github.com/center-for-threat-informed-defense/tram/) platform "[TRAM](https://medium.com/mitre-engenuity/tram-advancing-research-into-automated-ttp-identification-in-threat-reports-2d868fecc791)", which can associate the input attack procedure (left) with ATT&CK techniques and tactics (right) to help generate CTI in a structured form as "TTPs"
 
 <div align="center"> <img alt="p2-10" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-10.png?raw=true" width="640px"> </div><br>
 
 **3.** Through the TRAM platform and manual verification, we've generated the **general security CTI** of some common attacks, which could be easily imported into graph
- - *The figure below shows an example of the reformatted "file stealing" attack*
+ - *The figure below shows an example of the extracted "file stealing" attack*
 
 <div align="center"> <img alt="p2-23" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-23.png?raw=true" width="720px"> </div>
 
@@ -557,7 +540,7 @@ toc_label: "Contents"
 ## Development
 **1.** As for the development, knowledge graph can be constructed through **graph database**. This project chooses the [ArangoDB](https://www.arangodb.com/), and its basic construction processes are recorded [here](/notes/arangodb)
 
-**2.** I take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the actual entities and edges in the constructed graph database:
+**2.** I take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the actual entities and edges in my constructed graph database:
 
 <div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div><br>
 
