@@ -615,15 +615,18 @@ toc_label: "Contents"
 ### Detection framework
 **1.** From a macro perspective, the project studies 2 types of behavior: <u>abstract threat behavior</u> derived through theoretical analysis (**CTI** in KG), and <u>specific system behavior</u> collected through practical experiments (**behavior data** in KG). The overall threat detection idea is "based on **CTI** dimension, supplemented by other dimensions, detect anomalies in **behavior data** dimension"
 
-<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="600px"> </div><br>
+<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="620px"> </div><br>
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework** shown above, which defines 3 kinds of behaviors according to the threat level from low to high:
- - *<b>System device behavior</b> is the complete set of <u>behavior data</u>, including 2 subsets of middle-level and high-level behavior*
-   -  *Due to the high proportion of labelled syslogs, it is hard to identify the abnormal data hidden in massive normal data at this level*
- - *<b>Security threat behavior</b> is detected when some <u>system device behaviors</u> satisfy a specific attack pattern recorded in <u>general security CTI</u>*
-   - *Its detection idea is: search for combination of syslogs in which their "technique" labels match the "techniques" used by attack pattern*
- - *<b>Service abnormal behavior</b> is detected when some <u>security threat behaviors</u> further conform to a specific threat scenario described in <u>specific railway CTI</u>*
-   - *Its detection idea is: search for attack patterns that involve the operation of certain "service command file" exploited by threat scenario*
+ - <b>System device behavior</b> 
+   - *It is the complete set of <u>behavior data</u>, including 2 subsets of middle-level and high-level behavior*
+   - *Due to the high proportion of labelled syslogs, it is hard to identify the abnormal data hidden in massive normal data at this level*
+ - <b>Security threat behavior</b>
+   - *It is detected when some <u>system device behaviors</u> satisfy a specific attack pattern recorded in <u>general security CTI</u>*
+   - *The idea is: search for combination of syslogs in which their "technique" labels match the "techniques" used by attack pattern*
+ - <b>Service abnormal behavior</b> 
+   - *It is detected when some <u>security threat behaviors</u> further conform to a specific threat scenario described in <u>specific railway CTI</u>*
+   - *The idea is: search for attack patterns that involve the operation of certain "service command file" exploited by threat scenario*
 
 ### Detection modes
 **1.** As for the application, this framework can perform 2 detection modes: 
