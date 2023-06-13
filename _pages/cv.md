@@ -41,16 +41,16 @@ redirect_from:
 <hr>
 
 - **[Verification and recurrence of \*\*\*\*\* vulnerability in the wireless communication system of China Urban Rail Transit](/projects/project1)** <br>
-  <font size='3'><b>Time:</b>&ensp;2022.04.15 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Main Participant<br>
+  <font size='3'><b>Time:</b>&ensp;2022.04 - 2023.05 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Main Participant<br>
   <b>Abstract:</b>&ensp;A high-risk vulnerability (CNNVD-202204-3571) in the subway system is proposed by our preliminary theoretical research. Then a confidential project is established, and aims to build a pseudo base-station experimental platform for the recurrence of the <u>man-in-the-middle</u> attack against the LTE communication used in subway</font>
 
 - **[Cybersecurity threat analysis and prediction of high-speed railway signal system based on knowledge graph](/projects/project2)** <br>
-  <font size='3'><b>Time:</b>&ensp;2021.04.05 - Now &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Main Participant<br>
+  <font size='3'><b>Time:</b>&ensp;2021.04 - 2023.06 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Main Participant<br>
   <b>Abstract:</b>&ensp;This project studies the application of cybersecurity <u>knowledge graph</u> in the high-speed railway signal system (cyber-physical system). The main contents include: 1) Threat modeling 2) Knowledge graph construction 3) Anomaly detection and attack prediction of railway signal system</font>
 
 - **[Design of LED traffic light brightness-adaptive system based on microcontroller](/projects/project3)** <br>
-  <font size='3'><b>Time:</b>&ensp;2018.04.20 - 2019.05.04&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Principal Investigator<br>
-  <b>Abstract:</b>&ensp;The LED traffic lights currently used in various working conditions are mostly of constant luminance, which are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
+  <font size='3'><b>Time:</b>&ensp;2018.04 - 2019.05 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; <b>Role:</b>&ensp;Principal Investigator<br>
+  <b>Abstract:</b>&ensp;The LED traffic lights currently used in various conditions are mostly of constant luminance, which are easy to be interfered by the environment. Therefore, this project aims to design the <u>microcontroller</u> based brightness-adaptive system of LED traffic lights</font>
 
 ## Patents 
 <hr>
