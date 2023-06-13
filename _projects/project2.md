@@ -640,7 +640,10 @@ toc_label: "Contents"
  - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple basic algorithms including BFS, so we could develop detection functions based on it*
 
 ### Security threat behavior detection (low → middle)
-**1.** An example of the AQL code for detection at this level is as follows:
+**1.** The general idea for detection at this level is:
+ - *Traverse within "CTI" to obtain all attack patterns' entities (CTI)*
+ - *Traverse downward to "asset" through "syslog" to find related logs for each pattern (behavior data)*
+ - *Output the traversal path as the detection result*
  
 ```sql
 FOR v,e,p IN ANY 'CTI/steal1'
@@ -655,7 +658,7 @@ FOR v,e,p IN ANY 'CTI/steal1'
 RETURN p
 ```
 
-**2.** After executing the above code, 2 attack patterns in the dataset were successfully detected:
+**2.** After executing codes similar to above, 2 kinds of attack patterns were successfully detected:
  - *Lateral movement*
  
 <div align="center"> <img alt="p2-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-17.png?raw=true" width="740px"> </div><br>
@@ -664,14 +667,14 @@ RETURN p
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
 ### Service abnormal behavior detection (middle → high)
-**1.** The basis for mapping from mid-level to high-level is the **service command files**
+**1.** The basis for mapping from mid-level to high-level is the **service command files**. The general idea is:
+- *Based on the traversal result of <b>security threat behavior detection</b>, set filter conditions for specific command file to continue traversing upwards*
 
 **2.** For the detected "lateral movement", it does not involve any command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
 
 <div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="480px"> </div><br>
 
-**3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the "file stealing" attack may be further mapped to the high-level service abnormal behavior through the following AQL code:
- - *The general idea is: based on the traversal result of the security threat behavior detection, set filter conditions to continue traversing upwards*
+**3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the "file stealing" attack may be further mapped to the high-level service abnormal behavior
 
 ```sql
 FOR v,e,p IN 1..8 ANY 'CTI/steal3'
@@ -695,10 +698,10 @@ RETURN p
 <div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="250px"> </div><br>
 
 ### Service abnormal behavior detection (high → low)
-**1.** The workflow of bi-directional detection is:
- - *traverse within the "threat_scenario" layer (current location) to obtain remaining steps (CTI)*
- - *traverse downward to the "syslog" layer for each step to find related logs (behavior data)*
- - *output the traversal path as the detection result*
+**1.** The general idea for detection at this level is as follows:
+ - *Traverse within "threat_scenario" to obtain remaining scenarios' entities (CTI)*
+ - *Traverse downward to "syslog" to find related logs for each scenario (behavior data)*
+ - *Output the traversal path as the detection result*
 
 **2.** At first, node "TS2.1" was read, which involves **tampering** with the **TSR cancel** command file. However, since this file was tampered locally by the attacker, no relevant logs can be detected
 
