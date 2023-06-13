@@ -642,7 +642,7 @@ toc_label: "Contents"
 ### Security threat behavior detection (low → middle)
 **1.** The general idea for detection at this level is:
  - *Traverse within "CTI" to obtain all attack patterns' entities (CTI)*
- - *Traverse downward to "asset" through "syslog" to find related logs for each pattern (behavior data)*
+ - *Traverse to "asset" through "syslog" to find related logs for each pattern (behavior data)*
  - *Output the traversal path as the detection result*
  
 ```sql
@@ -667,8 +667,8 @@ RETURN p
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
 ### Service abnormal behavior detection (middle → high)
-**1.** The basis for mapping from mid-level to high-level is the **service command files**. The general idea is:
-- *Based on the traversal result of <b>security threat behavior detection</b>, set filter conditions for specific command file to continue traversing upwards*
+**1.** The basis for mapping from mid-level to high-level is the **service command files**. The general idea for detection at this level is:
+- *Based on the traversal result of <b>security threat behavior detection</b>, set filter conditions for the specific command file to continue traversing upwards*
 
 **2.** For the detected "lateral movement", it does not involve any command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
 
@@ -729,7 +729,7 @@ RETURN p
 **4.** Through the above code, abnormal behavior of operating such command file was detected:
 
 <div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="500px"> </div><br>
-**5.** Continue traversing within the "threat scenario" layer to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file
+**5.** Continue traversing to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file
 
 ```sql
 FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
