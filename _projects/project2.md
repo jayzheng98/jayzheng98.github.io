@@ -540,7 +540,7 @@ toc_label: "Contents"
 
 **2.** Here, I take the <u>specific railway CTI</u> and <u>environment data</u> 2 dimensions as examples to display the actually constructed graph:
 
-<div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="760px"> </div><br>
+<div align="center"> <img alt="p2-13" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-13.png?raw=true" width="770px"> </div><br>
 
 **3.** Basic indicators of the constructed KG:
 <details><summary style="text-align: center; font-size: 14px;"><b>Click to view indicators</b></summary>
@@ -611,7 +611,7 @@ toc_label: "Contents"
 ### Detection framework
 **1.** From a macro perspective, the project studies 2 types of behavior: <u>abstract threat behavior</u> derived through theoretical analysis (**CTI** in KG), and <u>specific system behavior</u> collected through practical experiments (**behavior data** in KG). The overall threat detection idea is "based on **CTI** dimension, supplemented by other dimensions, detect anomalies in **behavior data** dimension"
 
-<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="640px"> </div><br>
+<div align="center"> <img alt="p2-14" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-14.png?raw=true" width="660px"> </div><br>
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework** shown above, which defines 3 kinds of behaviors according to the threat level from low to high:
  - <b>System device behavior</b> 
@@ -631,7 +631,7 @@ toc_label: "Contents"
 
 <div align="center"> <img alt="p2-15" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-15.png?raw=true" width="780px"> </div>
 
-**2.** The program flowchart of experiment based on the detection framework is:
+**2.** The program flowchart of following experiment based on the detection framework is:
 
 <div align="center"> <img alt="p2-16" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-6.png?raw=true" width="660px"> </div><br>
 
@@ -640,8 +640,7 @@ toc_label: "Contents"
  - *ArangoDB's query language [AQL](https://www.arangodb.com/docs/stable/aql/index.html) has integrated multiple basic algorithms including BFS, so we could develop detection functions based on it*
 
 ### Security threat behavior detection (low → middle)
-**1.** Since the association between <u>behavior data</u>, <u>knowledge data</u>, and <u>CTI</u> has already been established in the KG, we only need to search for the syslog node combinations that match the TTPs of <u>general security CTI</u> according to their ATT&CK labels
- - *The AQL code for this detection is as follows:*
+**1.** An example of the AQL code for detection at this level is as follows:
  
 ```sql
 FOR v,e,p IN ANY 'CTI/steal1'
@@ -656,7 +655,7 @@ FOR v,e,p IN ANY 'CTI/steal1'
 RETURN p
 ```
 
-**2.** After executing the above code, we've detected 2 kinds of attack patterns in the dataset:
+**2.** After executing the above code, 2 attack patterns in the dataset were successfully detected:
  - *Lateral movement*
  
 <div align="center"> <img alt="p2-17" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-17.png?raw=true" width="740px"> </div><br>
@@ -665,14 +664,14 @@ RETURN p
 <div align="center"> <img alt="p2-18" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-18.png?raw=true" width="760px"> </div><br>
 
 ### Service abnormal behavior detection (middle → high)
-**1.** The basis for mapping from mid-level to high-level in this project is the **command files**
+**1.** The basis for mapping from mid-level to high-level is the **service command files**
 
-**2.** For the detected "lateral movement", it does not involve any service command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
+**2.** For the detected "lateral movement", it does not involve any command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
 
 <div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="480px"> </div><br>
 
-**3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the detected attack may be further mapped to the high-level service abnormal behavior through the following AQL template:
- - *The general idea is: based on the traversal result of the middle-level detection, set filter conditions to continue traversing upwards*
+**3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the "file stealing" attack may be further mapped to the high-level service abnormal behavior through the following AQL code:
+ - *The general idea is: based on the traversal result of the security threat behavior detection, set filter conditions to continue traversing upwards*
 
 ```sql
 FOR v,e,p IN 1..8 ANY 'CTI/steal3'
@@ -691,7 +690,7 @@ FOR v,e,p IN 1..8 ANY 'CTI/steal3'
 RETURN p
 ```
 
-**4.** After executing the above code, only the first step of threat scenario2 (node "TS2") was matched, suggesting that **bottom-up** detection alone is insufficient for identifying service abnormal behavior in our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario2
+**4.** After executing the above code, only the first step of threat scenario2 (node "TS2") was matched, suggesting that **bottom-up** detection is insufficient for our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario2
 
 <div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="250px"> </div><br>
 
