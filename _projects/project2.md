@@ -175,11 +175,10 @@ toc_label: "Contents"
 
 ## Design
 ### Simulation range
-**1.** I built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)):
+**1.** I've built a simulation range in my laboratory according to the Signal Safety Data Network(SSDN) of train control system ([networking processes](/notes/DC)):
 
 <div align="center"><img alt="p2-3" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-1.png?raw=true" width="750px"></div>
 
-**2.** This range is composed of the network equipment and other 3 parts:
 <details><summary style="text-align: center; font-size: 14px;"><b>Click to view range component</b></summary>
   <ul>
     <li><strong>Network Equipment</strong>
@@ -206,7 +205,6 @@ toc_label: "Contents"
     </li>
   </ul></details>
 
-**3.** Detailed configuration of this range is shown in the table below:
 <details><summary style="text-align: center; font-size: 14px;"><b>Click to view range configuration</b></summary>
 <ul>
   <li>
@@ -312,12 +310,12 @@ toc_label: "Contents"
 ### Simulation attack
 **1.** I designed a complete attack strategy against the system based on the aforementioned POCA output "threat scenario2". It covers all 12 tactics and includes 18 techniques of [MITRE ATT&CK](https://attack.mitre.org/)
 
-<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.png?raw=true" width="765px"> </div> <br>
+<div align="center"> <img alt="p2-5" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-5.png?raw=true" width="790px"> </div> <br>
 
 **2.** I separately implemented the pre and post penetration by Kali in the range, and all syslogs (total 3 days) are saved as the raw dataset
 
 <details><summary style="text-align: center; font-size: 14px;"><b>Click to view dataset example</b></summary>
-<div align="center"> <img alt="p2-24" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-24.png?raw=true" width="760px"> </div>
+<div align="center"> <img alt="p2-24" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-24.png?raw=true" width="790px"> </div>
 </details>
 
 ## Development
@@ -340,7 +338,7 @@ toc_label: "Contents"
 <hr>
 
 ## Introduction
-**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. The main challenge in current security analysis is not data shortage, but how to effectively combine information from multiple sources
+**1.** The expanding scale of cyberspace leads to a sharp increase in the amount of security-related data, which are diverse, fragmented, and heterogeneous. **The main challenge** in current security analysis is not data shortage, but how to effectively combine information from multiple sources
 
 **2.** Previous chapters have generated various data, such as threat modeling, system architecture, and system logs. To effectively utilize these outputs, we need to address the **multi-source heterogeneous** issue. Knowledge graph(KG), with its excellent data integration, correlation, and visualization capability, becomes the preferred technology
 
@@ -348,13 +346,14 @@ toc_label: "Contents"
 
 ## Design
 ### Ontology structure
-**1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture with 4 dimensions of CSKG:
+**1.** A review article "[Recent Progress of Using Knowledge Graph for Cybersecurity](https://www.mdpi.com/2079-9292/11/15/2287)" provides us with a general architecture of CSKG, which consists of 4 dimensions:
 
 <div align="center"> <img alt="p2-8" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-8.png?raw=true" width="540px"> </div><br>
 
-**2.** On the basis of this template, we've designed the following ontology structure of our CSKG of train control system:
+**2.** On the basis of this architecture, we've designed the following ontology structure of our CSKG of train control system:
 
-<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="760px"> </div><br>
+<div align="center"> <img alt="p2-12" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-12.png?raw=true" width="780px"> </div>
+
 <details><summary style="text-align: center; font-size: 14px;"><b>Click to view meaning of edges between dimensions</b></summary>
  <table>
   <thead>
@@ -493,7 +492,7 @@ toc_label: "Contents"
   </tr>
   </tbody>
 </table>
-</details>
+</details><br>
 
 **3.** The following 4 sections will separately discuss each dimension in the ontology structure
 
