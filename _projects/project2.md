@@ -674,7 +674,7 @@ RETURN p
 
 <div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="480px"> </div><br>
 
-**3.** According to the <u>specific railway CTI</u>, the control action related to TSR cancel command is "CA0". Based on this clue, the "file stealing" attack may be further mapped to the high-level service abnormal behavior
+**3.** Based on this clue, the "file stealing" attack may be further mapped to the high-level service abnormal behavior
 
 ```sql
 FOR v,e,p IN 1..8 ANY 'CTI/steal3'
@@ -698,14 +698,14 @@ RETURN p
 <div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="250px"> </div><br>
 
 ### Service abnormal behavior detection (high → low)
-**1.** The general idea for detection at this level is as follows:
- - *Traverse within "threat_scenario" to obtain remaining scenarios' entities (CTI)*
+**1.** The general idea for detection at this level is:
+ - *Traverse within "threat_scenario" to obtain remaining threat scenarios' entities (CTI)*
  - *Traverse downward to "syslog" to find related logs for each scenario (behavior data)*
  - *Output the traversal path as the detection result*
 
 **2.** At first, node "TS2.1" was read, which involves **tampering** with the **TSR cancel** command file. However, since this file was tampered locally by the attacker, no relevant logs can be detected
 
-**3.** Then, continue traversing to the "TS2.1.1" node, which involves **leakage** of the **TSR execution reminder** command file
+**3.** Then, continue traversing to the "TS2.1.1" node, which involves **leakage** of the **TSR execution reminder** command file. The corresponding AQL code is:
 
 ```sql
 FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
@@ -729,7 +729,7 @@ RETURN p
 **4.** Through the above code, abnormal behavior of operating such command file was detected:
 
 <div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="500px"> </div><br>
-**5.** Continue traversing to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file
+**5.** Continue traversing to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file. The corresponding AQL code is:
 
 ```sql
 FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
@@ -757,7 +757,6 @@ RETURN p
  - *Finally,* `TargetFilename` *field clearly reveals that the attacker's target is **TSR_execution.CONF***
 
 <div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="600px"> </div><br>
-**7.** So far, main abnormal behaviors related to threat scenario2 in the dataset have been detected
 
 <br>
 
