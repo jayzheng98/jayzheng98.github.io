@@ -615,7 +615,7 @@ toc_label: "Contents"
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework** shown above, which defines 3 kinds of behaviors according to the threat level from low to high:
  - <b>System device behavior</b> 
-   - *It is the complete set of <u>behavior data</u>, including 2 subsets of middle & high-level behavior*
+   - *It is the complete set of <u>behavior data</u>, including 2 subsets of mid & high-level behavior*
    - *Due to the high proportion of labelled syslogs, it is hard to identify the abnormal data hidden in massive normal data at this level*
  - <b>Security threat behavior</b>
    - *It is detected when some <u>system device behaviors</u> satisfy a specific attack pattern recorded in <u>general security CTI</u>*
@@ -646,7 +646,7 @@ toc_label: "Contents"
  - *Output the traversal path as the detection result*
  
 ```sql
-FOR v,e,p IN ANY 'CTI/steal1'
+FOR vertices,edges,paths IN ANY 'CTI/steal1'
                 CTICTI,
                 CTITTP,
                 OUTBOUND TechniqueTechnique_mitigation,
@@ -655,7 +655,7 @@ FOR v,e,p IN ANY 'CTI/steal1'
                 INBOUND ParentpChildp,
                 INBOUND AssetProcess
     OPTIONS {bfs:ture}
-RETURN p
+RETURN paths
 ```
 
 **2.** After executing codes similar to above, 2 kinds of attack patterns were successfully detected:
@@ -677,7 +677,7 @@ RETURN p
 **3.** Based on this clue, the "file stealing" attack may be further mapped to the high-level service abnormal behavior
 
 ```sql
-FOR v,e,p IN 1..8 ANY 'CTI/steal3'
+FOR vertices,edges,paths IN 1..8 ANY 'CTI/steal3'
                      CTITTP,
                      INBOUND SyslogTTP,
                      INBOUND ProcessSyslog,
@@ -690,7 +690,7 @@ FOR v,e,p IN 1..8 ANY 'CTI/steal3'
      FILTER p.vertices[*]._key ANY == "23647"
         AND p.vertices[*].command ANY == "TSR_Cancel"
         AND p.vertices[*].security_threat ANY == "Leakage"
-RETURN p
+RETURN paths
 ```
 
 **4.** After executing the above code, only the first step of threat scenario2 (node "TS2") was matched, suggesting that **bottom-up** detection is insufficient for our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario2
@@ -708,7 +708,7 @@ RETURN p
 **3.** Then, continue traversing to the "TS2.1.1" node, which involves **leakage** of the **TSR execution reminder** command file. The corresponding AQL code is:
 
 ```sql
-FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
+FOR vertices,edges,paths IN 1..7 ANY 'threat_scenario/TS2'
                      TSTS,
                      INBOUND TSWeakness,
                      OUTBOUND CAWeakness,
@@ -723,7 +723,7 @@ FOR v,e,p IN 1..7 ANY 'threat_scenario/TS2'
         AND p.vertices[*].security_threat ANY == "Leakage"
      FILTER p.vertices[*].TargetFilename
         AND p.vertices[*].TargetFilename LIKE "%TSR_ExecutionReminder%"
-RETURN p
+RETURN paths
 ```
 
 **4.** Through the above code, abnormal behavior of operating such command file was detected:
@@ -732,7 +732,7 @@ RETURN p
 **5.** Continue traversing to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file. The corresponding AQL code is:
 
 ```sql
-FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
+FOR vertices,edges,paths IN 1..8 ANY 'threat_scenario/TS2'
                      TSTS,
                      INBOUND TSWeakness,
                      OUTBOUND CAWeakness,
@@ -747,7 +747,7 @@ FOR v,e,p IN 1..8 ANY 'threat_scenario/TS2'
         AND p.vertices[*].security_threat ANY == "Counterfeit"
      FILTER p.vertices[*].TargetFilename
         AND p.vertices[*].TargetFilename LIKE "%TSR_Execution%"
-RETURN p
+RETURN paths
 ```
 
 **6.** Through the above code, abnormal behavior of operating such command file was detected:
