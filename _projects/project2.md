@@ -695,7 +695,7 @@ RETURN paths
 
 **4.** After executing the above code, only the first step of threat scenario2 (node "TS2") was matched, suggesting that **bottom-up** detection is insufficient for our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario2
 
-<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="640px"> </div><br>
+<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="620px"> </div><br>
 
 ### Service abnormal behavior detection (high → low)
 **1.** The general idea for detection at this level is:
