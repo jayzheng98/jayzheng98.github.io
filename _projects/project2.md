@@ -615,7 +615,7 @@ toc_label: "Contents"
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework** shown above, which defines 3 kinds of behaviors according to the threat level from low to high:
  - <b>System device behavior</b> 
-   - *It is the complete set of <u>behavior data</u>, including 2 subsets of middle-level and high-level behavior*
+   - *It is the complete set of <u>behavior data</u>, including 2 subsets of middle and high-level behavior*
    - *Due to the high proportion of labelled syslogs, it is hard to identify the abnormal data hidden in massive normal data at this level*
  - <b>Security threat behavior</b>
    - *It is detected when some <u>system device behaviors</u> satisfy a specific attack pattern recorded in <u>general security CTI</u>*
@@ -670,7 +670,7 @@ RETURN p
 **1.** The basis for mapping from mid-level to high-level is the **service command files**. The general idea for detection at this level is:
 - *Based on the traversal result of <b>security threat behavior detection</b>, set filter conditions for the specific command file to continue traversing upwards*
 
-**2.** For the detected "lateral movement", it does not involve any command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged"
+**2.** For the detected "lateral movement", it does not involve any command file; For the "file stealing", the commandline input of "syslog/23647" (corresponding to the 3rd step of this attack pattern) indicates that it used the `Copy-Item` to copy (steal) the "TSR_Cancel.CONF" command file to a folder called "staged":
 
 <div align="center"> <img alt="p2-19" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-19.png?raw=true" width="480px"> </div><br>
 
