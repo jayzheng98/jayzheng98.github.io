@@ -615,7 +615,7 @@ toc_label: "Contents"
 
 **2.** Based on this idea, I've designed a **behavior-based anomaly detection framework** shown above, which defines 3 kinds of behaviors according to the threat level from low to high:
  - <b>System device behavior</b> 
-   - *It is the complete set of <u>behavior data</u>, including 2 subsets of middle and high-level behavior*
+   - *It is the complete set of <u>behavior data</u>, including 2 subsets of middle & high-level behavior*
    - *Due to the high proportion of labelled syslogs, it is hard to identify the abnormal data hidden in massive normal data at this level*
  - <b>Security threat behavior</b>
    - *It is detected when some <u>system device behaviors</u> satisfy a specific attack pattern recorded in <u>general security CTI</u>*
