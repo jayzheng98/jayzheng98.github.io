@@ -695,7 +695,7 @@ RETURN paths
 
 **4.** After executing the above code, only the first step of threat scenario2 (node "TS2") was matched, suggesting that **bottom-up** detection is insufficient for our dataset. Therefore, **bi-directional** detection is required to further trace subsequent steps of threat scenario2
 
-<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="620px"> </div><br>
+<div align="center"> <img alt="p2-20" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-20.png?raw=true" width="600px"> </div><br>
 
 ### Service abnormal behavior detection (high → low)
 **1.** The general idea for detection at this level is:
@@ -727,8 +727,11 @@ RETURN paths
 ```
 
 **4.** Through the above code, abnormal behavior of operating such command file was detected:
+ - *Firstly,* `RuleName` *field of "syslog/24049" indicates the involvement of **script and payload**, suggesting that it is highly likely a trace of the attacker's behavior as monitoring the **TSR execution reminder***
+ - *Furthermore,* `TargetFilename` *field records the monitored file located in "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Recent", which is typically used to store shortcuts of recently used files or applications*
+ - *Therefore, it can be inferred that the script used by attacker doesn't directly monitor the original command file, but a shortcut in another directory*
 
-<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="500px"> </div><br>
+<div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="560px"> </div><br>
 **5.** Continue traversing to the "TS2.1.1.1" node, which involves the **counterfeit** of **TSR execution** command file. The corresponding AQL code is:
 
 ```sql
@@ -751,7 +754,7 @@ RETURN paths
 ```
 
 **6.** Through the above code, abnormal behavior of operating such command file was detected:
- - *Firstly, this log corresponds to **event 11**, which is generated when a new file is created or the original **file is overwritten**. It is consistent with the fact that the attacker replaced the "TSR execute" with the stolen "TSR cancel" command file*
+ - *Firstly, "syslog/4634" corresponds to **event 11**, which is generated when a new file is created or the original **file is overwritten**. It is consistent with the fact that the attacker replaced the "TSR execute" with the stolen "TSR cancel" command file*
  - *Secondly, the process path recorded in* `Image` *field includes **cmd.exe**, indicating that the attacker replaced file through remote commandline*
  - *Then, same abnormal behavior was detected on CTC active (asset8) and standby (asset9), indicating that the attacker had replaced files on both devices*
  - *Finally,* `TargetFilename` *field clearly reveals that the attacker's target is **TSR_execution.CONF***
