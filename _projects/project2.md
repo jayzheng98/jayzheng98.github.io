@@ -728,7 +728,7 @@ RETURN paths
 
 **4.** Through the above code, abnormal behavior of operating such command file was detected:
  - *Firstly,* `RuleName` *field of "syslog/24049" indicates the involvement of **script and payload**, suggesting that it is highly likely a trace of attacker monitoring the **TSR execution reminder***
- - *Furthermore,* `TargetFilename` *field records the monitored file and its location as "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Recent", which is typically used to store shortcuts of recently used files*
+ - *Furthermore, the* `TargetFilename` *field records the monitored file and its location as "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Recent", which is typically used to store shortcuts of recently used files*
  - *Therefore, it can be inferred that the script used by attacker doesn't directly monitor the original command file, but a shortcut in another directory*
 
 <div align="center"> <img alt="p2-21" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-21.png?raw=true" width="580px"> </div><br>
@@ -759,7 +759,7 @@ RETURN paths
  - *Then, same abnormal behavior was detected on CTC active (asset8) and standby (asset9), indicating that the attacker had replaced files on both devices*
  - *Finally,* `TargetFilename` *field clearly reveals that the attacker's target is **TSR_execution.CONF***
 
-<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="600px"> </div><br>
+<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="660px"> </div><br>
 
 <br>
 
