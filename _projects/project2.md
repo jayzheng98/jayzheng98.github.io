@@ -759,7 +759,7 @@ RETURN paths
  - *Then, same abnormal behavior was detected on CTC active (asset8) and standby (asset9), indicating that the attacker had replaced files on both devices*
  - *Finally,* `TargetFilename` *field clearly reveals that the attacker's target is **TSR_execution.CONF***
 
-<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="660px"> </div><br>
+<div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="680px"> </div><br>
 
 <br>
 
