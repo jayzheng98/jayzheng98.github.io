@@ -769,10 +769,10 @@ RETURN paths
 **1.** This thesis focuses on **threat modeling** and **anomaly detection** research for train control system. The main contributions are:
  - *A novel threat modeling approach is proposed, which integrates security analysis with the process of system service to achieve the coalescence of functional safety and cyber security of cyber-physical systems*
  -	*A cybersecurity knowledge graph of railway train control system is constructed, which provides researchers with a global analysis perspective by using multidimensional data to model the behavior of railway systems*
- -	*A abnormal behavior detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide visual outputs*
+ -	*A abnormal behavior detection framework is proposed based on the constructed knowledge graph, which can effectively detect major attack behaviors hidden in system logs and provide intelligible visual outputs*
 
 **2.** Although certain results have been achieved, there are still limitations and researchable issues:
- - *The POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate two types of CTI when constructing the knowledge graph*
- - *Manual analysis is still used to assist the graph model in making judgments in the bi-directional mode. With the development of AI technology, the attack and defense scenarios will gradually become intelligent. Our graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
+ - *The POCA provides a relatively simple description of the attack patterns involved in threat scenarios, which directly leads to the inability to effectively associate 2 types of CTI when constructing the knowledge graph*
+ - *Manual analysis is used to assist the graph model in the bi-directional detection. With the development of AI technology, the attack and defense scenarios will gradually become intelligent. Our graph model should also integrate a variety of model-based intelligent technologies to achieve fully automated analysis and detection*
 
 <div align="right"><a class="top-link hide" href="#top"><font size="6"><b>↑</b></font></a></div><br>
