@@ -329,7 +329,7 @@ toc_label: "Contents"
 **3.** However, the above work is kind of rudimentary, since about **93%** logs will be labeled. In other words, its strong generalization results in low identification of real attack behaviors
  - *For example, all operations achieved by Powershell will be labeled as "T1059.001 Powershell", while they can actually be divided more specifically*
 
-**4.** Therefore, we've written another set of **detection rules** ([repository](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)) specialized for the commandline (powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE CALDERA platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK
+**4.** Therefore, we've written another set of **detection rules** ([repository](https://github.com/jayzheng98/Mapping-Sysmonlogs-to-ATTACK)) specialized for the commandline (powershell/cmd/terminal) inputs. It integrates 770 attack abilities of [MITRE CALDERA platform](https://caldera.mitre.org/), covering 11 tactics and about 240 techniques (60%) of ATT&CK matrix
  - *By running the* `test_in_my_case.py` *in the repository, it will overwrite the* `RuleName` *of some logs with more precise "ATT&CK technique_ids", and then export the processed dataset from ELK as* `syslog.csv` *at once*
 
 <br>
@@ -760,6 +760,8 @@ RETURN paths
  - *Finally,* `TargetFilename` *field clearly reveals that the attacker's target is **TSR_execution.CONF***
 
 <div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="720px"> </div><br>
+
+## Result
 
 <br>
 
