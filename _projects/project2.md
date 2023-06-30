@@ -765,9 +765,10 @@ RETURN paths
 ### Detection result
 **1.** We collected the detection results of our KG model and performed detection on the same dataset using a log analysis platform based on the ELK engine as a reference
 
-**2.** As shown below, the log analysis platform detected 40% of all the attack processes, while the KG identified 60%, with a higher availability in detecting post-penetration attack
+**2.** As shown below, the log analysis platform detected **40%** of all the attack processes, while the KG identified **60%**, with a higher availability in detecting post-penetration attack
 
 <table>
+ <thead>
   <tr>
     <th>Stage</th>
     <th>Process</th>
@@ -775,6 +776,8 @@ RETURN paths
     <th>Detected by KG?</th>
     <th>Detected by ELK?</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
     <td rowspan="5">Pre-penetration</td>
     <td>1</td>
@@ -837,11 +840,12 @@ RETURN paths
     <td>√</td>
     <td>×</td>
   </tr>
+ </tbody>
 </table>
 
-**3.** To further demonstrate the advantage of behavior-based detection, we take the detection of "Post-penetration process 5" as an example to analyze the differences between KG model and log analysis platform:
- - *Actually, the log analysis platform contains detection rules for the "malicious file replacement", but primarily based on the "source IP", "file name", and "replaced content". However, in our designed attack, the attacker's IP was pre-set as legitimate, and the target file was only replaced by another service command file, without any malicious code. This case indicates that the platform's feature-based detection can be easily bypassed*
- - *On the contrary, the detection of our KG model is behavior-based. Regardless of changes in basic features such as "IP", "file name", or "file content", as long as the adversary still exhibits the behavior as "replacing command files", it will be recognized as an anomaly in system service*
+**3.** To further demonstrate the advantage of behavior-based detection, we take the detection of "Post-penetration process 5" as an example to analyze the differences between the 2 approaches:
+ - *Actually, the log analysis platform contains detection rules for the "malicious file replacement", but primarily based on the "source IP", "file name", and "replaced content". However, in our designed attack, the attacker's IP was pre-set as legitimate, and the target file was only replaced by another service command file, without any malicious code. This case indicates that the platform's **feature-based** detection can be easily bypassed*
+ - *On the contrary, the detection of our KG model is **behavior-based**. Regardless of changes in features such as "IP", "file name", or "file content", as long as the adversary still exhibits the behavior as "replacing command file", it will be recognized as an anomaly in system service*
 
 <br>
 
