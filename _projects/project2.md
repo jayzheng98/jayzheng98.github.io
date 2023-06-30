@@ -761,7 +761,87 @@ RETURN paths
 
 <div align="center"> <img alt="p2-22" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/proj2-22.png?raw=true" width="740px"> </div><br>
 
-## Result
+## Assessment
+### Detection result
+**1.** We collected the detection results of our KG model and performed detection on the same dataset using a log analysis platform based on the ELK engine as a reference
+
+**2.** As shown below, the log analysis platform detected 40% of all the attack processes, while the KG identified 60%, with a higher availability in detecting post-penetration attack
+
+<table>
+  <tr>
+    <th>Stage</th>
+    <th>Process</th>
+    <th>Description</th>
+    <th>Detected by KG?</th>
+    <th>Detected by ELK?</th>
+  </tr>
+  <tr>
+    <td rowspan="5">Pre-penetration</td>
+    <td>1</td>
+    <td>Exploit vulnerabilities to establish connection with CTC from specific port</td>
+    <td>×</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Elevate permissions on CTC through MSF commands such as process migration</td>
+    <td>×</td>
+    <td>×</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Establish the proxy link between Caldera and CTC through the Meterpreter shell</td>
+    <td>√</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Use the Mimikatz to steal the name and password of CTC domain administrator</td>
+    <td>×</td>
+    <td>×</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Use stolen credentials to realize the lateral movement between the CTC active and standby</td>
+    <td>√</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td rowspan="5">Post-penetration</td>
+    <td>1</td>
+    <td>Search in all agent hosts for reserved historic "TSR cancel" files</td>
+    <td>√</td>
+    <td>×</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Copy searched files to the Kali and delete the attack trace</td>
+    <td>√</td>
+    <td>√</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Tamper the content of the "TSR cancel" configuration file locally for forgery</td>
+    <td>×</td>
+    <td>×</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Remotely upload a PS script to CTC standby to monitor the change of its "execution reminder" file</td>
+    <td>√</td>
+    <td>×</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Once the targeted file changed, replace the "TSR execution" file with the counterfeit one</td>
+    <td>√</td>
+    <td>×</td>
+  </tr>
+</table>
+
+**3.** To further demonstrate the advantage of behavior-based detection, we take the detection of "Post-penetration process 5" as an example to analyze the differences between KG model and log analysis platform:
+ - *Actually, the log analysis platform contains detection rules for the "malicious file replacement", but primarily based on the "source IP", "file name", and "replaced content". However, in our designed attack, the attacker's IP was pre-set as legitimate, and the target file was only replaced by another service command file, without any malicious code. This case indicates that the platform's feature-based detection can be easily bypassed*
+ - *On the contrary, the detection of our KG model is behavior-based. Regardless of changes in basic features such as "IP", "file name", or "file content", as long as the adversary still exhibits the behavior as "replacing command files", it will be recognized as an anomaly in system service*
 
 <br>
 
