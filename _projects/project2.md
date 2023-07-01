@@ -847,7 +847,106 @@ RETURN paths
  - *Actually, the log analysis platform contains detection rules for the "malicious file replacement", but primarily based on the "source IP", "file name", and "replaced content". However, in our designed attack, the attacker's IP was pre-set as legitimate, and the target file was only replaced by another service command file, without any malicious code. This case indicates that the platform's **feature-based** detection can be easily bypassed*
  - *On the contrary, the detection of our KG model is **behavior-based**. Regardless of changes in features such as "IP", "file name", or "file content", as long as the adversary still exhibits the behavior as "replacing command file", it will be recognized as an anomaly in system service*
 
-<br>
+### Detection efficiency
+**1.** To preliminarily evaluated the detection efficiency, we conducted repeated detection of "lateral movement" and "file stealing" attacks using the KG model on 3 groups of datasets (primarily varying in size), and performed similar operations using the aforementioned log analysis platform
+
+**2.** As shown below, considering that the KG establishes associations (shortcuts) among logs, even with a larger amount of data (i.e., knowledge dimensions apart from logs), it still exhibits **higher efficiency** compared to the log analysis platform's sequential query approach. However, the test data also demonstrates that the query efficiency of graph database is more significantly **affected by the data size**. This highlights the importance of deploying distributed graph database to ensure optimal performance when handling large data volumes
+
+<table>
+ <theaad>
+  <tr>
+    <th>Dataset (Number of logs)</th>
+    <th>Detection Target</th>
+    <th>Platform (Data Format)</th>
+    <th>Minimum Time (ms)</th>
+    <th>Maximum Time (ms)</th>
+    <th>Average Time (ms)</th>
+  </tr>
+ </theaad>
+ <tbody>
+  <tr>
+    <td rowspan="4">Dataset 1 (36970)</td>
+    <td rowspan="2">Lateral Movement</td>
+    <td>ELK (JSON)</td>
+    <td>36.87</td>
+    <td>68.81</td>
+    <td>50.44</td>
+  </tr>
+  <tr>
+    <td>KG (Graph)</td>
+    <td>1.17</td>
+    <td>1.48</td>
+    <td>1.35</td>
+  </tr>
+  <tr>
+    <td rowspan="2">File Stealing</td>
+    <td>ELK (JSON)</td>
+    <td>72.02</td>
+    <td>83.43</td>
+    <td>78.29</td>
+  </tr>
+  <tr>
+    <td>KG (Graph)</td>
+    <td>3.98</td>
+    <td>5.53</td>
+    <td>4.68</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Dataset 2 (50440)</td>
+    <td rowspan="2">Lateral Movement</td>
+    <td>ELK (JSON)</td>
+    <td>33.81</td>
+    <td>57.20</td>
+    <td>45.01</td>
+  </tr>
+  <tr>
+    <td>KG (Graph)</td>
+    <td>1.95</td>
+    <td>2.18</td>
+    <td>2.06</td>
+  </tr>
+  <tr>
+    <td rowspan="2">File Stealing</td>
+    <td>ELK (JSON)</td>
+    <td>75.56</td>
+    <td>91.64</td>
+    <td>83.40</td>
+  </tr>
+  <tr>
+    <td>KG (Graph)</td>
+    <td>10.29</td>
+    <td>11.93</td>
+    <td>11.05</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Dataset 3 (525776)</td>
+    <td rowspan="2">Lateral Movement</td>
+    <td>ELK (JSON)</td>
+    <td>76.31</td>
+    <td>99.83</td>
+    <td>87.28</td>
+  </tr>
+  <tr>
+    <td>KG (Graph)</td>
+    <td>47.80</td>
+    <td>67.21</td>
+    <td>57.17</td>
+  </tr>
+  <tr>
+    <td rowspan="2">File Stealing</td>
+    <td>ELK (JSON)</td>
+    <td>105.87</td>
+    <td>143.68</td>
+    <td>127.51</td>
+  </tr>
+  <tr>
+    <td>KG (Graph)</td>
+    <td>96.47</td>
+    <td>124.71</td>
+    <td>110.29</td>
+  </tr>
+ </tbody>
+</table>
 
 # Conclusion
 <hr>
