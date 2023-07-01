@@ -850,19 +850,19 @@ RETURN paths
 ### Detection efficiency
 **1.** To preliminarily evaluated the detection efficiency, we conducted repeated detection of "lateral movement" and "file stealing" attacks using the KG model on 3 groups of datasets (primarily varying in size), and performed similar operations using the aforementioned log analysis platform
 
-**2.** As shown below, considering that the KG establishes associations (shortcuts) among logs, even with a larger amount of data (i.e., knowledge dimensions apart from logs), it still exhibits **higher efficiency** compared to the log analysis platform's sequential query approach. However, the test data also demonstrates that the query efficiency of graph database is more significantly **affected by the data size**. This highlights the importance of deploying distributed graph database to ensure optimal performance when handling large data volumes
+**2.** As shown below, considering that the KG establishes associations (shortcuts) among logs, even with a larger amount of data (i.e., knowledge dimensions apart from logs), it still exhibits **higher efficiency** compared to the log analysis platform's sequential query approach
 
 <table>
- <theaad>
+ <thead>
   <tr>
-    <th>Dataset (Number of logs)</th>
+    <th>Dataset<br>(Number of logs)</th>
     <th>Detection Target</th>
-    <th>Platform (Data Format)</th>
-    <th>Minimum Time (ms)</th>
-    <th>Maximum Time (ms)</th>
-    <th>Average Time (ms)</th>
+    <th>Platform<br>(Data Format)</th>
+    <th>Minimum Time<br>(ms)</th>
+    <th>Maximum Time<br>(ms)</th>
+    <th>Average Time<br>(ms)</th>
   </tr>
- </theaad>
+ </thead>
  <tbody>
   <tr>
     <td rowspan="4">Dataset 1 (36970)</td>
@@ -947,6 +947,9 @@ RETURN paths
   </tr>
  </tbody>
 </table>
+
+**3.**  However, the test data also demonstrates that the query efficiency of graph database is more significantly **affected by the data size**. This highlights the importance of deploying distributed graph database to ensure optimal performance when handling large data volumes
+<br>
 
 # Conclusion
 <hr>
