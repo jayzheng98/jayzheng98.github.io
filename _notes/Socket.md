@@ -30,8 +30,6 @@ toc_label: "Contents"
 <br>
 
 # Introduction
-<hr>
-
 **1.** Actually the complex rationale behind Socket is not recorded in this article. The aim of this page is to help people get started quickly. They can modify the templates according to their needs
 
 **2.** Besides the common data types such as "number" and "string", Socket can also transmit "structure" and "class" (shown in [UDP Client](#u\-client))
@@ -41,11 +39,7 @@ toc_label: "Contents"
 <br>
 
 # Linux
-<hr>
-
 ## UDP
-<hr>
-
 ### U-Client
  - *IPv4*
 
@@ -169,8 +163,6 @@ int main() {
 <br>
 
 ## TCP
-<hr>
-
 ### T-Client
  - *IPv4*
 
@@ -276,8 +268,6 @@ int main(){
 <br>
 
 ## Test
-<hr>
-
 **1.** You can copy and modify the snippets above according to your practical engineering application, and remember to run them in the Linux environment. Here I've tested them with IDE "Clion" in Ubuntu 18.04:<br>
 
 **2. UDP**
@@ -296,7 +286,6 @@ int main(){
 <br>
 
 # Windows
-<hr>
 
 Since I haven't encountered the scenario of socket communication on Windows in all my projects before, I cannot make a record here for the time being 😉
 
