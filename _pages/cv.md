@@ -55,7 +55,7 @@ redirect_from:
 ## Patents 
 <hr>
 
-- <font size='3'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，Patent No: 202210229787.3 (Granted)</font>
+- <font size='3'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，Patent No. 202210229787.3 (Granted)</font>
 
 ## Awards & Honors 
 <hr>
