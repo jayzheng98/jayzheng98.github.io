@@ -3,12 +3,13 @@ title: "A Process-Oriented and Coalescent Analysis Method for Safety and Securit
 collection: publications
 permalink: /publication/paper-number-1
 excerpt: '*Zhongyi Zheng, Saifei Li, Xiong Deng, Lianshan Yan*'
-date: 2022-8-12
-venue: 'International Journal of Critical Infrastructure Protection'
-#paperurl: 'http://academicpages.github.io/files/paper1.pdf'
+date: 2025-1-12
+venue: 'IEEE Intelligent Transportation Systems Magazine'
+paperurl: 'https://ieeexplore.ieee.org/document/10944542'
 ---
  
-Current status: **Under Review** &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[Journal Home](https://www.sciencedirect.com/journal/international-journal-of-critical-infrastructure-protection/about/aims-and-scope)
+Current status: **Published** 
+[Journal Home](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5117645)
 <br>
 
 A novel approach to deeply integrate the security analysis with the process of system service is proposed, which achieves the coalescent analysis of two critical attributes as functional safety and cyber security of cyber-physical systems.
