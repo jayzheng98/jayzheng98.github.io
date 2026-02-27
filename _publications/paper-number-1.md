@@ -8,7 +8,7 @@ venue: 'IEEE Intelligent Transportation Systems Magazine'
 paperurl: 'https://ieeexplore.ieee.org/document/10944542'
 ---
  
-Current status: **[Published](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5117645)** 
+Current status: **Published** &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;[Journal Home](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5117645)
 <br>
 
 A novel approach to deeply integrate the security analysis with the process of system service is proposed, which achieves the coalescent analysis of two critical attributes as functional safety and cyber security of cyber-physical systems.
