@@ -14,7 +14,7 @@ toc_label: "Contents"
 # Introduction
 <hr>
 
-**1.** This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it (Once the vulnerability is announced, the subway communication systems will be upgraded and fixed), it has the potential to be used by criminals to further cause severe social harm.
+**1.** This vulnerability currently exists in many subway lines of China, if it was disclosed before CNNVD officially announces it, it has the potential to be used by criminals to further cause severe social harm.
 
 **2.** The project is divided into 2 parts and are studied by 2 group of people separately. The goal of the first part(theoretic) is to figure out the specific rationale behind this vulnerability and how it can be exploited by attacks. They have already finished their work and drew us a conclusion that it can be exploited by the **man-in-the-middle(MITM)** attack
 
