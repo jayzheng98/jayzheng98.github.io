@@ -70,19 +70,26 @@ redirect_from:
 <hr>
 
 - **Embedded** <br>
+  <font size='3'>
   <b>MCU:</b>&ensp;STC15 *(8051)*, STM32F1 *(Thumb-2)* and Kinetis K66 *(ARM)* <br>
   <b>SoC:</b>&ensp;i.MX6ULL *(ARM)* and a self-developed chip *(CK810)* from my corporation<br>
   <b>System:</b>&ensp;SylixOS, Linux<br>
-  <b>Circuit design:</b>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font> 
+  <b>Circuit design:</b>&ensp;Have experience in designing two-layer PCB with the Altium Designer and <a href="https://lceda.cn/editor#">JLCEDA</a>
+  </font> 
 - **Language** <br>
-  <font size='3'><b>Master:</b>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/php">PHP</a>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Matlab, C#<br>
-  I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (<a href="https://jayzheng98.github.io/notes/OP">note</a>)</font>
+  <font size='3'>
+  <b>Master:</b>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/php">PHP</a>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Matlab, C#<br>
+  I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (<a href="https://jayzheng98.github.io/notes/OP">note</a>)
+  </font>
 - **Database** <br>
-  <font size='3'><b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/mysql">Mysql</a>, <a href="https://jayzheng98.github.io/notes/arangodb">ArangoDB</a> &ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Neo4j</font>
+  <font size='3'>
+  <b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/mysql">Mysql</a>, <a href="https://jayzheng98.github.io/notes/arangodb">ArangoDB</a> &ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Neo4j
+  </font>
 <!-- - **Networking** <br>
   <font size='3'><b>Computer network:</b>&ensp;Know well of the use of network equipment (<a href="https://jayzheng98.github.io/notes/DC">note</a>)<br>
   <b>Wireless network:&ensp;LTE)</b>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>-->
 - **Security** <br>
   <font size='3'>
   <b>Red tool:</b>&ensp; Familiar with Metasploit and MITRE Caldera Platform<br>
-  <b>Blue tool:</b>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon</font>
+  <b>Blue tool:</b>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon
+  </font>
