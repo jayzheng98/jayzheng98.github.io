@@ -3,7 +3,7 @@ layout: single
 title: "Cybersecurity threat analysis and prediction of High-speed Railway Signal System based on knowledge graph"
 collection: projects
 permalink: /projects/project2
-excerpt: "*Applied Basic Research Project of Science & Technology Department of Sichuan Province [grant 21YYJC3147]*"
+excerpt: "*National Natural Science Foundation of China [Grant 62301461]*"
 date: 2021-04-05
 toc: true
 toc_label: "Contents"
