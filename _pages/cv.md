@@ -20,6 +20,8 @@ redirect_from:
 <style>
   body{text-align: justify}
 </style>
+## Work Experience 
+<hr>
 
 ## Education 
 <hr>
@@ -35,7 +37,7 @@ redirect_from:
 ## Publications 
 <hr>
 
-- *<font size='3'>Zhongyi Zheng, Saifei Li, Xiong Deng, Lianshan Yan. "<a href="https://ieeexplore.ieee.org/document/10944542">A Process-Oriented and Coalescent Analysis Method for Safety and Security in Railway Systems.</a>" </font>*
+- *<font size='3'>Z. Zheng, S. Li, X. Deng and L. Yan, "<a href="https://ieeexplore.ieee.org/document/10944542">A Process-Oriented and Coalescent Analysis Method for Safety and Security in Railway Systems</a>", in IEEE Intelligent Transportation Systems Magazine, vol. 17, no. 6, pp. 38-54, Nov.-Dec. 2025, doi: 10.1109/MITS.2025.3550868. </font>*
   
 ## Research projects 
 <hr>
@@ -67,18 +69,20 @@ redirect_from:
 ## Skills 
 <hr>
 
-- **Programming** <br>
+- **Embedded** <br>
+  <b>MCU:</b>&ensp;STC15 *(8051)*, STM32F1 *(Thumb-2)* and Kinetis K66 *(ARM)* <br>
+  <b>SoC:</b>&ensp;i.MX6ULL *(ARM)* and a self-developed chip *(CK810)* from my corporation<br>
+  <b>System:</b>&ensp;SylixOS, Linux<br>
+  <b>Circuit design:</b>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font> 
+- **Language** <br>
   <font size='3'><b>Master:</b>&ensp;C, Python &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/php">PHP</a>, C++ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Matlab, C#<br>
   I've been "accepted" for about 250 problems on <u>Leetcode</u> and <u>Nowcoder</u> (<a href="https://jayzheng98.github.io/notes/OP">note</a>)</font>
 - **Database** <br>
   <font size='3'><b>Familiar:</b>&ensp;<a href="https://jayzheng98.github.io/notes/mysql">Mysql</a>, <a href="https://jayzheng98.github.io/notes/arangodb">ArangoDB</a> &ensp;&ensp;&ensp;&ensp;&ensp;<b>Understand:</b>&ensp;Neo4j</font>
-- **Networking** <br>
+<!-- - **Networking** <br>
   <font size='3'><b>Computer network:</b>&ensp;Know well of the use of network equipment (<a href="https://jayzheng98.github.io/notes/DC">note</a>)<br>
-  <b>Wireless network:&ensp;LTE)</b>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>
+  <b>Wireless network:&ensp;LTE)</b>&ensp;Familiar with the <u>srsRAN</u> open-source stack, and have experience in source code modification</font>-->
 - **Security** <br>
-  <font size='3'><b>Command-line shell:</b>&ensp;Familiar with CMD, Powershell and <a href="https://jayzheng98.github.io/notes/linux">Terminal(Linux)</a><br>
+  <font size='3'>
   <b>Red tool:</b>&ensp; Familiar with Metasploit and MITRE Caldera Platform<br>
   <b>Blue tool:</b>&ensp;Know well of the log audit system based on Elasticsearch and Sysmon</font>
-<!-- - **Embedded development: (haven't touched for some time)** <br>
-  <b>MCU:</b>&ensp;I (used to) master the programming on Intel 8051 and Kinetis K66, and have used the STM32 and TI MSP430 for several times<br>
-  <b>Circuit design:</b>&ensp;Have experience in designing two-layer PCB with the Altium Designer</font> -->
