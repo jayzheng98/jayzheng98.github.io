@@ -25,7 +25,7 @@ redirect_from:
 <div style="float:right; text-align:right; margin-top:12px"><b>2023-Now</b></div>
 
 - <b>Embedded Software Engineer</b>, CHINA ELECTRONICS TECHNOLOGY CYBER SECURITY CO., LTD.<br>
-   <font size='3'><i>Developed application-layer software for cryptographic applications on SoC and embedded OS platforms.</i></font>
+   <font size='3'><i>Developed application-layer software for cryptographic applications on SoC and embedded OS platforms</i></font>
 
 ## Education 
 <hr>
@@ -76,7 +76,7 @@ redirect_from:
 - **Embedded** <br>
   <font size='3'>
   <b>MCU:</b>&ensp;STC15 <i>(8051)</i>, STM32F1 <i>(Thumb-2)</i> and Kinetis K66 <i>(ARM)</i><br>
-  <b>SoC:</b>&ensp;i.MX6ULL <i>(ARM)</i> and a self-developed chip <i>(CK810)</i> from my corporation<br>
+  <b>SoC:</b>&ensp;i.MX6ULL <i>(ARM)</i> and a self-developed chip <i>(ck810)</i> from my corporation<br>
   <b>System:</b>&ensp;SylixOS, Linux<br>
   <b>Circuit design:</b>&ensp;Have experience in designing PCB with the Altium Designer or <a href="https://lceda.cn/editor#">JLCEDA</a>
   </font> 
