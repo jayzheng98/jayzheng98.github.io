@@ -25,7 +25,7 @@ redirect_from:
 <div style="float:right; text-align:right; margin-top:12px"><b>2023-Now</b></div>
 
 - <b>Embedded Software Engineer</b>, CHINA ELECTRONICS TECHNOLOGY CYBER SECURITY CO., LTD.<br>
-   <font size='3'><i>Developed application-layer software for cryptographic applications on SoC and embedded OS platforms</i></font>
+   <font size='3'><i>Develop application-layer cryptographic software on SoC and embedded OS platforms</i></font>
 
 ## Education 
 <hr>
