@@ -61,13 +61,13 @@ redirect_from:
 ## Patents 
 <hr>
 
-- <font size='3'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，Patent No. 202210229787.3 (Granted)</font>
+- <font size='3'>李赛飞，<b>郑中一</b>，闫连山，张丽杰. “<i>一种信息物理融合的铁路信号控制系统威胁分析方法[P]</i>”，CN114978569A，2022-08-30，Patent No. 202210229787.3</font>
 
 ## Awards & Honors 
 <hr>
 
-- <font size='3'><b>Regional Award</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
-- <font size='3'>Provincial <b>2nd Prize</b>, 2019 National Undergraduate Electronic Design Competition. "<i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">Subject H: Analog Electromagnetic Curved Gun</a></i>". <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
+- <font size='3'><b>[Regional Award](https://jayzheng98.github.io/files/ZTE.pdf)</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
+- <font size='3'><b>[Provincial 2nd Prize](https://jayzheng98.github.io/files/nuedc.pdf)</b>, 2019 National Undergraduate Electronic Design Competition. "<i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">Subject H: Analog Electromagnetic Curved Gun</a></i>". <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
 - <font size='3'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font>
 
 ## Skills 
