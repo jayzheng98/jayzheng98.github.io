@@ -66,8 +66,8 @@ redirect_from:
 ## Awards & Honors 
 <hr>
 
-- <font size='3'><b>[Regional Award](https://jayzheng98.github.io/files/ZTE.pdf)</b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
-- <font size='3'><b>[Provincial 2nd Prize](https://jayzheng98.github.io/files/nuedc.pdf)</b>, 2019 National Undergraduate Electronic Design Competition. "<i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">Subject H: Analog Electromagnetic Curved Gun</a></i>". <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
+- <font size='3'><b><a href="https://jayzheng98.github.io/files/ZTE.pdf">Regional Award</a></b> (National ranking 17/321), The 11th "Hold Moon" Algorithm Elite Challenge of ZTE Corp. <i>"Dijkstra Sect: Traffic Data Forecast".</i> <b>Zhongyi Zheng</b>. 2021.05</font>
+- <font size='3'><b><a href="https://jayzheng98.github.io/files/nuedc.pdf">Provincial 2nd Prize</a></b>, 2019 National Undergraduate Electronic Design Competition. "<i><a href="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/nuedc.jpg?raw=true">Subject H: Analog Electromagnetic Curved Gun</a></i>". <b>Zhongyi Zheng</b>, Zhuocheng Shi, Feifan Lei. 2019.08</font>
 - <font size='3'><b>1st Prize</b> (No.1), 2018 fall Southwest Jiaotong University Undergraduate Electronic Design Competition. <i>"Electronic Firefly".</i> <b>Zhongyi Zheng</b>. 2019.04</font>
 
 ## Skills 
@@ -78,7 +78,7 @@ redirect_from:
   <b>MCU:</b>&ensp;STC15 <i>(8051)</i>, STM32F1 <i>(Thumb-2)</i> and Kinetis K66 <i>(ARM)</i><br>
   <b>SoC:</b>&ensp;i.MX6ULL <i>(ARM)</i> and a self-developed chip <i>(ck810)</i> from my corporation<br>
   <b>System:</b>&ensp;SylixOS, Linux<br>
-  <b>Circuit design:</b>&ensp;Have experience in designing PCB with the Altium Designer or <a href="https://lceda.cn/editor#">JLCEDA</a>
+  <b>Circuit design:</b>&ensp;Have experience in designing PCB with the Altium Designer and <a href="https://lceda.cn/editor#">JLCEDA</a>
   </font> 
 - **Language** <br>
   <font size='3'>
