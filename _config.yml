@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Zhongyi Zheng"
   avatar           : "1.jpg"
-  bio              : <b>1998.07</b><br>The quieter you become, the more you are able to hear<br>
+  bio              : The quieter you become, the more you are able to hear<br>
                      <!--<img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" alt="C++" title="C++">
                      <img width="25" src="https://github.com/jayzheng98/jayzheng98.github.io/blob/master/images/logo-php-36013.png?raw=true" alt="PHP" title="PHP">
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python" title="Python">
@@ -104,7 +104,7 @@ author:
                      <img width="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" alt="Linux" title="Linux">
                      <br><br>-->
   location         : "Chengdu, China"
-  employer         :
+  employer         : "1998.07"
   pubmed           : 
   googlescholar    : 
   email            : "zhengzy@my.swjtu.edu.cn"
